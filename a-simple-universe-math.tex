@@ -1,0 +1,70 @@
+\documentclass[a4paper
+%,draft
+]{article}
+
+\usepackage{amsthm}
+\usepackage{appendix}
+\usepackage[english]{babel}
+ 
+ %%%%%%%%%%%%%%%%%%v
+\usepackage{combelow}
+\usepackage{hyperref}
+\usepackage[utf8]{inputenc}
+\usepackage{newunicodechar}
+
+\usepackage[
+    backend=biber,
+    style=apa
+%    citestyle=authoryear,
+%    citestyle=alphabetic,
+%    sortcites=true,
+%    style=authoryear
+%    style=alphabetic
+    ]{biblatex}
+    
+\DeclareLanguageMapping{english}{english-apa}
+\addbibresource{design-argument.bib}
+
+\newunicodechar{Ș}{\cb{S}}
+\newunicodechar{ș}{\cb{s}}
+\newunicodechar{Ț}{\cb{T}}
+\newunicodechar{ț}{\cb{t}}
+
+\title{A Simple Universe Argument}
+\author{Virgil Șerbănuță\thanks{\href{mailto:design-and-chance@poarta.org}{design-and-chance@poarta.org}}}
+%\date{June 2015}
+ %%%%%%%%%%%%%%%%%%^
+ 
+ 
+\usepackage{amsfonts}
+\usepackage[obeyDraft]{todonotes}
+\newcommand{\svn}[2][]{\todo[author=Virgil,color=red!25!white,#1]{#2}}
+\newcommand{\tsf}[2][]{\todo[author=Traian,color=green!40!white,#1]{#2}}
+\newcommand{\tsfgata}[2][]{\todo[author=Traian,color=blue!40!white,#1]{DONE - #2}}
+\newcommand{\commentfootnote}[1][]{}
+
+\def\reale{\mathbb{R}}
+\def\intregi{\mathbb{Z}}
+\def\complexe{\mathbb{C}}
+\def\naturale{\mathbb{N}}
+\newcommand{\paper}[1]{paper}
+\newcommand{\multime}[1]{\left\{ #1 \right\}}
+\newcommand{\definitie}[1]{\textbf{#1}}
+\newcommand{\ghilimele}[1]{``#1"}
+\newcommand{\negat}[1]{\sim #1}
+\newcommand{\citare}[1]{(\cite{#1})} % TODO: Separate this in a version with parenthesis and one without.
+
+\newtheorem{afirmatie}{Claim}
+\newtheorem{notatie}{Notation} 
+\newtheorem{theorem}{Theorem}[section]
+ 
+\begin{document}
+
+ %%%%%%%%%%%%%%%%%%
+\maketitle
+ %%%%%%%%%%%%%%%%%%
+ 
+ \begin{abstract}
+This \paper{} presents an argument that, with probability $1$, the laws that govern a non-designed universe are infinitely complex at any level of observation. From this it follows that there is a $0$ probability of us living in a non-designed universe. 
+ \end{abstract}
+\end{document}
