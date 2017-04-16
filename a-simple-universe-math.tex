@@ -1,5 +1,5 @@
 \documentclass[a4paper
-%,draft
+,draft
 ]{article}
 
 \usepackage{amsthm}
@@ -64,7 +64,98 @@
 \maketitle
  %%%%%%%%%%%%%%%%%%
  
- \begin{abstract}
-This \paper{} presents an argument that, with probability $1$, the laws that govern a non-designed universe are infinitely complex at any level of observation. From this it follows that there is a $0$ probability of us living in a non-designed universe. 
- \end{abstract}
+\begin{abstract}
+  This \paper{} presents an argument that, with probability $1$, the laws that govern a non-designed universe are infinitely complex at any level of observation. From this it follows that there is a $0$ probability of us living in a non-designed universe. 
+\end{abstract}
+
+\section{Should sort these}
+
+Let $A$ be a set with the same cardinality as $\reale$. Let $F$ be the set of all mathematical propositions \svn{Is this the right term if they have one variable?} of one variable over $A$. Let $A_f=\multime{a\in A\mid f(a) \mbox{ is true}}$. Given a probability distribution over $A$, we define $P(f)=P(A_f)$. Let $F_0$ be the set of all elements of $F$ such that their probability is $0$ for all continuous distributions over $A$, i.e. $F_0=\multime{f\in F\mid P(A_f)=0 \mbox{ for all continuous distributions over } A}$.
+
+Let us note that $F$ is countable, so $F_0$ is countable. Then, obviously, for any continuous distribution over $A$, $P(F_0)=0$, so the probability of its complement is $1$, i.e. $P(F\setminus F_0)=1$\svn{Is this the best way to denote the complement?}. Then, for any continuous distribution, statistically speaking, the elements of $f$ are false for all elements of $A$\svn{Is this a good way to say that almost all of them are $0$?}.
+
+Then let us say that an element $a\in A$ is \definitie{generic} if no property from $F_0$ is true for $a$. Let us say that $a$ is \definitie{peculiar} if it is not generic, i.e. if there is a property $f\in F_0$ such that $f(a)$ is true.
+
+Let us assume that the \ghilimele{state of the universe at a given moment in time}, or something close enough to it, is something that makes sense. As an example, one could replace it with the state of the universe for a section through a universe's space-time that splits the universe in three parts: the section itself, the points which are before the section in time, and the points which are after the section in time.
+
+Then a \definitie{universe description} is a mathematical theory that has a set of axioms which is at most countable and which allows predicting the future state of the universe given its state at a given moment in time. A \definitie{universe region description} is something similar, but only for a given space-time region of a universe. As an example, a deterministic universe is a universe for which there is a description which allows one to fully predict the future state given the state at any moment in time.
+
+An \definitie{approximate universe description} is a universe description which allows one to approximate the future state of the universe with a precision $\eta$ from its state at a given moment in time. An universe for which such a description exists could be called deterministic with precision $\eta$.
+
+Note that we may have universes for which we can approximate the future state only with a probability $p$ and only for a limited time $\Delta t$. Then a grup of such restricts, $\eta>0$, $p>0$ and $\Delta t>0$, will be called a \definitie{level of approximation}.
+
+When we talk about a universe's description (or a universe region's description) given a level of approximation, the description is identified in the following way: first, only descriptions which approximate the universe with that level of aproximation are considered, forming a set $S$. If $S$ contains at least one finite description, then we pick the shortest such description as \ghilimele{the description}, breaking ties by using the lexicographic order. Otherwise, we simply say that the universe has an infinite description, and we will abuse the terminology a bit, saying that $S$ is its description.
+
+In the following, we will only talk about universes which have space and time and which have an approximate description for a given level of approximation (or which can be split into a countable number of regions which have such approximate descriptions).
+
+\section{Axioms}
+
+If our universe is not created, then there is a level of approximation $L$ such that the following axioms hold. If it is created, then axiom \ref{noreason} does not hold.\svn{Explain why.}
+
+\begin{enumerate}
+\item \label{countablecovering} Given a positive rational size $q$, our universe can be covered by a set that is at most countable, of time-space hypercubes of size $q$.
+  \begin{itemize}
+    \item Note that this axiom is stronger than needed, one could use only rational numbers which are greater than a well-chosen limit, such that the hypercube in axiom \ref{nonessentialhypercube} is such a hypercube.
+
+    \item Note, also, that one could use open sets of size at most $q$ instead of hypercubes.\svn{Can I relax this further? I need the total number of possiblities to be at most countable so that I can sum zero probabilities.}
+  \end{itemize}
+
+\item \label{nonessentialhypercube} There is a non-trivial (i.e. it contains a non-empty hypercube) time-space region of our universe $R_{ours}$ with the following properties:
+  \begin{enumerate}
+    \item One can specify its limits precisely enough (i.e. within the level of approximation $L$) using a finte number of words. As an example, one could choose a time-space hypercube specified relative to the prezent and Earth's center, axis and rotation plane.
+    \item We could use a finite description $d_{ours}$ to describe this region within the level of approximation $L$.
+    \item $R_{ours}$ is outside the part of our universe which is essential for our existence, e.g. outside of Earth's orbit around Sun.
+  \end{enumerate}
+\item \label{uncountable} There is a set $D$ of descriptions of universe regions such that the following are true:
+  \begin{enumerate}
+    \item $D$ has the same cardinality as $\reale$.
+    \item For all elements $d\in D$ there is at least one conceivable universe $U_d$ which
+      \begin{enumerate}
+        \item contains intelligent beings that use mathematics,
+        \item has a time-space and a region $R_d$ of $U_d$ that can be specified, within the level of approximation $L$, using a finite number of words.
+        \item for the intelligent beings mentioned above and for the level of approximation $L$, $d$ is a description of $R_d$.
+      \end{enumerate}
+    \item $d_{ours}\in D$
+  \end{enumerate}
+\item \label{infinitechain} The probability that there are a series of $meta-meta-\dots meta-$universes, i.e. $(meta-)^n$universes with $n\ge 0$, such that the following are true, is $0$:
+  \begin{enumerate}
+    \item our universe is the $(meta-)^0$universe;
+    \item the laws of the $(meta-)^{n-1}$universe which are relevant to us in one way or another are the way they are because of the laws of the $(meta-)^n$universe, for all $n > 0$;
+    \item for all $n$, the laws of all the $(meta-)^n$universe that define the laws of the $(meta-)^{n-1}$universe are not generic.
+  \end{enumerate}
+  \begin{itemize}
+    \item Note that the term $meta-$universe here is used loosely, it just means that there is something outside of our universe, which is not an intelligent being, which is a reason (as in axiom \ref{noreason}) for the laws of our universe.
+    \item Note that the rule that all possible universes exist could be considered a $meta-$universe.
+  \end{itemize}
+\item \label{noreason} If $A$ has the same cardinality as $\reale$ and one observes an element $a\in A$, and there is absolutely no reason for $a$ being observed over any other element, then $a$ is generic.
+  \begin{itemize}
+    \item Note that \ghilimele{there being a reason}, is used here in a very generic way, it just means that there is something that influences this observation. In particular, it does not necessarily mean that $a$ is determined by a proces. E.g. observing the time interval between two particles being emmited by a radioactive object has some reason behind it, i.e. the way our universe works means that some ranges of values have higher probabilities than others. Or maybe the way our universe works means that all possible values have equal probability, or that all possible value ranges have probabilities proportional with their size: This also means that \ghilimele{there is a reason} for observing an element.
+    \item Note that the only case relevant to this paper when when we might observe something for which there is no reason, would be when we are observing our universe: if our universe is not created, it might be that there is nothing above our universe which would have an influence over how our universe is.
+  \end{itemize}
+\end {enumerate}
+
+\section{Proof}
+
+Let us estimate the probability of our universe not being created.
+
+First, let us note that the set of finite descriptions is countable, while, from axiom \ref{uncountable}, the total set of descriptions $D$ is not countable. This means that finite descriptions are peculiar.
+
+Let $H$ be the hypercube in axiom \ref{nonessentialhypercube} and let $q$ be a rational number such that $H$ is of size greater than $q$. According to axiom \ref{countablecovering}, such a rational number exists.
+
+The laws of the hypercube are determined by the laws of our universe, i.e. the laws of our universe specify which of the possible sets of laws work in a specific hypercube. Let us consider how a conceivable universe determines the laws of a given hypercube. If these are chosen using a continuous distribution, with probability $1$ they are generic. However, $H$'s laws are peculiar, which means that the probability of having such a hypercube is $0$.
+
+Let us see what happens if they are chosen using a discontinous distribution $d_0$ which belongs to our universe, which is the $(meta-)^0$universe. $d_0$'s discontinuities are at most countable, and they are determined by the $(meta-)^1$universe. If these discontinuities are generic, then $H$'s laws still have a probability $0$ of being peculiar.
+
+Let us see what happens if at least one discontinuity is peculiar, let us call it $x_0$. If the distribution probability $d_1$, which specifies for which points $d_0$ is discontinuous, is continuous, then the probability of $x_0$ being peculiar is $0$. If $d_1$ has discontinuities, they may be generic, which means that $H$'s probability is still $0$. If one of $d_1$'s discontinuities is peculiar, we repeat the same process.
+
+In general, if there is an $n$ such that the $(meta-)^{n}$universe is not included in any way in anything that may influence the way its laws are, then, by axiom \ref{noreason}, $d_n$'s discontinuities are generic, which means that $H$'s probability is $0$. If not, then if $d_n$ does not have a peculiar discontinuity, then $H's$ probability is $0$. Otherwise, $d_{n+1}$ must have a peculiar discontinuity.
+
+So the only way in which $H$'s probability was not proven as being $0$ above is when there is an infinite chain of $(meta-)^{n}$universes, which, by axiom \ref{infinitechain}, has a $0$ probability.
+
+Then $H$'s probability is $0$ for all cases, which means that the probability of our universe not being created in $0$.
+
+\section{Why the axioms hold if our universe is not create}
+
+\section{Why axiom \ref{noreason} does not hold if our universe is created}
+
 \end{document}
