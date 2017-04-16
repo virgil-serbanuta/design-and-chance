@@ -70,15 +70,19 @@
 
 \section{Should sort these}
 
-Let $A$ be a set with the same cardinality as $\reale$. Let $F$ be the set of all mathematical propositions \svn{Is this the right term if they have one variable?} of one variable over $A$. Let $A_f=\multime{a\in A\mid f(a) \mbox{ is true}}$. Given a probability distribution over $A$, we define $P(f)=P(A_f)$. Let $F_0$ be the set of all elements of $F$ such that their probability is $0$ for all continuous distributions over $A$, i.e. $F_0=\multime{f\in F\mid P(A_f)=0 \mbox{ for all continuous distributions over } A}$.
+Let $A$ be a set with the same cardinality as $\reale$. Let $F$ be the set of all mathematical predicates of one variable over $A$ that can be written as a finite formula. Let $A_f=\multime{a\in A\mid f(a) \mbox{ is true}}$. Given a probability distribution over $A$, we define $P(f)=P(A_f)$. Let $F_0$ be the set of all elements of $F$ such that their probability is $0$ for all continuous distributions over $A$, i.e. $F_0=\multime{f\in F\mid P(A_f)=0 \mbox{ for all continuous distributions over } A}$.
 
-Let us note that $F$ is countable, so $F_0$ is countable. Then, obviously, for any continuous distribution over $A$, $P(F_0)=0$, so the probability of its complement is $1$, i.e. $P(F\setminus F_0)=1$\svn{Is this the best way to denote the complement?}. Then, for any continuous distribution, statistically speaking, the elements of $f$ are false for all elements of $A$\svn{Is this a good way to say that almost all of them are $0$?}.
+Let us note that $F$ is countable, so $F_0$ is at most countable. Then, obviously, for any continuous distribution over $A$, $P(F_0)=0$, so the probability of its complement is $1$, i.e. $P(F\setminus F_0)=1$\svn{Is this the best way to denote the complement?}. Then, for any continuous distribution, almost surely all elements of $F_0$ are false for a given element of $A$.
 
 Then let us say that an element $a\in A$ is \definitie{generic} if no property from $F_0$ is true for $a$. Let us say that $a$ is \definitie{peculiar} if it is not generic, i.e. if there is a property $f\in F_0$ such that $f(a)$ is true.
 
-Let us assume that the \ghilimele{state of the universe at a given moment in time}, or something close enough to it, is something that makes sense. As an example, one could replace it with the state of the universe for a section through a universe's space-time that splits the universe in three parts: the section itself, the points which are before the section in time, and the points which are after the section in time.
+Let us consider all universes for which the \ghilimele{state of the universe at a given moment in time}, or something close enough to it, is something that makes sense. As an example, one could consider a universe in which not all points' time can be compared. In such a case one might (or might not) be able to replace the state of the universe at a given moment in time with the state of the universe for a section through a universe's space-time that splits the universe in three parts: the section itself, the points which are before the section in time, and the points which are after the section in time.
 
-Then a \definitie{universe description} is a mathematical theory that has a set of axioms which is at most countable and which allows predicting the future state of the universe given its state at a given moment in time. A \definitie{universe region description} is something similar, but only for a given space-time region of a universe. As an example, a deterministic universe is a universe for which there is a description which allows one to fully predict the future state given the state at any moment in time.
+To keep the exposition simple, in the following I will use \ghilimele{state of the universe at a given moment in time}, but one should replace it with one's favourite alternative concept.
+
+Then a \definitie{universe description} is a mathematical theory that has a set of axioms which is at most countable and which allows making predictions about the future state of the universe given its state at a certain moment in time. A \definitie{universe region description} is something similar, but only for a given space-time region of a universe. As an example, for a deterministic universe there might exist a description which allows one to fully predict the future state given the state at any moment in time, but a universe description does not have to predict everything.
+
+Note that a universe description is dependent on who makes the prediction. We could try to make predictions as some beings that can observe the full present state of a universe, or we could consider whatever intelligent beings live in that universe (if any) and what could they observe. Obviously, different intelligent beings might be able observe very different things inside a universe. In the axioms below we will work with universes that contain intelligent beings \svn{check that I mentioned this} and all predictions would be relative to what these intelligent beings could observe.
 
 An \definitie{approximate universe description} is a universe description which allows one to approximate the future state of the universe with a precision $\eta$ from its state at a given moment in time. An universe for which such a description exists could be called deterministic with precision $\eta$.
 
@@ -86,25 +90,27 @@ Note that we may have universes for which we can approximate the future state on
 
 When we talk about a universe's description (or a universe region's description) given a level of approximation, the description is identified in the following way: first, only descriptions which approximate the universe with that level of aproximation are considered, forming a set $S$. If $S$ contains at least one finite description, then we pick the shortest such description as \ghilimele{the description}, breaking ties by using the lexicographic order. Otherwise, we simply say that the universe has an infinite description, and we will abuse the terminology a bit, saying that $S$ is its description.
 
-In the following, we will only talk about universes which have space and time and which have an approximate description for a given level of approximation (or which can be split into a countable number of regions which have such approximate descriptions).
+One could use a well-ordering on the real numbers to choose the lowest description as the universe's description, but that will complicate things without any benefit.
+
+In the following, we will only talk about universes (or universe regions) which have space and time and which have an approximate description for a given level of approximation (or which can be split into a countable number of regions which have such approximate descriptions).
 
 \section{Axioms}
 
-If our universe is not created, then there is a level of approximation $L$ such that the following axioms hold. If it is created, then axiom \ref{noreason} does not hold.\svn{Explain why.}
+In the following, OURS could be either \ghilimele{our universe}, \ghilimele{our galaxy from some time around its beginnings until some time around its possible end/merger with a larger galaxy/etc.} or \ghilimele{the observable region of our universe extended as much as possible, in a sane way, through time}, or anything similar. Let us say it is \ghilimele{the observable region of our universe, extended in time}.
+
+If our universe is not created, then there is a level of approximation $L$ and a rational number $r$ such that the following axioms hold. If it is created, then axiom \ref{noreason} does not hold.\svn{Explain why.}
 
 \begin{enumerate}
-\item \label{countablecovering} Given a positive rational size $q$, our universe can be covered by a set that is at most countable, of time-space hypercubes of size $q$.
+\item \label{countablecovering} Given a positive rational size $q>r$, OURS can be covered by a set that is at most countable of time-space hypercubes of size $q$.
   \begin{itemize}
-    \item Note that this axiom is stronger than needed, one could use only rational numbers which are greater than a well-chosen limit, such that the hypercube in axiom \ref{nonessentialhypercube} is such a hypercube.
-
-    \item Note, also, that one could use open sets of size at most $q$ instead of hypercubes.\svn{Can I relax this further? I need the total number of possiblities to be at most countable so that I can sum zero probabilities.}
+    \item Note that this axiom is stronger than needed, one could use open sets of size at most $q$ instead of hypercubes.
   \end{itemize}
 
-\item \label{nonessentialhypercube} There is a non-trivial (i.e. it contains a non-empty hypercube) time-space region of our universe $R_{ours}$ with the following properties:
+\item \label{nonessentialhypercube} There is a non-trivial (i.e. it contains a non-empty hypercube of size greater than $r$) time-space region of OURS, $R_{ours}$ with the following properties:
   \begin{enumerate}
-    \item One can specify its limits precisely enough (i.e. within the level of approximation $L$) using a finte number of words. As an example, one could choose a time-space hypercube specified relative to the prezent and Earth's center, axis and rotation plane.
-    \item We could use a finite description $d_{ours}$ to describe this region within the level of approximation $L$.
-    \item $R_{ours}$ is outside the part of our universe which is essential for our existence, e.g. outside of Earth's orbit around Sun.
+    \item One can specify its limits precisely enough (i.e. within the level of approximation $L$) using a finte number of words. As an example, one could choose a time-space region that includes our solar system from Mars' orbit to Pluto's, through all the time where its position can be specified reasonably using its current position as a basis.
+    \item We could use a finite description $d_{ours}$ to describe this region within the level of approximation $L$. As an example one could use classical mechanics, maybe with some chemistry and some quantum physics (deterministic) approximations to describe our solar system fairly well.
+    \item $R_{ours}$ is outside the part of our universe which is essential for our existence, e.g. outside of Earth's orbit around Sun. If, when looking back in time, what happens outside Earth's orbit becomes essential for us, we stop the time-space region after that time.
   \end{enumerate}
 \item \label{uncountable} There is a set $D$ of descriptions of universe regions such that the following are true:
   \begin{enumerate}
@@ -124,7 +130,7 @@ If our universe is not created, then there is a level of approximation $L$ such 
     \item for all $n$, the laws of all the $(meta-)^n$universe that define the laws of the $(meta-)^{n-1}$universe are not generic.
   \end{enumerate}
   \begin{itemize}
-    \item Note that the term $meta-$universe here is used loosely, it just means that there is something outside of our universe, which is not an intelligent being, which is a reason (as in axiom \ref{noreason}) for the laws of our universe.
+    \item Note that the term $meta-$universe here is used loosely, it just means that there is something outside of a universe, which is not an intelligent being, which is a reason (as in axiom \ref{noreason}) for the laws of our universe.
     \item Note that the rule that all possible universes exist could be considered a $meta-$universe.
   \end{itemize}
 \item \label{noreason} If $A$ has the same cardinality as $\reale$ and one observes an element $a\in A$, and there is absolutely no reason for $a$ being observed over any other element, then $a$ is generic.
@@ -142,11 +148,11 @@ First, let us note that the set of finite descriptions is countable, while, from
 
 Let $H$ be the hypercube in axiom \ref{nonessentialhypercube} and let $q$ be a rational number such that $H$ is of size greater than $q$. According to axiom \ref{countablecovering}, such a rational number exists.
 
-The laws of the hypercube are determined by the laws of our universe, i.e. the laws of our universe specify which of the possible sets of laws work in a specific hypercube. Let us consider how a conceivable universe determines the laws of a given hypercube. If these are chosen using a continuous distribution, with probability $1$ they are generic. However, $H$'s laws are peculiar, which means that the probability of having such a hypercube is $0$.
+The laws of the hypercube are determined by the laws of our universe ($U$), i.e. the laws of our universe specify which of the possible sets of laws work in a specific hypercube. Let us consider how a conceivable universe determines the laws of a given hypercube. If these are chosen using a continuous distribution, with probability $1$ they are generic. However, $H$'s laws are peculiar, which means that the probability of having such a hypercube is $0$. Note that this is true even if $U$'s laws say that every possible hypercube exists: $H$'s probability among all $U$'s hypercubes is still $0$.
 
 Let us see what happens if they are chosen using a discontinous distribution $d_0$ which belongs to our universe, which is the $(meta-)^0$universe. $d_0$'s discontinuities are at most countable, and they are determined by the $(meta-)^1$universe. If these discontinuities are generic, then $H$'s laws still have a probability $0$ of being peculiar.
 
-Let us see what happens if at least one discontinuity is peculiar, let us call it $x_0$. If the distribution probability $d_1$, which specifies for which points $d_0$ is discontinuous, is continuous, then the probability of $x_0$ being peculiar is $0$. If $d_1$ has discontinuities, they may be generic, which means that $H$'s probability is still $0$. If one of $d_1$'s discontinuities is peculiar, we repeat the same process.
+Let us see what happens if at least one discontinuity is peculiar, let us call it $x_0$. Let $d_1$ be the distribution probability which specifies for which points $d_0$ is discontinuous. If $d_1$ is continuous, then the probability of $x_0$ being peculiar is $0$. If $d_1$ has discontinuities, they may be generic, which means that $H$'s probability is still $0$. If one of $d_1$'s discontinuities is peculiar, we repeat the same process.
 
 In general, if there is an $n$ such that the $(meta-)^{n}$universe is not included in any way in anything that may influence the way its laws are, then, by axiom \ref{noreason}, $d_n$'s discontinuities are generic, which means that $H$'s probability is $0$. If not, then if $d_n$ does not have a peculiar discontinuity, then $H's$ probability is $0$. Otherwise, $d_{n+1}$ must have a peculiar discontinuity.
 
@@ -156,6 +162,40 @@ Then $H$'s probability is $0$ for all cases, which means that the probability of
 
 \section{Why the axioms hold if our universe is not create}
 
+\subsection{Axiom \ref{countablecovering}}
+
+This axiom uses some basic facts that we believe about our universe: that our space-time can be approximated locally as an open set of $R^n$. It is actually even weaker than that: it just requires that, as far as we can observe, for a given level of approximation, OURS can be approximated by a certain kind of open subset of $R^n$.
+
+While this could certainly be false, it would mean that almost everything that we believe about OURS is wrong. In particular, everything that we believe about the distant past or future would likely be wrong by large margins. E.g. the dinosaurs could as well have dissapeared 1000 years ago or 1000 billion years ago.
+
+\subsection{Axiom \ref{nonessentialhypercube}}
+
+One example of a region that fits axiom \ref{nonessentialhypercube} would be a time-space region $R_{ours}$ that includes our solar system from Mars' orbit to Pluto's, through all the time where its position can be specified reasonably using its current position as a basis. One could use classical mechanics, maybe with some chemistry and some quantum physics (deterministic) approximations to describe our solar system fairly well. Also, in recent-ish history, this $R_{ours}$ seems non-essential for our existence. We could extend this region in the past and future until it becomes essential.
+
+Even if, somehow, this region is essential for our existence, we could go outside of our solar sistem, or even outside of our galaxy to find a good region.
+
+\subsection{Axiom \ref{uncountable}}
+
+As argued above, OURS could have an approximate universe description given by classical mechanics, maybe with some additions.
+
+One could imagine describing what is outside of Earth's orbit by (almost) any countable axiom system that still specifies $R^n$ as a base. Then this would produce a set of descriptions with the same cardinality as $\reale$, each of this universe would contain intelligent beings that use mathematics, and so on.
+
+\subsection{Axiom \ref{infinitechain}}
+
+Note that this axiom describes the existence of something for which we don't have any proof. Even more, this axiom describes something which is infinitely peculiar, and could be made even more peculiar, e.g. is there something outside the infinite series of $(meta-)^n$universes that can be the source of this peculiarness?\svn{does it work in a similar way, i.e. continuous distributions with peculiar discontinuities? If not, I should remove this}.
+
+This axiom requires a strong faith in something for which we don't have any reason to believe. There is no chance of a revelation, or any other means of having even the weakest hint about the existence of this chain of $meta-$universes. I guess that almost any theist would be in a much better position than anyone believing that this axiom does not hold.
+
+If there is a value $p < 1$ such that the probability of a peculiar $meta^n-$universe existing if a peculiar $meta^{n-1}-$universe exists is at most $p$, then the probability of all of them existing is lower than $p^n$ for any $n$, so it is $0$. Then the probability of a $meta^n-$universe existing needs to converge at $1$ fast enough, so we actually need some very strong beliefs about these meta-universes.
+
+\subsection{Axiom \ref{noreason}}
+
+I think that holding an extremely strong oppinion, i.e. that there is a chance of $a$ being peculiar, without there being any reason for that, and without us having a reason to believe that, is the one of the best example of irrational beliefs. It could only be better if we would have reasons to believe otherwise.
+
+But we do actually have reasons to believe otherwise. While there are better examples, consider that there are people claiming that they had a revelation about our world being created. One may believe that the probability that these people are lying is (very) high, but I don't think anyone can reasonably believe that this probability is 1.
+
 \section{Why axiom \ref{noreason} does not hold if our universe is created}
+
+
 
 \end{document}
