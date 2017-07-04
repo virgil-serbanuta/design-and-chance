@@ -93,7 +93,7 @@ An \definitie{approximate universe description} is a universe description which 
 
 Note that we may have universes for which we can approximate the future state only with a probability $p$ and only for a limited time $\Delta t$. Then a grup of such restricts, $\eta>0$, $p>0$ and $\Delta t>0$, will be called a \definitie{level of approximation}.
 
-For a given universe\svn{and some beings inside of it?} or a region of that universe\svn{did I define this?}, given a level of approximation, we will pick a canonical description in the following way: first, only descriptions which approximate the universe with that level of aproximation are considered, forming a set $S$. If $S$ contains at least one finite description, then we pick the shortest such description as \ghilimele{the description}, breaking ties by using the lexicographic order. Otherwise, we simply say that the universe (region) has an infinite description, and we will abuse the terminology a bit and pick $S$ as the canonical description\svn{Whoa, did I just pick the entire set as the description? Does it actually work? If yes, then that's cool!}. If the level of approximation is obvious from the context, we will call this canonical description \definitie{the universe's description} or the \definition{universe region's description}.
+For a given universe \svn{and some beings inside of it?}or region of a universe\svn{did I define this?}, given a level of approximation, we will pick a canonical description in the following way: first, only descriptions which approximate the universe with that level of aproximation are considered, forming a set $S$. If $S$ contains at least one finite description, then we pick the shortest such description as \ghilimele{the description}, breaking ties by using the lexicographic order. Otherwise, we simply say that the universe (region) has an infinite description, and we will abuse the terminology a bit and pick $S$ as the canonical description\svn{Whoa, did I just pick the entire set as the description? Does it actually work? If yes, then that's cool!}. If the level of approximation is obvious from the context, we will call this canonical description \definitie{the universe's description} or the \definitie{universe region's description}.
 
 One could use a well-ordering on the real numbers to choose the lowest description as the universe's description, but that will complicate things without any benefit.
 
@@ -101,9 +101,9 @@ In the following, we will only talk about universes (or universe regions) which 
 
 \section{Axioms}
 
-In the following, OURS could be either \ghilimele{our universe}, \ghilimele{our galaxy from some time around its beginnings until some time around its possible end/merger with a larger galaxy/etc.} or \ghilimele{the observable region of our universe extended as much as possible, in a sane way, through time}, or anything similar. Let us say it is \ghilimele{the observable region of our universe, extended in time}.
+In the following, OURS could be either \ghilimele{our universe}, \ghilimele{our galaxy from some time around its beginnings until some time around its possible end} or \ghilimele{the observable region of our universe extended as much as possible, in a sane way, through time}, or anything similar. Let us say it is \ghilimele{the observable region of our universe, extended in time}.
 
-If our universe is not created, then there is a level of approximation $L$ and a rational number $r$ such that the following axioms hold. If it is created, then axiom \ref{noreason} does not hold.\svn{Explain why.}
+If our universe is not created, then there is a level of approximation $L$ and a rational number $r$ such that the following axioms hold. If it is created, then axiom \ref{noreason} does not hold.\svn{Explain why. Well, there is nothing to explain, these axioms are true in all cases. Think more about this.}
 
 \begin{enumerate}
 \item \label{countablecovering} Given a positive rational size $q>r$, OURS can be covered by a set that is at most countable of time-space hypercubes of size $q$.
@@ -115,7 +115,7 @@ If our universe is not created, then there is a level of approximation $L$ and a
   \begin{enumerate}
     \item One can specify its limits precisely enough (i.e. within the level of approximation $L$) using a finte number of words. As an example, one could choose a time-space region that includes our solar system from Mars' orbit to Pluto's, through all the time where its position can be specified reasonably using its current position as a basis.
     \item We could use a finite description $d_{ours}$ to describe this region within the level of approximation $L$. As an example one could use classical mechanics, maybe with some chemistry and some quantum physics (deterministic) approximations to describe our solar system fairly well.
-    \item $R_{ours}$ is outside the part of our universe which is essential for our existence, e.g. outside of Earth's orbit around Sun. If, when looking back in time, what happens outside Earth's orbit becomes essential for us, we stop the time-space region after that time.
+    \item $R_{ours}$ is outside the part of our universe which is essential for our existence, e.g. outside of Earth's orbit around Sun. If we choose that as our time-space region, when looking back in time, what happens in this region may become essential for us, say at some time $t_0$. This simply means that we will need to start the time-space region after that time $t_0$.
   \end{enumerate}
 \item \label{uncountable} There is a set $D$ of descriptions of universe regions such that the following are true:
   \begin{enumerate}
@@ -128,7 +128,7 @@ If our universe is not created, then there is a level of approximation $L$ and a
       \end{enumerate}
     \item $d_{ours}\in D$
   \end{enumerate}
-\item \label{infinitechain} The probability that there are a series of $meta-meta-\dots meta-$universes, i.e. $(meta-)^n$universes with $n\ge 0$, such that the following are true, is $0$:
+\item \label{infinitechain} The probability that there is a series of $meta-meta-\dots meta-$universes, i.e. $(meta-)^n$universes with $n\ge 0$, such that the following are true, is $0$:
   \begin{enumerate}
     \item our universe is the $(meta-)^0$universe;
     \item the laws of the $(meta-)^{n-1}$universe which are relevant to us in one way or another are the way they are because of the laws of the $(meta-)^n$universe, for all $n > 0$;
@@ -136,7 +136,7 @@ If our universe is not created, then there is a level of approximation $L$ and a
   \end{enumerate}
   \begin{itemize}
     \item Note that the term $meta-$universe here is used loosely, it just means that there is something outside of a universe, which is not an intelligent being, which is a reason (as in axiom \ref{noreason}) for the laws of our universe.
-    \item Note that the rule that all possible universes exist could be considered a $meta-$universe.
+    \item Note that the rule\svn{This is not a rule.} that all possible universes exist could be considered a $meta-$universe.
   \end{itemize}
 \item \label{noreason} If $A$ has the same cardinality as $\reale$ and one observes an element $a\in A$, and there is absolutely no reason for $a$ being observed over any other element, then $a$ is generic.
   \begin{itemize}
@@ -147,7 +147,12 @@ If our universe is not created, then there is a level of approximation $L$ and a
 
 \section{Proof}
 
-Let us estimate the probability of our universe not being created.
+\begin{theorem}
+  If there is no Creator then the probability that the region of space mentioned in axiom \ref{nonessentialhypercube}, $R_ours$, exists, is $0$.
+\end{theorem}
+
+\begin{proof}
+%Let us estimate the probability of our universe not being created.
 
 First, let us note that the set of finite descriptions is countable, while, from axiom \ref{uncountable}, the total set of descriptions $D$ is not countable. This means that finite descriptions are peculiar.
 
@@ -163,7 +168,18 @@ In general, if there is an $n$ such that the $(meta-)^{n}$universe is not includ
 
 So the only way in which $H$'s probability was not proven as being $0$ above is when there is an infinite chain of $(meta-)^{n}$universes, which, by axiom \ref{infinitechain}, has a $0$ probability.
 
-Then $H$'s probability is $0$ for all cases, which means that the probability of our universe not being created in $0$.
+Then $H$'s probability is $0$ for all cases
+\end{proof}
+
+\begin{theorem}
+If there is a Creator, then the probability that $R_ours$ exists may be greater than $0$.
+\end{theorem}
+
+\begin{theorem}
+With probability $1$, our universe is created.
+\end{theorem}
+
+This means that the probability of our universe not being created in $0$.
 
 \section{Why the axioms hold if our universe is not create}
 
