@@ -2,6 +2,7 @@
 ,draft
 ]{article}
 
+\usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{appendix}
 \usepackage[english]{babel}
@@ -43,15 +44,18 @@
 \newcommand{\tsfgata}[2][]{\todo[author=Traian,color=blue!40!white,#1]{DONE - #2}}
 \newcommand{\commentfootnote}[1][]{}
 
+\def\infordinala{\omega}
+\def\infordinalb{\omega_1}
 \def\reale{\mathbb{R}}
 \def\intregi{\mathbb{Z}}
 \def\complexe{\mathbb{C}}
 \def\naturale{\mathbb{N}}
+\def\designer{\mathbb{D}}
 \newcommand{\paper}[1]{paper}
 \newcommand{\multime}[1]{\left\{ #1 \right\}}
 \newcommand{\definitie}[1]{\textbf{#1}}
 \newcommand{\ghilimele}[1]{``#1"}
-\newcommand{\negat}[1]{\sim #1}
+\newcommand{\lnotat}[1]{\sim #1}
 \newcommand{\citare}[1]{(\cite{#1})} % TODO: Separate this in a version with parenthesis and one without.
 
 \newtheorem{afirmatie}{Claim}
@@ -128,14 +132,14 @@ If our universe is not created, then there is a level of approximation $L$ and a
       \end{enumerate}
     \item $d_{ours}\in D$
   \end{enumerate}
-\item \label{infinitechain} The probability that there is a series of $meta-meta-\dots meta-$universes, i.e. $(meta-)^n$universes with $n\ge 0$, such that the following are true, is $0$:
+\item \label{infinitechain} The probability that there is a meta-universe for each ordinal in $\infordinalb$\footnote{The set of all countable ordinals and the lowest uncountable ordinal}\svn{Is this the right cardinal?}, such that the following are true, is $0$:
   \begin{enumerate}
-    \item our universe is the $(meta-)^0$universe;
-    \item the laws of the $(meta-)^{n-1}$universe which are relevant to us in one way or another are the way they are because of the laws of the $(meta-)^n$universe, for all $n > 0$;
-    \item for all $n$, the laws of all the $(meta-)^n$universe that define the laws of the $(meta-)^{n-1}$universe are not generic.
+    \item our universe is the $0$-th meta universe;
+    \item each universe corresponding to an ordinal $\alpha$\svn{I should put the next paranthesis outside of the axioms somehow.} (the $\alpha$-th meta-universe or the $(meta-)^\alpha$ universe) determines, directly or indirectly, in all lower ordinals, the part of the laws of universes which is relevant to us in one way or another;
+    \item for all $\alpha$, the laws of the $\alpha$-th meta-universe that define the laws of the lower meta-universes are not generic.
   \end{enumerate}
   \begin{itemize}
-    \item Note that the term $meta-$universe here is used loosely, it just means that there is something outside of a universe, which is not an intelligent being, which is a reason (as in axiom \ref{noreason}) for the laws of our universe.
+    \item Note that the term meta-universe here is used loosely, it just means that there is something outside of a universe, which is not an intelligent being, which is a reason (as in axiom \ref{noreason}) for the laws of our universe.
     \item Note that the rule\svn{This is not a rule.} that all possible universes exist could be considered a $meta-$universe.
   \end{itemize}
 \item \label{noreason} If $A$ has the same cardinality as $\reale$ and one observes an element $a\in A$, and there is absolutely no reason for $a$ being observed over any other element, then $a$ is generic.
@@ -143,22 +147,20 @@ If our universe is not created, then there is a level of approximation $L$ and a
     \item Note that \ghilimele{there being a reason}, is used here in a very generic way, it just means that there is something that influences this observation. In particular, it does not necessarily mean that $a$ is determined by a proces. E.g. observing the time interval between two particles being emmited by a radioactive object has some reason behind it, i.e. the way our universe works means that some ranges of values have higher probabilities than others. Or maybe the way our universe works means that all possible values have equal probability, or that all possible value ranges have probabilities proportional with their size: This also means that \ghilimele{there is a reason} for observing an element.
     \item Note that the only case relevant to this paper when when we might observe something for which there is no reason, would be when we are observing our universe: if our universe is not created, it might be that there is nothing above our universe which would have an influence over how our universe is.
   \end{itemize}
+\item \label{ourplausible} $P(R_{ours} \mid Designer) > 0$ and $P(Designer)>0$.\svn{The introduction for all axioms, \ghilimele{If our universe is not created ...}, does not apply for this axiom. }
 \end {enumerate}
 
-\section{Proof}
-
 \begin{theorem}
-  If there is no Creator then the probability that the region of space mentioned in axiom \ref{nonessentialhypercube}, $R_ours$, exists, is $0$.
+  If there is no Designer then the probability that the region of space mentioned in axiom \ref{nonessentialhypercube}, $R_{ours}$, exists, is $0$.
 \end{theorem}
 
 \begin{proof}
-%Let us estimate the probability of our universe not being created.
 
 First, let us note that the set of finite descriptions is countable, while, from axiom \ref{uncountable}, the total set of descriptions $D$ is not countable. This means that finite descriptions are peculiar.
 
 Let $H$ be the hypercube in axiom \ref{nonessentialhypercube} and let $q$ be a rational number such that $H$ is of size greater than $q$. According to axiom \ref{countablecovering}, such a rational number exists.
 
-The laws of the hypercube are determined by the laws of our universe ($U$), i.e. the laws of our universe specify which of the possible sets of laws work in a specific hypercube. Let us consider how a conceivable universe determines the laws of a given hypercube. If these are chosen using a continuous distribution, with probability $1$ they are generic. However, $H$'s laws are peculiar, which means that the probability of having such a hypercube is $0$. Note that this is true even if $U$'s laws say that every possible hypercube exists: $H$'s probability among all $U$'s hypercubes is still $0$.
+The laws of the hypercube are determined by the laws of our universe ($U$), i.e. the laws of our universe specify which of the possible sets of laws work in a specific hypercube. Let us consider how a conceivable universe determines the laws of a given hypercube. If these are chosen using a continuous distribution, then they are generic with probability $1$. However, $H$'s laws are peculiar, which means that the probability of having such a hypercube is $0$. Note that this is true even if $U$'s laws say that every possible hypercube exists: $H$'s probability among all $U$'s hypercubes is still $0$.
 
 Let us see what happens if they are chosen using a discontinous distribution $d_0$ which belongs to our universe, which is the $(meta-)^0$universe. $d_0$'s discontinuities are at most countable, and they are determined by the $(meta-)^1$universe. If these discontinuities are generic, then $H$'s laws still have a probability $0$ of being peculiar.
 
@@ -166,22 +168,61 @@ Let us see what happens if at least one discontinuity is peculiar, let us call i
 
 In general, if there is an $n$ such that the $(meta-)^{n}$universe is not included in any way in anything that may influence the way its laws are, then, by axiom \ref{noreason}, $d_n$'s discontinuities are generic, which means that $H$'s probability is $0$. If not, then if $d_n$ does not have a peculiar discontinuity, then $H's$ probability is $0$. Otherwise, $d_{n+1}$ must have a peculiar discontinuity.
 
-So the only way in which $H$'s probability was not proven as being $0$ above is when there is an infinite chain of $(meta-)^{n}$universes, which, by axiom \ref{infinitechain}, has a $0$ probability.
+So the only way in which $H$'s probability was not proven as being $0$ above is when there is an infinite chain of $(meta-)^{n}$universes. But let us note that this entire infinite chain of universes has a countable number of peculiar discontinuities. Then either its probability is $0$ because of axiom \ref{noreason}, or there is an universe corresponding to $\infordinala$ which determines the laws of the previous universes. But if we denote by $d_{\infordinala}$ the probability distribution that describes the previous universes' discontinuities, then, as above, either the previous universes' probability is 0, or $d_{\infordinala}$ has peculiar discontinuities.
 
-Then $H$'s probability is $0$ for all cases
+Note that, as long as $\alpha$ is a countable ordinal, if the discontinuities of all ordinals lower than $\alpha$ are peculiar, then either the probability of having these discontinuities is $0$ or $d_\alpha$ has peculiar discontinuities. So, by transfinite induction, for all ordinals lower than $\infordinalb$, $d_alpha$ has peculiar discontinuities. From axiom \ref{infinitechain}, the probability of this happening is $0$.
+
+Then $H$'s probability is $0$ for all cases.
 \end{proof}
-
-\begin{theorem}
-If there is a Creator, then the probability that $R_ours$ exists may be greater than $0$.
-\end{theorem}
 
 \begin{theorem}
 With probability $1$, our universe is created.
 \end{theorem}
 
-This means that the probability of our universe not being created in $0$.
+\begin{proof}
 
-\section{Why the axioms hold if our universe is not create}
+Let $A$ and $B$ be disjoint events.
+
+\begin{equation*}
+\begin{split}
+P(A \lor B \mid C) &= \frac{P((A \lor B) \land C)}{P(C)} \\
+                   &= \frac{P((A \land C) \lor (B \land C))}{P(C)} \\
+                   &= \frac{P(A \land C)}{P(C)} + \frac{P(B \land C)}{P(C)} \\
+                   &= P(A\mid C) + P(B\mid C). 
+\end{split}
+\end{equation*}
+
+If $P(A \lor B) = 1$:
+
+\begin{equation*}
+\begin{split}
+P(C) &= P(C \land (A \lor B)) = P(C \land A) + P(C \land B) \\
+      &= P(C \mid A) P(A) + P(C \mid B) P(B).
+\end{split}
+\end{equation*}
+
+Let $\designer$ be the hypothesis that our universe is designed.
+
+\begin{equation*}
+\begin{split}
+P(R_{ours}) &= P(R_{ours} \mid \designer) P(\designer) + P(R_{ours} | \lnot \designer) P(\lnot \designer) \\
+            &= P(R_{ours} \mid \designer) P(\designer) > 0.
+\end{split}
+\end{equation*}
+
+$$P(\lnot \designer \mid R_{ours}) = \frac{P(R_{ours} \mid \lnot \designer) P(\lnot \designer)}{P(R_{ours})} = 0.$$
+
+\begin{equation*}
+\begin{split}
+1 &= P(\designer \lor \lnot \designer \mid R_{ours}) \\
+  &= P(\designer \mid R_{ours}) + P(\lnot \designer \mid R_{ours}) \\
+  &= P(\designer \mid R_{ours}).
+\end{split}
+\end{equation*}
+
+\end{proof}
+
+\section{Why the axioms hold if our universe is not created}
 
 \subsection{Axiom \ref{countablecovering}}
 
@@ -191,7 +232,7 @@ While this could certainly be false, it would mean that almost everything that w
 
 \subsection{Axiom \ref{nonessentialhypercube}}
 
-One example of a region that fits axiom \ref{nonessentialhypercube} would be a time-space region $R_{ours}$ that includes our solar system from Mars' orbit to Pluto's, through all the time where its position can be specified reasonably using its current position as a basis. One could use classical mechanics, maybe with some chemistry and some quantum physics (deterministic) approximations to describe our solar system fairly well. Also, in recent-ish history, this $R_{ours}$ seems non-essential for our existence. We could extend this region in the past and future until it becomes essential.
+One example of a region that fits axiom \ref{nonessentialhypercube} would be a time-space region $R_{ours}$ that includes our solar system from Mars' orbit to Pluto's, through all the time where its position can be specified reasonably using its current position as a basis. One could use classical mechanics, maybe with some chemistry and some quantum physics (deterministic) approximations to describe our solar system fairly well. Also, in recent-ish history, this $R_{ours}$ seems non-essential for our existence. We can extend this region in the past and future until it becomes essential.
 
 Even if, somehow, this region is essential for our existence, we could go outside of our solar sistem, or even outside of our galaxy to find a good region.
 
@@ -203,20 +244,34 @@ One could imagine describing what is outside of Earth's orbit by (almost) any co
 
 \subsection{Axiom \ref{infinitechain}}
 
-Note that this axiom describes the existence of something for which we don't have any proof. Even more, this axiom describes something which is infinitely peculiar, and could be made even more peculiar, e.g. is there something outside the infinite series of $(meta-)^n$universes that can be the source of this peculiarness?\svn{does it work in a similar way, i.e. continuous distributions with peculiar discontinuities? If not, I should remove this}.
+Note that to this axiom assigns a zero probability for the existence of something for which we don't have any kind of confirmation, no matter how weak. Not having any confirmation might not be enough for assigning a zero probability to it, but this axiom describes something which is infinitely peculiar, and this infinite is uncountable.
 
-This axiom requires a strong faith in something for which we don't have any reason to believe. There is no chance of a revelation, or any other means of having even the weakest hint about the existence of this chain of $meta-$universes. I guess that almost any theist would be in a much better position than anyone believing that this axiom does not hold.
+This axiom requires a strong faith in something for which we don't have any reason to believe. There is no chance of a revelation, or any other means of having even the weakest hint about the existence of this well-ordered structure of meta-universes. I guess that almost any theist would be in a much better position than anyone believing that this axiom does not hold.
 
-If there is a value $p < 1$ such that the probability of a peculiar $meta^n-$universe existing if a peculiar $meta^{n-1}-$universe exists is at most $p$, then the probability of all of them existing is lower than $p^n$ for any $n$, so it is $0$. Then the probability of a $meta^n-$universe existing needs to converge at $1$ fast enough, so we actually need some very strong beliefs about these meta-universes.
+As an example, let us consider only the universes corresponding to finite ordinals. If there is a value $p < 1$ such that the probability of a peculiar $meta^n-$universe existing if a peculiar $meta^{n-1}-$universe exists is at most $p$, then the probability of all of them existing is lower than $p^n$ for any $n$, so it is $0$. In order to have a non-zero probability, we need the probability of a $meta^n-$universe existing to converge at $1$, and it can't simply converge to $1$, it needs to converge fast enough so that the product of these probabilities converges to something greater that 0. That in itself means that we to believe in a very strong claim about these meta-universes. However, we need the total probability of an uncountable set of peculiar universes to be greater than 0, which is an incomparably stronger claim.
 
 \subsection{Axiom \ref{noreason}}
 
-I think that holding an extremely strong oppinion, i.e. that there is a chance of $a$ being peculiar, without there being any reason for that, and without us having a reason to believe that, is the one of the best example of irrational beliefs. It could only be better if we would have reasons to believe otherwise.
+I think that believing in an extremely strong claim, i.e. that there is a chance of $a$ being peculiar, without there being any reason for that, and without us having any reason to believe it, is a very good example of an irrational belief. It could only be better if we would have reasons to believe otherwise.
 
-But we do actually have reasons to believe otherwise. While there are better examples, consider that there are people claiming that they had a revelation about our world being created. One may believe that the probability that these people are lying is (very) high, but I don't think anyone can reasonably believe that this probability is 1.
+But we do actually have reasons to believe otherwise. While there are better examples, consider that there are people claiming that they had a revelation about our world being created. One may believe that the probability that these people are lying is (very) high, but I don't think anyone can reasonably believe that this probability is $1$.
 
-\section{Why axiom \ref{noreason} does not hold if our universe is created}
+\subsection{Axiom \ref{ourplausible}}
 
+There are a few ways to go about this:
 
+1. Simply stating that design means that non-continuous distributions are used and that it's the only thing that can explain this 0 probability. I wouldn't find this to be very convincing because even if it's a non-continuous distribution, the same reasoning as above could be used.
+
+2. State that there is a non-zero probability that someone would design a universe for beings with finite mathematical power, and that there is a non-zero probability that this means that the universe can be understood by those beings. This is better, but it's still not clear why there is a non-zero probability for designing for beings with finite mathematical power.
+
+3. Say that things may be different if we had any hint about the existence of the $\infordinalb$ set of peculiar universes. However, we don't, but we have a hint about a Designer that designed the universe for us, which means that axiom \ref{noreason} does not apply. It's not clear why this hint would help to change a $0$ probability in a non-zero one.
+
+4. Make a difference between a person and a dead meta-universe that makes it clear that peculiarness is expected.
+
+5. Use Swinburne's argument about why would God create human-like beings.
+
+6. Make an argument that there is a non-zero probability that a Designer may want variation, so He may want to create different kinds of things: things of higher complexity and things of lower complexity, so there is a discontinuity for peculiar things.
+
+Still, one may want to state this as an axiom and argue about it philosophically.
 
 \end{document}
