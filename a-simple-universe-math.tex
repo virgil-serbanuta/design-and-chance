@@ -72,32 +72,37 @@
   This \paper{} presents an argument that, with probability $1$, the laws that govern a non-designed universe are infinitely complex at any level of observation. From this it follows that there is a $0$ probability of us living in a non-designed universe. 
 \end{abstract}
 
-\section{Should sort these}
+\section{Introductive notions}
 
-Let $A$ be a set with the same cardinality as $\reale$. Let $F$ be the set of all mathematical predicates of one variable over $A$ that can be written as a finite formula. Let $A_f=\multime{a\in A\mid f(a) \mbox{ is true}}$. Given a probability distribution over $A$, we define $P(f)=P(A_f)$. Let $F_0$ be the set of all elements of $F$ such that their probability is $0$ for all continuous probability distributions over $A$, i.e. $F_0=\multime{f\in F\mid P(A_f)=0 \mbox{ for all continuous probability distributions over } A}$.
+\subsection{Probabilities}
+
+Let $A$ be a set with the same cardinality as $\reale$. Let $F$ be the set of all mathematical predicates of one variable over $A$ that can be written as a finite formula. If $f$ is such a predicate then let $A_f$ be the subset of $A$ where $f$ is true, i.e. $A_f=\multime{a\in A\mid f(a) \mbox{ is true}}$. Given a probability distribution over $A$, we define $P(f)=P(A_f)$.
+
+Let $F_0$ be the set of all elements of $F$ such that their probability is $0$ for all continuous probability distributions over $A$, i.e. $$F_0=\multime{f\in F\mid P(A_f)=0 \mbox{ for all continuous probability distributions over } A}.$$
+As an example, any predicate which is true for a finite subset of elements, i.e. $A_f$ is finite, would belong to $F_0$. Let us identify by $A_0$ the set of elements of $A$ for which at least one predicate of $F_0$ is true, i.e.
+$$A_0=\multime{a \in A\mid \exists f\in F_0 \mbox{ with } f(a)\mbox{ true} }.$$
+Let us also denote by $F_1$ and $A_1$ the complements of $F_0$ and $A_0$, respectively.
 
 In the following we will assume that we are using a continuous probability distribution over $A$.
 
-Let us note that $F$ is countable, so $F_0$ is at most countable. Then, obviously, $P(F_0)=0$, so the probability of its complement is $1$, i.e. $P(F\setminus F_0)=1$\svn{Is this the best way to denote the complement?}.
-
-Then let us say that an element $a\in A$ is \definitie{generic} if no predicate from $F_0$ is true for $a$. Let us say that $a$ is \definitie{peculiar} if it is not generic, i.e. if there is a predicate $f\in F_0$ such that $f(a)$ is true. Then $P(x\mbox{ is generic}) = P(F\setminus F_0) = 1$ and $P(x\mbox{ is peculiar}) = P(F_0) = 0$.
+Let us note that $F$ is countable, so $F_0$ is at most countable. Then, obviously, $P(F_0)=0$, so the probability of its complement, $F_1$, is $1$. Similarly, $P(A_0) = 0$ and $P(A_1) = 1$ which justifies the indexes used for these. Then let us say that an element $a\in A_1$ is \definitie{generic} and an element $a\in A_0$ is \definitie{peculiar}. Then we could rewrite the equalities above to $P(x\mbox{ is generic}) = 1$ and $P(x\mbox{ is peculiar}) = 0$.
 \svn{I should actually use the \ghilimele{is finite} predicate or something like that.}
 
-Let us consider all universes for which the \ghilimele{state of the universe at a given moment in time}, or something close enough to it, is something that makes sense. As an example, one could consider a universe in which there are space-time points whose time can't be compared. In such a case one might (or might not) be able to replace the state of the universe at a given moment in time with the state of the universe for a section through a universe's space-time that splits the universe in three parts: the section itself, the points which are before the section in time, and the points which are after the section in time.
+\subsection{Universe models}
+
+Let us consider all universes for which the \ghilimele{state of the universe at a given moment in time}, or something close enough to it, makes sense. As an example of something close enough, one could consider a universe with a space-time, but in which there are some space-time points whose time can't be compared. In such a case one might (or might not) be able to replace the state of the universe at a given moment in time with the state of the universe for a section through a universe's space-time that splits the universe in three parts: the section itself, the points which are before the section in time, and the points which are after the section in time.
 
 To keep the exposition simple, in the following I will use \ghilimele{state of the universe at a given moment in time}, but one should replace it with one's favourite alternative concept.
 
-Then a \definitie{universe description} is a mathematical theory that has a set of axioms which is at most countable and which allows making predictions about the future state of the universe given its state at a certain moment in time. A \definitie{universe region description} is something similar, but only for a given space-time region of a universe. As an example, for a deterministic universe there might exist a description which allows one to fully predict the future state given the state at any moment in time, but a universe description does not have to predict everything.
+Then a \definitie{universe description} is a mathematical theory that has a set of axioms which is at most countable and which allows making predictions about the future state of the universe given its state at a certain moment in time. A \definitie{universe region description} is something similar, but only for a given space-time region of a universe. In the best case, for a deterministic universe, there might exist a description which allows one to correctly predict the entire future state given the state at any moment in time, but a universe description as defined here does not have to predict everything and, even when it predicts something, it does not have to always be correct.
 
-Note that the data available for making predictions is dependent on who is making the prediction, which, in turn, means that different universe descriptions may be useful in different context. As an example, in a single universe like ours there may be beings which can observe its full present state,beings who can observe all types of things in the universe, but can only observe a limited amount of space around them, and beings who can't observe a large number of things in the universe, and whose influence on the things they can observe shows up as random noise. Each of these types of beings may discover and may prefere a different kind of universe description.
+Note that the data available for making predictions is dependent on who is making the prediction, which, in turn, means that different universe descriptions may be useful in different context. As an example, in a single universe like ours there may be many kinds of beings: beings which can observe its full present state, beings which could observe all types of things in the universe, but which at a given time can only observe a limited amount of space around them, and beings which are blind to many kinds of things in the universe, and the influence of those things on the things they can observe shows up as random noise. Each of these types of beings may discover and may prefer different kinds of universe descriptions.
 
 In order to handle this dependence on who observes the universe in a reasonable way, in the axioms below we will work with universes that contain intelligent beings \svn{check that I mentioned this} and all predictions would be relative to what these intelligent beings could observe\svn{say that these beings are included implicitly everywhere or include them explicitly everywhere}.
 
-An \definitie{approximate universe description} is a universe description which allows one to approximate the future state of the universe with a precision $\eta$ from its state at a given moment in time\svn{dubious, until now universe descriptions did not need to cover everything, they could have errors, or they could be something that does not actually apply at all to a universe. What is the purpose of this? Wouldn't it be better to just ask how good is a description and introduce p, deltat and eta this way?}. An universe for which such a description exists could be called deterministic with precision $\eta$.
+A universe description for which we don't know how good it is would be less useful. Let us try to specify how good an univese description is. An \definitie{approximate universe description} with a \definitie{level of approximation} $\eta>0$, $p>0$ and $\Delta t>0$ is a universe description which allows one to approximate the future state of the universe with a precision $\eta$, with a probability $p>0$ for a prediction to be correct\svn{Do I need the probability of the prediction to be correct or do I need to cover a fraction p of the world?} and for a limited amount of time $\Delta t$.
 
-Note that we may have universes for which we can approximate the future state only with a probability $p$ and only for a limited time $\Delta t$. Then a grup of such restricts, $\eta>0$, $p>0$ and $\Delta t>0$, will be called a \definitie{level of approximation}.
-
-For a given universe \svn{and some beings inside of it?}or region of a universe\svn{did I define this?}, given a level of approximation, we will pick a canonical description in the following way: first, only descriptions which approximate the universe with that level of aproximation are considered, forming a set $S$. If $S$ contains at least one finite description, then we pick the shortest such description as \ghilimele{the description}, breaking ties by using the lexicographic order. Otherwise, we simply say that the universe (region) has an infinite description, and we will abuse the terminology a bit and pick $S$ as the canonical description\svn{Whoa, did I just pick the entire set as the description? Does it actually work? If yes, then that's cool!}. If the level of approximation is obvious from the context, we will call this canonical description \definitie{the universe's description} or the \definitie{universe region's description}.
+For a given universe \svn{and some beings inside of it?}or region of a universe\svn{did I define this?}, given a level of approximation, we will pick a canonical description in the following way: Let $S$ be the set of descriptions which approximate the universe with the given level of aproximation. If $S$ contains at least one finite description, then we pick the shortest such description as \ghilimele{the canonical description}, breaking ties by using the lexicographic order. Otherwise, we simply say that the universe (region) has an infinite description, and we will abuse the terminology a bit by picking $S$ as the canonical description\svn{Whoa, did I just pick the entire set as the description? Does it actually work? If yes, then that's cool!}. If the level of approximation is obvious from the context, we will call this canonical description \definitie{the universe's description} or the \definitie{universe region's description}.
 
 One could use a well-ordering on the real numbers to choose the lowest description as the universe's description, but that will complicate things without any benefit.
 
@@ -105,9 +110,11 @@ In the following, we will only talk about universes (or universe regions) which 
 
 \section{Axioms}
 
-In the following, OURS could be either \ghilimele{our universe}, \ghilimele{our galaxy from some time around its beginnings until some time around its possible end} or \ghilimele{the observable region of our universe extended as much as possible, in a sane way, through time}, or anything similar. Let us say it is \ghilimele{the observable region of our universe, extended in time}.
+In the following, OURS could be either \ghilimele{our universe}, \ghilimele{our galaxy from some time around its beginnings until some time around its possible end} or \ghilimele{the observable region of our universe extended as much as possible, in a sane way, through time}, or anything similar. To make it easier to talk about it, let us pick the last option.
 
-If our universe is not designed, then there is a level of approximation $L$ and a rational number $r$ such that the following axioms hold. If it is designed, then axiom \ref{noreason} does not hold.\svn{Explain why. Well, there is nothing to explain, these axioms are true in all cases. Think more about this.}
+Whenever we are talking about descriptions of OURS, we, humans, are the intelligent beings which may use these descriptions.
+
+There is a level of approximation $L$ and a rational number $r$ such that the following axioms hold.
 
 \begin{enumerate}
 \item \label{countablecovering} Given a positive rational size $q>r$, OURS can be covered by a set that is at most countable of time-space hypercubes of size $q$.
@@ -117,8 +124,8 @@ If our universe is not designed, then there is a level of approximation $L$ and 
 
 \item \label{nonessentialhypercube} There is a non-trivial (i.e. it contains a non-empty hypercube of size greater than $r$) time-space region of OURS, $R_{ours}$ with the following properties:
   \begin{enumerate}
-    \item One can specify its limits precisely enough (i.e. within the level of approximation $L$) using a finte number of words. As an example, one could choose a time-space region that includes our solar system from Mars' orbit to Pluto's, through all the time where its position can be specified reasonably using its current position as a basis.
-    \item We could use a finite description $d_{ours}$ to describe this region within the level of approximation $L$. As an example one could use classical mechanics, maybe with some chemistry and some quantum physics (deterministic) approximations to describe our solar system fairly well.
+    \item One can specify its limits precisely enough (i.e. within the level of approximation $L$) using a finite mathematical predicate. As an example, one could choose a time-space region in that contains the space from Mars' orbit to Pluto's, through all the past and future time where its position can be specified reasonably using its current position as a basis.
+    \item We could use a finite description $d_{ours}$ to describe this region within the level of approximation $L$. As an example one could use classical mechanics, maybe with some chemistry and some quantum physics (deterministic) approximations to describe our solar system fairly well. \svn{These examples are repeated in the "Why are these axioms reasonable" section. Maybe I should delete them here.}
     \item $R_{ours}$ is outside the part of our universe which is essential for our existence, e.g. outside of Earth's orbit around Sun. If we choose that as our time-space region, when looking back in time, what happens in this region may become essential for us, say at some time $t_0$. This simply means that we will need to start the time-space region after that time $t_0$.
   \end{enumerate}
 \item \label{uncountable} There is a set $D$ of descriptions of universe regions such that the following are true:
@@ -147,8 +154,10 @@ If our universe is not designed, then there is a level of approximation $L$ and 
     \item Note that \ghilimele{there being a reason}, is used here in a very generic way, it just means that there is something that influences this observation. In particular, it does not necessarily mean that $a$ is determined by a proces. E.g. observing the time interval between two particles being emmited by a radioactive object has some reason behind it, i.e. the way our universe works means that some ranges of values have higher probabilities than others. Or maybe the way our universe works means that all possible values have equal probability, or that all possible value ranges have probabilities proportional with their size: This also means that \ghilimele{there is a reason} for observing an element.
     \item Note that the only case relevant to this paper when when we might observe something for which there is no reason, would be when we are observing our universe: if our universe is not designed, it might be that there is nothing above our universe which would have an influence over how our universe is.
   \end{itemize}
-\item \label{ourplausible} $P(R_{ours} \mid Designer) > 0$ and $P(Designer)>0$.\svn{The introduction for all axioms, \ghilimele{If our universe is not designed ...}, does not apply for this axiom. }
+\item \label{ourplausible} $P(R_{ours} \mid Designer) > 0$ and $P(Designer)>0$.
 \end {enumerate}
+
+\section{Results}
 
 \begin{theorem}
   If there is no Designer then the probability that the region of space mentioned in axiom \ref{nonessentialhypercube}, $R_{ours}$, exists, is $0$.
@@ -160,17 +169,17 @@ First, let us note that the set of finite descriptions is countable, while, from
 
 Let $H$ be the hypercube in axiom \ref{nonessentialhypercube} and let $q$ be a rational number such that $H$ is of size greater than $q$. According to axiom \ref{countablecovering}, such a rational number exists.
 
-The laws of the hypercube are determined by the laws of our universe ($U$), i.e. the laws of our universe specify which of the possible sets of laws work in a specific hypercube. Let us consider how a conceivable universe determines the laws of a given hypercube. If these are chosen using a continuous distribution, then they are generic with probability $1$. However, $H$'s laws are peculiar, which means that the probability of having such a hypercube is $0$. Note that this is true even if $U$'s laws say that every possible hypercube exists: $H$'s probability among all $U$'s hypercubes is still $0$.
+The laws of the hypercube are determined by the laws of our universe ($U$), i.e. the laws of our universe specify which of the possible sets of laws work in a specific hypercube. Let us consider how a conceivable universe determines the laws of a given hypercube. If these are chosen using a continuous distribution, then they are generic with probability $1$. However, $H$'s laws are peculiar, which means that the probability of having such a hypercube is $0$. Note that this is true even if $U$'s laws say that every possible hypercube exists: $H$'s probability among all $U$'s hypercubes is still $0$.\svn{For this it is enough to say that there are two hypercubes with the same laws, not two hypercubes where I can predict enough things.}
 
-Let us see what happens if they are chosen using a discontinous distribution $d_0$ which belongs to our universe, which is the $(meta-)^0$universe. $d_0$'s discontinuities are at most countable, and they are determined by the $(meta-)^1$universe. If these discontinuities are generic, then $H$'s laws still have a probability $0$ of being peculiar.
+Let us see what happens if they are chosen using a discontinous distribution $d_0$ which belongs to our universe, which we will call the $(meta-)^0$universe from now on. Let us note that $d_0$'s discontinuities are at most countable. If these discontinuities are generic, then $H$'s laws have a $0$ probability of being peculiar. If there is no $(meta-)^1$universe, i.e. there is no reason for these discontinuities, then, from axiom \ref{noreason}, $d_0$'s discontinuities are, indeed, generic.
 
-Let us see what happens if at least one discontinuity is peculiar, let us call it $x_0$. Let $d_1$ be the distribution probability which specifies for which points $d_0$ is discontinuous. If $d_1$ is continuous, then the probability of $x_0$ being peculiar is $0$. If $d_1$ has discontinuities, they may be generic, which means that $H$'s probability is still $0$. If one of $d_1$'s discontinuities is peculiar, we repeat the same process.
+The only case when they may not be generic is if they are determined by the $(meta-)^1$universe. Let us assume that at least one discontinuity is peculiar, and let us call it $x_0$. Let $d_1$ be the distribution probability which specifies for which points $d_0$ is discontinuous. If $d_1$ is continuous, then the probability of $x_0$ being peculiar is $0$. If $d_1$ has discontinuities, they may be generic, which means that $H$'s probability is still $0$. As above, if there is no $(meta-)^2$universe, then these discontinuities are indeed generic, so let us assume that there is a $(meta-)^2$universe and that one of $d_1$'s discontinuities is peculiar. Then we can repeat the same reasoning.
 
-In general, if there is an $n$ such that the $(meta-)^{n}$universe is not included in any way in anything that may influence the way its laws are, then, by axiom \ref{noreason}, $d_n$'s discontinuities are generic, which means that $H$'s probability is $0$. If not, then if $d_n$ does not have a peculiar discontinuity, then $H's$ probability is $0$. Otherwise, $d_{n+1}$ must have a peculiar discontinuity.
+In general, if there is an $n$ such that the $(meta-)^{n}$universe is not included in anything that may influence the way its laws are, then, by axiom \ref{noreason}, $d_n$'s discontinuities are generic, which means that $H$'s probability is $0$. If it is included in a $(meta-)^{n+1}$universe and $d_n$ does not have a peculiar discontinuity, then $H's$ probability is $0$. To have a non-zero probability we need both a $(meta-)^{n+1}$universe and a peculiar discontinuity for $d_n$. But, in a similar way, this means that there is a $(meta-)^{n+2}$universe and $d_{n+1}$ must have a peculiar discontinuity.
 
-So the only way in which $H$'s probability was not proven as being $0$ above is when there is an infinite chain of $(meta-)^{n}$universes. But let us note that this entire infinite chain of universes has a countable number of peculiar discontinuities. Then either its probability is $0$ because of axiom \ref{noreason}, or there is an universe corresponding to $\infordinala$ which determines the laws of the previous universes. But if we denote by $d_{\infordinala}$ the probability distribution that describes the previous universes' discontinuities, then, as above, either the previous universes' probability is 0, or $d_{\infordinala}$ has peculiar discontinuities.
+So the only way in which $H$'s probability was not proven as being $0$ above is when there is an infinite chain of $(meta-)^{n}$universes. But let us note that this entire infinite chain of universes has a countable number of peculiar discontinuities. Then either its probability is $0$ because of axiom \ref{noreason}, or there is an universe corresponding to $\infordinala$\footnote{The lowest infinite ordinal} which determines the laws of the previous universes. But if we denote by $d_{\infordinala}$ the probability distribution that describes the previous universes' discontinuities, then, as above, either the previous universes' probability is 0, or $d_{\infordinala}$ has peculiar discontinuities.
 
-Note that, as long as $\alpha$ is a countable ordinal, if the discontinuities of all ordinals lower than $\alpha$ are peculiar, then either the probability of having these discontinuities is $0$ or $d_\alpha$ has peculiar discontinuities. So, by transfinite induction, for all ordinals lower than $\infordinalb$, $d_alpha$ has peculiar discontinuities. From axiom \ref{infinitechain}, the probability of this happening is $0$.
+Note that, as long as $\alpha$ is a countable ordinal, if the discontinuities of all ordinals lower than $\alpha$ are peculiar, then either the probability of having these discontinuities is $0$ or $d_\alpha$ has peculiar discontinuities. So, by transfinite induction, for all ordinals lower than $\infordinalb$, $d_\alpha$ has peculiar discontinuities. From axiom \ref{infinitechain}, the probability of this happening is $0$.
 
 Then $H$'s probability is $0$ for all cases.
 \end{proof}
@@ -224,15 +233,18 @@ $$P(\lnot \designer \mid R_{ours}) = \frac{P(R_{ours} \mid \lnot \designer) P(\l
 
 \end{proof}
 
-\section{Why the axioms hold if our universe is not designed}
+\section{Why the axioms hold}
 
 \subsection{Axiom \ref{countablecovering}}
 
-This axiom uses some basic facts that we believe about our universe: that our space-time can be approximated locally as an open set of $R^n$. It is actually even weaker than that: it just requires that, as far as we can observe, for a given level of approximation, OURS can be approximated by a certain kind of open subset of $R^n$.
+This axiom states that OURS can be covered by a set of hypercubes of a given size. While this could certainly be false, it is implied by some basic beliefs that we have about our universe, namely that there is a level of approximation for which the space and time close to us can be approximated locally by an open set of $R^n$.
 
-While this could certainly be false, it would mean that almost everything that we believe about OURS is wrong. In particular, everything that we believe about the distant past or future would likely be wrong by large margins. E.g. the dinosaurs could as well have dissapeared 1000 years ago or 1000 billion years ago.
+% While this could certainly be false, it would mean that almost everything that we believe about OURS is wrong. In particular, everything that we believe about the distant past or future would likely be wrong by large margins. E.g. the dinosaurs could as well have dissapeared 1000 years ago or 1000 billion years ago.
 
 \subsection{Axiom \ref{nonessentialhypercube}}
+
+This axiom states that there is a region of space and time for which we can, in principle, approximate both its position and its behaviour, and which would allow us to live if its behaviour was diffferent. Note that we don't actually have to provide an approximate behaviour for whatever is in that region, we just have to be able to build a mathematical model which would approximately predict that region's behaviour in a non-zero fraction of cases.
+\svn{But predicting depends on what is in that box. If we fill it with whatever weird particles, black holes, and so on, maybe things get harder. OTOH, maybe it works if we can predict at all.}
 
 One example of a region that fits axiom \ref{nonessentialhypercube} would be a time-space region $R_{ours}$ that includes our solar system from Mars' orbit to Pluto's, through all the time where its position can be specified reasonably using its current position as a basis. One could use classical mechanics, maybe with some chemistry and some quantum physics (deterministic) approximations to describe our solar system fairly well. Also, in recent-ish history, this $R_{ours}$ seems non-essential for our existence. We can extend this region in the past and future until it becomes essential.
 
@@ -240,40 +252,58 @@ Even if, somehow, this region is essential for our existence, we could go outsid
 
 \subsection{Axiom \ref{uncountable}}
 
-As argued above, OURS could have an approximate universe description given by classical mechanics, maybe with some additions.
+This axioms states that, for a given level of approximation, there is a large set of conceivable universes, in some respects, are similar to OURS, but which are, at the same time, wildly different. Also, OURS belongs to this set.
 
-One could imagine describing what is outside of Earth's orbit by (almost) any countable axiom system that still specifies $R^n$ as a base. Then this would produce a set of descriptions with the same cardinality as $\reale$, each of this universe would contain intelligent beings that use mathematics, and so on.
+To see why that is reasonable, let us first note that, in a similar way to axiom \ref{nonessentialhypercube}, OURS could have an approximate universe description given by classical mechanics, maybe with some additions.
+
+Also, for almost any countable axiom system that still has $R^n$ as a base, one could imagine an alternate universe in which what is inside (say) Mars' orbit stays the same as in ours, but what is what is outside of Mars' orbit is described by that axiom set. All of these countable axiom sets form a set of descriptions with the same cardinality as $\reale$, and each of these imaginary universes would contain intelligent beings that use mathematics, and so on.
 
 \subsection{Axiom \ref{infinitechain}}
 
-Note that to this axiom assigns a zero probability for the existence of something for which we don't have any kind of confirmation, no matter how weak. Not having any confirmation might not be enough for assigning a zero probability to it, but this axiom describes something which is infinitely peculiar, and this infinite is uncountable.
+This axiom assigns a zero probability for the existence of a non-countable, well-ordered sequences of universes, for which we don't have any kind of confirmation, no matter how weak. There is no chance of a revelation, or any other means of having even the weakest hint about its existence. Not having any confirmation might not be enough for assigning a zero probability to it, but this axiom describes something which is infinitely peculiar, and this infinite is uncountable. Negating this axiom would require a (very) strong faith in something for which we don't have any reason to believe.
 
-This axiom requires a strong faith in something for which we don't have any reason to believe. There is no chance of a revelation, or any other means of having even the weakest hint about the existence of this well-ordered structure of meta-universes. I guess that almost any theist would be in a much better position than anyone believing that this axiom does not hold.
+To get a hint of how strong this faith must be, let us consider only the universes corresponding to finite ordinals. If there is a value $p < 1$ such that the probability of a peculiar $meta^n-$universe existing if a peculiar $meta^{n-1}-$universe exists is at most $p$, then the probability of all of them existing is lower than $p^n$ for any $n$, so it is $0$.
 
-As an example, let us consider only the universes corresponding to finite ordinals. If there is a value $p < 1$ such that the probability of a peculiar $meta^n-$universe existing if a peculiar $meta^{n-1}-$universe exists is at most $p$, then the probability of all of them existing is lower than $p^n$ for any $n$, so it is $0$. In order to have a non-zero probability, we need the probability of a $meta^n-$universe existing to converge at $1$, and it can't simply converge to $1$, it needs to converge fast enough so that the product of these probabilities converges to something greater that 0. That in itself means that we to believe in a very strong claim about these meta-universes. However, we need the total probability of an uncountable set of peculiar universes to be greater than 0, which is an incomparably stronger claim.
+In order to have a non-zero probability, we need the probability of a $meta^n-$universe existing to converge at $1$, and it can't simply converge to $1$, it needs to converge fast enough so that the product of these probabilities converges to something greater that $0$. While that, in itself, is a very strong claim, it's not enough. We need to believe in an incomparably stronger claim, namely the total probability of an uncountable set of peculiar universes to be greater than $0$.
 
 \subsection{Axiom \ref{noreason}}
 
-I think that believing in an extremely strong claim, i.e. that there is a chance of $a$ being peculiar, without there being any reason for that, and without us having any reason to believe it, is a very good example of an irrational belief. It could only be better if we would have reasons to believe otherwise.
+I think that believing in one of the strongest claims one could make, i.e. that there is a chance of $a$ being peculiar, without there being any reason for that, and without us having any reason to believe it, is a very good example of an irrational belief.
 
-But we do actually have reasons to believe otherwise. While there are better examples, consider that there are people claiming that they had a revelation about our world being created. One may believe that the probability that these people are lying is (very) high, but I don't think anyone can reasonably believe that this probability is $1$.
+To take an example, let us assume that we, at some point in the future, somehow find out the perfect mathematical model for the universe and that we know that it is perfect and that there is no simpler model. Let us assume that this model (or any equivalent one) has a free parameter which could be any real number.
+
+Given all these, I think that it is completely unreasonable to believe that this free parameter is (say) an integer without it being determined, or at least influenced, from outside the universe. To generalize, since the set of real numbers which we can uniquely identify without using the "is the value of a certain universe parameter" property is peculiar, we can be fully confident that this parameter would not be in this set. Instead, it would be part of this set's complement, which is infinitely larger and contains almost all real numbers.
+
+%I think that believing in an extremely strong claim, i.e. that there is a chance of $a$ being peculiar, without there being any reason for that, and without us having any reason to believe it, is a very good example of an irrational belief. It could only be better if we would have reasons to believe otherwise.
+
+%But we do actually have reasons to believe otherwise. While there are better examples, consider that there are people claiming that they had a revelation about our world being created. One may believe that the probability that these people are lying is (very) high, but I don't think anyone can reasonably believe that this probability is $1$.
 
 \subsection{Axiom \ref{ourplausible}}
 
 There are a few ways to go about this:
 
-1. Simply stating that design means that non-continuous distributions are used and that it's the only thing that can explain this 0 probability. I wouldn't find this to be very convincing because even if it's a non-continuous distribution, the same reasoning as above could be used.
+1. Simply stating that design means that non-continuous distributions are used and that it's the only thing that can explain this $0$ probability. I wouldn't find this to be very convincing because even if it's a non-continuous distribution, the same reasoning as above could be used.
 
 2. State that there is a non-zero probability that someone would design a universe for beings with finite mathematical power, and that there is a non-zero probability that this means that the universe can be understood by those beings. This is better, but it's still not clear why there is a non-zero probability for designing for beings with finite mathematical power.
 
 3. Say that things may be different if we had any hint about the existence of the $\infordinalb$ set of peculiar universes. However, we don't, but we have a hint about a Designer that designed the universe for us, which means that axiom \ref{noreason} does not apply. It's not clear why this hint would help to change a $0$ probability in a non-zero one.
 
-4. Make a difference between a person and a dead meta-universe that makes it clear that peculiarness is expected.
+4. Make a difference between a person and a dead meta-universe that makes it clear that peculiarness is expected. One way to do that would be to start with the first point, namely that a Designer would have an intent when doing designs and that he attempts to pick the option which he expected to fulfill that intent in the best way possible. Therefore, optimally there is one design per intent, or, at least, a small number of designs, depending on how good the Designer is. There is a question of how big is the number of intents. So, if the intents are countable and the designer is somewhat capable, then we get a discontinuous probability distribution over universe descriptions.
+
+This, in itself, is not enough, we need to know why would a Designer have an intent which requires a peculiar universe.
+
+Now, it's true that we may not always be able to distinguish between a Designer and a blind force, and that we can only do that when the Design is peculiar, but still, that happens only when there's a non-zero chance that the Designer would do a peculiar design, so we need a separate argument for that.\svn{This may be fit for the introduction or something similar.}
+
+Still, there are some reasons for this non-zero chance.
+
+One is that variety is interesting and that this is a special type of variety, therefore maybe there is an intent which requires a peculiar universe. If the peculiar universes would be countable then we could distribute this non-zero probability such that all of them have a non-zero probability. If not, it's just our hope.\svn{How is it?}
+
+Another one is that a Designer's intent is about beings which can reason. If the Designer's power of reasoning is infinite, which is not an unreasonable assumption, then there are two options: the intent is also about beings with infinite reasoning power, or the intent is about beings with finite reasoning power. Now, if it happens that there are enough beings with infinite reasoning power\footnote{Say, $3$ such beings, but any number would do.}, then the Designer may also intend to design beings with finite reasoning power. If the Designer's power of reasoning is finite, then it's likely that the only option is to design other beings with finite reasoning power.\svn{Maybe reword this as "there is a non-zero chance that...".}
+
+But if the Designer designs beings with finite reasoning power, then the Designer may also design an environment where these beings can use their reasoning power effectively, i.e. an environment which, at the level an which these beings usually function, can be mostly understood by them, i.e. it has a finite approximate description which allows the prediction of a non-trivial number of things.
 
 5. Use Swinburne's argument about why would God create human-like beings.
 
 6. Make an argument that there is a non-zero probability that a Designer may want variation, so He may want to create different kinds of things: things of higher complexity and things of lower complexity, so there is a discontinuity for peculiar things.
-
-Still, one may want to state this as an axiom and argue about it philosophically.
 
 \end{document}
