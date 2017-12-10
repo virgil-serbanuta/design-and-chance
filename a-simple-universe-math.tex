@@ -100,7 +100,10 @@ Note that the data available for making predictions is dependent on who is makin
 
 In order to handle this dependence on who observes the universe in a reasonable way, in the axioms below we will work with universes that contain intelligent beings \svn{check that I mentioned this} and all predictions would be relative to what these intelligent beings could observe\svn{say that these beings are included implicitly everywhere or include them explicitly everywhere}.
 
-A universe description for which we don't know how good it is would be less useful. Let us try to specify how good an univese description is. An \definitie{approximate universe description} with a \definitie{level of approximation} $\eta>0$, $p>0$ and $\Delta t>0$ is a universe description which allows one to approximate the future state of the universe with a precision $\eta$, with a probability $p>0$ for a prediction to be correct\svn{Do I need the probability of the prediction to be correct or do I need to cover a fraction p of the world?} and for a limited amount of time $\Delta t$.
+A universe description for which we don't know how good it is would be less useful. Let us try to specify how good an univese description is. An \definitie{approximate universe description} with a \definitie{level of approximation} $\eta>0$, $p>0$ and $\Delta t>0$ is a universe description which allows one to approximate the future state of the universe with a precision $\eta$, with a probability $p>0$ for a prediction to be correct \svn{Do I need the probability of the prediction to be correct or do I need to cover a fraction p of the world?} and for a limited amount of time $\Delta t$.
+\svn{I must answer the following questions: exactly what does that probability of correct prediction mean? Is it an aggregate among all possible predictions? Does it mean that all of them need a p chance of being correct? Do I need a fraction of the universe here? All writable predictions are countable, so they all have a non-zero weighth, so the aggregate probability most likely can't be zero. Am I talking about provable predictions or about predictions which are true on models?}
+
+TODO: What is the probability of a prediction to be true? Let us say that we have a probability distribution for all the predictions that the intelligent beings could make and that p is the average probability of a prediction to be true.
 
 For a given universe \svn{and some beings inside of it?}or region of a universe\svn{did I define this?}, given a level of approximation, we will pick a canonical description in the following way: Let $S$ be the set of descriptions which approximate the universe with the given level of aproximation. If $S$ contains at least one finite description, then we pick the shortest such description as \ghilimele{the canonical description}, breaking ties by using the lexicographic order. Otherwise, we simply say that the universe (region) has an infinite description, and we will abuse the terminology a bit by picking $S$ as the canonical description\svn{Whoa, did I just pick the entire set as the description? Does it actually work? If yes, then that's cool!}. If the level of approximation is obvious from the context, we will call this canonical description \definitie{the universe's description} or the \definitie{universe region's description}.
 
@@ -114,7 +117,7 @@ In the following, OURS could be either \ghilimele{our universe}, \ghilimele{our 
 
 Whenever we are talking about descriptions of OURS, we, humans, are the intelligent beings which may use these descriptions.
 
-There is a level of approximation $L$ and a rational number $r$ such that the following axioms hold.
+There is a level of approximation $L$ and a rational number $r$ \svn{Do I need $r > \eta$?}such that the following axioms hold.
 
 \begin{enumerate}
 \item \label{countablecovering} Given a positive rational size $q>r$, OURS can be covered by a set that is at most countable of time-space hypercubes of size $q$.
@@ -122,11 +125,11 @@ There is a level of approximation $L$ and a rational number $r$ such that the fo
     \item Note that this axiom is stronger than needed, one could use open sets of size at most $q$ instead of hypercubes.
   \end{itemize}
 
-\item \label{nonessentialhypercube} There is a non-trivial (i.e. it contains a non-empty hypercube of size greater than $r$) time-space region of OURS, $R_{ours}$ with the following properties:
+\item \label{nonessentialhypercube} There is a time-space region of OURS which is non-trivial (i.e. it contains a non-empty hypercube of size greater than $r$), let us call it $R_{ours}$, with the following properties:
   \begin{enumerate}
     \item One can specify its limits precisely enough (i.e. within the level of approximation $L$) using a finite mathematical predicate. As an example, one could choose a time-space region in that contains the space from Mars' orbit to Pluto's, through all the past and future time where its position can be specified reasonably using its current position as a basis.
     \item We could use a finite description $d_{ours}$ to describe this region within the level of approximation $L$. As an example one could use classical mechanics, maybe with some chemistry and some quantum physics (deterministic) approximations to describe our solar system fairly well. \svn{These examples are repeated in the "Why are these axioms reasonable" section. Maybe I should delete them here.}
-    \item $R_{ours}$ is outside the part of our universe which is essential for our existence, e.g. outside of Earth's orbit around Sun. If we choose that as our time-space region, when looking back in time, what happens in this region may become essential for us, say at some time $t_0$. This simply means that we will need to start the time-space region after that time $t_0$.
+    \item $R_{ours}$ is outside the part of our universe which is essential for our existence, e.g. outside of Earth's orbit around Sun. If we choose that \svn{what does \ghilimele{that} mean here?}as our time-space region, when looking back in time, what happens in this region may become essential for us, say at some time $t_0$. This simply means that we will need to start the time-space region after that time $t_0$.
   \end{enumerate}
 \item \label{uncountable} There is a set $D$ of descriptions of universe regions such that the following are true:
   \begin{enumerate}
@@ -169,7 +172,7 @@ First, let us note that the set of finite descriptions is countable, while, from
 
 Let $H$ be the hypercube in axiom \ref{nonessentialhypercube} and let $q$ be a rational number such that $H$ is of size greater than $q$. According to axiom \ref{countablecovering}, such a rational number exists.
 
-The laws of the hypercube are determined by the laws of our universe ($U$), i.e. the laws of our universe specify which of the possible sets of laws work in a specific hypercube. Let us consider how a conceivable universe determines the laws of a given hypercube. If these are chosen using a continuous distribution, then they are generic with probability $1$. However, $H$'s laws are peculiar, which means that the probability of having such a hypercube is $0$. Note that this is true even if $U$'s laws say that every possible hypercube exists: $H$'s probability among all $U$'s hypercubes is still $0$.\svn{For this it is enough to say that there are two hypercubes with the same laws, not two hypercubes where I can predict enough things.}
+The laws of the hypercube are determined by the laws of our universe ($U$), i.e. the laws of our universe specify which of the possible sets of laws work in a specific hypercube. While it may be that the same observable laws apply in the same way accross the entire universe, this is likely a special case, so in a generic conceivable universe we will have a probability distribution over the entire set of descriptions. If a hypercube's laws are chosen using a continuous distribution, then they are generic with probability $1$. However, $H$'s laws are peculiar, which means that the probability of having such a hypercube is $0$. Note that this is true even if $U$'s laws say that every possible hypercube exists: $H$'s probability among all $U$'s hypercubes is still $0$.\svn{For this it is enough to say that there are two hypercubes with the same laws, not two hypercubes where I can predict enough things.}
 
 Let us see what happens if they are chosen using a discontinous distribution $d_0$ which belongs to our universe, which we will call the $(meta-)^0$universe from now on. Let us note that $d_0$'s discontinuities are at most countable. If these discontinuities are generic, then $H$'s laws have a $0$ probability of being peculiar. If there is no $(meta-)^1$universe, i.e. there is no reason for these discontinuities, then, from axiom \ref{noreason}, $d_0$'s discontinuities are, indeed, generic.
 
@@ -305,5 +308,49 @@ But if the Designer designs beings with finite reasoning power, then the Designe
 5. Use Swinburne's argument about why would God create human-like beings.
 
 6. Make an argument that there is a non-zero probability that a Designer may want variation, so He may want to create different kinds of things: things of higher complexity and things of lower complexity, so there is a discontinuity for peculiar things.
+
+\section{On models for our universe.}
+
+There are a few options: finite vs infinite universe, created vs non-created, complex everywhere vs complex only far away vs simple.
+
+1. If finite allows continuum complexity, then our universe is created.
+
+2. If finite does not allow continuum complexity, then, on the non-created branch, a universe can only be infinite and infinitely complex. By default there is nothing saying that this complexity should be close to us.
+
+\section{On models for our universe - 2}
+
+I need to show that the hypercube can have a continuum of optimal descriptions. This is not trivial, especially since the size of the hypercube may be smaller than the measuring error.
+
+I need to show the same for the entire universe. In the following, I'll assume that I did.
+
+On the other hand, if a finite hypercube can have only a countable set of optimal descriptions for a given approximation level, then finitness implies that our universe is designed, so either our universe is infinite, or it is designed.
+
+Also, an infinite observable universe with a finite observable description for a given approximation level implies design, so either our universe is infinite and has an infinite observable description for any approximation level, or it is designed.
+
+Let us assume that it is infinite, with an infinite observable description. We can split it into countable hypercubes of equal size. Obviously, we'll have a countable set of descriptions for them. We'll take any reasonable probability distribution on them. These hypercubes could be arranged in any way, and we have a continuum of arrangements. That's likely to not be useful here. However, let us take $pl$ to be the probability of having a hypercube of size $l$ that approximately follows the laws that we see. Let us assume that we split our space into hypercubes, and that we have the directions up, down, left, right, front, back. Taking any such hypercube, the probability of it following our laws is $pl$. If we take $n$ hypercubes, the probability of all following our laws is $pl^n$. So the probability of our universe not being created converges exponentially at $0$.
+
+\section{Larger region than needed}
+
+Wasn't this already handled above?
+
+\section{What happens when a hypercube does not have a continuum of possible optimal descriptions}
+
+TODO: this example is about infinity, not continuum. One can have an infinite number of descriptions, but it's less clear that this is compatible with our life. As an example, let us consider a hypercube that periodically emits light for half of the period, then stops for the second half. The light intensity is, in principle, unlimited, but, arguably, above a certain value, depending on its distance to us, our life may become impossible.
+
+While this example does not mean in itself that it's impossible to have a continuum of descriptions,
+
+If the universe is infinite, and the same set of rules stands, then one can make a similar argument as the above (TODO: expand). But we can't prove that the univers id infinite.
+
+If only a finite region of space around us has the same laws, then we can take a probability distribution over the set of laws and we can say that for each hypercube (i.e. cubic milimeter-milisecond) ouside the area essential for our life there is a probability $p$ of having the same set of laws as in our region. There are two questions here: 1. Is $p$ really a constant? 2. What is the value of $p$?
+
+We don't have any reason to believe otherwise, so, by default, $p$ shuld be a constant, with a value of $\frac{1}{possible optimal description count}$. Then, although we can't compute it since we don't have a prior probability, the probability that there is a Creator increases extremely fast with each hypercube that has the same approximate set of laws.
+
+However, instead of assuming that we have a constant probability, let us see if there is a deeper reason for that.
+
+First, since the set of hypercubes that we can observe is finite, let us number then from $1$ to $N$.
+
+Let us denote by $L$ the number of hypercubes that have the same set of laws as the ones in which we live. This is a constant of our universe. We should model it with a number randomly distributed in {0, .., N}. $P(L=n)$
+
+Hm.... If there is no universe above ours, there is no reason for hypercubes to be coordinated, so, looking from ouside, we should expect a generic probability $p$ that one of them has the same set of laws as our hypercubes. Since $p$ is generic, $p$ is not $1$. Therefore the probablilty of our universe, if not designed, is less or equal to $p^N$
 
 \end{document}
