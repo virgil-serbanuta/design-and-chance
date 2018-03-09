@@ -6,7 +6,7 @@
 \usepackage{amsthm}
 \usepackage{appendix}
 \usepackage[english]{babel}
- 
+
  %%%%%%%%%%%%%%%%%%v
 \usepackage{combelow}
 \usepackage{hyperref}
@@ -22,7 +22,7 @@
 %    style=authoryear
 %    style=alphabetic
     ]{biblatex}
-    
+
 \DeclareLanguageMapping{english}{english-apa}
 \addbibresource{design-argument.bib}
 
@@ -35,8 +35,8 @@
 \author{Virgil Șerbănuță\thanks{\href{mailto:design-and-chance@poarta.org}{design-and-chance@poarta.org}}}
 %\date{June 2015}
  %%%%%%%%%%%%%%%%%%^
- 
- 
+
+
 \usepackage{amsfonts}
 \usepackage[obeyDraft]{todonotes}
 \newcommand{\svn}[2][]{\todo[author=Virgil,color=red!25!white,#1]{#2}}
@@ -58,16 +58,20 @@
 \newcommand{\lnotat}[1]{\sim #1}
 \newcommand{\citare}[1]{(\cite{#1})} % TODO: Separate this in a version with parenthesis and one without.
 
+\newtheorem{definition}{Definition}
 \newtheorem{afirmatie}{Claim}
-\newtheorem{notatie}{Notation} 
+\newtheorem{notatie}{Notation}
 \newtheorem{theorem}{Theorem}[section]
- 
+\newtheorem{lemma}{Lemma}
+\newtheorem{axiom}{Axiom}
+\newtheorem{note}{Note}
+
 \begin{document}
 
  %%%%%%%%%%%%%%%%%%
 \maketitle
  %%%%%%%%%%%%%%%%%%
- 
+
 \begin{abstract}
   This \paper{} presents an argument that, with probability $1$, the laws that govern a non-designed universe are infinitely complex at any level of observation. From this it follows that there is a $0$ probability of us living in a non-designed universe. 
 \end{abstract}
@@ -87,6 +91,126 @@ In the following we will assume that we are using a continuous probability distr
 
 Let us note that $F$ is countable, so $F_0$ is at most countable. Then, obviously, $P(F_0)=0$, so the probability of its complement, $F_1$, is $1$. Similarly, $P(A_0) = 0$ and $P(A_1) = 1$ which justifies the indexes used for these. Then let us say that an element $a\in A_1$ is \definitie{generic} and an element $a\in A_0$ is \definitie{peculiar}. Then we could rewrite the equalities above to $P(x\mbox{ is generic}) = 1$ and $P(x\mbox{ is peculiar}) = 0$.
 \svn{I should actually use the \ghilimele{is finite} predicate or something like that.}
+
+\subsection{Ordinals}
+Ordinals are generalizations of natural numbers. Natural numbers can be defined by identifying $0$ with the empty set $\emptyset$, then by saying that each natural number is the set of natural numbers less than it. This means that $1$ is the set $\multime{0}=\multime{\emptyset}$, $2$ is the set $\multime{0, 1}=\multime{\emptyset, \multime{\emptyset}}$, and so on.
+
+Each of these natural numbers is an ordinal. To define the first ordinal that is larger than all the natural numbers, $\omega$, we will use the same rule: let $\omega$ to be the set of ordinals smaller than it, i.e the set of natural numbers, $\omega=\multime{0, 1, 2, \dots}$.
+
+Of course, the next ordinal, called $\omega + 1$, will be the set $\multime{1, 2, \dots \omega}$ and the next one, $\omega+2$, will be $\multime{1, 2, \dots \omega, \omega+1}$. We can contine and, in the same way, define $2\cdot\omega=\omega+\omega$ to be the ordinal that comes after all $\omega+n$ where n is a natural number\svn{Use finite ordinal instead of natural number.}.
+
+Then we can define $\omega\cdot 3$, $\omega\cdot 4$ and so on, and we can take $\omega\cdot \omega$ to be the ordinal that comes after all the ones defined by using the above rules.
+
+Let us note that $\omega$ is countable, and that all the ordinals that come after it are also countable. By using the same kind of reasonong as above we can produce other countable ordinals like $\omega^\omega$ (from ordinals like $\omega\cdot\omega\cdot\dots\cdot\omega$) and $\epsilon_0$ (from $\omega^{\omega^{\cdots^\omega}}$).
+
+After going through many similar processes, at some point we obtain the smallest uncountable ordinal, $\omega_1$, which is the set of all countable ordinals.
+
+Let us note that some ordinals, like all the finite ones except $0$, and like $\omega+1$, can be obtained from the previous one by using a succesor relation, i.e. $succesor(\alpha) = \alpha\cup\multime{\alpha}$. All ordinals have a succesor, but not all are succesors, some, like $\omega$ and $\omega\cdot 2$ can be defined only as the set of all smaller ordinals. The former are called \ghilimele{successor ordinals}, the later are called \ghilimele{limit ordinals}. Note that $0$ is a limit ordinal.
+
+Transfinite induction is a generalization of induction, where, if we can prove that a property holds for an ordinal $\alpha$ from the fact that it holds for all ordinals $\beta<\alpha$, then this property holds for all ordinals.
+
+In many cases transfinite induction proofs are done separately for succesor ordinals (maybe in the form $p(\alpha)$ implies $p(\alpha+1)$) and for limit ordinals.
+
+\subsection{Main lemma}
+
+Let $\alpha$ be an ordinal.
+
+For each $\beta\le\alpha$, let us assume that:
+\begin{enumerate}
+  \item $E_\beta$ is a non-empty set with unspecified elements.
+        $E$ is the disjoint union of
+        all $E_\beta$.
+  \item There is a descendant-ancestor $d$ relation on $E$ ($d(e, f)$ is read as
+        \ghilimele{$e$ descends from $f$} or \ghilimele{$f$ is $e$'s ancestor})
+        that satisfies the following:
+        \begin{enumerate}
+          \item An element has at least one ancestor on each higher level:
+
+                For all $\gamma\le\alpha$, $\beta<\gamma$,
+                $e_\beta\in E_\beta$,
+                there is an $e_\gamma\in E_\gamma$ such that
+                $d(e_\beta, e_\gamma)$.
+          \item An element has no ancestor on its level, or below:
+
+                For all $\gamma\le\alpha$, $\beta\le\gamma$,
+                $e_\beta\in E_\beta$,
+                $e_\gamma\in E_\gamma$, it is not the case that
+                $d(e_\gamma, e_\beta)$.
+          \item Transitivity:
+
+                For all $\gamma\le\alpha$, $\beta\le\alpha$, $\delta\le\alpha$,
+                $e_\beta\in E_\beta$, $e_\gamma\in E_\gamma$,
+                $e_\delta\in E_\delta$, if $d(e_\beta, e_\gamma)$ and
+                $d(e_\gamma, e_\delta)$, then $d(e_\beta, e_\delta)$.
+        \end{enumerate}
+  \item $E^\beta_\gamma$ is defined as
+        $$E^\beta_\gamma=\multime{
+          (e_\delta)_{\gamma\le \delta < \beta}
+            \in\prod_{\gamma\le \delta < \beta}E_\delta
+          \mid
+          \forall \gamma\le\delta<\epsilon\le\beta, d(e_\delta, e_\epsilon)}.$$
+  \item $D_\beta$ is a non-empty set of probability distributions over $\reale$.
+  \item $p_\beta$ is a partial function from $E_\beta$ to $D_\beta$, providing
+        a probability distribution over $\reale$ for some of the $e\in E_\beta$.
+        When $\beta$ is obvious from the context, we will denote $p_\beta(e)$
+        by $p_e$.
+  \item If $\beta > 0$ then, for each $e\in E_\beta$ we have a way of choosing
+        tuples $(e_\gamma)_{\gamma<\beta}\in E^\beta_0$ in such a way that,
+        if $p_\gamma{e_\gamma}$ is defined for all $\gamma<\beta$,
+        $p_e(x)$ gives us the probability of $x$ being a discontinuity for
+        all $(p_{e_\gamma})_{\gamma<\beta}$.
+  \item For $0 < \gamma < \beta$ and $e_\beta\in E_\beta$, if
+        $p_{e_\delta}$ is defined for all $\gamma\le\delta<\beta$ and $x$ is a
+        discontinuity for
+        $(p_{e_\delta})_{\gamma\le\delta<\beta}\in E^\beta_\gamma$, then
+        $p_{e_\beta}(x \mid (e_\delta)_{\gamma\le\delta<\beta})
+          = p_{e_\gamma}(x)$.
+\end{enumerate}
+
+As an example, let us fix $e_\alpha$ in $E_\alpha$ and let us assume that we
+have a probability $P = P^{e_\alpha}$ over $E^\alpha_0$. We
+define $P^\beta$ to be $P$ restricted to
+$E^\beta_0$, i.e. $P^\beta(F) = P(E^\alpha_\beta \times F)$.
+We define $p_\beta$ inductively by:
+\begin{enumerate}
+  \item $p_0(e_0)$ are probabilities over $\reale$.
+  \item Assuming that $\beta > 0$ and that we have defined $p_\gamma$
+        for all $\gamma < \beta$, let
+        $$F_\gamma(H) =
+          \multime{e\in E_\gamma
+            \mid p_e \mbox { has a discontinuity in }H}$$
+        and let
+        $$F^\gamma_\delta(H)
+          = \prod_{\delta <= \epsilon < \gamma}F_\epsilon(H).$$
+        We define $p_{\beta}$ in the following way:
+        $$p_{e_{\beta}}(H) =
+          P^{\beta + 1}(F^{\beta}_0(H) \mid e_{\beta}).$$
+\end{enumerate}
+The above is well-defined if each of the sets $F_\gamma(H)$ is
+measurable. Strictly speaking, we only need $F_\gamma(x)$ to be measurable for
+all $x$, which is true in various cases, e.g. when all subsets of $E_\gamma$ are
+measurable.
+
+\begin{lemma}
+  Let $\alpha$ be an ordinal. For all $\beta < \alpha$, let $d$,
+  $E_\beta$, $E^\beta_\gamma$, $D_\beta$,
+  $p_\beta$, be as above. Let us also assume that
+  \begin{enumerate}
+    \item we have a property $Q$ over $\reale$;
+    \item there is a tuple $(e_\gamma)_{\gamma \le \beta}$ such that if
+          $\delta < \gamma \le \beta$ then $d(e_\gamma, e_\delta)$;
+    \item If $p_\beta(e_\beta)(x) = 0$ or $p_\beta(e_\beta)$ is not defined
+          then $Q(x)$.
+  \end{enumerate}
+
+  Then $\neg Q(x)$ implies $p$ defined up to $\alpha$ and
+  $p_\beta(e_\beta)(x) > 0$ for all $\beta$ up to $\alpha$.
+\proof
+  This is true in a stupid way from item 3 above. Do I really need all this
+  silly framework? The framework is needed in order to make item 3 work,
+  I guess.
+\end{lemma}
+
 
 \subsection{Universe models}
 
@@ -110,6 +234,151 @@ For a given universe \svn{and some beings inside of it?}or region of a universe\
 One could use a well-ordering on the real numbers to choose the lowest description as the universe's description, but that will complicate things without any benefit.
 
 In the following, we will only talk about universes (or universe regions) which have space and time and which have an approximate description for a given level of approximation (or which can be split into a countable number of regions which have such approximate descriptions)\svn{What did I just say here?}.
+
+\section{Valid options and axioms for our universe}
+
+I will discuss what happens in a mix of few cases:
+\begin{itemize}
+  \item Our universe is created or not.
+  \item Our universe has finite or infinite space.
+  \item Our universe has finite or infinite time.
+  \item Our universe has a finite or infinite description.
+  \item There is a meta-$\beta$ universe for each ordinal $\beta$ such that our universe is the meta-$0$ one and the meta-$beta$ universe includes, directly or not, all meta-$\alpha$ universes with $\alpha < \beta$. Alternatively, there is an ordinal $\beta$ where this stops being the case.
+  \item Life is/is not compatible with a finite chunk of space-time having an infinite observable description.
+\end{itemize}
+
+\subsection{Proof axioms}
+
+\begin{axiom}
+  We will assume that, if $P$ is a probability over $\reale$
+  (which does not have to be a probability over the Borel algebra of $\reale$)
+  for which singletons are measurable (can be generalized to having a set of
+  disjoint measurable events with the same cardinality as $\reale$), then,
+  if we observe $x\in\reale$ and $P(x)=0$, then $x$ is generic.
+\end{axiom}
+
+The argument for this assumption is that the set of events for which $P(y)$ is
+greater than $0$ is at most countable, and, if we remove them from $\reale$, we
+get a set with the same cardinality as $\reale$. On this set, the probability
+of all peculiar events taken together is $0$, so there is no chance of us
+observing one. Alternatively, the probability of all generic events is $1$,
+so we can be sure that we observed a generic event.
+
+Of course, the possibility of observing a peculiar event still exists, but,
+practically, we would never do that.
+
+\begin{axiom}
+  We will also assume that, if we observe $x\in\reale$, when we could have
+  observed any real number, and there is no probability distribution that could
+  describe how $x$ was chosen, then $x$ is generic.
+\end{axiom}
+
+Note that this axiom does not say that we do not know that probability
+distribution, it says that there is no such probability distribution.
+Anyone that thinks that this cannot happen should treat the cases where
+this axiom applies as invalid.
+
+The argument for this assumption is that, if there is nothing that could favor
+peculiar numbers over generic ones, it's absurd to think that we could have
+observed an element of such a tiny set among something infinitely larger.
+Also, the case with a probability above suggests that this may be the only
+reasonable assumption in this case.
+
+\begin{note}
+  If we divide $\reale$ into (disjoint) countable subsets, we still get $\reale$
+  such subsets, so the above can be generalized to observing a countable set
+  of events.
+\end{note}
+
+\begin{axiom}
+The probability that our universe is designed is not $0$.
+\end{axiom}
+
+\begin{axiom}
+Any finite universe has a non-zero probability of being designed.
+\end{axiom}
+
+Unless otherwise specified, below I will analyse what happens when our
+universe is not designed.
+
+\subsection {The actual proof}
+Let us assume that our universe has a finite description $x\in\reale$. Let us
+assume that our universe is contained in a meta-universe, which is contained in
+a meta-universe, and so on, these universes corresponding to ordinals. If there
+is an ordinal which does not correspond to any meta-universe, and above which
+there is no meta-universe, let us denote it by $\alpha$. Otherwise, let
+$\alpha$ be an ordinal greater than $0$.
+
+If $\alpha = 0$ then there is no probability distribution over universe
+descriptions, so $x$ is generic.
+
+Otherwise, if $\alpha > 0$, but at level $0$ there is no probability
+distribution over universe descriptions, $x$ is generic.
+
+Otherwise, let us assume that at some levels $\beta$ with
+$0 < \beta \le \alpha$ there is a probability
+$p_\beta$ over $\reale$, with $p_\beta(y)$ being the probability that $y$ is
+a discontinuity for all $p_\gamma$ with $\gamma < \beta$.
+
+Let $\beta$ be the minimum for which $p_\beta$ does not exist or
+$p_\beta(x) = 0$. Then, as far as $\beta$ is concerned, $x$ is generic.
+
+If such a $\beta$ does not exist, up to $\alpha$ and including it,
+$p_\beta$ exists and $p_\beta(x) > 0$.
+
+If there is no meta-universe above $\alpha$, then, as far as $\alpha$ is
+concerned, $x$ is generic.
+
+Otherwise, $\alpha$ is as large as it can be that ($x$ being generic as far as
+$\alpha$ is concerned) implies ($x$ is generic).
+
+Ok. For the countable ordinals: if one of them implies that $x$ is generic,
+then it is. For the uncountable ordinals: if only those imply that $x$ is
+generic, it may not matter. Why? One argument goes like this: the ordinals up
+to an ordinal tell us that it's plausible that $x$ is peculiar. However, that
+ordinal tells us that it's implausible, which also means that the ordinals below
+are implausible. If we're selecting from a set that's small enough,
+it's implausible that we get implausible elements. Small enough means countable.
+However, above countable ordinals, we expect to also get implausible results.
+This is also suggested by the generalization above.
+
+\section{Case analysis}
+
+\subsection{Meta-universes}
+
+Let us consider what happens if we find that our universe's description $d$ is peculiar. From the axiom above, there is a probablility distribution that allows us to compute $P(d)$. But this means that there exists something outside of our universe. Maybe other universes exist, maybe there are no other universes, but there is something that influences why our universe is peculiar instead of generic. We will call this the meta-$1$ universe. If this meta-$1$ universe is not part of a meta-$2$ universe then the set of discontinuities for $d1$ is generic, so $d$ is generic, contradiction.
+
+By transfinite induction, there is such a meta-$\alpha$ universe for any countable ordinal $\alpha$. Note that the set of all countable ordinals is an uncountable ordinal.
+
+Postulating that many meta universes is considered unreasonable, especially since they are not generic ones, so any case analysis that ends with our universe's descripton being peculiar (meaning that there is an uncountable number of meta universes) will be discarded.
+
+\subsection{Finite universe description}
+
+If our universe's description is finite, then it's peculiar, hence we will discard this hypothesis. From now on, our universe's description will be infinite.
+
+\subsection{Infinite description for finite chunks of universe}
+
+As far as we can observe, our universe has the same finite description everywhere. Let us take a finite space-time chunk $K$ outside the area neede for our life. Then $K$'s description would be peculiar, which we will discard as mentioned above.
+
+The only remaining hypothesis is that a finite space-time chunk can only have a finite description.
+
+\subsection{Finite space or time}
+
+As a consequence of the above, our universe must have either infinite space, or infinite time.
+
+\subsection{Remaining hypotheses}
+
+The only remaining option for a non-created universe is that is infinite in time, space, or both, it has an infinite description, no infinite local descriptions are compatible with our existence, and our universe's description is generic among all descriptions compatible with our existence.
+
+We will say that a region of space-time is \definitie{consistent} if the decription of any piece of that region is the same as the region's description.
+
+It is likely that our existence would not be possible without some (finite) time-space region around us having at least some consistency. Let us assume that the time-space occupied by our bodies needs very high consistency, much of Earth's and Sun's timespace needs high consistency, and that this consistency requirement drops as we co further away from us. Of course, there are many (possible or real) universes where this consistency does not exist. By chance, some would have consistent regions which are large enough that intelligent life exists. For almost all\footnote{This si an intuitive \ghilimele{almost all}, not a statistical one.} of those, inconsistencies would be readily observable, all life would end at random points of inconsistency, and so on. The question we would like to answer is what is more likely: that we are in a universe which, a far as we can tell, is consistent for huge spans of time and space around us, or that we are in a designed universe?
+
+If we consider a space-time hypercube of size $1$, say $1$ cubic meter for $1$ second, and assuming some approximation parameters \svn{define these before this section}, there is a finite set of possible descriptions, say $D_{c1}$. Let's denote its size by $N$. Let us assume some approximation requirements for which $N$ is at least $2$ (note that for reasonable parameters $N$ is very large). Let us aldo denote by $D_{OURS}$ the description that we would give to our universe (and )
+
+Then, by default, the probability that any such hypercube has a given description is $1/N$. The probability that $k$ such hypercubes have the same description is $1/N^k$. This converges very quickly to $0$, so it does not take much to go below any target probability\footnote{If $N=2$, $k=10$ is enough to go below one to one thousand odds, $k=20$ is enough to go below one to one million, $k=30$ goes below one to one billione}. Therefore, unless the probability of our universe being created is inimaginbly close to $0$, the region of universe that we can observe and which we believe to have the same observable description as ours is enough to discard the hypothesis that it was not designed\footnote{Let $ND$ be the hypothesis that our universe id not designed, $D$ be the hypothesis that it is designed, $OUR$ be our universe, $our$ be the region of space around us that has the same description. Note that $P(our) \ge P(OUR)=P(OUR|D)\cdot P(D) > 0$. Then $P(D|our) = \frac{P(our|D)\cdot P(D}{P(our)}) > 0$. Similarly, $P(ND|our) = \frac{P(our|ND)\cdot P(ND}{P(our)}) = \frac{P(ND)}{N^k} \cdot \frac{1}{P(our)}$. To compare the two we have to compare $P(our|D)\cdot P(D)$ with $\frac{P(ND)}{N^k}$.}. 
+
+But, although a probability of $1/N$ is a sensible default, someone may prefere a more skewed probability distribution. It is unresonable to use a distribution which assigns a $0$ probability to any of the possible cases, so let $q > 0$ be the probability of a given hypercube having the same description as our timespace region. Again, $q^k$ decreases very quickly, so unless $q$ or the probability of our universe being desined are extremely skewed, a very small region of space around us is enough to make us discard the not designed hypothesis.
 
 \section{Axioms}
 
@@ -149,7 +418,10 @@ There is a level of approximation $L$ and a rational number $r$ \svn{Do I need $
     \item for all $\alpha$, the laws of the $\alpha$-th meta-universe that define the laws of the lower meta-universes are not generic.
   \end{enumerate}
   \begin{itemize}
-    \item Note that the term meta-universe here is used loosely, it just means that there is something outside of a universe, which is not an intelligent being, which is a reason (as in axiom \ref{noreason}) for the laws of our universe.
+    \item Note that the term meta-universe here is used loosely, it just means
+          that there is something outside of a universe, which is not a
+          designer, but which is a reason (as in axiom \ref{noreason})
+          for the laws of our universe.
     \item Note that, if all possible universes exist, the class of all these universes could be considered a $meta-$universe.
   \end{itemize}
 \item \label{noreason} If $A$ has the same cardinality as $\reale$ and one observes an element $a\in A$, and there is absolutely no reason for $a$ being observed over any other element, then $a$ is generic.
