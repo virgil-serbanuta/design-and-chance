@@ -428,9 +428,11 @@ on top of something close to $\reale^n$, without specifying an exact
 mathematical object.
 
 \begin{axiom}\label{unitycovering}
-  For all $q\in\rationale$, the subset of hypercubes of size $q$ and corners
+  For all $q\in\rationale\cup\multime{-\infty, +\infty}$,
+  the subset of hypercubes of size $q$ and corners
   having rational coordinates is countable and covers our universe.
 \end{axiom}
+\svn{Do I Need this axiom?}
 
 This axiom states that our universe can be covered by a set of hypercubes
 of a given size. While this could certainly be false, it is implied by some
@@ -438,9 +440,63 @@ basic beliefs that we have about our universe, namely that there is a
 level of approximation for which the space and time anywhere in the universe
 can be approximated locally by an open set of $R^n$.
 
+\begin{axiom}\label{rationalcovering}
+  The set of (generalized) cuboids having corners in
+  $\rationale\cup\multime{-\infty, +\infty}$,
+  is countable and covers our universe.
+\end{axiom}
+
+Note that if our universe's spacetime is $\reale^\alpha$ with
+$\alpha$ finite, then the set of cuboids in the above axiom is countable.
+
+Note that, if our universe's spacetime is finite, it can be fully included
+in one of these cuboids, without touching its borders.
+
 \subsubsection{Logically possible universes}
-\subsubsection{Universe Covering}
-Is this needed?
+
+\begin{axiom}\label{uncountable}
+  There is a set $D$ of universe descriptions such that the following are true:
+  \begin{enumerate}
+    \item $D$ has the same cardinality as $\reale$.
+    \item For all elements $d\in D$ there is at least one conceivable
+          universe $U_d$ which
+      \begin{enumerate}
+        \item has a time-space;
+        \item contains intelligent beings that use mathematics;
+        \item for the intelligent beings mentioned above and
+              for the level of approximation $L$,
+              $d$ is a description of $U_d$.
+      \end{enumerate}
+    \item D contains our universe's description.
+  \end{enumerate}
+  The same is true for universe regions.
+\end{axiom}
+
+This axioms states that, for a given level of approximation,
+there is a large set of conceivable universes, in some respects,
+are similar to ours, but which are, in general, wildly different.
+Also, ours belongs to this set.
+
+To see why that is reasonable, let us first note that,
+%in a similar way to axiom \ref{nonessentialhypercube},
+our universe could have an approximate universe description
+given by classical mechanics, maybe with some additions.
+
+Also, for almost any countable axiom system that still
+has $R^n$ as a base, one could imagine an alternate universe
+which is exactly like ours inside (say) Mars' orbit,
+but what is what is outside of Mars' orbit is described by that axiom set.
+
+Some of this axiom sets would describe laws of nature which are similar enough
+to ours to allow us to travel outside of Mars' orbit, but different enough that
+we would notice (e.g. gravity could work differently, depending on the region
+of space in which one travels).
+
+All of these countable axiom sets form a set of descriptions
+with the same cardinality as $\reale$, and each of these
+conceivable universes would contain intelligent beings that use
+mathematics, and so on.
+
 \subsubsection{Neighborhood modelling}
 \subsubsection{Turtles all the way down}
 
@@ -566,6 +622,7 @@ From axiom ??, time and space are close to $\reale^4$.
 
 Let us take a countable covering with (generalized) cuboids of our universe
 with their corners' coordinates in $\rationale\cup\multime{-\infty, +\infty}$.
+From axiom \ref{rationalcovering}, this covering exists.
 Let us take all finite unions of such cuboids. Their set is countable.
 
 If a finite chunk of spacetime can have an infinite approximate
