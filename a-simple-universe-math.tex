@@ -51,6 +51,7 @@
 \def\complexe{\mathbb{C}}
 \def\naturale{\mathbb{N}}
 \def\rationale{\mathbb{Q}}
+\def\descriptions{\mathbb{K}}
 \def\designer{\mathbb{D}}
 \newcommand{\paper}[1]{paper}
 \newcommand{\multime}[1]{\left\{ #1 \right\}}
@@ -75,10 +76,15 @@
 
 \begin{abstract}
   This \paper{} presents an argument that, with probability $1$, the laws
-  that govern a non-designed universe are infinitely complex at any level of observation. From this it follows that there is a $0$ probability of us living in a non-designed universe. 
+  that govern a non-designed universe are infinitely complex at any level
+  of observation. From this it follows that there is a $0$ probability
+  of us living in a non-designed universe.
 \end{abstract}
 
 \section{Introduction}
+
+!!What am I trying to do!!
+
 \subsection{Background}
 \subsection{Probabilities}
 
@@ -115,6 +121,11 @@ the equalities above to $P(x\mbox{ is generic}) = 1$ and
 $P(x\mbox{ is peculiar}) = 0$.
 \svn{I should actually use the \ghilimele{is finite} predicate or something
      like that.}
+
+Obviously, $P(E)=0$, where $E\subset A$, does not mean that observing
+an element of $E$ is logically impossible, it just means that,
+if we make a set of (independent) observations that is at most countable
+of elements of $A$, we have no chance at all of observing an element of $E$.
 
 \subsection{Ordinals}
 
@@ -291,16 +302,21 @@ our universe in in a mix of the following cases:
 \section{Argument}
 
 \subsection{Axioms}
+
 \subsubsection{Observing events}
+
 \begin{axiom}
-  We will assume that, if $P$ is a probability over $\reale$
-  (which does not have to be a probability over the Borel algebra of $\reale$)
-  for which singletons are measurable (can be generalized to having a set of
-  disjoint measurable events with the same cardinality as $\reale$), then,
+  We will assume that, if $P$ is a probability over $\reale$, or a set with the
+  same cardinal, for which singletons are measurable
+  (can be generalized to having a set of disjoint measurable events
+  with the same cardinality as $\reale$), then,
   if we observe $x\in\reale$ and $P(x)=0$, then $x$ is generic.
+
+  Note that $P$ does not have to be a probability over the Borel algebra of
+  $\reale$.
 \end{axiom}
 
-Note that the set of events for which $P(y)$ is
+The set of events for which $P(y)$ is
 greater than $0$ is at most countable, and, if we remove them from $\reale$, we
 get a set with the same cardinality as $\reale$. On this set, the probability
 of all peculiar events taken together is $0$, so there is no chance of us
@@ -308,9 +324,10 @@ observing one. Alternatively, the probability of all generic events is $1$,
 so we can be sure that we observed a generic event.
 
 Of course, the possibility of observing a peculiar event still exists, but,
-practically, we will never observe it.
+practically, we will not observe it as long as the set of our
+observations is countable.
 
-\begin{axiom}
+\begin{axiom}\label{noprobability}
   We will also assume that, if we observe $x\in\reale$, when we could have
   observed any real number, and there is no probability distribution that could
   describe how $x$ was chosen, then $x$ is generic.
@@ -329,16 +346,67 @@ observed an element of such a tiny set among something infinitely larger.
 Also, the case with a probability above suggests that this may be the only
 reasonable assumption in this case.
 
-\begin{note}
-  If we divide $\reale$ into (disjoint) countable subsets, we still get $\reale$
-  such subsets, so the above can be generalized to observing a countable set
-  of events.
-\end{note}
-
 \subsubsection{Design probability}
+
 \begin{axiom}
   The probability that our universe is designed is not $0$.
 \end{axiom}
+
+\svn{quote/cite Swinburne}
+
+In this section we are interested only in whether a probability is $0$ or not,
+so the word \ghilimele{likely} can be replaced with
+\ghilimele{has a non-zero probability} without changing
+the meaning of the argument.
+
+First, let us note that something that is designed matches the intent of
+its designer. A designer may want to design everything possible, but then
+this shouldn't be properly called \ghilimele{design}, since it does not involve
+choice.
+
+A designer is likely
+to divide all the possible things in classes of similarity, and design at most
+a small number of things from each class (or at most one per class for a very
+good designer). In other words, between possible designs there will be small
+differences that do not really matter, so a normal designer will focus on the
+important parts and would not make explicit choices for each of these small
+diferences. And a very good designer would optimize and make the best choice
+even for these small things that do not matter much, but, then, again, these
+would not cause more things to be designed.
+
+Assuming that we have some classes of similarity which may be interesting for
+a given designer, it is reasoanble to think that their set is countable,
+and that we have a positive probability for each of them.
+
+Extrapolating from what we know about ourselves, although that does
+not give us much, it is still reasonable to believe that rational beings,
+capable themselves of design, would be interesting to a designer of worlds.
+Therefore, we can assume that it's not completely implausible that a designer
+would design a world in order to be inhabited by the said beings.
+
+But then, that world is likely to be simple enough that
+those beings would find it possible to use their reason to
+discover, navigate and interact fruitfully with their world.
+\svn{Hidden assumption that those beings are finite.}
+
+However, in order for them to be able to discover their world, the perceived
+laws of the universe must not change, at least not much, both with time and
+when moving through space. To be more precise, it's likely that most of
+the space and time accessible to those beings is fairly consistent.
+
+But then, it is possible that the entire universe has a finite approximate
+description.
+
+To summarize, it is reasonable to assume that peculiar descriptions have
+a non-zero probability.
+
+\svn{
+  Move the explanation after the proof because I actually need to point out
+  where the proof breaks. Explain that countable purposes means that each has
+  a nonzero probability. Explain that it's possible that at least one involves
+  a finite universe. Explain that, even if the universe is infinite, local
+  consinstency is expected.
+}
 
 There are a few ways to go about this:
 
@@ -436,9 +504,9 @@ mathematical object.
 
 This axiom states that our universe can be covered by a set of hypercubes
 of a given size. While this could certainly be false, it is implied by some
-basic beliefs that we have about our universe, namely that there is a
+basic beliefs that we have about our universe, e.g. that there is a
 level of approximation for which the space and time anywhere in the universe
-can be approximated locally by an open set of $R^n$.
+can be approximated locally by an open subset of $R^n$.
 
 \begin{axiom}\label{rationalcovering}
   The set of (generalized) cuboids having corners in
@@ -475,7 +543,7 @@ in one of these cuboids, without touching its borders.
 This axioms states that, for a given level of approximation,
 there is a large set of conceivable universes, in some respects,
 are similar to ours, but which are, in general, wildly different.
-Also, ours belongs to this set.
+Also, our universe belongs to this set.
 
 To see why that is reasonable, let us first note that,
 %in a similar way to axiom \ref{nonessentialhypercube},
@@ -492,9 +560,10 @@ to ours to allow us to travel outside of Mars' orbit, but different enough that
 we would notice (e.g. gravity could work differently, depending on the region
 of space in which one travels).
 
-All of these countable axiom sets form a set of descriptions
-with the same cardinality as $\reale$, and each of these
-conceivable universes would contain intelligent beings that use
+All of these countable axiom systems form a set of descriptions
+with the same cardinality as $\reale$, which we will
+denote by $\descriptions$. Each of the conceivable universes
+having one of these descriptions could contain intelligent beings that use
 mathematics, and so on.
 
 \subsubsection{Neighborhood modelling}
@@ -502,11 +571,13 @@ mathematics, and so on.
 
 \subsection{Valid options for our universe}
 
-This section will try to develop the axioms above in order to find out whether
-it is reasonable to believe that: our universe is (or is not) created,
-space and time are infinite, the laws that we use to describe the behaviour
-or the spacetime around us apply in the entire universe, our universe
-is contained in an uncountable chain of meta-universes, life is
+This section will try to develop the axioms above in order to find out what
+is reasonable to believe about: our universe is being designed or not;
+space and time being finite or infinite; the laws that we use to describe
+the behaviour or the spacetime around us applying only locally, around us,
+or in the entire universe;
+our universe being contained in an uncountable chain of meta-universes;
+life being
 compatible with a finite chunk of space-time having an infinite
 observable description.
 
@@ -515,41 +586,60 @@ We will focus mostly on what happens when our universe is not created.
 \subsection{Finite Descriptions and Uncountable Meta-universes}
 \label{fdaumu}
 
-Let us assume that our universe has a finite description $x\in\reale$.
-\svn {Mention that we identify descriptions with real numbers, finite
-      descriptions with natural numbers, but we don't keep the
-      operations/topological structure. Alternatively, don't use
-      $\reale$ here since it's misleading.}
-Let us
-assume that our universe is contained in a meta-universe, which is contained in
-a meta-universe, and so on, these meta-universes corresponding to ordinals.
-If there are ordinals which do not correspond to any meta-universe, and
+Let us assume first that our universe has a finite
+description $x\in\descriptions$.
+Let us also assume that our universe is contained
+in a meta-universe, which is contained in
+a meta-meta-universe, and so on, these meta-universes corresponding to
+ordinals. We will assign the ordinal $0$ to the first meta-universe.
+
+A meta-universe here is something that contains our universe, and which
+influences one way or another which of the logically possible universes exist.
+As an example, if all possible universes exist, we can take their
+set/collection/grouping to be a meta-universe. For the purpose of this paper,
+the most important thing related to a meta-universe is whether there is a
+probability measure over the descriptions of the universes
+contained in it, specifying which ones exist and in which proportion.
+The existence of
+such a probability implies the existence of a meta-universe, but not the other
+way around. Alternately, this probability may be the subjective probability
+which we assign to various universe descriptions.
+
+One example of a probability measure is that which assigns $1$ to our
+universe's description and $0$ to everything else. However, if, say,
+our universe is the only one that exists, but there is no reason for it
+existing and for the other universes not to exists, then there is no
+probability measure in the sense mentioned above.
+
+Returning to associating meta-universes with ordinals,
+if there are ordinals which do not correspond to any meta-universe, and
 the smallest one is countable, let us denote it by $\alpha$.
 Otherwise, let $\alpha$ be the lowest uncountable ordinal.
 
 If $\alpha = 0$ then there is no probability distribution over universe
-descriptions, so $x$ is generic.
-\svn{Did I explain what a meta-universe is? And how it is related to
-     probability? I.e. If there is no meta-universe, there is no probability
-     distribution}
-\svn{Mention this axiom.}
+descriptions, so $x$ is generic (axiom \ref{noprobability}).
 
 Otherwise, if $\alpha > 0$, but at level $0$ there is no probability
-distribution over universe descriptions, $x$ is generic.
-\svn{I said that our universe is the meta-$0$ one, but here it is
-     the meta-$-1$ one.}
-\svn{Explain that probability $0$ does not mean logical impossibility, it
-     means that if we bet on that an infinite number of times
-     (the infinite is countable), we will lose each time. So, assuming that
-     we have a non-zero probability alternative, we should bet on that.
-     For easier writing I will treat that as logical implication, but the
+distribution over universe descriptions, $x$ is generic (again, from axiom
+\ref{noprobability}).
+\svn{Either use the proper wording everywhere, or explain that,
+     for easier writing I am treating $P(X)=1$ that as
+     logical necessity, but the
      reader should keep in mind that the actual meaning is closer to
-     \ghilimele{practical implication}.}
+     \ghilimele{practically true}.}
 
-Otherwise, let us assume that at some levels $\beta$ with
+If the probability distribution at level $0$ is continuous,
+then the probability of all peculiar descriptions is $0$,
+so the only reasonable conclusion is that our universe has a generic
+approximate description.
+
+For many people, this result may be good enough. However, since the
+probability distribution at level $0$ does not have to be continuous,
+let us let us assume that at some levels $\beta$ with
 $0 < \beta \le \alpha$ there is a probability
-$p_\beta$ over $\reale$, with $p_\beta(y)$ being the probability that $y$ is
-a discontinuity for all $p_\gamma$ with $\gamma < \beta$.
+$p_\beta$ over $\descriptions$, with $p_\beta(y)$ being
+the probability that $y$ is a discontinuity
+for all $p_\gamma$ with $\gamma < \beta$.
 
 Let $\beta$ be the minimum (if any) for which $\beta < \alpha$ and
 $p_\beta$ does not exist or $p_\beta(x) = 0$.
@@ -562,15 +652,18 @@ $p_\beta$ does not exist or $p_\beta(x) = 0$.
 If such a $\beta$ exists, then, although in all the lower universes
 $\gamma < \beta$ we may be able to bet on a peculiar description for our
 universe, at level $\beta$ we can be sure that a bet on peculiar descriptions
-would fail. In other words, at level $\beta$ the only reasonable bet would be
-that we are in a chain of (meta-)universes where our universe's description is
+would fail.
+
+Since, until $\beta$, we made an at-most-countable number of observations, we
+do not expect to observe a peculiar event with $0$ probability, so we must be
+in a chain of (meta-)universes where our universe's description is
 generic.
 % Since we only placed an at-most-countable number of bets until now,
 %we don't expect certain failure.
 %\svn{Why we don't expect failure?}
 
 If such a $\beta$ does not exist, up to $\alpha$, without including it,
-$p_\beta$ exists and $p_\beta(x) > 0$.
+$p_\alpha$ exists and $p_\alpha(x) > 0$.
 
 If $\alpha$ is countable and there is no meta-universe above $\alpha$,
 then, similar to the above reasoning, as far as $\alpha$ is concerned,
@@ -668,7 +761,7 @@ disregard it.
 Let us analyze what happens if finite unions of cuboids covering a finite
 spacetime can only have finite approximate descriptions.
 Then let $A_1$ be the set of possible approximate descriptions for
-the hypercube of size, say, $1 second \times meter^3$.
+the hypercube of size, say, $1\;second \times meter^3$.
 Unless our approximation is extremely coarse, $A_1$ will have multiple elements.
 Let $P$ be the probability of encountering an element of $A_1$ in our universe.
 Since we don't know $P$, by default we could choose equal probabilities for
