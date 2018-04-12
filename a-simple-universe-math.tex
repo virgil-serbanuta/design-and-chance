@@ -567,6 +567,12 @@ having one of these descriptions could contain intelligent beings that use
 mathematics, and so on.
 
 \subsubsection{Neighborhood modelling}
+
+\begin{axiom}\label{finiteneighborhood}
+  There is a large time-space region of our universe that includes our solar
+  system, which has a finite approximate description.
+\end{axiom}
+
 \subsubsection{Turtles all the way down}
 
 \subsection{Valid options for our universe}
@@ -583,7 +589,7 @@ observable description.
 
 We will focus mostly on what happens when our universe is not created.
 
-\subsection{Finite Descriptions and Uncountable Meta-universes}
+\subsubsection{Finite Descriptions and Uncountable Meta-universes}
 \label{fdaumu}
 
 Let us assume first that our universe has a finite
@@ -654,7 +660,9 @@ $\gamma < \beta$ we may be able to bet on a peculiar description for our
 universe, at level $\beta$ we can be sure that a bet on peculiar descriptions
 would fail.
 
-Since, until $\beta$, we made an at-most-countable number of observations, we
+Since, until $\beta$, we made an at-most-countable number of
+observations\footnote{Each meta-universe between $\beta$ and us counts as an
+observation}, we
 do not expect to observe a peculiar event with $0$ probability, so we must be
 in a chain of (meta-)universes where our universe's description is
 generic.
@@ -673,11 +681,12 @@ This means that, if our universe is not created, the only option that
 has a chance of being reasonable is that $\alpha$ is uncountable and,
 for all $\beta < \alpha$, $p_\beta$ exists and $p_\beta(x) > 0$.
 
-Note that, in order to claim that $x$ is peculiar, one needs to postulate the
+To summarize, in order to claim that $x$ is peculiar, one needs to postulate the
 existence of an uncountable chain of meta-universes, all of them favouring a
 peculiar $x$, which, by default, is unlikely for any of them. Also, although the
-current argument does not work anymore with an uncountable chain of
-meta-universes, intuitively the peculiarness problem still remains.
+current argument does not work anymore when the chain of
+meta-universes becomes uncountable, intuitively the peculiarness problem
+still remains.
 
 From now on, I will assume that the possible objection in the preceding
 paragraph is unreasonable, which means that, practically speaking,
@@ -718,18 +727,29 @@ with their corners' coordinates in $\rationale\cup\multime{-\infty, +\infty}$.
 From axiom \ref{rationalcovering}, this covering exists.
 Let us take all finite unions of such cuboids. Their set is countable.
 
-If a finite chunk of spacetime can have an infinite approximate
-description which is compatible with inteligent life in the universe, then the
-argument in section \ref{fdaumu} also applies to a union of cuboids that covers
-finite chunks of space (we consider it as a mini-universe inside
-our universe), so either each such union has a generic description,
+Let us consider the case when a finite chunk of spacetime can
+have an infinite approximate
+description which is compatible with inteligent life in the universe.
+Let us take such a chunk of space and let us cover it with a finite union of
+finite cuboids.
+\svn{Why would this exist? Need axiom.}
+We can then apply the same argument as in section \ref{fdaumu} to any
+such union of cuboids, by considering it as a mini-unverse inside
+our universe.
+
+The set of all possible finite unions is countable,
+which means that the probability that any of them has a peculiar
+description is $0$. The only reasonable options that we have are:
+either each such union has a generic description,
 or finite chunks can only have peculiar descriptions, or our universe
 is designed.
 
-However, we believe that we can have peculiar/finite approximate descriptions
+However, we usually believe that we can have peculiar/finite
+approximate descriptions
 for the region of universe around us, which would leave us with the following
 two options: finite unions of cuboids that cover a finite chunk of space can
-only have finite descriptions, or our universe is designed.
+only have finite descriptions in a universe with intelligent life, or our
+universe is designed.
 
 However, from section \ref{fdaumu}, our universe should have an
 infinite description, which means that either our universe is infinite,
@@ -741,8 +761,10 @@ in section \ref{fdaumu}, we get that either each such union has a generic
 description, or our universe is designed.
 
 To summarize, either (finite unions of cuboids that cover finite chunk of space
-can have infinite descriptions) or (our universe is infinite, finite unions of
-cuboids that cover an infinite chunk of spacetime have only infinite
+can have infinite descriptions, and all of them have such descriptions, maybe
+with the exception of the region of space strictly needed for our existence) or
+(our universe is infinite, all finite unions of
+cuboids that cover an infinite chunk of spacetime have infinite
 descriptions, while finite unions of cuboids that cover a finite chunk of
 space can have only finite descriptions) or (our universe is designed)
 
@@ -751,10 +773,13 @@ $1 second \times meter^3$. Let us assume that our universe is not created
 and that finite unions of cuboids that cover a finite amount of space
 can have infinite approximate descriptions. Then each such hypercube should
 have a generic approximate description. However, we generally believe that
-we can describe the space around us fairly well using a finite description
-(axiom ??), so we will disregard this possibility. Even if we are unwilling
+we can describe the entire observable space fairly well
+using a finite description
+(axiom \ref{finiteneighborhood}), so we will disregard this possibility.
+Even if we are unwilling
 to disregard it, the same ideas as in the next section can be used to
 disregard it.
+\svn{Really?}
 
 \subsubsection{Improbable consistency}
 
@@ -1009,7 +1034,8 @@ which assigns a $0$ probability to any of the possible cases, so let $q > 0$ be
 the probability of a given hypercube having the same description as our
 timespace region. Again, $q^k$ decreases very quickly, so unless $q$ or the
 probability of our universe being desined are extremely skewed, a very small
-region of space around us is enough to make us discard the not designed hypothesis.
+region of space around us is enough to make us discard the
+hypothesis that our universe is not designed.
 
 \section{Axioms}
 
