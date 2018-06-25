@@ -63,7 +63,7 @@
 \newtheorem{definition}{Definition}
 \newtheorem{afirmatie}{Claim}
 \newtheorem{notatie}{Notation}
-\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}{Lemma}
 \newtheorem{axiom}{Axiom}
 \newtheorem{note}{Note}
@@ -74,42 +74,568 @@
 \maketitle
  %%%%%%%%%%%%%%%%%%
 
-\begin{abstract}
+ \begin{abstract}
+  This \paper{} presents an argument that one can make a prediction from
+  the hypothesis that our universe is not designed, i.e. that it has a high
+  level of complexity of a certain kind, and that this complexity would be
+  easily observable everywhere. However, this is not what we observe, which
+  falsifies the hypothesis. \svn{Make sure I actually made a prediction.}
 \end{abstract}
 
 \section{Introduction}
 
-\subsection{Background}
-\subsection{Probabilities}
+Many people believe
+that we can make various claims about the universe,
+that there are certain laws approximating its behaviour fairly well,
+that we can compute its age,
+that we can make predictions about the distant future, and so on.
+This \paper{} started as a
+mathematical attempt to understand why this is the case
+and what we can reasonably believe about our universe.
+It turns out that it matters
+whether our universe is designed or not, so it became a \paper{} about that.
 
-\subsection{Ordinals}
+In the end, the mathematical part turned out to be rather small,
+containing only a few simple properties about set cardinalities,
+probabilities and ordinals.
+I think that the non-mathematical ideas in this paper
+have an intuitive appeal even without the mathematical ones,
+but presenting them separately would make it less clear why certain
+conclusions can be drawn.
+Although, in my opinion, the non-mathematical ideas are also somewhat obvious,
+I did not manage yet to find anyone drawing the same conclusions
+in the same way.
 
-\subsection{Universe Models}
+My argument can be considered a statistical approach to Aquina's fifth way.
+It tries to avoid the issues that other statistical approaches (e.g. the
+fine-tuning argument) have.
 
-\subsection{Options for our universe}
+Sections \ref{?} to \ref{?} present the mathematical notions and results used
+in this paper. Section \ref{?} introduces universe approximations. Section
+\ref{?} introduces the argument's axioms, while section \ref{?} uses them
+to make predictions about our universe, then verifies if they match our
+observations. Sections \ref{?} and \ref{?} present this paper's relations to
+previos work.
 
-\section{Argument}
+\section{The ordered universe argument}
 
-\subsection{Axioms}
+%TODO: Urmatoarele trei alineate sunt nasoale.
+The \svn{great?} Catholic theologian Thomas Aquinas,
+in his \ghilimele{fifth way}, attempts to show God's existence from
+the order of the universe, i.e. that almost all bodies, almost always
+behave according to simple natural laws. %TODO: citation.
+One can find a good exposition of this argument in
+\citetitle{swinburne1968}%\citeauthor{swinburne1968} \citeyear{swinburne1968}
+\parencite{swinburne1968}, but let us look at a few ideas which are
+interesting in the context of this \paper{}.
+%Metaphysics by Peter van Inwagen, from 2015, says that it's a powerful and sophisticated defense.
+% 67 de citari https://scholar.google.ro/scholar?cites=18062876017816040453&as_sdt=2005&sciodt=1,5&hl=en
 
-\subsubsection{Observing events}
+There are two types of order which are interesting, the spatial order
+and the temporal order.
+The former is the order that one can see in (a part of) the universe
+at a given moment in time, e.g. that planets, living bodies, and other things
+are ordered.
+\svn{This seems a bit awkward, is there a better way to state it?}{} It is
+tricky to build an argument for the existence of a designer based on it.
+The latter can be seen in the behaviour of things, including the laws of
+nature, and it's the one that will be used in this \paper{}.
 
-\subsubsection{Design probability}
+\citetitle{swinburne1968} addresses Hume's
+objections\svn{Need to introduce them. * Re-read The Argument From Design}
+against Aquinas' argument, but one in particular is interesting here:
+the argument is based on analogy, which limits its strength.
+I think that this \paper{}'s argument, although it builds on the same
+foundation, needs only an extremely weak analogy
+(see Section \ref{sec:remaininghypothesis})\svn{Fix section}.
+% Do I really need the analogy? If yes, remove the \ghilimele{may work}. I don't need it - see the testimony argument.
 
-\subsubsection{$\reale^4$ universe}
+The following quote from \textcite{swinburne1968}, made when addressing
+Hume's objection that the order which can be observed in this universe
+is just an accident, makes a nice introduction for the argument
+described in this \paper{}:
+\begin{quote}
+But if we say that it is chance that in 1960 matter is behaving in a
+regular way, our claim becomes less and less plausible as we find that in
+1961 and 1962 and so on it continues to behave in a regular way. An appeal
+to chance to account for order becomes less and less plausible
+the greater the order.
+\end{quote}
 
-\subsubsection{Neighborhood modelling}
+However, there were many people who were surprised by the existence of laws
+for our universe in one way or another and who didn't try to use it
+as an argument for the existence of a Designer.
+As an example, see this quote of \textcite{Feynman2009}:
+\begin{quote}
+Incidentally, the fact that there are rules at all to be checked
+is a kind of a miracle; that it is possible to find a rule,
+like the inverse square law of gravitation, is some sort of miracle.
+It is not understood at all, but it leads to the possibility of
+prediction --- that means it tells you what you would expect in
+an experiment you have not yet done.
+\end{quote}
 
-\subsubsection{Turtles all the way down}
+% TODO: Maybe list some of Hume's issues with this argument.
 
-\subsection{Valid options for our universe}
+\section{The fine-tuning argument and other objections}
 
-\subsubsection{Finite Descriptions and Uncountable Meta-universes}
+Although the argument in this paper does not resemble the fine-tuning argument
+much, it uses similar methods, which may raise similar objections. Indeed,
+when writing this paper I had to carefully avoid these objections, so readers
+may find it useful to have a short summary of the fine-tuning argument and its
+objections which are also relevant to this paper, together with an explanation
+on how they were avoided.
 
-\subsubsection{Peculiar description for universe regions}
+In the recent past people started noticing that life can exist only for
+narrow ranges of various parameters of our universe, so our universe
+seems fine-tuned for life.
+But that seems unlikely unless there is a designer for our universe,
+a designer that wanted it to have (intelligent) life.
+Examples of such parameters include the early cosmic density and
+the expansion speed, the strength of the weak nuclear force, and
+the ratio between electromagnetism and gravity \parencite{Leslie2003}.
+
+Although this may seem intuitively reasonable, people have found various
+potential problems with this argument, some of which are presented below.
+For possible replies to some of these in the fine-tuning context see,
+e.g., \textcites{Leslie2003}{Swinburne2003}{Monton2006}{Kotzen2012}.
+% TODO: Cite \ghilimele{Should we care about fine-tuning} by Jeffery Koperski.
+% TODO: Actually check if these issues apply to my argument.
+
+Probabilities do not apply to the values of the cosmic parameters:
+if one assumes that all cosmic parameter ranges have the same probability
+then the probabilities become non-normalizable and the argument
+would apply to any finite range (coarse-tuning).
+If the cosmic parameter ranges do not all have the same probability,
+then we must consider many possible probability distributions.
+For some of them the life-permitting ranges have low probability,
+for others they have high probability and we don't have a good way
+of choosing one of them \parencites{Manson2009}{McGrew2001}.
+
+Indeed, the most reasonable assumption is that they all have the same
+probability, i.e. $0$, which implies that, if our mainstream physics theories
+provide a reasonable approximate model for our universe, then the probability
+that our universe is not designed is $0$.
+
+The current argument also analyses the other case, having unequal probabilities
+for individual events, where, in order to believe that our universe is not
+created, one needs to either ignore the evidence that we have about our
+universe's consistency, or believe in a rather weird and implausible structure
+of meta-universes, without having any proof for its existence.
+
+There is an observation selection effect:
+we can't observe a universe which is not life-permitting,
+so our observations are biased.
+If we take this additional piece of information into account,
+the probability of our universe not being designed is not longer
+small \parencite{Sober2009}.
+This is particularly interesting if multiple universes
+exist \parencite{Manson2009}.
+
+All universes considered in this paper contain intelligent life. Even
+more, the next source of bias, those beings' perception, was taken into account
+by describing universes as they are seen by the said beings.
+
+There is a third possible source of bias which is considered here: it can be
+argued that, in a non-created universe, beings might be intelligent
+only if their intelligence is useful to them. But this likely means that those
+beings live in a timespace region which seems consistent from their point of
+view. This is also addressed in the argument: we observe non-essential
+consistency, which can only be explained by design.
+
+The multiple universes objection raises an interesting issue in the context
+of the current argument.
+When multiple universes exists, the probability of an intelligent being
+living in a universe having a finite observable description is still $0$, or
+it needs the same implausible assumptions as the case of a single universe.
+In virtually all universes this argument\svn{axiom ??? instead of
+\ghilimele{this argument}} would not work, since the infinite complexity
+of the universe would be easily observable.
+For the intelligent beings living in the other universes, as long as they have
+a hypothesis which is more plausible, it would be irrational to think that
+their universe is not designed (assuming that the argument presented in
+this \paper{} is correct).
+
+Non homogenous spacetime:
+another possible case similar to the above is when our universe
+is much larger than the part that we can observe and, outside
+of the part that we can observe now, it contains spacetime regions
+with different values for the various cosmic parameters \parencite{Manson2003}.
+
+The current argument takes into account the fact that different
+spacetime regions can have different descriptions. Indeed, the fact that this
+is logically possible is used to show that the timespace region of our universe
+in which we live is implausible in a non-created universe.
+
+Unknown Designer's intent:
+from a natural theology point of view, one can't
+know what the Designer wanted
+(e.g. one can't know that a universe designer would want to create
+a universe having life) \parencites{Sober2009}{Narveson2003}, so, by default,
+any argument showing that the probability of our universe is small
+if it's not designed would also show that the probability is small
+even if it is designed.
+To fix this, one would need an independent way to show that the Designer
+wanted the universe to have life \parencite{Sober2003}.
+
+Although this argument is still based on analogy, note that the weakest
+analogy that still has some trace of plausibility is enough, i.e. we just need
+that \ghilimele{a Designer of world wants intelligent beings} has non-zero
+probability. \svn{Rephrase this - the counterargument has nothing about
+analogies. Maybe add something about revelations.}
+
+Design criteria: minds may be the product of natural laws,
+but we intuitively distinguish something natural from something
+designed by checking if their production involves a mind or it is only
+a result of natural laws.
+There is no similar way of telling if the creation of the laws of nature
+themselves is natural or not \parencite{Narveson2003}.
+\svn{Think carefully about this. This is not a FT counter-argument and
+I should make sure that I'm understanding this correctly. Think carefully.}{}
+
+I will rephrase this as: we distinguish designed object by being much
+more likely to be produced by processes involving minds than by natural laws.
+As an example, with our current understanding of physical laws, a watch could
+materialize out of thin air, or it could happen that its various pieces are
+the product of chance, and they came together by chance,
+but that's way too implausible, while it is more likely that any watch that we
+observe was designed.
+
+In the same way, does not show that the non-design hypothesis for our universe
+is logically impossible, it just shows that, under any plausible
+\ghilimele{natural laws}, our universe is much less plausible than if it was
+designed.
+
+\svn{Should this be here?} Note that, under the design assumption, one may have
+information from outside the universe about the designer's intent. \svn{A good
+question is how can we tell that from information from inside the universe.}
+
+\svn{10} In order to avoid this objection, the current argument works with
+conceivable universes.
+
+First, let us note that using conceivable universes makes sense. If we are
+trying to make a predictiona about how a designed / non-designed universe would
+look like, we would have to imagine that we are outside any universe, and we are
+about to observe one that is (say) non-designed. What could we say about it?
+Not much, maybe that it makes logical sense (i.e. that it can be modelled
+mathematically), maybe it has something cloase to time and space, but
+everything else is possible.
+
+As a parenthesis, one could go one step further and, by using the same proof
+structure as used in this paper, show that, if there is no designer of worlds,
+then the hypothesis that only our universe exists is a peculiar one, so it is
+extremely unlikely.
+
+There is a second reason why we should believe that many different universes
+exist: \svn{11} \svn{12} \svn{13} - Do I need this? Does it help?
+
+\textcite[][Section \ghilimele{Why a world with human bodies is unlikely
+if there is no God}]{Swinburne2003} comes sort of close to the argument
+presented in this \paper{}, but while \citeauthor{Swinburne2003}
+argues that human bodies are unlikely, I am arguing that, in the context
+of all possible universes that could have human-like beings,
+our universe is extremely unlikely.
+Since the existence of human bodies is not directly related to the subject
+of this \paper{}, I will not discuss that section more
+than it is strictly needed.
+Note that  \citeauthor{Swinburne2003} says that individual sets of laws
+have non-zero probability while I'm claiming that their probability is $0$.
+It seems to me that \citeauthor{Swinburne2003} implicitly assumes that
+such a set has a finite number of laws, while I am explicitly removing
+that constraint, so both can be right within their contexts.
+
+\section{Possible universes and their descriptions}
+
+% TODO: maybe delete the footnote.
+Many people believe that our universe is designed and created
+and that it's unreasonable to believe that any universe can exist
+without being created, and I agree with them.
+However, these beliefs are not shared by everyone, so it's worth thinking
+about what creation means.
+If our universe is created, then it's likely to be the way it is because
+its Creator
+\footnote{Not everybody that believes that our universe is created
+thinks that God created it.
+Still, I hope that they would agree that capitalizing the Creator
+of this universe is reasonable.}
+\svn{Do I need this footnote?}{} wanted it to have certain properties.
+In order to understand why our universe works the way it does,
+one would need to understand the intent of its Creator.
+While that is interesting in itself, I will not try to pursue it here,
+except for a few limited ideas.
+% TODO: use here the \ghilimele{design implies non-continous probabilities idea}
+
+For most of the remainder of this \paper{}, let us consider the other case.
+Let us assume the hypothesis that our universe is not designed and created
+and let us try to make a prediction based on it.
+How would a non-created universe look like?
+Would it be similar to our universe?
+Maybe an infinity of universes exist and ours is just one of many,
+or maybe our universe it the only one that exists.
+Even if ours is the only one, one could easily imagine that it worked
+in a different way, say that the speed of light would be different,
+or that gravity would work differently.
+
+There are people who claim that all logically possible universes exist,
+either because they think that it simply makes sense, or because they want to
+give a good account of modality, or because they need
+an ad hoc\svn{Do I need the \ghilimele{ad-hoc} part?}{} hypothesis
+to argue against, say, fine-tuning.
+The argument in this \paper{} does not assume that more than
+one universe exists, but it should work either way.
+
+A possible universe
+could have exactly the same fundamental laws as ours, but with matter
+organized differently.
+It could have similar laws, but with different universal constants.
+It could have different fundamental particles (or whatever the basic
+building blocks of our universe are, assuming that there are any).
+Or it could be completely different, i.e. different in all possible ways.
+
+It could be that our logic and reasoning are universal instruments,
+but it could also be that some of these possible universes are
+beyond what our reasoning can grasp and others have properties
+for which our logic is flawed.
+Even if that's the case, let us see if we can say anything about
+the possible universes that we could understand and could model in some way.
+
+In the following, the \definitie{possible universes} term will denote
+only the possible universes which we could model.
+
+This notion of model is not precise enough.
+Let us restrict the possible universes term even more,
+to the possible universes that could be modelled mathematically,
+even if that may leave out some of them.
+This may seem too restrictive,
+especially since this paper only needs universes which can be approximated
+by mathematical models.
+However, for simplicity, let us, for now, consider only universes
+which are fully modellable with sets of axioms that are at most countable.
+
+Let us restrict the universes we are considering even further, to universes that
+have something that remotely resembles time and space, for which
+\ghilimele{the state of the universe at a given moment in time}, or something
+close, makes sense, and which can plausibly contain intelligent beings.
+Any such universe is, for the purpose of this paper, a conceivable universe.
+
+To keep the exposition simple, in the following I will use
+\ghilimele{state of the universe at a given moment in time},
+but one should replace it with one's favourite alternative concept.
+
+A \definitie{universe description} is a mathematical theory that has
+a set of axioms which is at most countable and which allows making
+predictions about the future state of the universe given its state
+at a certain moment in time. A \definitie{universe region description}
+is something similar, but only for a given space-time region of a universe.
+In the best case, for a deterministic universe, there might exist
+a description which allows one to correctly predict the entire future state
+given the state at any moment in time, but a universe description
+as defined here does not have to predict everything and,
+even when it predicts something, it does not have to always be correct.
+
+Note that the data available for making predictions is dependent
+on who is making the prediction. As an example, if we assume that
+all predictions are about things that can be perceived, then
+each kind of intelligent beings (e.g. humans) will make predictions
+about the universe projected through their senses. If a universe contains
+multiple kinds of intelligent beings, with different kinds of
+sense organs, then that universe may have descriptions which are
+very different.
+
+In order to handle this dependence on who observes the universe
+in a reasonable way, in the reminder of this paper we will work with universes
+that contain intelligent beings
+and all predictions will be relative to what these intelligent beings
+could observe. If there are multiple kinds of intelligent beings in the
+universe, we'll assume that we picked one such kind. I.e. although we
+will talk about universes and their descriptions, we'll actually mean
+(universe, intelligent-being-kind) pairs and their corresponding descriptions.
+
+Next, let us try to specify how good an univese description
+is. First, our predictions speak about the future, but expecting them to
+predict everything until the end of the universe (if any) may not be
+reasonable. We may want to fix a minimum amount of time $\Delta t$
+and to evaluate the predictions about things that are at most
+$\Delta t$ in the future. Second, we should't expect to
+be able to describe everything with full precision, so we may want to
+have a precision $\eta>0$ for all the values that we predict.
+Third, we shouldn't expect our predictions to always be correct, so
+we should require that they are true with probability $p>0$.
+The exact meaning of \ghilimele{true with probability} here is left open.
+
+Then let us say that an \definitie{approximate universe description} with a
+\definitie{level of approximation} ($\eta>0$, $p>0$ and $\Delta t>0$)
+is a universe description which allows one to approximate the future
+state of the universe with a precision $\eta$, with a probability
+$p>0$ for a prediction to be correct
+\svn{Do I need the probability of the prediction to be correct
+     or do I need to cover a fraction p of the world?}
+and for a limited amount of time $\Delta t$.
+\svn{I must answer the following questions: exactly what does that
+     probability of correct prediction mean? Is it an aggregate among
+     all possible predictions? Does it mean that all of them need a p
+     chance of being correct? Do I need a fraction of the universe here?
+     All writable predictions are countable, so they all have a non-zero
+     weighth, so the aggregate probability most likely can't be zero.
+     Am I talking about provable predictions or about predictions
+     which are true on models?}
+
+\svn{200 reformulat}
+
+For a given universe or region of a universe,
+given a level of approximation, we will pick a canonical description
+in the following way: Let $S$ be the set of descriptions which approximate
+the universe with the given level of aproximation. If $S$ contains
+at least one finite description, then we pick the shortest such
+description as \ghilimele{the canonical description}, breaking ties by
+using the lexicographic order. Otherwise, we simply say that the
+universe (region) has an infinite description, and we will abuse the
+terminology a bit by picking $S$ as the canonical description (we could
+also pick a random description from the set).
+If the level of approximation is obvious from the context, we will call
+this canonical description \definitie{the universe's description}
+or the \definitie{universe region's description}.
+
+One could use a well-ordering on the real numbers to choose the
+lowest description as the universe's description, but that will
+complicate things without any benefit.
+
+\section{Options for our universe}
+
+The reminder of this paper will analyze what we can reasonably believe about
+the following issues:
+\begin{itemize}
+  \item Our universe is created or not.
+  \item Our universe has finite or infinite space.
+  \item Our universe has finite or infinite time.
+  \item Our universe has a finite or infinite description.
+  \item Option 1: There is a meta-$\beta$ universe for each countable ordinal
+        $\beta$ such that our universe is the meta-$0$ one and the meta-$beta$
+        universe includes, directly or not, all meta-$\alpha$ universes with
+        $\alpha < \beta$. Option 2: there is an ordinal $\beta$ where this
+        stops being the case.
+  \item Life is or is not compatible with a finite chunk of space-time having
+        an infinite observable description.
+\end{itemize}
+
+\section{Axioms}
+
+\subsection{Observing events}
+
+\begin{axiom}
+  If $P$ is a probability over the set of real numbers
+  (or a set with the
+  same cardinal) which can measure singletons,
+  we observe $x\in\reale$, and $P(x)=0$, then $x$ is generic.
+\end{axiom}
+
+Note that this does not require $P$ to be a probability over the
+Borel algebra of $\reale$, although that is, in many cases, implicitly
+assumed when talking about probabilities over $\reale$.
+
+The set of events for which $P(y)$ is
+greater than $0$ is at most countable, and, if we remove them from $\reale$, we
+get a set with the same cardinality as $\reale$. On this set, the probability
+of all peculiar events taken together is $0$, so there is no chance of us
+observing one. In other words, the probability of all generic events is $1$,
+so we can be sure that we observed a generic event.
+
+Of course, the (logical) possibility of observing a peculiar event still exists,
+but, practically, we will not observe it as long as the set of our
+observations is countable.
+
+This axiom could be generalized to probabilities for which singletons are not
+measurable, in those cases where we have a set of disjoint measurable events
+with the same cardinality as $\reale$, but, for the purpose of this paper,
+the current version should be enough.
+
+\begin{axiom}\label{noprobability}
+  If we observe $x\in\reale$, when we could have
+  observed any real number, and there is no probability distribution that could
+  describe how $x$ was chosen, then $x$ is generic.
+\end{axiom}
+
+Note that this axiom does not say that we do not know that probability
+distribution, it says that there is no such probability distribution.
+Anyone believing that this cannot happen should treat the cases where
+this axiom applies as invalid.
+
+Also note that this cannot happen when using subjective probabilities.
+
+If there is nothing that could favor
+peculiar numbers over generic ones, it's absurd to think that we could have
+observed an element of such a tiny set among something infinitely larger.
+Also, the case with a probability above suggests that this may be the only
+reasonable assumption in this case.
+
+\subsection{Design probability}
+
+\svn{30} \svn{31} \svn{32} \svn{33} \svn{34}
+\svn{35} \svn{36} \svn{37} \svn{38} \svn{39}
+\svn{40} \svn{41} \svn{42} \svn{43} \svn{44}
+\svn{202}
+\svn{45} \svn{46} \svn{47}
+
+\svn{48}
+
+\subsection{$\reale^4$ universe}
+
+\svn{49} \svn{50} \svn{51} \svn{52} \svn{53} \svn{54}
+
+\subsection{Logically possible universes}
+
+\svn{55} \svn{56} \svn{57} \svn{58} \svn{59} \svn{60}
+
+For any approximtion level $L$, and any region that is not trivial
+for $L$ (left open), there are multiple possible descriptions that
+are distinct for $L$ (not defined!). By splitting an infinite timespace
+into ?hypercube/hyperparalelipipedic? regions with corners in $\rationale$
+and taking all possible region description combinations,
+we get a set of countable universe descriptions \svn{61*}
+
+\subsection{Neighborhood modelling}
+
+\svn{62}
+\svn{201}
+\svn{
+    Think about deterministic vs non-deterministic modelling.
+    Think about overlapping approximate descriptions - I can't have
+    equivalence classes because a description that works for
+    a fraction of the universe can be equivalent to two incompatible
+    descriptions for the other fraction. Does the explanation in
+    \ghilimele{Logically possible universes} still work?
+}
+
+\section{Valid options for our universe}
+
+\svn{63} \svn{64}
+
+\subsection{Finite Descriptions and Uncountable Meta-universes}
+
+\svn{65} \svn{66} \svn{67} \svn{68} \svn{69}
+\svn{70} \svn{71} \svn{72} \svn{73} \svn{74}
+\svn{75} \svn{76} \svn{77} \svn{78} \svn{79}
+\svn{80} \svn{81} \svn{82}
+
+\subsection{Peculiar description for universe regions}
+
+\svn{83} \svn{84}
+\svn{85} \svn{86} \svn{87} \svn{88} \svn{89}
+\svn{90} \svn{91}
 
 \subsubsection{Improbable consistency}
 
+\svn{92} \svn{93} \svn{94}
+\svn{95} \svn{96} \svn{97} \svn{98}
+\svn{Footnote 100}
+\svn{Footnote 101}
+
 \section{Conclusion}
+
+\svn{*.*}
+\svn{
+    + explicatie ca universul nostru e unul din multele posibile bazate pe QM
+    means that the meta-universe is too simple.
+}
 
 \end{document}
