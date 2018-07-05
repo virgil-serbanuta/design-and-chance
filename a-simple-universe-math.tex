@@ -570,32 +570,219 @@ reasonable assumption in this case.
 
 \subsection{Design probability}
 
-\svn{30} \svn{31} \svn{32} \svn{33} \svn{34}
-\svn{35} \svn{36} \svn{37} \svn{38} \svn{39}
-\svn{40} \svn{41} \svn{42} \svn{43} \svn{44}
-\svn{202}
-\svn{45} \svn{46} \svn{47}
+\begin{axiom}
+  If $P$ is a probability over the set of real numbers
+  (or a set with the
+  same cardinal) which can measure singletons,
+  we observe $x\in\reale$, and $P(x)=0$, then $x$ is generic.
+\end{axiom}
 
-\svn{48}
+Note that this does not require $P$ to be a probability over the
+Borel algebra of $\reale$, although that is, in many cases, implicitly
+assumed when talking about probabilities over $\reale$.
+
+The set of events for which $P(y)$ is
+greater than $0$ is at most countable, and, if we remove them from $\reale$, we
+get a set with the same cardinality as $\reale$. On this set, the probability
+of all peculiar events taken together is $0$, so there is no chance of us
+observing one. In other words, the probability of all generic events is $1$,
+so we can be sure that we observed a generic event.
+
+Of course, the logical possibility of observing a peculiar event still exists,
+but, practically, we will not observe it as long as the set of our
+observations is countable.
+
+This axiom could be generalized to probabilities for which singletons are not
+measurable, in those cases where we have a set of disjoint measurable events
+with the same cardinality as $\reale$, but, for the purpose of this paper,
+the current version should be enough.
+
+\begin{axiom}\label{noprobability}
+If we observe $x\in\reale$, when we could have
+observed any real number, and there is no probability distribution that could
+describe how $x$ was chosen, then $x$ is generic.
+\end{axiom}
+
+Note that this axiom does not say that we do not know that probability
+distribution, it says that there is no such probability distribution.
+Anyone believing that this cannot happen should treat the cases where
+this axiom applies as invalid.
+
+Also note that this cannot happen when using subjective probabilities.
+
+If there is nothing that could favor
+peculiar numbers over generic ones, it's absurd to think that we could have
+observed an element of such a tiny set among something infinitely larger.
+Also, the case with a probability above suggests that this may be the only
+reasonable assumption in this case.
+
+\begin{axiom}
+  The probability that our universe is designed is greater than $0$.
+\end{axiom}
+\svn{quote/cite Swinburne or \ghilimele{This section parallels Swinburne}}
+
+In this section we are interested only in whether a probability is $0$ or not,
+so the word \ghilimele{likely} can be replaced with
+\ghilimele{has a non-zero probability} without decreasing
+the validity of the argument.
+
+First, let us note that something that is designed follows the intent of
+its designer. A designer may want to design everything possible, but then
+this shouldn't be properly called \ghilimele{design}, since it does not involve
+choice.
+
+A designer is likely
+to divide all the possible things in classes of similarity, and design at most
+a small number of things from each class (or at most one per class for a very
+good designer). In other words, between possible designs there will be small
+differences that do not really matter, so a normal designer will focus on the
+important parts and would not make explicit choices for each of these small
+diferences. And a very good designer would optimize and make the best choice
+even for these small things that do not matter much, but these
+would not cause more things to be designed.
+
+Assuming that we have some classes of similarity which may be interesting for
+a given designer, it is reasonable
+\svn{Rephase. Maybe \ghilimele{acceptable}?}
+to think that their set is countable,
+and, if so, that we have a positive probability for each of them.
+
+Extrapolating from what we know about ourselves, although that may
+not give us much, it is still reasonable to believe that
+\svn{finite?}
+rational beings,
+capable themselves of design, would be interesting to a designer of worlds.
+Therefore, we can assume that it's not completely implausible that a designer
+would design a world in order to be inhabited by the said beings.
+
+But then, that world is likely to be simple enough that
+those beings would find it possible to use their reason to
+discover, navigate and interact fruitfully with their world.
+\svn{Hidden assumption that those beings are finite.}
+
+\svn{202}
+
+However, in order for them to be able to discover their world, the perceived
+laws of the universe must not change, at least not much, both with time and
+when moving through space. To be more precise, it's likely that most of
+the space and time accessible to those beings is fairly consistent.
+
+But then, it is possible that the entire universe has a finite approximate
+description.
+
+To summarize, it is reasonable to assume that peculiar descriptions have
+a non-zero probability when a Designer is involved.
+
+\svn{5. Use Swinburne's argument about why would God create human-like beings.}
 
 \subsection{$\reale^4$ universe}
 
-\svn{49} \svn{50} \svn{51} \svn{52} \svn{53} \svn{54}
+This set of axioms attempts to say that our universe can be modelled
+on top of something close to $\reale^n$.
+
+\begin{axiom}\label{unitycovering}
+  For all $q\in\rationale\cup\multime{-\infty, +\infty}$,
+  the subset of hypercubes of size $q$ and corners
+  having generalized
+  \svn{define generalized rational. Check that it's needed, or we can use
+       $q\in Q$}
+  rational coordinates is countable and covers our universe.
+\end{axiom}
+\svn{Do I Need this axiom?}
+
+This axiom states that our universe can be covered by a set of hypercubes
+of a given size. While this could certainly be false, it is implied by some
+basic beliefs that we have about our universe, e.g. that there is a
+level of approximation for which the space and time anywhere in the universe
+can be approximated locally by an open subset of $R^n$.
+\svn{More explanation}
+
+\begin{axiom}\label{rationalcovering}
+  The set of (generalized) cuboids having their corners' coordinates in
+  $\rationale\cup\multime{-\infty, +\infty}$,
+  is countable and covers our universe.
+\end{axiom}
+
+If our universe's spacetime is $\reale^\alpha$ with
+$\alpha$ finite, then, indeed,
+the set of cuboids in the above axiom is countable.
+
+\begin{axiom}\label{finitecovering}
+  Any finite part of our universe can be covered with a finite set of cuboids
+  having their corners' coordinates in
+  $\rationale$.
+  \svn{Could be a definition.}
+\end{axiom}
+
 
 \subsection{Logically possible universes}
 
-\svn{55} \svn{56} \svn{57} \svn{58} \svn{59} \svn{60}
+\begin{axiom}\label{uncountable}
+  For any level of approximation $L$ there is a set $D_L$
+  of universe descriptions such that the following are true:
+  \begin{enumerate}
+    \item $D_L$ has the same cardinality as $\reale$.
+    \item For all elements $d\in D_L$ there is at least one conceivable
+          \svn{possible?}
+          universe $U_d$ which
+      \begin{enumerate}
+        \item has a time-space or something similar enough;
+        \item can plausibly contain intelligent beings that use mathematics;
+        \item for the intelligent beings mentioned above and
+              for the level of approximation $L$,
+              $d$ is a description of $U_d$.
+      \end{enumerate}
+    \item $D_L$ contains our universe's description.
+          \svn{Do I need to make such a strong claim?}
+  \end{enumerate}
+  The same is true for universe regions.
+  \svn{Except for the $\reale$ cardinality}
+\end{axiom}
 
-For any approximtion level $L$, and any region that is not trivial
+This axioms states that, for a given level of approximation,
+there is a large set of conceivable universes, which in some narrow respects
+are similar to ours, but which are, in general, wildly different.
+Also, our universe belongs to this set.
+\svn{Mention that all countable sets of axioms form a continuum.
+I did that below, but it's a bit unclear.}
+
+To see why that is reasonable, let us first note that,
+%in a similar way to axiom \ref{nonessentialhypercube},
+most likely, we have an approximate description for our universe
+given by classical mechanics, maybe with some additions.
+
+Next, for almost any countable axiom system that still
+has $R^n$ as a base, one could imagine an alternate universe
+which is exactly like ours inside (say) Mars' orbit,
+but what is what is outside of Mars' orbit is described by that axiom set.
+
+Some of these axiom sets would describe laws of nature which are similar enough
+to ours to allow us to observe what happens outside of Mars' orbit,
+but different enough that
+we would notice (e.g. gravity could work differently, depending on the region
+of space in which one travels).
+
+For any approximation level $L$, and any region that is not trivial
 for $L$ (left open), there are multiple possible descriptions that
 are distinct for $L$ (not defined!). By splitting an infinite timespace
 into ?hypercube/hyperparalelipipedic? regions with corners in $\rationale$
 and taking all possible region description combinations,
-we get a set of countable universe descriptions \svn{61*}
+we get a set of countable universe descriptions which we will
+denote by $\descriptions$. Each of the conceivable universes
+having one of these descriptions could contain intelligent beings that use
+mathematics, and so on.\svn{It's not about axiom sets, but about axiom sets
+that also include our region. Actually it's not about those axiom sets, but
+about their equivalence classes. Either reword everything, or, if choosing the
+lowest description soves the issue, make an explicit comment about it.}
 
 \subsection{Neighborhood modelling}
 
-\svn{62}
+\svn{Move before the previous section.}
+\begin{axiom}\label{finiteneighborhood}
+  There is a large time-space region of our universe that includes our solar
+  system, which has a finite approximate description.
+\end{axiom}
+
 \svn{201}
 \svn{
     Think about deterministic vs non-deterministic modelling.
@@ -608,24 +795,227 @@ we get a set of countable universe descriptions \svn{61*}
 
 \section{Valid options for our universe}
 
-\svn{63} \svn{64}
+This section will try to develop the axioms above in order to find out what
+is reasonable to believe about: our universe being designed or not;
+space and time being finite or infinite; the laws that we use to describe
+the behaviour of the universe working only locally, around us,
+or in the entire universe;
+our universe being contained in an uncountable chain of meta-universes;
+life being
+compatible with a finite chunk of space-time having an infinite
+observable description.
+
+We will focus mostly on what happens when our universe is not created
+since in this case it is easier to make predictions about our universe
+and to falsify them.
 
 \subsection{Finite Descriptions and Uncountable Meta-universes}
+\label{fdaumu}
 
-\svn{65} \svn{66} \svn{67} \svn{68} \svn{69}
-\svn{70} \svn{71} \svn{72} \svn{73} \svn{74}
-\svn{75} \svn{76} \svn{77} \svn{78} \svn{79}
-\svn{80} \svn{81} \svn{82}
+Let us assume first that our universe has a finite
+description, which we will denote by $x$, with $x\in\descriptions$.
+Let us also conside that, perhaps, our universe is contained
+in a meta-universe, which is, perhaps, contained in
+a meta-meta-universe, and so on, these meta-universes corresponding to
+ordinals. We will assign the ordinal $0$ to the first meta-universe.
+
+A meta-universe here is something that contains our universe, and which
+influences one way or another which of the logically possible universes exist.
+As an example, if all possible universes exist, we can take their
+set/collection/grouping to be a meta-universe. For the purpose of this paper,
+the most important thing related to a meta-universe is whether there is a
+probability measure over the descriptions of the universes
+contained in it, specifying which ones exist and in which proportion.
+The existence of
+such a probability implies the existence of a meta-universe, but not the other
+way around. Alternately, this probability may be the subjective probability
+which we assign to various universe descriptions.
+\svn{Axiom 2 - limit to countable?}
+\svn{
+  De gandit la faptul ca regula ca toate universurile posibile exista e
+  peculiar, dar, poate, rezonabila.
+  Poate nu.
+  Oricum, eu lucrez cu distributii de probabilitate.
+  Pot da ca exemplu si comenta exact regula ca
+  (fiecare univers posibil exista /
+  pentru fiecare descriere exista un univers)
+  si ca am sa nu distributie de probabilitate.
+  De urmarit cum se aplica axiomele - in articol sau ca anexa.
+}
+
+One example of a probability measure is that which assigns $1$ to our
+universe's description and $0$ to everything else.
+However, if, say,
+our universe is the only one that exists, but there is no reason for it
+existing
+\svn{Did I explain what it means?}
+and for the other universes not to exists, then there is no
+probability measure in the sense mentioned above.
+
+Returning to associating meta-universes with ordinals,
+if there are ordinals which do not correspond to any meta-universe, and
+the smallest one is countable, let us denote it by $\alpha$.
+Otherwise, let $\alpha$ be the lowest uncountable ordinal.
+
+If $\alpha = 0$ then there is no probability distribution over universe
+descriptions, so $x$ is generic (axiom \ref{noprobability}).
+
+Otherwise, if $\alpha > 0$, but, at level
+\svn{Did I say what \ghilimele{level} means?}
+$0$, there is no probability
+distribution over universe descriptions, $x$ is generic (again, from axiom
+\ref{noprobability}).
+\svn{Either use the proper wording everywhere, or explain that,
+     for easier writing I am treating $P(X)=1$ that as
+     logical necessity, but the
+     reader should keep in mind that the actual meaning is closer to
+     \ghilimele{practically true}.}
+
+If the probability distribution at level $0$ is continuous,
+then the probability of all peculiar descriptions is $0$,
+so the only reasonable conclusion is that our universe has a generic
+approximate description.
+\svn{Axiom??}
+
+For many people, this result may be good enough.
+However, since this
+probability distribution does not have to be continuous,
+let us let us assume that for some levels $\beta$ with
+$0 < \beta \le \alpha$ there is a probability
+$p_\beta$ over $\descriptions$, with $p_\beta(y)$ being
+the probability that $y$ is a discontinuity
+for all $p_\gamma$ with $\gamma < \beta$.
+\svn{Really confusing. Maybe a footnote with an example would help.}
+
+Let $\beta$ be the minimum (if any) for which $\beta < \alpha$ and
+$p_\beta$ does not exist or $p_\beta(x) = 0$.
+
+% If such a $\beta$ exists, then let us denote by $P$ the joint probalility for
+% all the ordinals up to $\beta$ and including it.
+% Then $p_\gamma(x) = P(x|\gamma)$. We have $P(x|\gamma)>0$ for all
+% $\gamma<\beta$ and $P(x|\beta) = 0$. Then $P(x) = 0$
+
+If such a $\beta$ exists, then, although in all the lower universes
+$\gamma < \beta$ we may be able to bet on a peculiar description for our
+universe, at level $\beta$ we can be sure that a bet on peculiar descriptions
+would fail.
+
+Since, until $\beta$, we made an at-most-countable number of
+observations\footnote{Each meta-universe between $\beta$ and us counts as an
+observation}, we
+do not expect to observe a peculiar event with $0$ probability, so we must be
+in a chain of (meta-)universes where our universe's description is
+generic.
+\svn{+quote. Qhat did I mean by \ghilimele{quote}?}
+% Since we only placed an at-most-countable number of bets until now,
+%we don't expect certain failure.
+%\svn{Why we don't expect failure?}
+
+If such a $\beta$ does not exist, up to $\alpha$, without including it,
+$p_\alpha$ exists and $p_\alpha(x) > 0$.
+
+If $\alpha$ is countable and there is no meta-universe above $\alpha$,
+then, similar to the above reasoning, as far as $\alpha$ is concerned,
+$x$ is generic.
+
+This means that, if our universe is not created, the only option that
+has a chance of being reasonable is that $\alpha$ is uncountable and,
+for all $\beta < \alpha$, $p_\beta$ exists and $p_\beta(x) > 0$.
+
+To summarize, in order to claim that $x$ is peculiar, one needs to postulate the
+existence of an uncountable chain of meta-universes, all of them favouring a
+peculiar $x$, which, by default, is unlikely for any of them. Also, although the
+current argument does not work anymore when the chain of
+meta-universes becomes uncountable, intuitively the peculiarness problem
+still remains.
+
+From now on, I will assume that the possible objection in the preceding
+paragraph is unreasonable, which means that, practically speaking,
+either $x$ is not peculiar or our universe is designed.
+
+Next, let us ask consider if a universe with finite space-time can have an
+infinite description that is compatible with intelligent life. If this is not
+possible, then either our universe is designed, or it has an infinite
+space-time, or it has a finite spacetime with an infinite description.
 
 \subsection{Peculiar description for universe regions}
 
-\svn{83} \svn{84}
-\svn{85} \svn{86} \svn{87} \svn{88} \svn{89}
-\svn{90} \svn{91}
+In this section, we will only work with cuboids that have their
+corners' coordinates
+in $\rationale\cup\multime{-\infty, +\infty}$, although we may limit
+them at times to smaller sets (e.g. finite coordinates).
+
+Let us take a countable covering with (generalized) cuboids of our universe.
+From axiom \ref{rationalcovering}, this covering exists.
+Let us take all finite unions of such cuboids. Their set is countable.
+
+Let us consider the case when a finite chunk of spacetime can
+have an infinite approximate
+description which is compatible with inteligent life in the universe.
+Let us take such a chunk of space and let us cover it with a finite union of
+finite cuboids (axiom \ref{finitecovering}).
+We can then apply the same argument as in section \ref{fdaumu} to any
+such union of cuboids, by considering it as a mini-unverse inside
+our universe.
+
+The set of all possible finite unions is countable,
+which means that the probability that any of them has a peculiar
+description is $0$. The only reasonable options that we have are:
+either each such union has a generic description,
+or finite chunks can only have peculiar descriptions, or our universe
+is designed.
+
+However, we usually believe that we can have peculiar/finite
+approximate descriptions
+for the region of universe around us (axiom \ref{finiteneighborhood}), so we
+will disregard the possibility that each finite union of cuboids has an
+infinite approximate description. Even if we are unwilling to disregard it,
+the argument in the next section also works when using the full set of
+descriptions, not only the finite ones.
+
+This leaves us with the following
+two options: finite unions of cuboids that cover a finite chunk of space can
+only have finite descriptions in a universe with intelligent life, or our
+universe is designed.
+
+However, from section \ref{fdaumu}, our universe should have an
+infinite description, which means that either our universe is infinite,
+or it is designed.
+
+If our universe is infinite,
+then finite unions of cuboids that cover an infinite
+amount of time-space can have infinite descriptions. The set of all finite
+unions of cuboids is countable.
+Applying the argument
+in section \ref{fdaumu}, we get that either each such union has a generic
+description, or our universe is designed.
+
+To summarize, either
+\begin{itemize}
+  \item our universe is designed, or
+  \item our universe is infinite, all finite unions of
+        cuboids that cover an infinite chunk of spacetime have infinite
+        descriptions, while finite unions of cuboids that cover a finite chunk
+        of space can have only finite descriptions.
+\end{itemize}
 
 \subsubsection{Improbable consistency}
 
-\svn{92} \svn{93} \svn{94}
+Let us focus on the second case above, infinite universe with infinite
+description, while finite unions of cuboids have finite approximate
+descriptions.
+
+Let $A_1$ be the set of possible approximate descriptions for
+a hypercube of size, say, $1\;second \times meter^3$.
+Unless our approximation is extremely coarse, $A_1$ will have multiple elements.
+For any description $a\in A_1$, let $P(a)$ be the probability of encountering
+a hypercube with $a$ as its description in our universe.
+
+\svn{Finite union covering infinite space has infinite description
+     iff
+     infinite hypercube covering infinite space has infinite description
+     iff ???}
+
 \svn{95} \svn{96} \svn{97} \svn{98}
 \svn{Footnote 100}
 \svn{Footnote 101}
