@@ -58,6 +58,7 @@
 \newcommand{\definitie}[1]{\textbf{#1}}
 \newcommand{\ghilimele}[1]{``#1"}
 \newcommand{\lnotat}[1]{\sim #1}
+\newcommand{\negat}[1]{\sim #1}  % TODO: This is the same as \lnotat
 \newcommand{\citare}[1]{(\cite{#1})} % TODO: Separate this in a version with parenthesis and one without.
 
 \newtheorem{definition}{Definition}
@@ -480,7 +481,18 @@ and for a limited amount of time $\Delta t$.
      Am I talking about provable predictions or about predictions
      which are true on models?}
 
-\svn{200 reformulat}
+There is a distinction that we should make.
+When predicting (say) weather we can't make long-term precise predictions,
+and this happens because weather is chaotic, that is, a small difference
+in the start state can create large differences over time.
+This could happen even if the universe is deterministic
+and we know the laws of the universe perfectly, as long as we don't know
+the full current state of the universe.
+However, as argued above, with probability $1$, our hypothetical intelligent
+beings would not be able to make predictions for a significant part of
+the universe because they would have no idea about how their universe works,
+not because they don't know its state precisely enough.
+\svn{reformulat}
 
 For a given universe or region of a universe,
 given a level of approximation, we will pick a canonical description
@@ -660,7 +672,29 @@ those beings would find it possible to use their reason to
 discover, navigate and interact fruitfully with their world.
 \svn{Hidden assumption that those beings are finite.}
 
-\svn{202}
+First, something close to this issue was already addressed by
+\textcite{Swinburne2003}, which argues that, if God exists,
+there is a fairly good chance that humans can understand their universe:
+
+\begin{quote}
+  So, in order to have significant freedom and responsibility, humans need
+  at any time to be situated in a \ghilimele{space} in which there is a
+  region of basic control and perception, and a wider region into which
+  we can extend our perception and control by learning which of our
+  basic actions and perceptions have which more distant effects and causes
+  when we are stationary, and by learning which of our basic actions cause
+  movement into which part of the wider region.
+  If we are to learn which of our basic actions done where have which
+  more distant effects (including which ones move us into which parts
+  of the wider region), and which distant events will have which basically
+  perceptible effects, the spatial world must be governed by laws of nature.
+  For only if there are such regularities will there be recipes for changing
+  things and recipes for extending knowledge that creatures can learn and
+  utilize.
+  So humans need a spatial location in a law governed universe in which to
+  exercise their capacities, and so there is an argument from our being thus
+  situated to God.
+\end{quote}
 
 However, in order for them to be able to discover their world, the perceived
 laws of the universe must not change, at least not much, both with time and
@@ -783,7 +817,15 @@ lowest description soves the issue, make an explicit comment about it.}
   system, which has a finite approximate description.
 \end{axiom}
 
-\svn{201}
+Above I argued that, for non-created universes, the probability of having
+a non-trivial finite approximate mathematical description is zero,
+i.e. $P(F | \negat{C}) = 0$.
+As mentioned above, many people assume, implicitly or explicitly,
+that our universe has such a description, e.g. when claiming
+that the universe is around $14$ billion years old.
+This means that they assume that $P(F) > 0$, which implies that $P(F | C) > 0$.
+It also implies that the probability of our universe not being created is $0$,
+i.e. $P(\negat{C} | F) = \frac{P(F | \negat{C}) P(\negat{C})}{P(F)} = 0$.
 \svn{
     Think about deterministic vs non-deterministic modelling.
     Think about overlapping approximate descriptions - I can't have
@@ -1016,16 +1058,202 @@ a hypercube with $a$ as its description in our universe.
      infinite hypercube covering infinite space has infinite description
      iff ???}
 
-\svn{95} \svn{96} \svn{97} \svn{98}
-\svn{Footnote 100}
-\svn{Footnote 101}
+Note that there are multiple ways of picking this probability. Examples
+\svn{TODO: Remove the examples. They are at odds with the reminder of this
+     section (subjective vs objective probabilities).
+     }
+include:
+\begin{itemize}
+  \item Take the entire spacetime that we could reach until the termic death of
+        our universe and divide it into hypercubes of size $1$. This spacetime
+        is, most likely, finite, so we can assign equal weights to each
+        hypercube, and we can sum these for each description to get
+        the probability of each description.
+        \svn{Shouldn't one take the description probability among all universes?
+             Have an option where this is a subjective probability
+             }
+  \item Abuse the term \ghilimele{encountering} and take any weight
+        function over space-time divided in hypercubes of size $1$ that does
+        not assign a $0$ weight to any hypercube such that all weights add to
+        $1$, perhaps we would
+        assign the maximum probability to \ghilimele{now and here},
+        decaying exponentially over any infinite dimension. As above,
+        we would add these weights to get the probability
+        ************ of any description in the entire space.
+\end{itemize}
+
+If $A_1$ would be finite, we could, by default, pick the probability
+distribution that assigns equal probabilities to all elements of $A_1$.
+Howewer, $A_1$ can be countable, so let us consider how such a probability
+distribution would look like.
+It would be unreasonable to assume that the probability is zero for all
+elements except one.
+This is suggested by two things: first, there are too many
+possible universes where this does not happen; second, right now we are
+examining the case when our universe has an infinite description, so not all
+hypercubes share the same description\footnote{
+This may not be true when considering only descriptions
+within a finite region of space-time, but it's still unreasonabe to believe
+that there is only one description within that space}.
+
+If the description that we use for the universe around us
+has probability $p_1 < 1$, then the probability of observing $n$ hypercubes
+with this description without observing any other description is $p_1^n$.
+\svn{This assumes independence, but that's reasonable among all possible
+     universes.
+     }
+
+Even if $p_1$ is very close to $1$, $p_1^n$ converges very quickly to $0$,
+so the consistency of a small spacetime region around us is enough
+to make this hypothesis unlikely enough (compared to the others, assuming
+that at least one other has a non-zero probability) to disregard it.
+
+TODO: Move to the right\footnote{
+  If $N=2$, $k=10$ is enough to go below one to one thousand odds,
+  $k=20$ is enough to go below one to one million, $k=30$ goes below one to one
+  billion
+  }
+place\footnote{
+  Let $ND$ be the hypothesis that our universe id not designed,
+  $D$ be the hypothesis that it is designed, $OUR$ be our universe,
+  $our$ be the region of space around us that has the same description.
+  Note that $P(our) \ge P(OUR)=P(OUR|D)\cdot P(D) > 0$.
+  Then $P(D|our) = \frac{P(our|D)\cdot P(D}{P(our)}) > 0$.
+  Similarly,
+  $P(ND|our) = \frac{P(our|ND)\cdot P(ND}{P(our)})
+    = \frac{P(ND)}{N^k} \cdot \frac{1}{P(our)}$.
+  To compare the two we have to compare
+  $P(our|D)\cdot P(D)$ with $\frac{P(ND)}{N^k}$.
+  }.
 
 \section{Conclusion}
 
-\svn{*.*}
+We have, then, the following reasonable possibilities:
+
+\begin{enumerate}
+\item Our universe is designed.
+\item Our timespace is infinite and each infinite chunk has an infinite
+      description. Any approximate description for a limited chunk of timespace
+      around us is finite (infinite descriptions are impossible or
+      incompatible with life). At the same time, one of the following
+      would be true:
+      \begin{enumerate}
+      \item We are in a very unlikely chunk of our universe, where,
+            given a reasonable decomposition in small pieces (e.g.
+            hypercubes of size $1$), all pieces around us that we observe
+            have the same approximate description. The probability
+            of this happening converges quickly to $0$ when the number
+            of observed pieces goes up.
+      \item The universe pieces around us do not have the same
+            approximate description. This means that
+            we can't know much about the past and we can't
+            predict much about the future. This is not what we
+            observe.
+      \end{enumerate}
+\end{enumerate}
+
+The most reasonable option seems to be that our universe is designed.
+
 \svn{
     + explicatie ca universul nostru e unul din multele posibile bazate pe QM
     means that the meta-universe is too simple.
 }
+
+\section{Background}
+\subsection{Probabilities}
+
+Let $A$ be a set with the same cardinality as $\reale$. Let $F$ be the set of
+all mathematical predicates of one variable over $A$ that can be written as a
+finite formula. If $f$ is such a predicate then let $A_f$ be the subset of
+$A$ where $f$ is true, i.e. $A_f=\multime{a\in A\mid f(a) \mbox{ is true}}$.
+Given a probability distribution over $A$, we define $P(f)=P(A_f)$.
+
+Let $F_0$ be the set of all elements of $F$ such that their probability is
+$0$ for all continuous probability distributions over $A$, i.e.
+$$F_0=\multime{
+  f\in F
+  \mid P(A_f)=0
+    \mbox{ for all continuous probability distributions over } A}.
+$$
+As an example, any predicate which is true for a finite subset of elements,
+i.e. $A_f$ is finite, would belong to $F_0$. Let us identify by $A_0$ the
+set of elements of $A$ for which at least one predicate of $F_0$ is true, i.e.
+$$A_0=\multime{a \in A\mid \exists f\in F_0 \mbox{ with } f(a)\mbox{ true} }.$$
+Let us also denote by $F_1$ and $A_1$ the complements of $F_0$ and $A_0$,
+respectively.
+
+Let $P$ be a continuous probability distribution.
+
+Since $F$ is countable, $F_0$ must be at most countable. Then,
+obviously, $P(F_0)=0$, so the probability of its complement, $P(F_1)$, is $1$.
+Similarly, $P(A_0) = 0$ and $P(A_1) = 1$, which justifies the indexes used for
+these.
+
+Let us say that an element $a\in A_1$ is \definitie{generic}
+and an element $a\in A_0$ is \definitie{peculiar}. Then we could rewrite
+the equalities above to $P(x\mbox{ is generic}) = 1$ and
+$P(x\mbox{ is peculiar}) = 0$.
+\svn{I should actually use the \ghilimele{is finite} predicate or something
+     like that.}
+
+Obviously, $P(E)=0$, where $E\subset A$, does not mean that observing
+an element of $E$ is logically impossible, it just means that,
+if we make a set of (independent) observations that is at most countable
+of elements of $A$, we have no chance at all of observing an element of $E$.
+
+\subsection{Ordinals}
+
+Ordinals are generalizations of natural numbers. Natural numbers can be
+defined by identifying each natural number with the set of natural numbers less
+than it. Then $0$ is identified with the empty set $\emptyset$,
+$1$ with $\multime{0}=\multime{\emptyset}$,
+$2$ with $\multime{0, 1}=\multime{\emptyset, \multime{\emptyset}}$,
+and so on.
+
+Each of these natural numbers is an ordinal. To define the smallest ordinal
+that is not a natural number, denoted by $\omega$, we will use the
+same rule: let $\omega$ to be the set of ordinals smaller than it, i.e
+the set of natural numbers, $\omega=\multime{0, 1, 2, \dots}$.
+
+Of course, the next ordinal, called $\omega + 1$, will be the set
+$\multime{0, 1, 2, \dots \omega}$ and the next one,
+$\omega+2$, will be $\multime{0, 1, 2, \dots \omega, \omega+1}$. We can
+continue and, in the same way, define $\omega\cdot 2=\omega+\omega$ to be
+the ordinal that comes after all $\omega+n$ where n is a natural number
+\svn{Use finite ordinal instead of natural number.}.
+
+Then we can define $\omega\cdot 3$, $\omega\cdot 4$ and so on, and we can
+take $\omega\cdot \omega$ to be the ordinal that comes after all the ones
+defined by using the above rules.
+
+Let us note that $\omega$ is countable, and that all the ordinals mentioned
+above that come after it are also countable. By using the same kind of
+reasoning as above we can produce other countable ordinals like
+$\omega^\omega$ (from ordinals like $\omega\cdot\omega\cdot\dots\cdot\omega$)
+and $\epsilon_0$ (from $\omega^{\omega^{\cdots^\omega}}$).
+
+After going through many similar processes, at some point we obtain the
+smallest uncountable ordinal, $\omega_1$, which is the set of all
+countable ordinals.
+
+Let us note that some ordinals, like all the finite ones except $0$,
+and like $\omega+1$, can be obtained from the previous one by using
+a succesor relation, i.e. $succesor(\alpha) = \alpha\cup\multime{\alpha}$.
+All ordinals have a succesor, but not all are succesors, some, like
+$\omega$ and $\omega\cdot 2$ can be defined only as the set of all
+smaller ordinals. The former are called \ghilimele{successor ordinals},
+the later are called \ghilimele{limit ordinals}. Note that $0$ is a limit
+ordinal.
+
+Transfinite induction is a generalization of induction, where, if we can
+prove that a property holds for an ordinal $\alpha$ from the fact that
+it holds for all ordinals $\beta<\alpha$, then this property holds for
+all ordinals.
+\svn{am I using this?}
+
+In many cases transfinite induction proofs are done separately for
+succesor ordinals (maybe in the form $p(\alpha)$ implies $p(\alpha+1)$)
+and for limit ordinals.
+\svn{am I using this?}
 
 \end{document}
