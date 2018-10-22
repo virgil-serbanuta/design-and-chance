@@ -1,0 +1,4 @@
+pdflatex a-simple-universe-math.tex
+biber a-simple-universe-math
+pdflatex a-simple-universe-math.tex
+pdflatex a-simple-universe-math.tex
