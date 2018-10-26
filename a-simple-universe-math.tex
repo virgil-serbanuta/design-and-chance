@@ -86,11 +86,12 @@
 \section{Introduction}
 
 Many people believe
-that we can make various claims about the universe,
-that there are certain laws approximating its behaviour fairly well,
+that there are certain laws approximating our universe's behaviour fairly well,
 that we can compute its age,
 that we can make predictions about the distant future, and so on.
-This \paper{} started as a
+In a way, all of these are really surprising
+\svn{Maybe move the Feinmann quote from below to here},
+so this \paper{} started as a
 mathematical attempt to understand why this is the case
 and what we can reasonably believe about our universe.
 It turns out that it matters
@@ -108,17 +109,22 @@ I did not manage yet to find anyone drawing the same conclusions
 in the same way.
 
 My argument can be considered a statistical approach to Aquina's fifth way.
-It tries to avoid the issues that other statistical approaches (e.g. the
-fine-tuning argument) have.
+It tries to avoid the issues that other statistical approaches for showing
+our universe's design (e.g. the fine-tuning argument) have.
 
-Sections \ref{?} to \ref{?} present the mathematical notions and results used
-in this paper. Section \ref{?} introduces universe approximations. Section
-\ref{?} introduces the argument's axioms, while section \ref{?} uses them
-to make predictions about our universe, then verifies if they match our
-observations. Sections \ref{?} and \ref{?} present this paper's relations to
+Sections \ref{probabilities-section} and \ref{sec:ordinals}
+briefly present some mathematical background for people interested in it.
+Section \ref{sec:possible-universes} introduces universe approximations
+and a few other related notions.
+Section \ref{sec:axioms} introduces the argument's axioms,
+while section \ref{sec:valid-options} uses them to make predictions
+about our universe, then verifies if they match our observations.
+Sections \ref{sec:ordered-universe} and
+\ref{sec:fine-tuning} present this paper's relations to
 previos work.
 
 \section{The ordered universe argument}
+\label{sec:ordered-universe}
 
 %TODO: Urmatoarele trei alineate sunt nasoale.
 The \svn{great?} Catholic theologian Thomas Aquinas,
@@ -132,24 +138,21 @@ interesting in the context of this \paper{}.
 %Metaphysics by Peter van Inwagen, from 2015, says that it's a powerful and sophisticated defense.
 % 67 de citari https://scholar.google.ro/scholar?cites=18062876017816040453&as_sdt=2005&sciodt=1,5&hl=en
 
-There are two types of order which are interesting, the spatial order
+There are two types of order which we may consider, the spatial order
 and the temporal order.
-The former is the order that one can see in (a part of) the universe
+The former is the order that can be seen in (a part of) the universe
 at a given moment in time, e.g. that planets, living bodies, and other things
 are ordered.
-\svn{This seems a bit awkward, is there a better way to state it?}{} It is
-tricky to build an argument for the existence of a designer based on it.
 The latter can be seen in the behaviour of things, including the laws of
 nature, and it's the one that will be used in this \paper{}.
 
 \citetitle{swinburne1968} addresses Hume's
-objections\svn{Need to introduce them. * Re-read The Argument From Design}
+objections \svn{Need to introduce them. * Re-read The Argument From Design}
 against Aquinas' argument, but one in particular is interesting here:
 the argument is based on analogy, which limits its strength.
 I think that this \paper{}'s argument, although it builds on the same
 foundation, needs only an extremely weak analogy
-(see Section \ref{sec:remaininghypothesis})\svn{Fix section}.
-% Do I really need the analogy? If yes, remove the \ghilimele{may work}. I don't need it - see the testimony argument.
+(see Section \ref{sec:design-probability}).
 
 The following quote from \textcite{swinburne1968}, made when addressing
 Hume's objection that the order which can be observed in this universe
@@ -179,6 +182,11 @@ an experiment you have not yet done.
 % TODO: Maybe list some of Hume's issues with this argument.
 
 \section{The fine-tuning argument and other objections}
+\label{sec:fine-tuning}
+\svn{
+  Consider deleting this section or moving it to the objections section or
+  correcting it.
+}
 
 Although the argument in this paper does not resemble the fine-tuning argument
 much, it uses similar methods, which may raise similar objections. Indeed,
@@ -346,20 +354,10 @@ such a set has a finite number of laws, while I am explicitly removing
 that constraint, so both can be right within their contexts.
 
 \section{Possible universes and their descriptions}
+\label{sec:possible-universes}
 
-% TODO: maybe delete the footnote.
-Many people believe that our universe is designed and created
-and that it's unreasonable to believe that any universe can exist
-without being created, and I agree with them.
-However, these beliefs are not shared by everyone, so it's worth thinking
-about what creation means.
 If our universe is created, then it's likely to be the way it is because
-its Creator
-\footnote{Not everybody that believes that our universe is created
-thinks that God created it.
-Still, I hope that they would agree that capitalizing the Creator
-of this universe is reasonable.}
-\svn{Do I need this footnote?}{} wanted it to have certain properties.
+its Creator wanted it to have certain properties.
 In order to understand why our universe works the way it does,
 one would need to understand the intent of its Creator.
 While that is interesting in itself, I will not try to pursue it here,
@@ -374,14 +372,18 @@ Would it be similar to our universe?
 Maybe an infinity of universes exist and ours is just one of many,
 or maybe our universe it the only one that exists.
 Even if ours is the only one, one could easily imagine that it worked
-in a different way, say that the speed of light would be different,
-or that gravity would work differently.
+in a different way, e.g. maybe some constant like the speed of light would be
+different, or maybe gravity would work differently.
 
 There are people who claim that all logically possible universes exist,
 either because they think that it simply makes sense, or because they want to
 give a good account of modality, or because they need
 an ad hoc\svn{Do I need the \ghilimele{ad-hoc} part?}{} hypothesis
 to argue against, say, fine-tuning.
+If that's the case, it seems, at first sight, that making predictions about
+non-designed universes is rather hard.
+However, this paper argues that there are certain things that can be said
+regardless of how many universes exist.
 The argument in this \paper{} does not assume that more than
 one universe exists, but it should work either way.
 
@@ -389,7 +391,7 @@ A possible universe
 could have exactly the same fundamental laws as ours, but with matter
 organized differently.
 It could have similar laws, but with different universal constants.
-It could have different fundamental particles (or whatever the basic
+It could have different fundamental particles (or fields, or whatever the basic
 building blocks of our universe are, assuming that there are any).
 Or it could be completely different, i.e. different in all possible ways.
 
@@ -412,18 +414,20 @@ especially since this paper only needs universes which can be approximated
 by mathematical models.
 However, for simplicity, let us, for now, consider only universes
 which are fully modellable with sets of axioms that are at most countable.
+\svn{Do I need this?}
 
 Let us restrict the universes we are considering even further, to universes that
-have something that remotely resembles time and space, for which
+have something remotely resembling time and space, for which
 \ghilimele{the state of the universe at a given moment in time}, or something
 close, makes sense, and which can plausibly contain intelligent beings.
 Any such universe is, for the purpose of this paper, a conceivable universe.
 
 To keep the exposition simple, in the following I will use
-\ghilimele{state of the universe at a given moment in time},
+\ghilimele{the state of the universe at a given moment in time},
 but one should replace it with one's favourite alternative concept.
 
-A \definitie{universe description} is a mathematical theory that has
+Let us define a \definitie{universe description} to be a mathematical
+theory that has
 a set of axioms which is at most countable and which allows making
 predictions about the future state of the universe given its state
 at a certain moment in time. A \definitie{universe region description}
@@ -442,18 +446,23 @@ about the universe projected through their senses. If a universe contains
 multiple kinds of intelligent beings, with different kinds of
 sense organs, then that universe may have descriptions which are
 very different.
+Of course, things that are not observable directly can sometimes be mapped
+to things that are observable, but this may not be always true.
 
 In order to handle this dependence on who observes the universe
 in a reasonable way, in the reminder of this paper we will work with universes
 that contain intelligent beings
 and all predictions will be relative to what these intelligent beings
-could observe. If there are multiple kinds of intelligent beings in the
-universe, we'll assume that we picked one such kind. I.e. although we
+could observe.
+If there are multiple kinds of intelligent beings in the
+universe, when talking about its description, we'll assume that we picked
+one such kind.
+I.e. although we
 will talk about universes and their descriptions, we'll actually mean
 (universe, intelligent-being-kind) pairs and their corresponding descriptions.
 
 Next, let us try to specify how good an univese description
-is. First, our predictions speak about the future, but expecting them to
+should be. First, our predictions speak about the future, but expecting them to
 predict everything until the end of the universe (if any) may not be
 reasonable. We may want to fix a minimum amount of time $\Delta t$
 and to evaluate the predictions about things that are at most
@@ -463,6 +472,7 @@ have a precision $\eta>0$ for all the values that we predict.
 Third, we shouldn't expect our predictions to always be correct, so
 we should require that they are true with probability $p>0$.
 The exact meaning of \ghilimele{true with probability} here is left open.
+Of course, we may add other similar constraints if needed.
 
 Then let us say that an \definitie{approximate universe description} with a
 \definitie{level of approximation} ($\eta>0$, $p>0$ and $\Delta t>0$)
@@ -488,11 +498,8 @@ in the start state can create large differences over time.
 This could happen even if the universe is deterministic
 and we know the laws of the universe perfectly, as long as we don't know
 the full current state of the universe.
-However, as argued above, with probability $1$, our hypothetical intelligent
-beings would not be able to make predictions for a significant part of
-the universe because they would have no idea about how their universe works,
-not because they don't know its state precisely enough.
-\svn{reformulat}
+However, high precision predictions may be possible if the full state
+is taken into account.
 
 For a given universe or region of a universe,
 given a level of approximation, we will pick a canonical description
@@ -531,35 +538,46 @@ the following issues:
 \end{itemize}
 
 \section{Axioms}
+\label{sec:axioms}
+
+Throughout this paper we will only use probability measures that can measure
+singletons (i.e. single-element sets).
 
 \subsection{Observing events}
-
+\svn{Add the definition for "generic" and add a reference to the section + peculiar}
 \begin{axiom}
   If $P$ is a probability over the set of real numbers
-  (or a set with the
-  same cardinal) which can measure singletons,
+  (or a set with the same cardinal)\footnote{Readers of this paper should
+  keep in mind that, in most cases throughout this paper, what is being said
+  about the set of real numbers is similarly valid for any set with the same
+  cardinality.}
+  which can measure singletons,
   we observe $x\in\reale$, and $P(x)=0$, then $x$ is generic.
 \end{axiom}
 
-Note that this does not require $P$ to be a probability over the
+Note that here, and in all the axioms in this paper, it is not required that
+$P$ is be a probability over the
 Borel algebra of $\reale$, although that is, in many cases, implicitly
 assumed when talking about probabilities over $\reale$.
 
 The set of events for which $P(y)$ is
 greater than $0$ is at most countable, and, if we remove them from $\reale$, we
-get a set with the same cardinality as $\reale$. On this set, the probability
+get a set with the same cardinality as $\reale$.
+On this later set, the probability
 of all peculiar events taken together is $0$, so there is no chance of us
-observing one. In other words, the probability of all generic events is $1$,
+observing one.
+In other words, the probability of all generic events is $1$,
 so we can be sure that we observed a generic event.
 
 Of course, the (logical) possibility of observing a peculiar event still exists,
 but, practically, we will not observe it as long as the set of our
-observations is countable.
+observations is at most countable.
 
 This axiom could be generalized to probabilities for which singletons are not
 measurable, in those cases where we have a set of disjoint measurable events
 with the same cardinality as $\reale$, but, for the purpose of this paper,
 the current version should be enough.
+\svn{Keep or drop this paragraph?}
 
 \begin{axiom}\label{noprobability}
   If we observe $x\in\reale$, when we could have
@@ -577,56 +595,11 @@ Also note that this cannot happen when using subjective probabilities.
 If there is nothing that could favor
 peculiar numbers over generic ones, it's absurd to think that we could have
 observed an element of such a tiny set among something infinitely larger.
-Also, the case with a probability above suggests that this may be the only
+Also, the case with a probability above suggests that this is the only
 reasonable assumption in this case.
 
 \subsection{Design probability}
-
-\begin{axiom}
-  If $P$ is a probability over the set of real numbers
-  (or a set with the
-  same cardinal) which can measure singletons,
-  we observe $x\in\reale$, and $P(x)=0$, then $x$ is generic.
-\end{axiom}
-
-Note that this does not require $P$ to be a probability over the
-Borel algebra of $\reale$, although that is, in many cases, implicitly
-assumed when talking about probabilities over $\reale$.
-
-The set of events for which $P(y)$ is
-greater than $0$ is at most countable, and, if we remove them from $\reale$, we
-get a set with the same cardinality as $\reale$. On this set, the probability
-of all peculiar events taken together is $0$, so there is no chance of us
-observing one. In other words, the probability of all generic events is $1$,
-so we can be sure that we observed a generic event.
-
-Of course, the logical possibility of observing a peculiar event still exists,
-but, practically, we will not observe it as long as the set of our
-observations is countable.
-
-This axiom could be generalized to probabilities for which singletons are not
-measurable, in those cases where we have a set of disjoint measurable events
-with the same cardinality as $\reale$, but, for the purpose of this paper,
-the current version should be enough.
-
-\begin{axiom}\label{noprobability}
-If we observe $x\in\reale$, when we could have
-observed any real number, and there is no probability distribution that could
-describe how $x$ was chosen, then $x$ is generic.
-\end{axiom}
-
-Note that this axiom does not say that we do not know that probability
-distribution, it says that there is no such probability distribution.
-Anyone believing that this cannot happen should treat the cases where
-this axiom applies as invalid.
-
-Also note that this cannot happen when using subjective probabilities.
-
-If there is nothing that could favor
-peculiar numbers over generic ones, it's absurd to think that we could have
-observed an element of such a tiny set among something infinitely larger.
-Also, the case with a probability above suggests that this may be the only
-reasonable assumption in this case.
+\label{sec:design-probability}
 
 \begin{axiom}
   The probability that our universe is designed is greater than $0$.
@@ -654,15 +627,12 @@ even for these small things that do not matter much, but these
 would not cause more things to be designed.
 
 Assuming that we have some classes of similarity which may be interesting for
-a given designer, it is reasonable
-\svn{Rephase. Maybe \ghilimele{acceptable}?}
-to think that their set is countable,
-and, if so, that we have a positive probability for each of them.
+a given designer, it is acceptable to believe that their set is at most
+countable, and, if so, that we have a positive probability for each of them.
 
 Extrapolating from what we know about ourselves, although that may
-not give us much, it is still reasonable to believe that
-\svn{finite?}
-rational beings,
+not give us much, it is still acceptable to believe that
+finite rational beings,
 capable themselves of design, would be interesting to a designer of worlds.
 Therefore, we can assume that it's not completely implausible that a designer
 would design a world in order to be inhabited by the said beings.
@@ -696,9 +666,8 @@ there is a fairly good chance that humans can understand their universe:
   situated to God.
 \end{quote}
 
-However, in order for them to be able to discover their world, the perceived
-laws of the universe must not change, at least not much, both with time and
-when moving through space. To be more precise, it's likely that most of
+However, a designer designing a universe for intelligent beings would likely
+make it intelligible to those beings, so it's likely that most of
 the space and time accessible to those beings is fairly consistent.
 
 But then, it is possible that the entire universe has a finite approximate
@@ -711,24 +680,38 @@ a non-zero probability when a Designer is involved.
 
 \subsection{$\reale^4$ universe}
 
+\svn{Add axioms for:
+
+* anything physical that is part of our universe, including empty space, can
+  have a set of real-number coordinates attached to it that approximates its
+  location (how well?). - this should be included in the things below. Maybe
+  add it as an explanation.
+}
+
+\svn{Kind of redundant. Do I need all of these axioms?}
+
 This set of axioms attempts to say that our universe can be modelled
 on top of something close to $\reale^n$.
+
+Let us define a \definite{generalized rational number} as being either a
+rational number, or one of $-\infty$ and $+\infty$.
 
 \begin{axiom}\label{unitycovering}
   For all $q\in\rationale\cup\multime{-\infty, +\infty}$,
   the subset of hypercubes of size $q$ and corners
   having generalized
-  \svn{define generalized rational. Check that it's needed, or we can use
+  \svn{Check that generalized rationals are needed, or we can use
        $q\in Q$}
   rational coordinates is countable and covers our universe.
 \end{axiom}
 \svn{Do I Need this axiom?}
 
-This axiom states that our universe can be covered by a set of hypercubes
-of a given size. While this could certainly be false, it is implied by some
+This axiom states that our universe can be covered by a countable
+set of hypercubes of a given size.
+While this could certainly be false, it is implied by some
 basic beliefs that we have about our universe, e.g. that there is a
 level of approximation for which the space and time anywhere in the universe
-can be approximated locally by an open subset of $R^n$.
+can be modelled locally by an open subset of $R^n$.
 \svn{More explanation}
 
 \begin{axiom}\label{rationalcovering}
@@ -748,6 +731,8 @@ the set of cuboids in the above axiom is countable.
   \svn{Could be a definition.}
 \end{axiom}
 
+\svn{Generalize: a countable set of coordinates covering the space,
+  coordinates become finer and finer.}
 
 \subsection{Logically possible universes}
 
@@ -769,8 +754,8 @@ the set of cuboids in the above axiom is countable.
     \item $D_L$ contains our universe's description.
           \svn{Do I need to make such a strong claim?}
   \end{enumerate}
-  The same is true for universe regions.
-  \svn{Except for the $\reale$ cardinality}
+  The same is true for universe regions, excetp that $D_L$ may have a lower
+  cardinality.
 \end{axiom}
 
 This axioms states that, for a given level of approximation,
@@ -784,6 +769,7 @@ To see why that is reasonable, let us first note that,
 %in a similar way to axiom \ref{nonessentialhypercube},
 most likely, we have an approximate description for our universe
 given by classical mechanics, maybe with some additions.
+Alternately, one could use a description based on, say, quantum field theory.
 
 Next, for almost any countable axiom system that still
 has $R^n$ as a base, one could imagine an alternate universe
@@ -836,6 +822,7 @@ i.e. $P(\negat{C} | F) = \frac{P(F | \negat{C}) P(\negat{C})}{P(F)} = 0$.
 }
 
 \section{Valid options for our universe}
+\label{sec:valid-options}
 
 This section will try to develop the axioms above in order to find out what
 is reasonable to believe about: our universe being designed or not;
@@ -975,12 +962,12 @@ From now on, I will assume that the possible objection in the preceding
 paragraph is unreasonable, which means that, practically speaking,
 either $x$ is not peculiar or our universe is designed.
 
-Next, let us ask consider if a universe with finite space-time can have an
+Next, let us consider if a universe with finite space-time can have an
 infinite description that is compatible with intelligent life. If this is not
 possible, then either our universe is designed, or it has an infinite
 space-time, or it has a finite spacetime with an infinite description.
 
-\subsection{Peculiar description for universe regions}
+\subsection{Peculiar descriptions for universe regions}
 
 In this section, we will only work with cuboids that have their
 corners' coordinates
@@ -1161,6 +1148,7 @@ The most reasonable option seems to be that our universe is designed.
 
 \section{Background}
 \subsection{Probabilities}
+\label{probabilities-section}
 
 Let $A$ be a set with the same cardinality as $\reale$. Let $F$ be the set of
 all mathematical predicates of one variable over $A$ that can be written as a
@@ -1202,6 +1190,7 @@ if we make a set of (independent) observations that is at most countable
 of elements of $A$, we have no chance at all of observing an element of $E$.
 
 \subsection{Ordinals}
+\label{sec:ordinals}
 
 Ordinals are generalizations of natural numbers. Natural numbers can be
 defined by identifying each natural number with the set of natural numbers less
