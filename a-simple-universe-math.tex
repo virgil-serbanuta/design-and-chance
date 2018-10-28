@@ -693,7 +693,7 @@ a non-zero probability when a Designer is involved.
 This set of axioms attempts to say that our universe can be modelled
 on top of something close to $\reale^n$.
 
-Let us define a \definite{generalized rational number} as being either a
+Let us define a \definitie{generalized rational number} as being either a
 rational number, or one of $-\infty$ and $+\infty$.
 
 \begin{axiom}\label{unitycovering}
@@ -972,12 +972,16 @@ From now on, I will assume that the possible objection in the preceding
 paragraph is unreasonable, which means that, practically speaking,
 either $x$ is not peculiar or our universe is designed.
 
-Next, let us consider if a universe with finite space-time can have an
-infinite description that is compatible with intelligent life. If this is not
-possible, then either our universe is designed, or it has an infinite
-space-time, or it has a finite spacetime with an infinite description.
+Next, let us consider if a finite space-time part of a universe can have an
+infinite \svn{observable?} description that is compatible with intelligent
+life in the entire universe.
+If it turns out that this is not possible,
+then either our universe is designed, or it has an infinite space-time.
 
 \subsection{Peculiar descriptions for universe regions}
+
+\svn{Simplify. I should talk about
+$\reale^n$ and use one axiom.}
 
 In this section, we will only work with cuboids that have their
 corners' coordinates
@@ -988,11 +992,14 @@ Let us take a countable covering with (generalized) cuboids of our universe.
 From axiom \ref{rationalcovering}, this covering exists.
 Let us take all finite unions of such cuboids. Their set is countable.
 
-Let us consider the case when a finite chunk of spacetime can
-have an infinite approximate
+Let us examine first what happens when a finite chunk of spacetime
+can have an infinite approximate
 description which is compatible with inteligent life in the universe.
-Let us take such a chunk of space and let us cover it with a finite union of
+Let us take such a chunk of space
+\svn{I should not try to take a random region.}
+and let us cover it with a finite union of
 finite cuboids (axiom \ref{finitecovering}).
+\svn{I should talk only about a single cuboid.}
 We can then apply the same argument as in section \ref{fdaumu} to any
 such union of cuboids, by considering it as a mini-unverse inside
 our universe.
@@ -1003,6 +1010,16 @@ description is $0$. The only reasonable options that we have are:
 either each such union has a generic description,
 or finite chunks can only have peculiar descriptions, or our universe
 is designed.
+\svn{
+  This paragraph and the previous one are really obscure.
+  The argument goes like this:
+
+  1. There is a finite chunk with infinite observable description.
+  2. There is a finite cuboid with infinite observable description
+     that includes it.
+  3. Any cuboid that is far enough has an infinite observable description
+     (because countable).
+}
 
 However, we usually believe that we can have peculiar/finite
 approximate descriptions
@@ -1022,20 +1039,18 @@ infinite description, which means that either our universe is infinite,
 or it is designed.
 
 If our universe is infinite,
-then finite unions of cuboids that cover an infinite
-amount of time-space can have infinite descriptions. The set of all finite
-unions of cuboids is countable.
-Applying the argument
-in section \ref{fdaumu}, we get that either each such union has a generic
+then there are infinite cuboids, and those can have
+observably infinite descriptions.
+But the set of all infinite cuboids is countable, so, by applying the argument
+in section \ref{fdaumu}, we get that either each such cuboid has a generic
 description, or our universe is designed.
 
 To summarize, either
 \begin{itemize}
   \item our universe is designed, or
-  \item our universe is infinite, all finite unions of
-        cuboids that cover an infinite chunk of spacetime have infinite
-        descriptions, while finite unions of cuboids that cover a finite chunk
-        of space can have only finite descriptions.
+  \item our universe is infinite, all infinite cuboids have infinite
+        descriptions, while all finite unions of finite cuboids
+        can have only finite descriptions.
 \end{itemize}
 
 \subsubsection{Improbable consistency}
@@ -1050,55 +1065,27 @@ Unless our approximation is extremely coarse, $A_1$ will have multiple elements.
 For any description $a\in A_1$, let $P(a)$ be the probability of encountering
 a hypercube with $a$ as its description in our universe.
 
-\svn{Finite union covering infinite space has infinite description
-     iff
-     infinite hypercube covering infinite space has infinite description
-     iff ???}
-
-Note that there are multiple ways of picking this probability. Examples
-\svn{TODO: Remove the examples. They are at odds with the reminder of this
-     section (subjective vs objective probabilities).
-     }
-include:
-\begin{itemize}
-  \item Take the entire spacetime that we could reach until the termic death of
-        our universe and divide it into hypercubes of size $1$. This spacetime
-        is, most likely, finite, so we can assign equal weights to each
-        hypercube, and we can sum these for each description to get
-        the probability of each description.
-        \svn{Shouldn't one take the description probability among all universes?
-             Have an option where this is a subjective probability
-             }
-  \item Abuse the term \ghilimele{encountering} and take any weight
-        function over space-time divided in hypercubes of size $1$ that does
-        not assign a $0$ weight to any hypercube such that all weights add to
-        $1$, perhaps we would
-        assign the maximum probability to \ghilimele{now and here},
-        decaying exponentially over any infinite dimension. As above,
-        we would add these weights to get the probability
-        ************ of any description in the entire space.
-\end{itemize}
-
-If $A_1$ would be finite, we could, by default, pick the probability
+If $A_1$ is be finite, we could, by default, pick the probability
 distribution that assigns equal probabilities to all elements of $A_1$.
-Howewer, $A_1$ can be countable, so let us consider how such a probability
-distribution would look like.
-It would be unreasonable to assume that the probability is zero for all
-elements except one.
-This is suggested by two things: first, there are too many
-possible universes where this does not happen; second, right now we are
-examining the case when our universe has an infinite description, so not all
-hypercubes share the same description\footnote{
-This may not be true when considering only descriptions
-within a finite region of space-time, but it's still unreasonabe to believe
-that there is only one description within that space}.
+Howewer, $A_1$ can be countable (and, right now, we are examining the case when
+our universe has an infinite description which strongly suggests that $A_1$
+is countable), so we have to consider more general probabilities.
+
+In any case, it is possible to use probabiliites that do not assign $0$
+to descriptions that can be found in our universe, so the only reasonable
+option that we have is to use such a probability distribution.
+Since, as mentioned above, $A_1$ has multiple elements, we can't reasonably
+have one element with probability $1$.
 
 If the description that we use for the universe around us
-has probability $p_1 < 1$, then the probability of observing $n$ hypercubes
-with this description without observing any other description is $p_1^n$.
-\svn{This assumes independence, but that's reasonable among all possible
-     universes.
-     }
+has probability $p_1 < 1$, then the probability of observing $n$
+non-overlapping hypercubes
+with this description without observing any other description is
+$p_1^n$\footnote{
+  This assumes independence between the hypercubes, but, given that our
+  universe's description is a generic one, randomly chosen among all possible
+  ones, this is a reasonable assumption.
+}.
 
 Even if $p_1$ is very close to $1$, $p_1^n$ converges very quickly to $0$,
 so the consistency of a small spacetime region around us is enough
@@ -1131,7 +1118,7 @@ We have, then, the following reasonable possibilities:
 \item Our universe is designed.
 \item Our timespace is infinite and each infinite chunk has an infinite
       description. Any approximate description for a limited chunk of timespace
-      around us is finite (infinite descriptions are impossible or
+      around us is finite (infinite descriptions being impossible or
       incompatible with life). At the same time, one of the following
       would be true:
       \begin{enumerate}
