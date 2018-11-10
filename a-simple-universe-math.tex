@@ -697,24 +697,6 @@ on top of something close to $\reale^n$.
 Let us define a \definitie{generalized rational number} as being either a
 rational number, or one of $-\infty$ and $+\infty$.
 
-\begin{axiom}\label{unitycovering}
-  For all $q\in\rationale\cup\multime{-\infty, +\infty}$,
-  the subset of hypercubes of size $q$ and corners
-  having generalized
-  \svn{Check that generalized rationals are needed, or we can use
-       $q\in Q$}
-  rational coordinates is countable and covers our universe.
-\end{axiom}
-\svn{Do I Need this axiom?}
-
-This axiom states that our universe can be covered by a countable
-set of hypercubes of a given size.
-While this could certainly be false, it is implied by some
-basic beliefs that we have about our universe, e.g. that there is a
-level of approximation for which the space and time anywhere in the universe
-can be modelled locally by an open subset of $R^n$.
-\svn{More explanation}
-
 \begin{axiom}\label{rationalcovering}
   The set of (generalized) cuboids having their corners' coordinates in
   $\rationale\cup\multime{-\infty, +\infty}$,
@@ -725,9 +707,9 @@ If our universe's spacetime is $\reale^\alpha$ with
 $\alpha$ finite, then, indeed,
 the set of cuboids in the above axiom is countable.
 
-\begin{axiom}\label{finitecovering}
-  Any finite part of our universe can be covered with a finite set of cuboids
-  having their corners' coordinates in
+\begin{axiom}\label{finitecuboid}
+  Any finite part of our universe can be covered with a finite cuboid
+  having its corners' coordinates in
   $\rationale$.
   \svn{Could be a definition.}
 \end{axiom}
@@ -992,23 +974,21 @@ them at times to smaller sets (e.g. finite coordinates).
 Let us take a countable covering with (generalized) cuboids of our universe.
 From axiom \ref{rationalcovering}, this covering exists.
 Let us take all finite unions of such cuboids. Their set is countable.
+\svn{Do I need this paragraph? Most likely not.}
 
 Let us examine first what happens when a finite chunk of spacetime
 can have an infinite approximate
 description which is compatible with inteligent life in the universe.
 Let us take such a chunk of space
 \svn{I should not try to take a random region.}
-and let us cover it with a finite union of
-finite cuboids (axiom \ref{finitecovering}).
-\svn{I should talk only about a single cuboid.}
+and let us cover it with a finite cuboid (axiom \ref{finitecovering}).
 We can then apply the same argument as in section \ref{fdaumu} to any
-such union of cuboids, by considering it as a mini-unverse inside
-our universe.
+such cuboids, by considering it as a mini-unverse inside our universe.
 
-The set of all possible finite unions is countable,
+The set of all possible finite cuboids is countable,
 which means that the probability that any of them has a peculiar
 description is $0$. The only reasonable options that we have are:
-either each such union has a generic description,
+either each such cuboid has a generic description,
 or finite chunks can only have peculiar descriptions, or our universe
 is designed.
 \svn{
@@ -1025,13 +1005,13 @@ is designed.
 However, we usually believe that we can have peculiar/finite
 approximate descriptions
 for the region of universe around us (axiom \ref{finiteneighborhood}), so we
-will disregard the possibility that each finite union of cuboids has an
+will disregard the possibility that each finite cuboid has an
 infinite approximate description. Even if we are unwilling to disregard it,
 the argument in the next section also works when using the full set of
 descriptions, not only the finite ones.
 
 This leaves us with the following
-two options: finite unions of cuboids that cover a finite chunk of space can
+two options: finite cuboids can
 only have finite descriptions in a universe with intelligent life, or our
 universe is designed.
 
@@ -1050,14 +1030,14 @@ To summarize, either
 \begin{itemize}
   \item our universe is designed, or
   \item our universe is infinite, all infinite cuboids have infinite
-        descriptions, while all finite unions of finite cuboids
+        descriptions, while all finite cuboids
         can have only finite descriptions.
 \end{itemize}
 
 \subsubsection{Improbable consistency}
 
 Let us focus on the second case above, infinite universe with infinite
-description, while finite unions of cuboids have finite approximate
+description, while finite cuboids have finite approximate
 descriptions.
 
 Let $A_1$ be the set of possible approximate descriptions for
