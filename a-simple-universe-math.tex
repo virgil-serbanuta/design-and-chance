@@ -112,7 +112,7 @@ My argument can be considered a statistical approach to Aquina's fifth way.
 It tries to avoid the issues that other statistical approaches for showing
 our universe's design (e.g. the fine-tuning argument) have.
 
-Sections \ref{probabilities-section} and \ref{sec:ordinals}
+Sections \ref{sec:probabilities} and \ref{sec:ordinals}
 briefly present some mathematical background for people interested in it.
 Section \ref{sec:possible-universes} introduces universe approximations
 and a few other related notions.
@@ -332,7 +332,8 @@ everything else is possible.
 
 As a parenthesis, one could go one step further and, by using the same proof
 structure as used in this paper, show that, if there is no designer of worlds,
-then the hypothesis that only our universe exists is a peculiar one, so it is
+then the hypothesis that only our universe exists is a peculiar\svn{makes
+reference to a term which is defined later} one, so it is
 extremely unlikely.
 
 There is a second reason why we should believe that many different universes
@@ -413,7 +414,7 @@ This may seem too restrictive,
 especially since this paper only needs universes which can be approximated
 by mathematical models.
 However, for simplicity, let us, for now, consider only universes
-which are fully modellable with sets of axioms that are at most countable.
+which are modellable with sets of axioms that are at most countable.
 \svn{Do I need this?}
 
 Let us restrict the universes we are considering even further, to universes that
@@ -543,8 +544,15 @@ the following issues:
 Throughout this paper we will only use probability measures that can measure
 singletons (i.e. single-element sets).
 
+The \ghilimele{generic} and \ghilimele{peculiar} terms are defined more
+precisely in section \ref{sec:probability}, but, informally,
+an object is peculiar if it satisfies a peculiar predicate, and a peculiar
+predicate is one that has a zero probability for any continuous probability
+distribution. As an example, "has a finite number of digits" is a peculiar
+predicate over real numbers, and any real number with a finite number
+of digits, like $12.5$, is peculiar.
+
 \subsection{Observing events}
-\svn{Add the definition for "generic" and add a reference to the section + peculiar}
 \begin{axiom}
   If $P$ is a probability over the set of real numbers
   (or a set with the same cardinal)\footnote{Readers of this paper should
@@ -572,12 +580,6 @@ so we can be sure that we observed a generic event.
 Of course, the (logical) possibility of observing a peculiar event still exists,
 but, practically, we will not observe it as long as the set of our
 observations is at most countable.
-
-This axiom could be generalized to probabilities for which singletons are not
-measurable, in those cases where we have a set of disjoint measurable events
-with the same cardinality as $\reale$, but, for the purpose of this paper,
-the current version should be enough.
-\svn{Keep or drop this paragraph?}
 
 \begin{axiom}\label{noprobability}
   If we observe $x\in\reale$, when we could have
@@ -611,8 +613,8 @@ so the word \ghilimele{likely} can be replaced with
 \ghilimele{has a non-zero probability} without decreasing
 the validity of the argument.
 
-First, let us note that something that is designed follows the intent of
-its designer. A designer may want to design everything possible, but then
+First, let us note that a designed entity follows the intent of
+its designer. A designer may want to design every possible thing, but then
 this shouldn't be properly called \ghilimele{design}, since it does not involve
 choice.
 
@@ -640,7 +642,6 @@ would design a world in order to be inhabited by the said beings.
 But then, that world is likely to be simple enough that
 those beings would find it possible to use their reason to
 discover, navigate and interact fruitfully with their world.
-\svn{Hidden assumption that those beings are finite.}
 
 First, something close to this issue was already addressed by
 \textcite{Swinburne2003}, which argues that, if God exists,
@@ -714,9 +715,6 @@ the set of cuboids in the above axiom is countable.
   \svn{Could be a definition.}
 \end{axiom}
 
-\svn{Generalize: a countable set of coordinates covering the space,
-  coordinates become finer and finer.}
-
 \subsection{Logically possible universes}
 
 \begin{axiom}\label{uncountable}
@@ -725,7 +723,6 @@ the set of cuboids in the above axiom is countable.
   \begin{enumerate}
     \item $D_L$ has the same cardinality as $\reale$.
     \item For all elements $d\in D_L$ there is at least one conceivable
-          \svn{possible?}
           universe $U_d$ which
       \begin{enumerate}
         \item has a time-space or something similar enough;
@@ -735,7 +732,9 @@ the set of cuboids in the above axiom is countable.
               $d$ is a description of $U_d$.
       \end{enumerate}
     \item $D_L$ contains our universe's description.
-          \svn{Do I need to make such a strong claim?}
+          \svn{Do I need to make such a strong claim? I don't think
+            it's actually true, if eta is low enough then we can't
+            predict much.}
   \end{enumerate}
   The same is true for universe regions, except that $D_L$ may have a lower
   cardinality.
@@ -793,9 +792,9 @@ lowest description soves the issue, make an explicit comment about it.}
 
 Many people assume, implicitly or explicitly,
 that our universe has such a description, e.g. when claiming
-that the universe is around $14$ billion years old, or that the sun will die
-in some distant future, becoming a white dwarf
-\svn{also add examples of things which are space-distant from us.}.
+that the universe is around $14$ billion years old, that the sun will,
+in some distant future, become a white dwarf, or that standard-candle supernovae
+are not ilussions.
 This means that they assume that our universe has a finite approximate
 description or, at least, that our solar system/galaxy/observable part of the
 universe has such a description.
@@ -1113,7 +1112,7 @@ The most reasonable option seems to be that our universe is designed.
 
 \section{Background}
 \subsection{Probabilities}
-\label{probabilities-section}
+\label{sec:probabilities}
 
 Let $A$ be a set with the same cardinality as $\reale$. Let $F$ be the set of
 all mathematical predicates of one variable over $A$ that can be written as a
