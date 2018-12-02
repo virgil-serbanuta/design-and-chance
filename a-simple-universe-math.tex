@@ -240,9 +240,9 @@ even if that may leave out some of them.
 This may seem too restrictive,
 especially since this paper only needs universes which can be approximated
 by mathematical models.
-However, for simplicity, let us, for now, consider only universes
+We are going to relax this when talking about approximations, but, for now,
+let us consider only universes
 which are modellable with sets of axioms that are at most countable.
-\svn{Do I need this?}
 
 Let us restrict the universes we are considering even further, to universes that
 have something remotely resembling time and space, for which
@@ -306,9 +306,15 @@ Then let us say that an \definitie{approximate universe description} with a
 \definitie{level of approximation} ($\eta>0$, $p>0$ and $\Delta t>0$)
 is a universe description which allows one to approximate the future
 state of the universe with a precision $\eta$, with a probability
-$p>0$ for a prediction to be correct
-\svn{Do I need the probability of the prediction to be correct
-     or do I need to cover a fraction p of the world?}
+$p>0$ for a prediction to be correct ($p$ is the same for each location
+where we make predictions)
+%\svn{Do I need the probability of the prediction to be correct
+%     or do I need to cover a fraction p of the world? Covering a fraction
+%     of the world might actually mean that a universe with intelligent
+%     beings can only have finite descriptions: intelligent => the set of
+%     possible descriptions for hypercubes of size $1$ is at most countable
+%     => there is one which covers a fraction of the universe that is $>1$ =>
+%     I can chose that to build my universe approximation. }
 and for a limited amount of time $\Delta t$.
 \svn{I must answer the following questions: exactly what does that
      probability of correct prediction mean? Is it an aggregate among
@@ -848,6 +854,7 @@ To summarize, either
 \end{itemize}
 
 \subsubsection{Improbable consistency}
+\label{sec:improbableconsistency}
 
 Let us focus on the second case above, infinite universe with infinite
 description, while finite cuboids have finite approximate
@@ -1115,8 +1122,35 @@ that constraint, so both can be right within their contexts.
 
 \subsection{Not enough descriptions}
 
-a\svn{The cardinal may be less than $\reale$, e.g. because of statistical models
-or approximations.}
+When working without approximations, there are $\reale$ possible descriptions
+that are essentially different. However, this is less obvious when working with
+approximations, especially since that means we can probably have incompatible
+descriptions for the same universe.
+
+Let us assume (as an axiom) that, for a given level of approximation, we can
+find a finite hypercube size $l$ such that there is a finite set of approximate
+descriptions $I$ which can't all apply to the same hypercube of that size, and,
+for any set of hypercubes whose descriptions include the $I$ set we can't
+find a single approximate description that works for all of them.
+
+Then, let us consider a hypothetical infinite universe whose timespace is $R^n$.
+Let us divide it in hypercubes of size $l$ and let us assign the incompatible
+descriptions in the set mentioned above to these hypercubes in a roughly even
+way\footnote{The set of hypercubes is countable, so there is no standard
+way of doing an even distribution, but any that looks reasonable would do}.
+Then let us assume that this universe has a finite description. But this
+description can be used to make predictions with that level of approximation
+in all hypercubes, so for any hypercube of size $1$ we can have a finite
+approximate description saying, roughly, \ghilimele{This is a hypercube of
+size $1$ in a universe with this description}, which contradicts the assumption
+above.
+
+Of course, we need to show that this assumption is reasonable. Let us assume
+a universe which is similar to ours, but in which each hypercube has different
+fundamental constants. It does look then that, by choosing these constants
+carefully, we could make almost all predictions that work in one fail in the
+other. Even if that's not enough, it looks like we could change not only the
+constants, but the universe laws themselves, until they are different enough.
 
 \section{Conclusion}
 
