@@ -551,7 +551,8 @@ the set of cuboids in the above axiom is countable.
 \subsection{Logically possible universes}
 
 \begin{axiom}\label{uncountable}
-  For any level of approximation $L$ there is a set $D_L$
+  For any level of approximation $L$ above a certain minimum level (see below)
+  there is a set $D_L$
   of universe descriptions such that the following are true:
   \begin{enumerate}
     \item $D_L$ has the same cardinality as $\reale$.
@@ -564,21 +565,21 @@ the set of cuboids in the above axiom is countable.
               for the level of approximation $L$,
               $d$ is a description of $U_d$.
       \end{enumerate}
-    \item $D_L$ contains our universe's description.
-          \svn{Do I need to make such a strong claim? I don't think
-            it's actually true, if eta is low enough then we can't
-            predict much.}
+    \item $D_L$ contains a description for our universe.
   \end{enumerate}
   The same is true for universe regions, except that $D_L$ may have a lower
   cardinality.
 \end{axiom}
 
+The minimum level for which this is true is left unspecified, but we should
+include some common-sense restricts, e.g. the length precision is above
+Planck's length. All levels of approximation used below will be above this
+minimum level, even if this is not mentioned explicitly.
+
 This axioms states that, for a given level of approximation,
 there is a large set of conceivable universes, which in some narrow respects
 are similar to ours, but which are, in general, wildly different.
 Also, our universe belongs to this set.
-\svn{Mention that all countable sets of axioms form a continuum.
-I did that below, but it's a bit unclear.}
 
 To see why that is reasonable, let us first note that,
 %in a similar way to axiom \ref{nonessentialhypercube},
@@ -603,17 +604,19 @@ for $L$
 if we use an approximation level that does not measure things larger
 than a size $l$, then the region must be significantly larger than $l$),
 there are multiple possible descriptions that
-are distinct for $L$ (not defined!). By splitting an infinite timespace
+are distinct for $L$\svn{not defined!}. By splitting an infinite timespace
 into disjoint regions defined by a finite set of rational coordinates
 and taking all possible ways of assigning descriptions to these regions
 we get a set of universe descriptions with infinitely countable axioms
-which we will denote by $\descriptions$.
+which we will denote by $\descriptions$. This means that the set of
+description has at least the cardinality of $\reale$.
+
 Each of the conceivable universes
 having one of these descriptions could contain intelligent beings that use
 mathematics, and so on.\svn{It's not about axiom sets, but about axiom sets
 that also include our region. Actually it's not about those axiom sets, but
 about their equivalence classes. Either reword everything, or, if choosing the
-lowest description soves the issue, make an explicit comment about it.}
+lowest description solves the issue, make an explicit comment about it.}
 
 \subsection{Neighborhood modelling}
 
@@ -693,9 +696,9 @@ which we assign to various universe descriptions.
 
 If, say,
 our universe is the only one that exists, but there is no reason for it
-existing
+to exist
 \svn{Did I explain what it means?}
-and for the other universes not to exists, then there is no meta-universe,
+and for the other universes to not exist, then there is no meta-universe,
 since it would provide this reason, and there is no
 probability measure in the sense mentioned above.
 
@@ -759,7 +762,7 @@ observation}, we
 do not expect to observe a peculiar event with $0$ probability, so we must be
 in a chain of (meta-)universes where our universe's description is
 generic.
-\svn{+quote. Qhat did I mean by \ghilimele{quote}?}
+\svn{+quote. What did I mean by \ghilimele{quote}?}
 % Since we only placed an at-most-countable number of bets until now,
 %we don't expect certain failure.
 %\svn{Why we don't expect failure?}
