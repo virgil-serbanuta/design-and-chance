@@ -303,7 +303,7 @@ The exact meaning of \ghilimele{true with probability} here is left open.
 Of course, we may add other similar constraints if needed.
 
 Then let us say that an \definitie{approximate universe description} with a
-\definitie{level of approximation} ($\eta>0$, $p>0$ and $\Delta t>0$)
+\definitie{level of approximation} $L=(\eta>0,$ $p>0$ and $\Delta t>0)$
 is a universe description which allows one to approximate the future
 state of the universe with a precision $\eta$, with a probability
 $p>0$ for a prediction to be correct ($p$ is the same for each location
@@ -541,12 +541,49 @@ If our universe's spacetime is $\reale^\alpha$ with
 $\alpha$ finite, then, indeed,
 the set of cuboids in the above axiom is countable.
 
-\begin{axiom}\label{finitecuboid}
-  Any finite part of our universe can be covered with a finite cuboid
-  having its corners' coordinates in
-  $\rationale$.
-  \svn{Could be a definition.}
+The following can also be an axiom.
+
+\begin{definition}\label{finitecuboid}
+  A part of our universe is \definitie{finite} if
+  it can be covered with a finite cuboid
+  having its corners' coordinates in $\rationale$.
+\end{definition}
+
+There are a lot of possible definitions for \ghilimele{finite} which are not
+included in the above.
+While this paper could probably be extended to also handle many of these,
+most likely there is no point in doing so.
+As an example, in $\reale^3$ one can define it as
+\ghilimele{having a finite volume}, which would
+mean that there are finite things that do not fit in finite cuboids.
+When defining a level of approximation, we could allow
+selecting a part of the thing we model, with volume less than a fixed
+constant, in which we can ignore what happens.
+
+\subsection{Neighborhood modelling}
+
+\svn{Move before the previous section.}
+\begin{axiom}\label{finiteneighborhood}
+  There is a large time-space region of our universe which includes our solar
+  system, and which has a finite approximate description.
 \end{axiom}
+
+Many people assume, implicitly or explicitly,
+that our universe has such a description, e.g. when claiming
+that the universe is around $14$ billion years old, that the sun will,
+in some distant future, become a white dwarf, or that standard-candle supernovae
+are not ilussions.
+This means that they assume that our universe has a finite approximate
+description or, at least, that our solar system/galaxy/observable part of the
+universe has such a description.
+\svn{
+    Think about deterministic vs non-deterministic modelling.
+    Think about overlapping approximate descriptions - I can't have
+    equivalence classes because a description that works for
+    a fraction of the universe can be equivalent to two incompatible
+    descriptions for the other fraction. Does the explanation in
+    \ghilimele{Logically possible universes} still work?
+}
 
 \subsection{Logically possible universes}
 
@@ -618,31 +655,6 @@ that also include our region. Actually it's not about those axiom sets, but
 about their equivalence classes. Either reword everything, or, if choosing the
 lowest description solves the issue, make an explicit comment about it.}
 
-\subsection{Neighborhood modelling}
-
-\svn{Move before the previous section.}
-\begin{axiom}\label{finiteneighborhood}
-  There is a large time-space region of our universe that includes our solar
-  system, which has a finite approximate description.
-\end{axiom}
-
-Many people assume, implicitly or explicitly,
-that our universe has such a description, e.g. when claiming
-that the universe is around $14$ billion years old, that the sun will,
-in some distant future, become a white dwarf, or that standard-candle supernovae
-are not ilussions.
-This means that they assume that our universe has a finite approximate
-description or, at least, that our solar system/galaxy/observable part of the
-universe has such a description.
-\svn{
-    Think about deterministic vs non-deterministic modelling.
-    Think about overlapping approximate descriptions - I can't have
-    equivalence classes because a description that works for
-    a fraction of the universe can be equivalent to two incompatible
-    descriptions for the other fraction. Does the explanation in
-    \ghilimele{Logically possible universes} still work?
-}
-
 \section{Valid options for our universe}
 \label{sec:valid-options}
 
@@ -672,8 +684,16 @@ ordinals. We will assign the ordinal $0$ to the first meta-universe.
 
 A meta-universe here is something that contains our universe, and which
 influences one way or another which of the logically possible universes exist.
-As an example, if all possible universes exist, we can take their
-set/collection/grouping to be a meta-universe. For the purpose of this paper,
+
+Let us think what it means that a meta-universe does not exist. If there is
+nothing influencing what universes exist and what universes do not exist, we
+expect only two outcomes: either nothing exists, or every conceivable universe
+exists. We can reject the former since we observe such a universe.
+
+If, say, only one universe exists, then we can take the set containing it
+as a meta-universe with a rule specifying that only this universe exists.
+
+For the purpose of this paper,
 the most important thing related to a meta-universe is whether there is a
 probability measure over the descriptions of the universes
 contained in it, specifying which ones exist and in which proportion.
@@ -683,14 +703,6 @@ way around. Alternately, this probability may be the subjective probability
 which we assign to various universe descriptions.
 \svn{Axiom 2 - limit to countable?}
 \svn{
-  De gandit la faptul ca regula ca toate universurile posibile exista e
-  peculiar, dar, poate, rezonabila.
-  Poate nu.
-  Oricum, eu lucrez cu distributii de probabilitate.
-  Pot da ca exemplu si comenta exact regula ca
-  (fiecare univers posibil exista /
-  pentru fiecare descriere exista un univers)
-  si ca am sa nu distributie de probabilitate.
   De urmarit cum se aplica axiomele - in articol sau ca anexa.
 }
 
@@ -1154,6 +1166,31 @@ fundamental constants. It does look then that, by choosing these constants
 carefully, we could make almost all predictions that work in one fail in the
 other. Even if that's not enough, it looks like we could change not only the
 constants, but the universe laws themselves, until they are different enough.
+
+\subsection{No meta-universe}
+
+We need to take a closer look at some particular cases for what can exist and
+what can't.
+As an example, it may intuitively seem that it is reasonable to think that
+all universes exists, and that this specific instance of what can exist has
+a non-zero probability, although \ghilimele{all exist} is a peculiar
+predicate when considering
+what subset of conceivable universes actually exist.
+
+If so, then we can ask ourselves if this entire argument makes sense.
+And, assuming that it makes sense, why can't we have a greater than zero
+probability that only one universe exists.
+
+First, I am arguing that, if a meta-universe exists, then the argument in this
+paper applies, and one's intuition is wrong. But, actually, there is a hidden
+assumption in the intuition that it's somewhat likely that all universes exist.
+All universes exist if there is nothing constraining what can exist, i.e.
+there is no meta-universe.
+
+If this hypothesis is reasonable, then, as argued in section \ref{fdaumu},
+we have at most two choices for what can exist, so the predicate
+\ghilimele{all exist} is no longer peculiar. This paper does not discuss if
+this hypothesis is, indeed, reasonable.
 
 \section{Conclusion}
 
