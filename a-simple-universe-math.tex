@@ -1070,6 +1070,7 @@ designed.
 
 *************************
 \subsection{Few universes exist}
+\label{sec:fewuniverses}
 
 Another possible objection is that almost all of the universes used
 in this paper can't really exist.
@@ -1187,41 +1188,101 @@ a function predicting the next hypercube from a hypercube's past
 and its context (i.e. position). Now we must find out how many functions
 we need in order to describe all possible assignments.
 
-Each such function leaves out $\reale$ possible universes, because we
-can flip any subset of its predictions and get a new possible universe.
-Each two such functions leave out $\reale$ possible universes,
-because we can either take an infinite subset out of the set where they are
-identical and we can flip them, or we can take two infinite subsets from
-their two differences, make an infinite set of pairs, then flip any subset.
-Each finite set of such functions leaves out $\reale$ possible universes
-for the same reason.
+To make things simpler, let us assume that $n=1$. It should be obvious that
+the reminder of this example can be generalized to any $n>0$.
 
-For a countable set of functions we can do the following: take the
-first function, take an infinite subset of hypercubes $A1$ that leaves out
-an infinite subset of hypercubes $B1$, for the second function, take an
-infinite subset of hypercubes $A2\subset B1$ that leaves out an infinite
-subset $B2$, and so on. Then we can flip subsets of $A1 \times A2 \times \dots$.
+Having $n=1$, means that we have a bijection between integers and hypercubes.
+Let us identify the two hypercube types with $\multime{0, 1}$ and
+let us represent a universe as a function from $\intregi$ to $\multime{0, 1}$,
+identifying, for each hypercube, its type.
 
-This means that we need an uncountable set of functions. With the continuum
-hypothesis, this means $\reale$.
+We can represent the past of a hypercube $x\in\intregy$ by a pair $(x, f)$
+the function
+$f$ goes from the set of natural numbers to $\multime{0,1}$, representing
+$x$'s past.
 
-Does an infinite set of functions of cardinality less than $\reale$ leave out
-at least one description? We have a function from descriptions to sets of
-functions that get them correctly. Each pair of functions in such a set has a
-description that differentiates them. So, given a function, we can take a subset
-of descriptions of cardinality less than $\reale$ that separates it from
-everything else. This means that we can have a set of descriptions of the same
-cardinality that separates between all functions. Also, for any countable subset
-we can find $\reale$ functions that are left out. ****
+We are trying to predict the future of all functions given
+their past, and their position.
+Any way of making these predictions identifies with a function from the past
+of some hypercubes to their future.
+And any universe description must have a way of making hypercube type
+predictions.
+
+Note that any such way of making predictions can be identified with a function
+from the past of hypercubes to the type of the next hypercube.
+Let us find out how many such functions we need.
+To make things simple, let us consider only universes which, for negative
+integers, have hypercubes of type $0$.
+
+The past of hypercube $0$ is perfectly identical, so, in order to predict
+the hypercube with index $0$, we need two distinct prediction functions.
+In order to predict the types of hypercubes $0$ and $1$ we need four
+distinct hypercubes.
+In general, in order to predict the types of hypercubes from $0$ to $n$
+we need $2^n$ distinct prediction functions.
+And, in order to predict the type of all hypercubes which are greater or equal
+to $0$, we need $2^\naturale$, i.e. $\reale$ prediction functions.
+
+\subsection{Fractions of space}
+
+Note that above I used a specific definition of what I mean by
+predictions being "true with probability $p>0$".
+However, it's valid to ask what happens if we want our predictions to be true
+in only a fraction $p$ of spacetime, with probability $p$.
+
+Anyone who wants to talk about \ghilimele{a fraction $p$ of spacetime} needs a
+measure function over the entire spacetime.
+But, over an infinite universe, for any such measure and any fraction $p<1$,
+one can pick a finite amount of timespace which cover that fraction $p$ of the
+universe.
+If we look at a finite chunk of the universe, then, obviously, it's more regular
+than the others, but that does not tell us much about the complexity of the
+entire universe.
+
+But let us assume that one has a way of identifying fractions $p$ of universes
+that works well enough intuitively.
+As an example, given a fraction $p$, one may
+divide the spacetime in finite chunks of same size, and ask that, within each,
+a fraction close enough to $p$ of hypercubes are part of a specific set,
+e.g. part of the set where predictions work.
 
 \svn{
-  Prove that we need countable mappings and $\reale$ descriptions.
+  What are the \ghilimele{hypercubes} above? A fraction of space does not
+  mean that we can use hypercubes for that. I must make this assumption
+  explicit.
 }
-\svn{
-  This works only with some kinds of statistical modeling because
-  we need to fulfill p% of predictions in all hypercubes, we can't,
-  e.g., say that we model p% of space with full precision.
-}
+
+Since what we mean by \ghilimele{a fraction $p$} is not fully defined,
+there may be definitions for which the argument below does not work,
+but, most likely, it works for all reasonable definitions.
+Also, the argument below presents only the idea, without working out all
+details, since there is no point of being fully precise without a precise
+hypothesis.
+
+Let us denote by $n$ the number of chunks we get if we split the entire space
+in $p\%$ chunks, one of which may be smaller than $p\%$.
+As above, we can probably have $2n$ different hypercube types with the level
+of approximation $p$.
+
+We are interested in hypercube type assignments that assign the hypercube types
+in a way that the universe has a fraction less than $p/2$ for each of them.
+We'll further assume that when we divide the spacetime in chunks of the same
+size (hypercubes are a good canditate),
+we can get at least two assignments for the hypercubes inside those
+chunks such that the two assignments do not assign the same value to the
+same (as relative to the chunk) hypercube in both.
+
+Now, any description which works in a fraction $p$ of space must make
+predictions that, at least sometimes, work in at least two hypercubes.
+Since the universe can have at least two completely different universe chunks,
+as mentioned above, in order to make predictions, a definition must identify
+the chunk type. As in section \ref{sec:fewuniverses}, we must have at least
+$\reale$ definitions.
+
+\svn{Send people here for extensions of what $p$ means.}
+\svn{Is \ghilimele{true} appropriate here? and in the entire paper?
+Truth is a word that's hard to use.
+Would it be better to use \ghilimele{verified} or something similar?}
 
 \subsection{No meta-universe}
 
