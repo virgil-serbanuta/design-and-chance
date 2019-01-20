@@ -1144,30 +1144,84 @@ that are essentially different. However, this is less obvious when working with
 approximations, especially since that means we can probably have incompatible
 descriptions for the same universe.
 
-Let us assume (as an axiom) that, for a given level of approximation, we can
-find a finite hypercube size $l$ such that there is a finite set of approximate
-descriptions $I$ which can't all apply to the same hypercube of that size, and,
+Let us assume (as an axiom) that, for a given level of approximation $L$, we can
+find a finite hypercube size $l$ such that there is a finite set of
+(full-precision)
+descriptions $I$ such that,
 for any set of hypercubes whose descriptions include the $I$ set we can't
-find a single approximate description that works for all of them.
+find a single finite approximate description that works for all of them
+within the level of approximation $L$.
+
+In the following, one needs to pay attention to the difference between
+hypercube descriptions and universe descriptions, which are not always
+identified explicitly.
+
+Here is an incomplete example that shows why the above is reasonable.
+First, let us consider that we fixed a set of "primary measurements" that we
+can do for our model, such that any other measurement that we could do can be
+computed from those.
+Then let us take two descriptions, the first saying
+\ghilimele{the value of each primary measurement is $0$},
+and the second saying
+\ghilimele{the value of each primary measurement oscillates quickly
+  between $0$ and something large enough to be easily detected within
+  the approximation level}.
 
 Then, let us consider a hypothetical infinite universe whose timespace is $R^n$.
 Let us divide it in hypercubes of size $l$ and let us assign the incompatible
 descriptions in the set mentioned above to these hypercubes in a roughly even
-way\footnote{The set of hypercubes is countable, so there is no standard
-way of doing an even distribution, but any that looks reasonable would do}.
-Then let us assume that this universe has a finite description. But this
-description can be used to make predictions with that level of approximation
-in all hypercubes, so for any hypercube of size $1$ we can have a finite
-approximate description saying, roughly, \ghilimele{This is a hypercube of
-size $1$ in a universe with this description}, which contradicts the assumption
-above.\svn{This works only with some kinds of statistical modeling.}
+way.
+The set of hypercubes is countable, so there are $\reale$ ways of
+assigning these descriptions.
 
-Of course, we need to show that this assumption is reasonable. Let us assume
-a universe which is similar to ours, but in which each hypercube has different
-fundamental constants. It does look then that, by choosing these constants
-carefully, we could make almost all predictions that work in one fail in the
-other. Even if that's not enough, it looks like we could change not only the
-constants, but the universe laws themselves, until they are different enough.
+Let us pick an assignment and let us pick a timespace point very close to the
+time end of a space-time hypercube boundary.
+Let us take that entire point's past and let us try to make a prediction based
+on that.
+First, based on just that past, we can't predict the type of the next hypercube,
+since there will be many possible assignments that have the same past, but in
+which the next hypercube will be different from the current assignment.
+
+Still, a universe description must solve this problem, so it must include
+a function predicting the next hypercube from a hypercube's past
+and its context (i.e. position). Now we must find out how many functions
+we need in order to describe all possible assignments.
+
+Each such function leaves out $\reale$ possible universes, because we
+can flip any subset of its predictions and get a new possible universe.
+Each two such functions leave out $\reale$ possible universes,
+because we can either take an infinite subset out of the set where they are
+identical and we can flip them, or we can take two infinite subsets from
+their two differences, make an infinite set of pairs, then flip any subset.
+Each finite set of such functions leaves out $\reale$ possible universes
+for the same reason.
+
+For a countable set of functions we can do the following: take the
+first function, take an infinite subset of hypercubes $A1$ that leaves out
+an infinite subset of hypercubes $B1$, for the second function, take an
+infinite subset of hypercubes $A2\subset B1$ that leaves out an infinite
+subset $B2$, and so on. Then we can flip subsets of $A1 \times A2 \times \dots$.
+
+This means that we need an uncountable set of functions. With the continuum
+hypothesis, this means $\reale$.
+
+Does an infinite set of functions of cardinality less than $\reale$ leave out
+at least one description? We have a function from descriptions to sets of
+functions that get them correctly. Each pair of functions in such a set has a
+description that differentiates them. So, given a function, we can take a subset
+of descriptions of cardinality less than $\reale$ that separates it from
+everything else. This means that we can have a set of descriptions of the same
+cardinality that separates between all functions. Also, for any countable subset
+we can find $\reale$ functions that are left out. ****
+
+\svn{
+  Prove that we need countable mappings and $\reale$ descriptions.
+}
+\svn{
+  This works only with some kinds of statistical modeling because
+  we need to fulfill p% of predictions in all hypercubes, we can't,
+  e.g., say that we model p% of space with full precision.
+}
 
 \subsection{No meta-universe}
 
