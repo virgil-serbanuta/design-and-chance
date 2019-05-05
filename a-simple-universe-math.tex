@@ -1093,12 +1093,9 @@ extremely unlikely.
 There is a second reason why we should believe that many different universes
 exist: There are $\reale$ descriptions, so there are $2^\reale$ sets of
 descriptions or, equivalently, $2^\reale$ possible claims about what can exist.
-The cardinal numbers remain the same when restricting the sets of descriptions
-to sets that include our universe's description \svn{Huh? This sounds stupid.
-After re-reading thrice I get what I wanted to say, but I don't think it's
-helpful.}
-and restricting the claims to claims which, among others, say that our
-universe's description is possible. Unlike in the main topic discussed in this
+The cardinal numbers remain the same even if we take into account only claims
+according to which our universe exists.
+Unlike in the main topic discussed in this
 paper, this time it's clear that only one of these claims can be true. If
 we try to model this in terms of probability distributions, we have a
 distribution which assigns $1$ to one of these possiblities, and $0$ to
@@ -1110,10 +1107,12 @@ The $2^\reale$ cardinal is larger than $\reale$, so even more than when
 working with a set of cardinal $\reale$, the only reasonable
 probability that we can assign to any concrete claim is $0$.
 
-Even more, the set of all sets of descriptions of cardinality less than $\reale$
-has a cardinality which is less than $2^\reale$, which means that it's
-reasonable to assume that it has probability $0$. Therefore, with probability
-$1$, the set of possible descriptions has the same cardinality as $\reale$.
+Let's say that the set of descriptions for which a universe exists is
+less than $\reale$. The set of all sets of descriptions of cardinality less
+than $\reale$ has a cardinality which is less than $2^\reale$.
+This means that it's reasonable to assume that it has probability $0$\svn{why?}.
+Therefore, with probability $1$, the set of possible descriptions has the same
+cardinality as $\reale$.
 
 Also, as above, by grouping similar descriptions in a set and applying the
 same reasoning to sets of groupings instead of sets of descriptions,
@@ -1196,8 +1195,8 @@ Let us identify the two hypercube types with $\multime{0, 1}$ and
 let us represent a universe as a function from $\intregi$ to $\multime{0, 1}$,
 identifying, for each hypercube, its type.
 
-We can represent the past of a hypercube $x\in\intregy$ by a pair $(x, f)$
-the function
+We can represent the past of a hypercube $x\in\intregi$ by a pair $(x, f)$,
+where the function
 $f$ goes from the set of natural numbers to $\multime{0,1}$, representing
 $x$'s past.
 
@@ -1214,8 +1213,9 @@ Let us find out how many such functions we need.
 To make things simple, let us consider only universes which, for negative
 integers, have hypercubes of type $0$.
 
-The past of hypercube $0$ is perfectly identical, so, in order to predict
-the hypercube with index $0$, we need two distinct prediction functions.
+The past of hypercube $0$ is perfectly identical in all these universes, so,
+in order to predict the type of the hypercube with index $0$,
+we need two distinct prediction functions.
 In order to predict the types of hypercubes $0$ and $1$ we need four
 distinct hypercubes.
 In general, in order to predict the types of hypercubes from $0$ to $n$
