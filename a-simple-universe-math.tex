@@ -53,6 +53,7 @@
 \def\rationale{\mathbb{Q}}
 \def\descriptions{D_L}
 \def\designer{\mathbb{D}}
+\def\our_description{OURD}
 \newcommand{\paper}[1]{paper}
 \newcommand{\multime}[1]{\left\{ #1 \right\}}
 \newcommand{\definitie}[1]{\textbf{#1}}
@@ -76,7 +77,7 @@
  %%%%%%%%%%%%%%%%%%
 
  \begin{abstract}
-  This \paper{} presents an argument that one can make a prediction from
+  This \paper{} argues that one can make a prediction from
   the hypothesis that our universe is not designed, i.e. that it has a high
   level of complexity of a certain kind, and that this complexity would be
   easily observable everywhere. However, this is not what we observe, which
@@ -152,7 +153,7 @@ objections \svn{Need to introduce them. * Re-read The Argument From Design}
 against Aquinas' argument, but one in particular is interesting here:
 the argument is based on analogy, which limits its strength.
 I think that this \paper{}'s argument, although it builds on the same
-foundation, needs only an extremely weak analogy
+foundation, needs only a fairly weak analogy
 (see Section \ref{sec:design-probability}).
 
 The following quote from \textcite{swinburne1968}, made when addressing
@@ -276,7 +277,8 @@ even when it predicts something, it does not have to always be correct.
 
 Note that the data available for making predictions is dependent
 on who is making the prediction. As an example, if we assume that
-all predictions are about things that can be perceived, then
+all predictions are about things that can be perceived, directly or indirectly,
+then
 each kind of intelligent beings (e.g. humans) will make predictions
 about the universe projected through their senses. If a universe contains
 multiple kinds of intelligent beings, with different kinds of
@@ -287,12 +289,12 @@ to things that are observable, but this may not be always true.
 
 In order to handle this dependence on who observes the universe
 in a reasonable way, in the reminder of this paper we will work with universes
-that contain intelligent beings
+that contain intelligent beings,
 and all predictions will be relative to what these intelligent beings
 could observe.
 If there are multiple kinds of intelligent beings in the
-universe, when talking about its description, we'll assume that we picked
-one such kind.
+universe, whenever we are talking about its description
+we will assume that we picked one such kind.
 I.e. although we
 will talk about universes and their descriptions, we'll actually mean
 (universe, intelligent-being-kind) pairs and their corresponding descriptions.
@@ -300,8 +302,8 @@ will talk about universes and their descriptions, we'll actually mean
 Next, let us try to specify how good an univese description
 should be. First, our predictions speak about the future, but expecting them to
 predict everything until the end of the universe (if any) may not be
-reasonable. We may want to fix a minimum amount of time $\Delta t$
-and to evaluate the predictions about things that are at most
+reasonable. We may want to fix a minimum amount of time $\Delta t$,
+focusing on predictions about things that are at most
 $\Delta t$ in the future. Second, we should't expect to
 be able to describe everything with full precision, so we may want to
 have a precision $\eta>0$ for all the values that we predict.
@@ -340,9 +342,10 @@ in the start state can create large differences over time.
 This could happen even if the universe is deterministic
 and we know the laws of the universe perfectly, as long as we don't know
 the full current state of the universe.
-However, high precision predictions may be possible if the full state
+However, high precision predictions may be possible for a deterministic
+universe if the full state
 is taken into account and, as we mentioned, we assume that we know the full
-state of the universe when making predictions.
+state of the universe at a moment in time when making predictions.
 
 For a given universe or region of a universe,
 given a level of approximation, we will pick a canonical description
@@ -352,7 +355,8 @@ at least one finite description, then we pick the shortest such
 description as \ghilimele{the canonical description}, breaking ties by
 using the lexicographic order. Otherwise, we simply say that the
 universe (region) has an infinite description, and we will abuse the
-terminology a bit by picking $S$ as the canonical description (we could
+terminology a bit by picking the entire set
+$S$ as the canonical description (we could
 also pick a random description from the set).
 If the level of approximation is obvious from the context, we will call
 this canonical description \definitie{the universe's description}
@@ -371,7 +375,7 @@ the following issues:
   \item Our universe is designed or not.
   \item Our universe has a finite or infinite description.
   \item Option 1: There is a meta-$\beta$ universe for each countable ordinal
-        $\beta$ such that our universe is the meta-$0$ one and the meta-$beta$
+        $\beta$ such that our universe is the meta-$0$ one and the meta-$\beta$
         universe includes, directly or not, all meta-$\alpha$ universes with
         $\alpha < \beta$. Option 2: there is an ordinal $\beta$ where this
         stops being the case.
@@ -383,7 +387,7 @@ the following issues:
 \section{Axioms}
 \label{sec:axioms}
 
-Throughout this paper we will implicitly only use separated probability
+Throughout this paper we will implicitly use only separated probability
 measures, i.e. they can measure singletons (single-element sets).
 
 Below we will use two terms, \ghilimele{generic} and \ghilimele{peculiar},
@@ -506,7 +510,7 @@ constant, in which we can ignore what happens.
 Many people assume, implicitly or explicitly,
 that this is true, and, even more, that a hypercube's description works
 for the entire universe.
-This is especially visible, e.g., when claiming
+This is especially visible when, e.g., claiming
 that the universe is around $14$ billion years old, that the sun will,
 in some distant future, become a white dwarf, or that standard-candle supernovae
 are not ilussions.
@@ -528,11 +532,12 @@ universe has such a description.
 
 \begin{axiom}\label{uncountable}
   For any level of approximation $L$ above a certain minimum level (see below)
-  there is a set $D_L$
+  there is a set $\descriptions$
   of universe descriptions such that the following are true:
   \begin{enumerate}
-    \item $D_L$ has the same cardinality as $\reale$.
-    \item For all elements $d\in D_L$ there is at least one conceivable
+    \item $\descriptions$ has the same cardinality as $\reale$.
+    \item For all descriptions $d$ in $\descriptions$
+          there is at least one conceivable
           universe $U_d$ which
       \begin{enumerate}
         \item has a time-space or something similar enough;
@@ -541,16 +546,18 @@ universe has such a description.
               for the level of approximation $L$,
               $d$ is $U_d$'s description.
       \end{enumerate}
-    \item If $d$ and $d'$ are descriptions from $D_L$, then $d$ does not work
+    \item If $d$ and $d'$ are descriptions from $\descriptions$,
+          then $d$ does not work
           for $U_{d'}$, the universe corresponding to $d'$.
-    \item $D_L$ contains a description for our universe.
+    \item $\descriptions$ contains a description for our universe.
   \end{enumerate}
-  The same is true for universe regions, except that $D_L$ may have a lower
+  The same is true for universe regions, except that
+  $\descriptions$ may have a lower
   cardinality.
 \end{axiom}
 
 The minimum level for which this is true is left unspecified, but we should
-include some common-sense restricts, e.g. the length precision is above
+include some common-sense restrictions, e.g. the length precision is above
 Planck's length. All levels of approximation used below will be above this
 minimum level, even if this is not mentioned explicitly.
 
@@ -587,7 +594,7 @@ of space in which one travels).
 For any approximation level $L$, and any region that is not trivial
 for $L$
 (the meaning of \ghilimele{trivial} is left open, but, as an example,
-if we use an approximation level that does not measure things larger
+if we use an approximation level that does not measure things smaller
 than a size $l$, then the region must be significantly larger than $l$),
 there are multiple possible descriptions that
 are distinct for $L$, i.e. there is no possible region where both descriptions
@@ -652,7 +659,8 @@ that constraint, so both can be right within their contexts.
 \svn{Use consistent capitalization for section titles.}
 
 Let us assume denote our universe's description by
-$OURD$. From axiom \ref{uncountable}, $OURD\in\descriptions$.
+$\our_description$. Let us take $\descriptions$ be the set of descriptions from
+axiom \ref{uncountable}, with $\our_description\in\descriptions$.
 Let us also consider that, perhaps, our universe is contained
 in a meta-universe, which is, perhaps, contained in
 a meta-meta-universe, and so on. Since these meta-universes included in other
@@ -694,7 +702,7 @@ the smallest one is countable, let us denote it by $\alpha$.
 Otherwise, let $\alpha$ be the lowest uncountable ordinal.
 
 If $\alpha = 0$ then there is no probability distribution over universe
-descriptions, so $OURD$ is generic (axiom \ref{ax:noprobability}).
+descriptions, so $\our_description$ is generic (axiom \ref{ax:noprobability}).
 \svn{Either use the proper wording everywhere, or explain that,
      for easier writing I am treating $P(X)=1$ that as
      logical necessity, but the
@@ -723,29 +731,30 @@ probability distribution for universe descriptions.
 \svn{Really confusing. Maybe a footnote with an example would help.}
 
 Let $\beta$ be the minimum (if any) for which $\beta < \alpha$ and
-$p_\beta$ does not exist or $p_\beta(OURD) = 0$.
+$p_\beta$ does not exist or $p_\beta(\our_description) = 0$.
 
 Before ordinal $\beta$, we made a countable number of observations on various
 probability distributions, one for each ordinal/meta-universe. Since one of them
-was made on a probability distribution where $p_\beta(OURD)=0$, then $OURD$ is
+was made on a probability distribution
+where $p_\beta(\our_description)=0$, then $\our_description$ is
 generic (axiom \ref{ax:zeroisgeneric}).
 
 If such a $\beta$ does not exist, up to $\alpha$, without including it,
-$p_\alpha$ exists and $p_\alpha(OURD) > 0$.
+$p_\alpha$ exists and $p_\alpha(\our_description) > 0$.
 
 If $\alpha$ is countable
 then, similar to the above reasoning,
-$OURD$ is generic.
+$\our_description$ is generic.
 
 This means that, if our universe is not designed, we have two options
-that might be reasonable: our universe's description, $OURD$, is
-generic, or ($OURD$ is peculiar, $\alpha$ is uncountable and,
-for all $\beta < \alpha$, $p_\beta$ exists and $p_\beta(OURD) > 0$.
+that might be reasonable: our universe's description, $\our_description$, is
+generic, or ($\our_description$ is peculiar, $\alpha$ is uncountable and,
+for all $\beta < \alpha$, $p_\beta$ exists and $p_\beta(\our_description) > 0$.
 
-In other words, in order to claim that $OURD$ is peculiar,
+In other words, in order to claim that $\our_description$ is peculiar,
 one needs to postulate the
 existence of an uncountable chain of meta-universes, all of them favouring a
-peculiar $OURD$, which, by default, is prohibitively unlikely for any of them.
+peculiar $\our_description$, which, by default, is prohibitively unlikely for any of them.
 But that's not all, since, although the
 current argument does not work anymore when the chain of
 meta-universes becomes uncountable, intuitively the peculiarness problem
@@ -755,7 +764,7 @@ peculiar thing, which might be reasonable)?
 
 From now on, I will assume that the possible objection in the preceding
 paragraph is unreasonable, which means that, practically speaking,
-either $OURD$ is generic or our universe is designed.
+either $\our_description$ is generic or our universe is designed.
 
 Since we don't know the limits of our universe, let us consider next
 what happens for universe regions.
