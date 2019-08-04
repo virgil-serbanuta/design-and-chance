@@ -394,7 +394,8 @@ Below we will use two terms, \ghilimele{generic} and \ghilimele{peculiar},
 which are defined precisely in section \ref{sec:probabilities}. Informally,
 an object is peculiar if it satisfies a peculiar predicate, and a peculiar
 predicate is one that has a zero probability for any continuous probability
-distribution. As an example, "has a finite number of digits" is a peculiar
+distribution. As an example,
+\ghilimele{has a finite number of digits} is a peculiar
 predicate over real numbers, and any real number with a finite number
 of digits, like $12.5$, is peculiar. An object or predicate is generic if
 it is not peculiar.
@@ -525,7 +526,7 @@ universe has such a description.
     descriptions for the other fraction. Does the explanation in
     \ghilimele{Logically possible universes} still work?
 
-    See the "Not enough descriptions" section.
+    See the \ghilimele{Not enough descriptions} section.
 }
 
 \subsection{Logically possible universes}
@@ -665,7 +666,7 @@ Let us also consider that, perhaps, our universe is contained
 in a meta-universe, which is, perhaps, contained in
 a meta-meta-universe, and so on. Since these meta-universes included in other
 meta-universes resemble ordinals, we will label them with ordinal numbers,
-starting with $0$ to the first meta-universe.
+starting with $0$ for the first meta-universe.
 
 For the purpose of this paper, a meta-universe is something that contains our
 universe and which influences, one way or another, which universes exist and
@@ -686,11 +687,12 @@ description was generated with a given probability distribution, but, since
 it will not make any difference in the argument below, we will make no
 assumptions about how many universes were generated.
 
-As an example, if only one universe exists, but there is absolutely no reason
+As an example, let us take a look at what happens if only one universe exists.
+If there is absolutely no reason
 for it existing and the other ones not existing, then no meta-universe which
 includes it exists.
-If, somehow, it is contained in a meta-universe which
-enforces that only this universe exists, the probability distribution will
+If, somehow, this universe is contained in a meta-universe which
+enforces that only one universe exists, the probability distribution will
 assign $1$ to this universe's description, and $0$ to everything else.
 If other universes could exists, but, somehow, they don't, we will get a
 probability distribution specifying what could exist, and we would be talking
@@ -701,8 +703,9 @@ if there are ordinals which do not correspond to any meta-universe, and
 the smallest one is countable, let us denote it by $\alpha$.
 Otherwise, let $\alpha$ be the lowest uncountable ordinal.
 
-If $\alpha = 0$ then there is no probability distribution over universe
-descriptions, so $\our_description$ is generic (axiom \ref{ax:noprobability}).
+If $\alpha = 0$, then there is no meta-universe containing ours, so there
+is no probability distribution over universe descriptions,
+which means that $\our_description$ is generic (axiom \ref{ax:noprobability}).
 \svn{Either use the proper wording everywhere, or explain that,
      for easier writing I am treating $P(X)=1$ that as
      logical necessity, but the
@@ -714,53 +717,78 @@ then the probability of all peculiar descriptions is $0$,
 so the only reasonable conclusion is that our universe has a generic
 approximate description (axiom \ref{ax:zeroisgeneric}).
 
-For many people, this result may be good enough. This seems to be taken in
-other papers looking at our universe, e.g. \cite{Calude2013}. If you agree with
+This result should probably be good enough, and other papers looking at what
+we can believe about our universe, e.g. \cite{Calude2013}, seem to agree that,
+when we are observing real numbers, they are generic. If you agree with
 this, please skip to section \ref{sec:peculiarregions}.
 
-However, let us see what happens when this probability distribution is not
-continuous.
-Let us let us assume that for some ordinals $\beta$ with
-$0 < \beta \le \alpha$ there is a probability
-$p_\beta$ over $\descriptions$, with $p_\beta(y)$ being
+However, one could also wonder what happens when this probability distribution
+is not continuous. If the discontinuities are generic, then we can easily
+show that, with probability $1$, our universe's description is generic.
+
+However, if they are not generic, then we can ask ourselves
+whether we have a probability
+description for these discontinuities. Since the meta-universe containing our
+universe may be contained in a meta-meta-universe, maybe the meta-meta-universe
+can provide such a distribution. If the meta-meta-universe probability
+distribution is continuous, then the discontinuities are generic. If not,
+then we have to ask ourselves if a meta-meta-meta-universe can give us more
+information.
+
+In general, let us let us assume that for some ordinals $\delta$ with
+$0 < \delta \le \alpha$ there is a probability distribution
+$p_\delta$ over $\descriptions$, telling us
 the probability that $y$ is a discontinuity
 for all lower ordinal probabilities, i.e. for all
-$p_\gamma$ with $\gamma < \beta$.
-Since we need $P_0$ to define the above, we will take it to be, the
+$p_\gamma$ with $\gamma < \delta$.
+We will take $p_0$ to be the
 probability distribution for universe descriptions.
-\svn{Really confusing. Maybe a footnote with an example would help.}
+
+So, $p_0$ will be the probability distribution over universe descriptions,
+$p_1$ (if it exists) will be the probability distribution telling us
+what's the probability that a given description is a discontinuity for $p_0$,
+$p_2$ will tell us
+what's the probability that a given description is a discontinuity for both
+$p_0$ and $p_1$, and so on.
 
 Let $\beta$ be the minimum (if any) for which $\beta < \alpha$ and
-$p_\beta$ does not exist or $p_\beta(\our_description) = 0$.
+either $p_\beta$ does not exist, or $p_\beta(\our_description) = 0$.
 
-Before ordinal $\beta$, we made a countable number of observations on various
-probability distributions, one for each ordinal/meta-universe. Since one of them
-was made on a probability distribution
-where $p_\beta(\our_description)=0$, then $\our_description$ is
-generic (axiom \ref{ax:zeroisgeneric}).
+If such $\beta$ ordinal exists, let us note that we can consider that
+we made a countable number of observations on various
+probability distributions, one for each ordinal/meta-universe, and that
+each time we observed our universe's description.
+Since one of them was made on a probability distribution
+where either there is no probability distribution $p_\beta$,
+or $p_\beta(\our_description)=0$, then $\our_description$ is
+generic (axioms \ref{ax:noprobability} and \ref{ax:zeroisgeneric}).
 
-If such a $\beta$ does not exist, up to $\alpha$, without including it,
-$p_\alpha$ exists and $p_\alpha(\our_description) > 0$.
-
-If $\alpha$ is countable
-then, similar to the above reasoning,
-$\our_description$ is generic.
+If such a $\beta<\alpha$ does not exist, then all $p_\delta$
+probability distributions exist, with $\delta$ going up to $\alpha$ and,
+perhaps, including it. If, additionally, $\alpha$ is countable, then,
+similar to the above reasoning, $\our_description$ is generic.
 
 This means that, if our universe is not designed, we have two options
 that might be reasonable: our universe's description, $\our_description$, is
 generic, or ($\our_description$ is peculiar, $\alpha$ is uncountable and,
-for all $\beta < \alpha$, $p_\beta$ exists and $p_\beta(\our_description) > 0$.
+for all $\delta < \alpha$,
+the probability distribution $p_\delta$ exists and, according to it,
+$\our_description$'s probability is greater than $0$.
 
 In other words, in order to claim that $\our_description$ is peculiar,
 one needs to postulate the
 existence of an uncountable chain of meta-universes, all of them favouring a
-peculiar $\our_description$, which, by default, is prohibitively unlikely for any of them.
+peculiar $\our_description$, which, by default,
+is prohibitively unlikely for any of them.
 But that's not all, since, although the
 current argument does not work anymore when the chain of
 meta-universes becomes uncountable, intuitively the peculiarness problem
-still remains: why would it suddenly become reasonable to have a huge collection
-of peculiar things (as opposed to having a huge collection with a single
-peculiar thing, which might be reasonable)?
+still remains: why would it suddenly become reasonable to make
+only peculiar observations if we make enough of them? Normally, when we make
+observations with a continuous probability distribution, which is the default,
+we expect to observe only generic elements as long as we make a
+countable number of observation, and only when the observation set
+becomes uncountable we expect to, perhaps, observe peculiar elements.
 
 From now on, I will assume that the possible objection in the preceding
 paragraph is unreasonable, which means that, practically speaking,
@@ -777,7 +805,7 @@ rational numbers or $+\infty$ or $-\infty$. From axiom
 \ref{ax:rationalcovering}, their set is countable.
 
 Let us examine whet happens when the set of descriptions for a hypercube that
-are compatible with life in that hypercube (and, most likely, in the universe
+are compatible with life in that hypercube (and, perhaps, in the universe
 around it) has the same cardinal as $\reale$: we can apply the same argument
 as in section \ref{fdaumu}, by considering it as some sort of universe, and the
 enclosing universe as a meta-universe.
@@ -792,28 +820,33 @@ This means that the only options
 that have a chance of being plausible are that our universe is designed, or
 that the set of descriptions compatible with life for a finite hypercube
 has a cardinality smaller than $\reale$.
-Additionally, from section \ref{fdaumu}, our universe has a generic description.
 
-Let us focus on the second case above: a universe with a generic
-description, in which finite cuboids have finite approximate
-descriptions.
+Let us focus on the latter case above.
+Note that, from section \ref{fdaumu}, our universe has
+a generic approximate description.
+But we assumed that the region around us has a finite approximate description.
+If we were to extend it to the entire universe, we would find a peculiar
+description for our universe, which is a contradiction. This means that there
+is at least one region in our universe which has a different description.
 
-Let $A_1$ be the set of possible approximate descriptions for
+Let $A$ be the set of possible approximate descriptions for
 a hypercube of size, say, $1\;second \times meter^3$.
-Unless our approximation is extremely coarse, $A_1$ will have multiple elements.
-We will assume that this is, indeed, the case.
-For any description $a\in A_1$, let $P(a)$ be the probability of encountering
+As argued in the paragraph above,
+unless our approximation level is extremely coarse,
+$A$ will have multiple elements.
+We will assume that we are working with a reasonable approximation level.
+For any description $a\in A$, let $P(a)$ be the probability of encountering
 a hypercube with $a$ as its description in our universe.
 
-If $A_1$ is finite, we could, by default, pick the probability
-distribution that assigns equal probabilities to all elements of $A_1$.
-However, $A_1$ can have an infinite cardinal as long as it's less than $\reale$,
+If $A$ is finite, we could, by default, pick the probability
+distribution that assigns equal probabilities to all elements of $A$.
+However, $A$ can have an infinite cardinal as long as it's less than $\reale$,
 so we have to consider more general probabilities.
 
-In any case, since, as mentioned above, $A_1$ has multiple elements,
+In any case, since, as mentioned above, $A$ has multiple elements,
 we can't reasonably have one element with probability $1$.
 
-Let $p1<1$ be the probability of the description that we use for the
+Let $p_1<1$ be the probability of the description that we use for the
 hypercubes around us.
 Then the probability of observing $n$
 non-overlapping hypercubes
@@ -824,25 +857,29 @@ with this description without observing any other description is\footnote{
 }
 $p_1^n$.
 
-Even if $p_1$ is very close to $1$, $p_1^n$ converges very quickly\footnote{
-  If $p_1=0.5$, $n=10$ is enough to go below one to one thousand odds,
-  $n=20$ is enough to go below one to one million, $n=30$ goes below one to one
-  billion.
-  }
-to $0$,
-so the consistency of a small spacetime region around us is enough
-to make this hypothesis unlikely enough (compared to the others, assuming
-that at least one other has a non-zero probability) to disregard it.
+Even if $p_1$ is very close to $1$, $p_1^n$ converges very quickly to 0.
+As an example, if $p_1=0.5$ then observing $n=10$ consecutive hypercubes with
+the same description is enough to make $p_1^n$ go below one to one thousand
+odds, $n=20$ is enough to go below one to one million,
+$n=30$ goes below one to one billion.
+
+Then, if we compare the non-design hypothesis
+with another one non-zero probability,
+almost always the consistency of a small spacetime region around us is enough
+to make the non-design hypothesis unlikely enough to disregard it.
 
 Next, let us see hat happens if we assume the design hypothesis.
-TODO: use this footnote\footnote{
-  Let $ND$ be the hypothesis that our universe id not designed,
-  $D$ be the hypothesis that it is designed, $OUR$ be our universe,
-  $our$ be the region of space around us that has the same description.
-  Note that $P(our) \ge P(OUR)=P(OUR|D)\cdot P(D) > 0$.
-  Then $P(D|our) = \frac{P(our|D)\cdot P(D}{P(our)}) > 0$.
+
+TODO: clean up and use this footnote\footnote{
+  Let $ND$ be the hypothesis that our universe is not designed,
+  $D$ be the hypothesis that it is designed, $\our_description$ be our
+  universe's description,
+  $our$ be the description for the region of space around us.
+  Note that
+  $P(our) \ge P(\our_description)=P(\our_description|D)\cdot P(D) > 0$.
+  Then $P(D|our) = \frac{P(our|D)\cdot P(D)}{P(our)} > 0$.
   Similarly,
-  $P(ND|our) = \frac{P(our|ND)\cdot P(ND}{P(our)})
+  $P(ND|our) = \frac{P(our|ND)\cdot P(ND)}{P(our)}
     = \frac{P(ND)}{N^k} \cdot \frac{1}{P(our)}$.
   To compare the two we have to compare
   $P(our|D)\cdot P(D)$ with $\frac{P(ND)}{N^k}$.
@@ -852,26 +889,32 @@ TODO: use this footnote\footnote{
 \label{sec:design-probability}
 
 Let us examine the hypothesis that our universe is designed.
-Since, in this case, the way our world works is based on the designer's intents,
-it is no longer obvious that we should just assume genericity on intents.
-We may have some clues pointing to peculiar descriptions, but it's hard to see
-how strong they are.
+Since, in this case, the way our world works would based
+on the designer's intent,
+it is no longer obvious that, say, continuous probability distributions
+should be the default.
+On the other hand, do we actually have better options?
 
-If the probability that our universe's description is peculiar is the same as
-in the non-design case, i.e. $0$, then we can draw the same conclusion: the
-probability of observing our universe is vanishingly small.
+Without any other information or assumption,
+we can repeat the previous argument to draw the same conclusion:
+the probability of observing our universe is vanishingly small.
 
-However, if the probability of having a peculiar description is positive, then
+However, if the probability of having a large consistent time-space region
+is positive, then
 the probability of observing our universe becomes more reasonable (how much
-more reasonable depends on the peculiarity's probability).
+more reasonable depends on the consistency's probability).
 
-We can separate this probability in three: the probability that a designer
-would want rational beings, the probability that the universe is consistent
-given that it was designed for rational beings, and the probability that the
-universe is peculiar given that it is consistent.
+We can separate this probability in two: the probability that a designer
+would want rational beings\svn{A designer could want a consistent universe
+region with a finite
+description without wanting intelligent beings, but this possibility is not
+analyzed in this paper}, denoted by $p_r$, and
+the probability that the universe region containing
+those intelligent beings is consistent
+given that it was designed for them.
 
-I think it's safe to assume that the last two probabilities are positive,
-and are probably fairly high. See as an example this quote from
+I think it's safe to assume that the latter probability is positive,
+and, probably, fairly high. See as an example this quote from
 \textcite{Swinburne2003}, which argues that, if God exists,
 there is a fairly good chance that humans can understand their universe:
 
@@ -895,19 +938,38 @@ there is a fairly good chance that humans can understand their universe:
   situated to God.
 \end{quote}
 
-Then, if the probability that a designer would want rational beings is non-zero,
-this would make the probability of observing our universe under the design
-hypothesis higher than the non-design one, therefore providing an ammount of
-support for design that roughly corresponds to the ratio between this
-probability and the probability of observing this world without design.
-If the same probability would not be vanishingly small, it would provide
-overhelming support for the design hypothesis.
+Let us compare the probability that
+we observe consistency under the \ghilimele{design for intelligent beings} and
+\ghilimele{no design} hypotheses.
+
+If the probability that a
+designer would want rational beings, $p_r$, is $0$, then we can't
+differentiate the design and non-design cases, and the
+the probability of observing our world's consistency is the same
+for both.
+
+However, if $p_r$ is non-zero, then the
+the probability of observing our world's consistency becomes larger in the
+design case, providing some ammount of support for that hypothesis.
+
+Oversimplifying a bit, the ammount of support would
+roughly be equal with the ratio between $p_r$ and the probability of observing
+our world's consistency in the non-design case.
+
+Since observing consistency without design has an extremely
+small probability,
+having almost any non-zero probability for
+\ghilimele{a designer of worlds would want
+rational beings} would provide
+overhelming support for the design hypothesis. As an example, a probability
+of $1$ in one billion billion would easily be large enough.
 
 From a natural theology point of view, one may argue for a higher design
 probability through analogy with our own intents: we would be interested
 in intelligent beings, it seems to us that intelligent beings would be
 interested in other intelligent beings, so maybe the Designer would be
 interested in creating other intelligent beings.
+
 How much is this worth? It's hard to tell, but, on the other hand, our options
 are:
 
@@ -923,9 +985,10 @@ are:
         and we are observing the consistency that we would expect from a
         universe designed for intelligent beings.
 \end{itemize}
-The first two options are valid only if, for a given approximation level,
-the set of approximate descriptions finite hypercubes has a lower cardinality
-if we require that the universe contains life.
+For completeness, the first two options are valid only if,
+for a given approximation level, if we require that a universe has life then
+the set of possible approximate descriptions for a finite hypercube
+has a lower cardinality than $\reale$.
 
 It seems to me that the only reasonable option is that the analogy is not as
 bad as some people may think it is.
@@ -938,7 +1001,8 @@ bad as some people may think it is.
 This section includes various possbile objections to this argument. Since the
 fine-tuning argument addresses the same problem, and it's also using a
 probabilistic argument (though in a completely different way), some of the
-objections below are similar to the fine-tuning ones.
+objections below are similar to the fine-tuning ones, and it may be helpful
+to compare the two approaches.
 
 For the fine-tuning argument see, e.g., \svn{citations}. For objections to the
 fine-tuning argument see
@@ -947,7 +1011,7 @@ For possible answers see, e.g.
 \textcites{Leslie2003}{Swinburne2003}{Monton2006}{Kotzen2012}.
 
 %Manson2009 McGrew2001 - probabilities not applicable to cosmic parameter
-values.
+%values.
 %Manson2009 Sober2009 - observation selection effect
 %Manson2009 - multiple universes
 %Manson2003 - nonhomogenous spacetime, different fundamental constants
@@ -1079,7 +1143,8 @@ same reasoning to sets of groupings instead of sets of descriptions,
 with probability $1$, the set of possible descriptions has $\reale$
 descriptions, which are very different, which is enough for this paper.
 \svn{missing contexts}
-\svn{Do I need the preceeding $4$ paragraphs, from "There is a second reason"?
+\svn{Do I need the preceeding $4$ paragraphs,
+from \ghilimele{There is a second reason}?
 Does it help?}
 
 \subsection{Not enough descriptions}
@@ -1102,7 +1167,8 @@ hypercube descriptions and universe descriptions, which are not always
 identified explicitly.
 
 Here is an incomplete example that shows why the above is reasonable.
-First, let us consider that we fixed a set of "primary measurements" that we
+First, let us consider that we fixed a set of
+\ghilimele{primary measurements} that we
 can do for our model, such that any other measurement that we could do can be
 computed from those.
 Then let us take two descriptions, the first saying
@@ -1177,7 +1243,7 @@ of space-time without changing the validity of this construction.
 \subsection{Fractions of space}
 
 Note that above I used a specific definition of what I mean by
-predictions being "true with probability $p>0$".
+predictions being \ghilimele{true with probability $p>0$}.
 However, it's valid to ask what happens if we want our predictions to be true
 in only a fraction $p$ of spacetime, with probability $p$.
 
