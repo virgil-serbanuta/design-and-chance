@@ -1205,19 +1205,20 @@ approximations, especially since that means we can probably have incompatible
 descriptions for the same universe.
 
 Let us assume (as an axiom) that, for a given level of approximation $L$, we can
-find a finite hypercube size $l$ such that there is a finite set of
+find a finite hypercube size $l$ for which there is a finite set of
 (full-precision)
-descriptions $I$ such that,
-for any set of hypercubes whose descriptions include the $I$ set we can't
+descriptions $I$ which cannot all be handled with a single finite approximate
+description. To be more precise,
+for any set of hypercubes whose descriptions include the $I$ set, we can't
 find a single finite approximate description that works for all of them
 within the level of approximation $L$.
 
-In the following, one needs to pay attention to the difference between
-hypercube descriptions and universe descriptions, which are not always
-identified explicitly.
+In the following, the difference between
+hypercube descriptions and universe descriptions is not always explicit,
+but can be inferred from the context.
 
-Here is an incomplete example that shows why the above is reasonable.
-First, let us consider that we fixed a set of
+Here is an incomplete example that shows why the above axiom is reasonable.
+First, let us assume that we have a set of
 \ghilimele{primary measurements} that we
 can do for our model, such that any other measurement that we could do can be
 computed from those.
@@ -1263,8 +1264,8 @@ identifying, for each hypercube, its type.
 We can represent the information available for predicting the type of a future
 hypercube given the current hypercube $x\in\intregi$ by a pair $(x, f)$,
 where the function
-$f$ goes from the set of natural numbers to $\multime{0,1}$, representing
-$x$'s past.
+$f$, representing
+$x$'s past, goes from the set of natural numbers to $\multime{0,1}$.
 
 We are trying to predict the future of all functions given
 their past, and their position.
@@ -1281,7 +1282,7 @@ we need two distinct prediction functions.
 In order to predict the types of hypercubes $0$ and $1$ we need four
 distinct hypercubes.
 In general, in order to predict the types of hypercubes from $0$ to $n$
-we need $2^n$ distinct prediction functions.
+we need $2^{n+1}$ distinct prediction functions.
 And, in order to predict the type of all hypercubes which are greater or equal
 to $0$, we need $2^\naturale$, i.e. $\reale$ prediction functions.
 
@@ -1290,60 +1291,58 @@ in the middle of such a universe (most likely with more dimensions than $2$)
 we can include a consistent chunk
 of space-time without changing the validity of this construction.
 
-\subsection{Fractions of space}
+%\subsection{Fractions of space}
 
-Note that above I used a specific definition of what I mean by
-predictions being \ghilimele{true with probability $p>0$}.
-However, it's valid to ask what happens if we want our predictions to be true
-in only a fraction $p$ of spacetime, with probability $p$.
+%Note that above I used a specific definition of what I mean by
+%predictions being \ghilimele{true with probability $p>0$}.
+%However, it's valid to ask, say,
+%what happens if we want our predictions to be true
+%in only a fraction $p$ of spacetime, with probability $p$.
 
-Anyone who wants to talk about \ghilimele{a fraction $p$ of spacetime} needs a
-measure function over the entire spacetime.
-But, over an infinite universe, for any such measure and any fraction $p<1$,
-one can pick a finite amount of timespace which cover that fraction $p$ of the
-universe.
-If we look at a finite chunk of the universe, then, obviously, it's more regular
-than the others, but that does not tell us much about the complexity of the
-entire universe.
+%Since what we mean by \ghilimele{a fraction $p$} is not fully defined,
+%there may be definitions for which the argument below does not work,
+%but, most likely, it works for all reasonable definitions.
+%Also, the argument below presents only the idea, without working out all
+%details, since there is no point of being fully precise without a precise
+%hypothesis.
 
-\svn{
-  What are the \ghilimele{hypercubes} above? A fraction of space does not
-  mean that we can use hypercubes for that. I must make this assumption
-  explicit.
-}
+%Let us take, again, $\reale^n$ as a hypothetical universe.
+%Let us denote by $n$ the number of chunks we get if we split the entire
+%spacetime
+%in chunks covering a fraction $p$, one of which may be smaller than $p$.
+%As above, we can probably find a hypercube size for which we
+%have $2n$ different hypercube descriptions when working with a given level
+%of approximation $L$.
+%Let us consider again that
+%we split a universe into hypercubes of this size, and that we assign
+%hypercube descriptions randomly.
 
-Since what we mean by \ghilimele{a fraction $p$} is not fully defined,
-there may be definitions for which the argument below does not work,
-but, most likely, it works for all reasonable definitions.
-Also, the argument below presents only the idea, without working out all
-details, since there is no point of being fully precise without a precise
-hypothesis.
+%We are interested in hypercube type assignments that assign the hypercube types
+%such that each of them covers a fraction less than $p/2$ of the universe.
 
-Let us denote by $n$ the number of chunks we get if we split the entire space
-in chunks covering a fraction $p$, one of which may be smaller than $p$.
-As above, we can probably have $2n$ different hypercube types with the level
-of approximation $L$. For each way of assigning these hypercube types,
-we get one type of universe.
+%Let us take a universe chunk covering a fraction $p$.
+%We can choose 
+% If that that includes at most one
+%partial hypercube, then, with a single hypercube description we can cover at
+%most half of it. 
 
-We are interested in hypercube type assignments that assign the hypercube types
-such that each of them covers a fraction less than $p/2$ of the universe.
-We'll further assume that when we divide the spacetime in chunks of the same
-size (hypercubes are a good canditate),
-we can get at least two assignments (i.e. two assignment types)
-for the hypercubes inside those
-chunks such that the two assignments do not assign the same value to the
-same hypercube in both.
+%We'll further assume that when we divide the spacetime in chunks of the same
+%size (hypercubes are a good canditate),
+%we can get at least two assignments (i.e. two assignment types)
+%for the hypercubes inside those
+%chunks such that the two assignments do not assign the same value to the
+%same hypercube in both.
 
-Now, any description which works in a fraction $p$ of space must make
-predictions that, roughly, work in at least two hypercube types.
-So, in order to make predictions, a definition must identify
-the hypercube type, as in section \ref{sec:fewuniverses}.
-This means that we must have at least
-$\reale$ definitions.
+%Now, any description which works in a fraction $p$ of space must make
+%predictions that, roughly, work in at least two hypercube types.
+%So, in order to make predictions, a definition must identify
+%the hypercube type, as in section \ref{sec:fewuniverses}.
+%This means that we must have at least
+%$\reale$ definitions.
 
-\svn{Is \ghilimele{true} appropriate here? and in the entire paper?
-Truth is a word that's hard to use.
-Would it be better to use \ghilimele{verified} or something similar?}
+%\svn{Is \ghilimele{true} appropriate here? and in the entire paper?
+%Truth is a word that's hard to use.
+%Would it be better to use \ghilimele{verified} or something similar?}
 
 \section{Conclusion}
 
