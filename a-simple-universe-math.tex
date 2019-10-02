@@ -275,7 +275,18 @@ given the state at any moment in time, but a universe description
 as defined here does not have to predict everything and,
 even when it predicts something, it does not have to always be correct.
 
-Note that the data available for making predictions is dependent
+\ghilimele{Predicting}, as used above, would normally mean that one
+starts from the theory and does some formal inferences and computations, having
+the prediction as the result.
+However, as \cite{Calude2013} shows, there are many
+things that can't be proven this way.
+We don't know if the state of the universe at a given moment in time is one of
+those things, although we could restrict our descriptions to ones where this
+is possible up to a reasonable level.
+Regardless, let us use a different meaning: a theory predicts something if
+that something is based on what is true in all models of that theory.
+
+Note that usually the data available for making predictions is dependent
 on who is making the prediction. As an example, if we assume that
 all predictions are about things that can be perceived, directly or indirectly,
 then
@@ -300,24 +311,24 @@ will talk about universes and their descriptions, we'll actually mean
 (universe, intelligent-being-kind) pairs and their corresponding descriptions.
 
 Next, let us try to specify how good an univese description
-should be. First, our predictions speak about the future, but expecting them to
+should be. First, predictions speak about the future, but expecting to
 predict everything until the end of the universe (if any) may not be
 reasonable. We may want to fix a minimum amount of time $\Delta t$,
 focusing on predictions about things that are at most
 $\Delta t$ in the future. Second, we should't expect to
 be able to describe everything with full precision, so we may want to
-have a precision $\eta>0$ for all the values that we predict.
-Third, we shouldn't expect our predictions to always be correct, so
+have a precision $\eta>0$ for all the values that are predicted.
+Third, we shouldn't expect predictions to always be correct, so
 we should require that they are true with probability $p>0$.
 The exact meaning of \ghilimele{true with probability} here is left open.
 Of course, we may add other similar constraints if needed.
 
 Then let us say that an \definitie{approximate universe description} with a
 \definitie{level of approximation} $L=(\eta>0,$ $p>0$ and $\Delta t>0)$
-is a universe description which allows one to approximate the future
+is a universe description which allows approximating the future
 state of the universe with a precision $\eta$, with a probability
 $p>0$ for a prediction to be correct ($p$ is the same for each location
-where we make predictions)
+where predictions are being made)
 %\svn{Do I need the probability of the prediction to be correct
 %     or do I need to cover a fraction p of the world? Covering a fraction
 %     of the world might actually mean that a universe with intelligent
@@ -717,9 +728,7 @@ then the probability of all peculiar descriptions is $0$,
 so the only reasonable conclusion is that our universe has a generic
 approximate description (axiom \ref{ax:zeroisgeneric}).
 
-This result should probably be good enough, and other papers looking at what
-we can believe about our universe, e.g. \cite{Calude2013}, seem to agree that,
-when we are observing real numbers, they are generic. If you agree with
+This result should probably be good enough, and if you agree with
 this, please skip to section \ref{sec:peculiarregions}.
 
 However, one could also wonder what happens when this probability distribution
