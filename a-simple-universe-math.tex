@@ -251,9 +251,9 @@ which are modellable with sets of axioms that are at most countable.
 Let us restrict the universes we are considering even further, to universes that
 have something remotely resembling time and space, for which
 \ghilimele{the state of the universe at a given moment in time}, or something
-close, makes sense, and which can plausibly contain intelligent beings. We
-will restrict the universe even further, so that there is no action at a
-distance.
+close, makes sense, and which can plausibly contain intelligent beings.
+% And let us restrict again, to universes where there is no action at a
+% distance.
 Any such universe is, for the purpose of this paper, a conceivable universe.
 
 To keep the exposition simple, in the following I will use
@@ -282,9 +282,9 @@ However, as \cite{Calude2013} shows, there are many
 things that can't be proven this way.
 We don't know if the state of the universe at a given moment in time is one of
 those things, although we could restrict our descriptions to ones where this
-is possible up to a reasonable level.
+is possible, at least up to a reasonable level.
 Regardless, let us use a different meaning: a theory predicts something if
-that something is based on what is true in all models of that theory.
+that something is true in all models of that theory.
 
 Note that usually the data available for making predictions is dependent
 on who is making the prediction. As an example, if we assume that
@@ -313,7 +313,7 @@ will talk about universes and their descriptions, we'll actually mean
 Next, let us try to specify how good an univese description
 should be. First, predictions speak about the future, but expecting to
 predict everything until the end of the universe (if any) may not be
-reasonable. We may want to fix a minimum amount of time $\Delta t$,
+reasonable. We may want to fix an amount of time $\Delta t$,
 focusing on predictions about things that are at most
 $\Delta t$ in the future. Second, we should't expect to
 be able to describe everything with full precision, so we may want to
@@ -350,8 +350,8 @@ There is a distinction that we should make.
 When predicting (say) weather we can't make long-term precise predictions,
 and this happens because weather is chaotic, that is, a small difference
 in the start state can create large differences over time.
-This could happen even if the universe is deterministic
-and we know the laws of the universe perfectly, as long as we don't know
+This would happen even if the universe would be deterministic
+and we would know the laws of the universe perfectly, as long as we don't know
 the full current state of the universe.
 However, high precision predictions may be possible for a deterministic
 universe if the full state
@@ -373,8 +373,8 @@ If the level of approximation is obvious from the context, we will call
 this canonical description \definitie{the universe's description}
 or the \definitie{universe region's description}.
 
-One could use a well-ordering on the real numbers to choose the
-lowest description as the universe's description, but that will
+One could also use a well-ordering on the real numbers to choose the
+lowest description as the universe's description, but that would
 complicate things without any benefit.
 
 \section{Options for our universe}
@@ -388,11 +388,12 @@ the following issues:
   \item Option 1: There is a meta-$\beta$ universe for each countable ordinal
         $\beta$ such that our universe is the meta-$0$ one and the meta-$\beta$
         universe includes, directly or not, all meta-$\alpha$ universes with
-        $\alpha < \beta$. Option 2: there is an ordinal $\beta$ where this
-        stops being the case.
+        $\alpha < \beta$.
+        Option 2: there is an ordinal $\beta$, possibly $1$,
+        where this stops being the case.
   \item The set of possible descriptions for a finite chunk of space-time
-        that are also compatible with life has the same cardinal as $\reale$,
-        or a smaller one.
+        that are also compatible with life has at least the cardinal
+        of $\reale$, or a smaller one.
 \end{itemize}
 
 \section{Axioms}
@@ -423,12 +424,13 @@ it is not peculiar.
 \end{axiom}
 
 Note that here, and in all the axioms in this paper, it is not required that
-$P$ is be a probability over the
+$P$ is a probability over the
 Borel algebra of $\reale$, although that is, in many cases, implicitly
 assumed when talking about probabilities over $\reale$.
 
 The set of events for which $P(y)$ is
-greater than $0$ is at most countable, and, if we remove them from $\reale$, we
+greater than $0$ is at most countable (see section \ref{sec:probabilities}),
+and, if we remove them from $\reale$, we
 get a set with the same cardinality as $\reale$.
 On this later set, the probability
 of all peculiar events taken together is $0$, so there is no chance of us
@@ -1416,6 +1418,26 @@ Obviously, $P(E)=0$, where $E\subset A$, does not mean that observing
 an element of $E$ is logically impossible, it just means that,
 if we make a set of (independent) observations that is at most countable
 of elements of $A$, we have no chance at all of observing an element of $E$.
+
+Let us consider a probability $P$ over the set of real numbers, $\reale$ (or
+a larger one). Let $A$ be the set of real numbers with non-zero probability.
+We will show that $A$ is countable.
+
+Indeed, let us take all subsets of $A$ that are at most countable. The
+probability of any such subset is between $0$ and $1$, so we can take
+$S$ to be the supremum of the probabilty of these subsets, and
+$S$ will also be between $0$ and $1$.
+
+There is a sequence $(C_n)$ of at most countable sets such that each $C_n$
+includes all the preceding ones, and $P(C_n)$ converges to the supremum, $S$.
+But the union of all $C_n$ (let us call it $C$) is also countable,
+and its probability is larger or equal than the probability of any $C_n$,
+so the union's probability is exactly $S$.
+
+If there would be a number $x$ of non-zero probability that is not in the
+union $C$, then the union of $x$ and $C$ would still be countable, and
+would have a larger probability than $S$, which is a contradiction.
+This means that $A$ is $C$, so $A$ is at most countable
 
 \subsection{Ordinals}
 \label{sec:ordinals}
