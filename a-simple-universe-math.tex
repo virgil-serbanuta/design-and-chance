@@ -1185,7 +1185,7 @@ However, there is an argument that does not use the continuum hypothesis:
 
 The set of all conceivable descriptions has the same cardinality as $\reale$,
 so the set of all sets of conceivable descriptions
-has the cardinality of $2^\reale$.
+has the same cardinality as the power set of $\reale$, i.e. $2^\reale$.
 Since a claim about what is possible specifies a set of descriptions, and any
 set of descriptions can be such a claim,
 the set of possible claims has the same cardinal as $2^\reale$.
@@ -1210,7 +1210,7 @@ cardinality as $\reale$.
 
 We should be able to get the same results if, instead of looking at the set
 of all distinct descriptions, we group descriptions based on their similarity
-and we work with groups of descriptions instead of descriptions.
+and we work with the set of these groups of descriptions.
 As argued in section \ref{sec:not-enough-descriptions},
 there are $\reale$ conceivable descriptions which are different
 enough, so each of these would be in a different group, which means that
@@ -1233,9 +1233,9 @@ descriptions for the same universe.
 Let us assume (as an axiom) that, for a given level of approximation $L$, we can
 find a finite hypercube size $l$ for which there is a finite set of
 (full-precision)
-descriptions $I$ which cannot all be handled with a single finite approximate
+descriptions $D_f$ which cannot all be handled with a single finite approximate
 description. To be more precise,
-for any set of hypercubes whose descriptions include the $I$ set, we can't
+for any set of hypercubes whose descriptions include the $D_f$ set, we can't
 find a single finite approximate description that works for all of them
 within the level of approximation $L$.
 
@@ -1270,7 +1270,9 @@ First, based on just that past, we can't predict the type of the next hypercube,
 since there will be many possible assignments that have the same past, but in
 which the next hypercube will be different from the current assignment.
 
-Still, a universe description must solve this problem, so it must include,
+Still, a universe description must predict the future from the past, and
+the future depends only on the next hypercube type. Then, the universe
+description must allow predicting the next hypercube type, so it must include,
 implicitly or explicitly,
 a function predicting the next hypercube from a hypercube's past
 and its context (i.e. position). Now we must find out how many such functions
@@ -1280,27 +1282,27 @@ To make things simpler, let us assume that the number of dimensions, $n$,
 is $1$ and that we have only two hypercube types.
 It should be obvious that
 the reminder of this example can be generalized to any number of dimensions
-and to any number of hypercube types greater than 2.
+and to any number of hypercube types greater than $2$.
 
-Having $n=1$, means that we have a bijection between integers and hypercubes.
-Let us identify the two hypercube types with $\multime{0, 1}$ and
+Having $n=1$, means that we have a bijection between integers and hypercubes,
+so let us identify a hypercube with its number.
+Let us also identify the two hypercube types with $\multime{0, 1}$ and
 let us represent a universe as a function from $\intregi$ to $\multime{0, 1}$,
 identifying, for each hypercube, its type.
 
 We can represent the information available for predicting the type of a future
-hypercube given the current hypercube $x\in\intregi$ by a pair $(x, f)$,
-where the function
-$f$, representing
-$x$'s past, goes from the set of natural numbers to $\multime{0,1}$.
+hypercube by a pair between the hypercube and its past, let us denote it
+by `(x, f)` where $x$ is the hypercube's number, and $f$, which represents
+$x$'s past, is a function from the set of natural numbers to $\multime{0,1}$.
 
-We are trying to predict the future of all functions given
-their past, and their position.
+However, we are not trying to predict just one hypercube's future,
+we are trying to predict the future of all hypercubes.
 Any way of making these predictions identifies with a function from the past
 of hypercubes to their future, i.e. from $(x, f)$ pairs to $\multime{0, 1}$.
 
-Let us find out how many such functions we need.
+Let us find out how many distinct functions we need.
 To make things simple, let us consider only universes which, for negative
-integers, have hypercubes of type $0$.
+integers, have only hypercubes of type $0$.
 
 The past of hypercube $0$ is perfectly identical in all these universes, so,
 in order to predict the type of the hypercube with index $0$,
@@ -1310,12 +1312,13 @@ distinct hypercubes.
 In general, in order to predict the types of hypercubes from $0$ to $n$
 we need $2^{n+1}$ distinct prediction functions.
 And, in order to predict the type of all hypercubes which are greater or equal
-to $0$, we need $2^\naturale$, i.e. $\reale$ prediction functions.
+to $0$, we need $2^\naturale$ (the power set of the natural numbers),
+i.e. $\reale$ prediction functions.
 
-Obviously, if that's needed for intelligent beings,
-in the middle of such a universe (most likely with more dimensions than $2$)
-we can include a consistent chunk
-of space-time without changing the validity of this construction.
+As mentioned previously, intelligent beings may need some consistent space-time
+around them. Even if that's the case, fixing the hypercube type for a finite
+chunk of an infinite universe does not change the the cardinal for the set of
+functions mentioned above.
 
 %\subsection{Fractions of space}
 
