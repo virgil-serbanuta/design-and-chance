@@ -90,15 +90,22 @@ Many people believe
 that there are certain laws approximating our universe's behaviour fairly well,
 that we can compute its age,
 that we can make predictions about the distant future, and so on.
-In a way, all of these are really surprising
-\svn{Maybe move the Feinmann quote from below to here},
-so this \paper{} started as a
-mathematical attempt to understand why this is the case
-and what we can reasonably believe about our universe.
-It turns out that it matters
-whether our universe is designed or not, so it became a \paper{} about that.
+In a way, all of these are really surprising.
+In the words of \textcite{Feynman2009}:
+\begin{quote}
+Incidentally, the fact that there are rules at all to be checked
+is a kind of a miracle; that it is possible to find a rule,
+like the inverse square law of gravitation, is some sort of miracle.
+It is not understood at all, but it leads to the possibility of
+prediction --- that means it tells you what you would expect in
+an experiment you have not yet done.
+\end{quote}
 
-In the end, the mathematical part turned out to be rather small,
+This \paper{} attempts to figure out statistically
+why do we observe such a surprising universe and
+what can we reasonably believe about it.
+
+The mathematical part of this paper is rather small,
 containing only a few simple properties about set cardinalities,
 probabilities and ordinals.
 I think that the non-mathematical ideas in this paper
@@ -125,7 +132,7 @@ answers to various objections to this paper.
 Section \ref{sec:background}
 briefly presents some mathematical background for people interested in it.
 
-\section{The ordered universe argument}
+\section{The Ordered Universe Argument}
 \label{sec:ordered-universe}
 
 %TODO: Urmatoarele trei alineate sunt nasoale.
@@ -168,22 +175,9 @@ to chance to account for order becomes less and less plausible
 the greater the order.
 \end{quote}
 
-However, there were many people who were surprised by the existence of laws
-for our universe in one way or another and who didn't try to use it
-as an argument for the existence of a Designer.
-As an example, see this quote of \textcite{Feynman2009}:
-\begin{quote}
-Incidentally, the fact that there are rules at all to be checked
-is a kind of a miracle; that it is possible to find a rule,
-like the inverse square law of gravitation, is some sort of miracle.
-It is not understood at all, but it leads to the possibility of
-prediction --- that means it tells you what you would expect in
-an experiment you have not yet done.
-\end{quote}
-
 % TODO: Maybe list some of Hume's issues with this argument.
 
-\section{Possible universes and their descriptions}
+\section{Possible Universes and Their Descriptions}
 \label{sec:possible-universes}
 
 If our universe is designed, then it's likely to be the way it is because
@@ -377,7 +371,7 @@ One could also use a well-ordering on the real numbers to choose the
 lowest description as the universe's description, but that would
 complicate things without any benefit.
 
-\section{Options for our universe}
+\section{Options for Our Universe}
 \label{sec:options}
 
 The reminder of this paper will analyze what we can reasonably believe about
@@ -412,7 +406,7 @@ predicate over real numbers, and any real number with a finite number
 of digits, like $12.5$, is peculiar. An object or predicate is generic if
 it is not peculiar.
 
-\subsection{Observing events}
+\subsection{Observing Events}
 \begin{axiom}
   \label{ax:zeroisgeneric}
   If $P$ is a probability over the set of real numbers
@@ -461,33 +455,40 @@ observed an element of such a tiny set among something infinitely larger.
 Also, the case with a probability above suggests that this is the only
 reasonable assumption in this case.
 
-\subsection{$\reale^4$ universe}
+\subsection{$\reale^4$ Universe}
 
-\svn{Add axioms for:
+The universes we are interested in are universes that can be
+modelled on top of $\reale^\alpha$, where $\alpha$ is finite,
+or something close enough to that.
 
-* anything physical that is part of our universe, including empty space, can
-  have a set of real-number coordinates attached to it that approximates its
-  location (how well?). - this should be included in the things below. Maybe
-  add it as an explanation.
-}
-
-We could replace the axiom below with one saying that our universe can be
-modelled on top of something close to $\reale^n$.
+However, the following axiom is enough, and it allowes us to not define
+what \ghilimele{close enough} means.
 
 Let us define a \definitie{generalized rational number} as being either a
 rational number, or one of $-\infty$ and $+\infty$.
 
 \begin{axiom}\label{ax:rationalcovering}
-  The set of (generalized) cuboids having their corners' coordinates in
+  The set of (generalized) cuboids using the same dimensions as our space-time
+  and having their corners' coordinates in
   $\rationale\cup\multime{-\infty, +\infty}$,
   is countable and covers our universe.
 \end{axiom}
 
-If our universe's spacetime is $\reale^\alpha$ with
-$\alpha$ finite, then, indeed,
-the set of cuboids in the above axiom is countable.
+The set of cuboids above is finite if and only if our universe uses a finite
+set of coordinates.
+Also, a spacetime based on real numbers, i.e. included
+in $\reale^\alpha$, will be included in the generalized hypercube having
+its corners at plus or minus infinity.
 
-The following can also be an axiom.
+The axiom above does not require the space-time to include the cuboids or
+their corners.
+If, say, our universe is based on the set of integers, i.e.
+it would be included in $\intregi^\alpha$,
+we could consider it as being included in $\rationale^\alpha$,
+where we could check if it is included in one of the hypercubes mentioned
+above.
+
+The following definition could also be written as an axiom.
 
 \begin{definition}\label{finitecuboid}
   A part of our universe is \definitie{finite} if
@@ -506,9 +507,8 @@ When defining a level of approximation, we could allow
 selecting a part of the thing we model, with volume less than a fixed
 constant, in which we can ignore what happens.
 
-\subsection{Neighborhood modelling}
+\subsection{Neighborhood Modelling}
 
-\svn{Move before the previous section.}
 \begin{axiom}\label{ax:finiteneighborhood}
   There is a large compact time-space region of our universe which
   includes our solar
@@ -542,7 +542,7 @@ universe has such a description.
     See the \ghilimele{Not enough descriptions} section.
 }
 
-\subsection{Logically possible universes}
+\subsection{Logically Possible Universes}
 
 \begin{axiom}\label{uncountable}
   For any level of approximation $L$ above a certain minimum level (see below)
@@ -627,10 +627,7 @@ and we require that the other regions' descriptions are compatible with life.
 
 Each of the conceivable universes
 having one of these descriptions could contain intelligent beings that use
-mathematics, and so on.\svn{It's not about axiom sets, but about axiom sets
-that also include our region. Actually it's not about those axiom sets, but
-about their equivalence classes. Either reword everything, or, if choosing the
-lowest description solves the issue, make an explicit comment about it.}
+mathematics, and so on.
 
 This likely means that the set of descriptions mentioned in the axiom,
 $\descriptions$, has the cardinality of $\reale$. See section
@@ -639,7 +636,7 @@ $\descriptions$, has the cardinality of $\reale$. See section
 Also see, e.g., \parencite{Manson2003}, which suggests that something similar
 might be happening in our universe.
 
-\section{Valid options for our universe}
+\section{Valid Options for Our Universe}
 \label{sec:valid-options}
 
 This section will try to develop the axioms above in order to find out what
@@ -670,7 +667,6 @@ that constraint, so both can be right within their contexts.
 
 \subsection{Peculiar Descriptions and Meta-universes}
 \label{fdaumu}
-\svn{Use consistent capitalization for section titles.}
 
 Let us assume denote our universe's description by
 $\our_description$. Let us take $\descriptions$ be the set of descriptions from
@@ -685,6 +681,14 @@ For the purpose of this paper, a meta-universe is something that contains our
 universe and which influences, one way or another, which universes exist and
 in which quantity. This influence will be represented as a probability
 distribution over universe descriptions.
+
+As an example, our universe could be one of the many universes in a
+meta-universe that contains universes having the same laws as ours, but with
+different fundamental constants.
+The probability distribution mentioned above would be zero for all
+plausible universes with different laws, and for the universes that have
+the same set of laws, it would be equivalent to a
+probability distribution over the fundamental constants.
 
 Any meta-universe without a corresponding probability distribution could
 probably be handled with an axiom similar to axioms \ref{ax:zeroisgeneric}
@@ -818,7 +822,7 @@ either $\our_description$ is generic or our universe is designed.
 Since we don't know the limits of our universe, let us consider next
 what happens for universe regions.
 
-\subsection{Peculiar descriptions for universe regions}
+\subsection{Peculiar Descriptions for Universe Regions}
 \label{sec:peculiarregions}
 
 Let us consider all generalized hypercubes whose corners' coordinates are
@@ -905,7 +909,7 @@ TODO: clean up and use this footnote\footnote{
   $P(our|D)\cdot P(D)$ with $\frac{P(ND)}{N^k}$.
   } or delete.
 
-\subsection{Design probability}
+\subsection{Design Probability}
 \label{sec:design-probability}
 
 Let us examine the hypothesis that our universe is designed.
@@ -925,7 +929,7 @@ the probability of observing our universe becomes more reasonable (how much
 more reasonable depends on the consistency's probability).
 
 We can separate this probability in two: the probability that a designer
-would want rational beings\svn{A designer could want a consistent universe
+would want rational beings\footnote{A designer could want a consistent universe
 region with a finite
 description without wanting intelligent beings, but this possibility is not
 analyzed in this paper}, denoted by $p_r$, and
@@ -1019,7 +1023,7 @@ bad as some people may think it is.
 
 \svn{5. Use Swinburne's argument about why would God create human-like beings.}
 
-\section{Objections and clarifications}
+\section{Objections and Clarifications}
 \label{sec:objections}
 
 This section includes various possbile objections to this argument. Since the
@@ -1043,7 +1047,7 @@ For possible answers see, e.g.
 
 % TODO: Cite \ghilimele{Should we care about fine-tuning} by Jeffery Koperski.
 
-\subsection{Observation selection effect and multiple universes}
+\subsection{Observation Selection Effect and Multiple Universes}
 
 In this \paper{}, we only look at universes that contain intelligent life,
 and that restricts the set of possible universe descriptions.
@@ -1095,7 +1099,7 @@ has some plausibility, it would be unreasonable to think that
 their universe is not designed (assuming that the argument presented in
 this \paper{} is correct).
 
-\subsection{Unknown Designer's intent}
+\subsection{Unknown Designer's Intent}
 
 From a natural theology point of view, one can't
 know what the Designer wanted
@@ -1128,7 +1132,7 @@ Even if they don't have equal probabilities, almost any positive change
 that the analogy works gives the design hypothesis an overhelmingly larger
 probability.
 
-\subsection{Few universes exist}
+\subsection{Few Universes Exist}
 \label{sec:fewuniverses}
 
 Another possible objection is: we used a meta-universe definition that's too
@@ -1222,7 +1226,7 @@ From these groups, we can extract a similar cardinal of
 possible descriptions, which should be different enough since we grouped them
 based on similarity.
 
-\subsection{Not enough descriptions}
+\subsection{Not Enough Descriptions}
 \label{sec:not-enough-descriptions}
 
 When working without approximations, there are $\reale$ possible descriptions
@@ -1320,7 +1324,25 @@ around them. Even if that's the case, fixing the hypercube type for a finite
 chunk of an infinite universe does not change the the cardinal for the set of
 functions mentioned above.
 
-%\subsection{Fractions of space}
+\subsection {Multiple Universes Based on the Same Laws}
+
+As mentioned above, our universe could be included in a meta-universe in which
+all universes have the same laws, but different fundamental constants, and no
+other universes are allowed.
+Of course, the fundamental constants would be part of a universe's description
+in the sense mentioned above.
+
+Since we are using approximate universe descriptions, and our universe
+seems to be based on laws that are continuous in these fundamental constants,
+then the set constants that are "different enough" should be at most countable.
+
+Since no other universe is allowed, and the set of allowed approximate
+descriptions is countable, the meta-universe's probability
+has to be non-zero for some of these descriptions. In other words, the
+meta-universe probability has some peculiar discontinuities, which, as
+mentioned above, is implausible.
+
+%\subsection{Fractions of Space}
 
 %Note that above I used a specific definition of what I mean by
 %predictions being \ghilimele{true with probability $p>0$}.
@@ -1387,11 +1409,6 @@ We have the following reasonable possibilities:
 \end{enumerate}
 
 The most reasonable option seems to be that our universe is designed.
-
-\svn{
-    + explicatie ca universul nostru e unul din multele posibile bazate pe QM
-    means that the meta-universe is too simple.
-}
 
 \section{Background}
 \label{sec:background}
