@@ -1401,21 +1401,25 @@ The most reasonable option seems to be that our universe is designed.
 \subsection{Probabilities}
 \label{sec:probabilities}
 
-Let $A$ be a set with the same cardinality as $\reale$. Let $F$ be the set of
+Let $A$ be a set with the same cardinality as the set of real numbers, $\reale$.
+Let $F$ be the set of
 all mathematical predicates of one variable over $A$ that can be written as a
-finite formula. If $f$ is such a predicate then let $A_f$ be the subset of
+finite formula.
+If $f$ is such a predicate then let $A_f$ be the subset of
 $A$ where $f$ is true, i.e. $A_f=\multime{a\in A\mid f(a) \mbox{ is true}}$.
 Given a probability distribution over $A$, we define $P(f)=P(A_f)$.
 
-Let $F_0$ be the set of all elements of $F$ such that their probability is
+Let $F_0$ be the set of predicates in $F$ whose probability is
 $0$ for all continuous probability distributions over $A$, i.e.
 $$F_0=\multime{
   f\in F
   \mid P(A_f)=0
     \mbox{ for all continuous probability distributions over } A}.
 $$
-As an example, any predicate which is true for a finite subset of elements,
-i.e. $A_f$ is finite, would belong to $F_0$. Let us identify by $A_0$ the
+As an example, any predicate $f$ which is true for a finite subset of elements,
+i.e. $A_f$ is finite, would belong to $F_0$.
+
+Let us identify by $A_0$ the
 set of elements of $A$ for which at least one predicate of $F_0$ is true, i.e.
 $$A_0=\multime{a \in A\mid \exists f\in F_0 \mbox{ with } f(a)\mbox{ true} }.$$
 Let us also denote by $F_1$ and $A_1$ the complements of $F_0$ and $A_0$,
@@ -1425,18 +1429,18 @@ Let $P$ be a continuous probability distribution.
 
 Since $F$ is countable, $F_0$ must be at most countable. Then,
 obviously, $P(F_0)=0$, so the probability of its complement, $P(F_1)$, is $1$.
-Similarly, $P(A_0) = 0$ and $P(A_1) = 1$, which justifies the indexes used for
+From the way we defined $P(f)$, $P(F_0) = P(A_0)$, so $P(A_0)$ must be $0$
+and $P(A_1)$ must be $1$, which justifies the indexes used for
 these.
 
 Let us say that an element $a\in A_1$ is \definitie{generic}
 and an element $a\in A_0$ is \definitie{peculiar}. Then we could rewrite
 the equalities above to $P(x\mbox{ is generic}) = 1$ and
 $P(x\mbox{ is peculiar}) = 0$.
-\svn{I should actually use the \ghilimele{is finite} predicate or something
-     like that.}
 
-Obviously, $P(E)=0$, where $E\subset A$, does not mean that observing
-an element of $E$ is logically impossible, it just means that,
+When the probability for a subset of $A$ is $0$, $P(E)=0$, where $E\subset A$,
+it does not mean that observing an element of $E$ is logically impossible,
+it means that,
 if we make a set of (independent) observations that is at most countable
 of elements of $A$, we have no chance at all of observing an element of $E$.
 
@@ -1458,7 +1462,8 @@ so the union's probability is exactly $S$.
 If there would be a number $x$ of non-zero probability that is not in the
 union $C$, then the union of $x$ and $C$ would still be countable, and
 would have a larger probability than $S$, which is a contradiction.
-This means that $A$ is $C$, so $A$ is at most countable
+This means that $C$, which is countable, contains all numbers with non-zero
+probability.
 
 \subsection{Ordinals}
 \label{sec:ordinals}
