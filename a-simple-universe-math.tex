@@ -203,10 +203,11 @@ either because they think that it simply makes sense, or because they want to
 give a good account of modality, or for other reasons.
 If that's the case, it seems, at first sight, that making predictions about
 non-designed universes is rather hard.
-However, this paper argues that there are certain things that can be said
-regardless of how many universes exist.
-The argument in this \paper{} does not assume that more than
-one universe exists, but it should work either way.
+However, this \paper{} argues that there are certain things that can be said
+regardless of how many universes exist, whether it is one, or all logically
+possbile ones, or anything in between.
+%The argument in this \paper{} does not assume that more than
+%one universe exists, but it should work either way.
 
 A possible universe
 could have exactly the same fundamental laws as ours, but with matter
@@ -224,9 +225,9 @@ Even if that's the case, let us see if we can say anything about
 the possible universes that we could understand and could model in some way.
 
 In the following, the \definitie{possible universes} term will denote
-only the possible universes which we could model.
-The \ghilimele{possible} term is used with the sense
-\ghilimele{logical possibility}. When the distinction between logical
+only the logically possible universes which we could model (with a few
+more constraints that will be added below). However, the word
+\ghilimele{possible} is ambiguous, so when the distinction between logical
 possibility and actual possibility is important, the
 \definitie{conceivable universes} term may be used instead.
 
@@ -252,8 +253,8 @@ Any such universe is, for the purpose of this paper, a conceivable universe.
 To keep the exposition simple, in the following I will use
 \ghilimele{the state of the universe at a given moment in time},
 but one should replace it with one's favourite alternative concept, e.g.
-with the past of a hyperplane whose points only have spacelike intervals between
-them.
+with \ghilimele{the past of a hyperplane whose points only have spacelike
+intervals between them}.
 
 Let us define a \definitie{universe description} to be a
 consistent mathematical theory that has
@@ -313,8 +314,16 @@ be able to describe everything with full precision, so we may want to
 have a precision $\eta>0$ for all the values that are predicted.
 Third, we shouldn't expect predictions to always be correct, so
 we should require that they are true with probability $p>0$.
-The exact meaning of \ghilimele{true with probability} here is left open.
+The exact meaning of \ghilimele{true with probability} here is left open,
+except that we require $p$ to be the same for each location where
+predictions are being made.
 Of course, we may add other similar constraints if needed.
+
+As an example, we could ask that, out of all predictions that we can make
+at a given spacetime location, $p$ turn out to be true. If we are making
+statistical predictions, then the observed outcomes would be consistent
+with a fraction $p$ of all sentences representing statistical predictions
+being correct.
 
 Then let us say that an \definitie{approximate universe description} with a
 \definitie{level of approximation} $L=(\eta>0,$ $p>0$ and $\Delta t>0)$
@@ -322,14 +331,6 @@ is a universe description which allows approximating the future
 state of the universe with a precision $\eta$, with a probability
 $p>0$ for a prediction to be correct
 and for a limited amount of time $\Delta t$.
-The probability $p$ is the same for each location
-where predictions are being made, but, otherwise, its exact meaning
-is left open.
-
-As an example, we could ask that, out of all predictions that we can make
-at a given spacetime location, $p$ turn out to be true. If we are making
-statistical predictions, then the observed outcomes would be consistent
-with a fraction $p$ of all statistical predictions being correct.
 
 There is a distinction that we should make.
 When predicting (say) weather we can't make long-term precise predictions,
@@ -401,7 +402,7 @@ it is not peculiar.
 \begin{axiom}
   \label{ax:zeroisgeneric}
   If $P$ is a probability over the set of real numbers
-  (or a set with the same cardinal)\footnote{Readers of this paper should
+  (or a set with the same cardinal)\footnote{Readers should
   keep in mind that, in most cases throughout this paper, what is being said
   about the set of real numbers is similarly valid for any set with the same
   cardinality.},
@@ -443,7 +444,7 @@ Also note that this cannot happen when using subjective probabilities.
 If there is nothing that could favor
 peculiar numbers over generic ones, it's absurd to think that we could have
 observed an element of such a tiny set among something infinitely larger.
-Also, the case with a probability above suggests that this is the only
+Also, the similar axiom for probabilities above suggests that this is the only
 reasonable assumption in this case.
 
 \subsection{$\reale^4$ Universe}
@@ -456,7 +457,10 @@ However, the following axiom is enough, and it allowes us to not define
 what \ghilimele{close enough} means.
 
 Let us define a \definitie{generalized rational number} as being either a
-rational number, or one of $-\infty$ and $+\infty$.
+rational number, or one of $-\infty$ and $+\infty$. Let us denote by
+\ghilimele{cuboid} a corner-based shape in the $n$-dimensional space
+(we could take it to mean \ghilimele{hyperrectangle}, \ghilimele{hypercube},
+or any similar shape).
 
 \begin{axiom}\label{ax:rationalcovering}
   The set of (generalized) cuboids using the same dimensions as our space-time
@@ -468,7 +472,7 @@ rational number, or one of $-\infty$ and $+\infty$.
 The set of cuboids above is finite if and only if our universe uses a finite
 set of coordinates.
 Also, a spacetime based on real numbers, i.e. included
-in $\reale^\alpha$, will be included in the generalized hypercube having
+in $\reale^\alpha$, will be included in the generalized cuboid having
 its corners at plus or minus infinity.
 
 The axiom above does not require the space-time to include the cuboids or
@@ -476,27 +480,26 @@ their corners.
 If, say, our universe is based on the set of integers, i.e.
 it would be included in $\intregi^\alpha$,
 we could consider it as being included in $\rationale^\alpha$,
-where we could check if it is included in one of the hypercubes mentioned
+where we could check if it is included in one of the cuboids mentioned
 above.
 
 The following definition could also be written as an axiom.
 
 \begin{definition}\label{finitecuboid}
   A part of our universe is \definitie{finite} if
-  it can be covered with a finite cuboid,
+  it can be covered with a finite cuboid, i.e. one
   having its corners' coordinates in $\rationale$.
 \end{definition}
 
 There are a lot of possible definitions for \ghilimele{finite} which are not
-included in the above.
+included here.
 While this paper could probably be extended to also handle many of these,
 most likely there is no point in doing so.
 As an example, in $\reale^3$ one can define it as
 \ghilimele{having a finite volume}, which would
 mean that there are finite things that do not fit in finite cuboids.
-When defining a level of approximation, we could allow
-selecting a part of the thing we model, with volume less than a fixed
-constant, in which we can ignore what happens.
+In order to handle this, when defining a level of approximation,
+we could allow ignoring what happens in a small part of the region we model.
 
 \subsection{Neighborhood Modelling}
 
@@ -505,15 +508,15 @@ constant, in which we can ignore what happens.
   includes our solar
   system, and there is a level of approximation $L$ such that:
   \begin{enumerate}
-    \item Any hypercube included in that region has a finite approximate
+    \item Any cuboid included in that region has a finite approximate
           description for the level $L$.
-    \item A description for one of the hypercubes also works for all other
-          hypercubes with the same size in the given time-space region.
+    \item A description for one of the cuboids also works for all other
+          cuboids with the same size in the given time-space region.
   \end{enumerate}
 \end{axiom}
 
 Many people assume, implicitly or explicitly,
-that this is true, and, even more, that a hypercube's description works
+that this is true, and, even more, that a cuboid's description works
 for the entire universe.
 This is especially visible when, e.g., claiming
 that the universe is around $14$ billion years old, that the sun will,
@@ -562,8 +565,9 @@ universe has such a description.
 \end{axiom}
 
 The minimum level for which this is true is left unspecified, but we should
-include some common-sense restrictions, e.g. the length precision is above
-Planck's length. All levels of approximation used below will be above this
+include some common-sense restrictions, e.g. the minimum length we would
+need to measure is not below Planck's length.
+All levels of approximation used below will be above this
 minimum level, even if this is not mentioned explicitly.
 
 This axioms states that, for a given level of approximation,
@@ -715,7 +719,7 @@ $\alpha$.
 If the smallest such ordinal is not countable,
 or if there is an ordinal for each
 universe, then let $\alpha$ be the lowest uncountable ordinal. $\alpha$ will
-be an upper limit for the ordinal that we will consider in the following.
+be an upper limit for any ordinal that we will consider in the following.
 
 If $\alpha = 0$, then there is no meta-universe containing ours, so there
 is no probability distribution over universe descriptions,
@@ -773,9 +777,11 @@ where either there is no probability distribution $p_\beta$,
 or $p_\beta(\our_description)=0$, then $\our_description$ is
 generic (axioms \ref{ax:noprobability} and \ref{ax:zeroisgeneric}).
 
-If such a $\beta<\alpha$ does not exist, then all $p_\delta$
-probability distributions exist, with $\delta$ going up to $\alpha$ and,
-perhaps, including it. If, additionally, $\alpha$ is countable, then,
+If such a $\beta<\alpha$ does not exist, then all
+probability distributions $p_\delta$ exist,
+with $\delta$ going up to $\alpha$ and,
+perhaps, including it.
+If, additionally, $\alpha$ is countable, then,
 similar to the above reasoning, $\our_description$ is generic.
 
 This means that, if our universe is not designed, we have two options
@@ -805,23 +811,24 @@ From now on, I will assume that the possible objection in the preceding
 paragraph is unreasonable, which means that, practically speaking,
 either $\our_description$ is generic or our universe is designed.
 
-Since we don't know the limits of our universe, let us consider next
+Since we don't know the limits of our universe, and how similar
+the entire universe is to the part we can observe, let us consider next
 what happens for universe regions.
 
 \subsection{Peculiar Descriptions for Universe Regions}
 \label{sec:peculiarregions}
 
-Let us consider all generalized hypercubes whose corners' coordinates are
+Let us consider all generalized cuboids whose corners' coordinates are
 rational numbers or $+\infty$ or $-\infty$. From axiom
 \ref{ax:rationalcovering}, their set is countable.
 
-Let us examine whet happens when the set of descriptions for a hypercube that
-are compatible with life in that hypercube (and, perhaps, in the universe
+Let us examine whet happens when the set of descriptions for a cuboid that
+are compatible with life in that cuboid (and, perhaps, in the universe
 around it) has the same cardinal as $\reale$: we can apply the same argument
 as in section \ref{fdaumu}, by considering it as some sort of universe, and the
 enclosing universe as a meta-universe.
 
-Then, since the set of all the generalized hypercubes mentioned above is
+Then, since the set of all the generalized cuboids mentioned above is
 countable, all of their descriptions should be generic.
 
 However, we usually believe that we can have finite approximate descriptions
@@ -829,7 +836,7 @@ for the observable part of our universe, or, at least, for a large part of if
 (axiom \ref{ax:finiteneighborhood}).
 This means that the only options
 that have a chance of being plausible are that our universe is designed, or
-that the set of descriptions compatible with life for a finite hypercube
+that the set of descriptions compatible with life for a finite cuboid
 has a cardinality smaller than $\reale$.
 
 Let us focus on the latter case above.
@@ -841,13 +848,13 @@ description for our universe, which is a contradiction. This means that there
 is at least one region in our universe which has a different description.
 
 Let $A$ be the set of possible approximate descriptions for
-a hypercube of size, say, $1\;second \times meter^3$.
+a cuboid of size, say, $1\;second \times meter^3$.
 As argued in the paragraph above,
 unless our approximation level is extremely coarse,
 $A$ will have multiple elements.
 We will assume that we are working with a reasonable approximation level.
 For any description $a\in A$, let $P(a)$ be the probability of encountering
-a hypercube with $a$ as its description in our universe.
+a cuboid with $a$ as its description in our universe.
 
 If $A$ is finite, we should, by default, pick the uniform probability
 distribution on $A$, assigning equal probabilities to all elements of $A$.
@@ -857,18 +864,18 @@ so we have to consider more general probabilities.
 In any case, since, as mentioned above, $A$ has multiple elements,
 we can't reasonably expect to have one element with probability $1$.
 Then let $p_1<1$ be the probability of the description that we use for the
-hypercubes around us.
+cuboids around us.
 The probability of observing $n$
-non-overlapping hypercubes
+non-overlapping cuboids
 with this description without observing any other description is\footnote{
-  This assumes independence between the hypercubes, but, given that our
+  This assumes independence between the cuboids, but, given that our
   universe's description is a generic one, randomly chosen among all possible
   ones, this is a reasonable assumption.
 }
 $p_1^n$.
 
 Even if $p_1$ is very close to $1$, $p_1^n$ converges quickly to 0.
-As an example, if $p_1=0.9$ then observing $n=70$ consecutive hypercubes with
+As an example, if $p_1=0.9$ then observing $n=70$ consecutive cuboids with
 the same description is enough to make $p_1^n$ go below one to one thousand
 odds, $n=140$ is enough to go below one to one million,
 $n=210$ goes below one to one billion.
@@ -1001,7 +1008,7 @@ It's hard to tell, but, on the other hand, our options are:
 \end{itemize}
 For completeness, the first two options are valid only if,
 for a given approximation level, if we require that a universe has life then
-the set of possible approximate descriptions for a finite hypercube
+the set of possible approximate descriptions for a finite cuboid
 has a lower cardinality than $\reale$.
 
 It seems to me that the only reasonable option is that the analogy is not as
@@ -1221,16 +1228,16 @@ approximations, especially since that means we can probably have incompatible
 descriptions for the same universe.
 
 Let us assume (as an axiom) that, for a given level of approximation $L$, we can
-find a finite hypercube size $l$ for which there is a finite set of
+find a finite cuboid size for which there is a finite set of
 (full-precision)
 descriptions $D_f$ which cannot all be handled with a single finite approximate
 description. To be more precise,
-for any set of hypercubes whose descriptions include the $D_f$ set, we can't
+for any set of cuboids whose descriptions include the $D_f$ set, we can't
 find a single finite approximate description that works for all of them
 within the level of approximation $L$.
 
 In the following, the difference between
-hypercube descriptions and universe descriptions is not always explicit,
+cuboid descriptions and universe descriptions is not always explicit,
 but can be inferred from the context.
 
 Here is an incomplete example that shows why the above axiom is reasonable.
@@ -1246,67 +1253,68 @@ and the second saying
   the approximation level}.
 
 Then, let us consider a hypothetical infinite universe whose timespace is $R^n$.
-Let us divide it in hypercubes of size $l$ and let us assign the incompatible
-descriptions in the set mentioned above to these hypercubes in a roughly even
+Let us divide it in cuboids of the size mentioned above
+and let us assign the incompatible
+descriptions in the set mentioned above to these cuboids in a roughly even
 way.
-The set of hypercubes is countable, so there are $\reale$ ways of
+The set of cuboids is countable, so there are $\reale$ ways of
 assigning these descriptions.
 
 Let us pick an assignment and let us pick a timespace point very close to the
-time end of a space-time hypercube boundary.
+time end of a space-time cuboid boundary.
 Let us take that entire point's past and let us try to make a prediction based
 on that.
-First, based on just that past, we can't predict the type of the next hypercube,
+First, based on just that past, we can't predict the type of the next cuboid,
 since there will be many possible assignments that have the same past, but in
-which the next hypercube will be different from the current assignment.
+which the next cuboid will be different from the current assignment.
 
 Still, a universe description must predict the future from the past, and
-the future depends only on the next hypercube type. Then, the universe
-description must allow predicting the next hypercube type, so it must include,
+the future depends only on the next cuboid type. Then, the universe
+description must allow predicting the next cuboid type, so it must include,
 implicitly or explicitly,
-a function predicting the next hypercube from a hypercube's past
+a function predicting the next cuboid from a cuboid's past
 and its context (i.e. position). Now we must find out how many such functions
 we need in order to describe all possible assignments.
 
 To make things simpler, let us assume that the number of dimensions, $n$,
-is $1$ and that we have only two hypercube types.
+is $1$ and that we have only two cuboid types.
 It should be obvious that
 the reminder of this example can be generalized to any number of dimensions
-and to any number of hypercube types greater than $2$.
+and to any number of cuboid types greater than $2$.
 
-Having $n=1$, means that we have a bijection between integers and hypercubes,
-so let us identify a hypercube with its number.
-Let us also identify the two hypercube types with $\multime{0, 1}$ and
+Having $n=1$, means that we have a bijection between integers and cuboids,
+so let us identify a cuboid with its number.
+Let us also identify the two cuboid types with $\multime{0, 1}$ and
 let us represent a universe as a function from $\intregi$ to $\multime{0, 1}$,
-identifying, for each hypercube, its type.
+identifying, for each cuboid, its type.
 
 We can represent the information available for predicting the type of a future
-hypercube by a pair between the hypercube and its past, let us denote it
-by `(x, f)` where $x$ is the hypercube's number, and $f$, which represents
+cuboid by a pair between the cuboid and its past, let us denote it
+by `(x, f)` where $x$ is the cuboid's number, and $f$, which represents
 $x$'s past, is a function from the set of natural numbers to $\multime{0,1}$.
 
-However, we are not trying to predict just one hypercube's future,
-we are trying to predict the future of all hypercubes.
+However, we are not trying to predict just one cuboid's future,
+we are trying to predict the future of all cuboids.
 Any way of making these predictions identifies with a function from the past
-of hypercubes to their future, i.e. from $(x, f)$ pairs to $\multime{0, 1}$.
+of cuboids to their future, i.e. from $(x, f)$ pairs to $\multime{0, 1}$.
 
 Let us find out how many distinct functions we need.
 To make things simple, let us consider only universes which, for negative
-integers, have only hypercubes of type $0$.
+integers, have only cuboids of type $0$.
 
-The past of hypercube $0$ is perfectly identical in all these universes, so,
-in order to predict the type of the hypercube with index $0$,
+The past of cuboid $0$ is perfectly identical in all these universes, so,
+in order to predict the type of the cuboid with index $0$,
 we need two distinct prediction functions.
-In order to predict the types of hypercubes $0$ and $1$ we need four
-distinct hypercubes.
-In general, in order to predict the types of hypercubes from $0$ to $n$
+In order to predict the types of cuboids $0$ and $1$ we need four
+distinct prediction functions.
+In general, in order to predict the types of all cuboids between $0$ and $n$
 we need $2^{n+1}$ distinct prediction functions.
-And, in order to predict the type of all hypercubes which are greater or equal
+And, in order to predict the type of all cuboids which are greater or equal
 to $0$, we need $2^\naturale$ (the power set of the natural numbers),
 i.e. $\reale$ prediction functions.
 
 As mentioned previously, intelligent beings may need some consistent space-time
-around them. Even if that's the case, fixing the hypercube type for a finite
+around them. Even if that's the case, fixing the cuboid type for a finite
 chunk of an infinite universe does not change the the cardinal for the set of
 functions mentioned above.
 
@@ -1347,33 +1355,33 @@ mentioned above, is implausible.
 %Let us denote by $n$ the number of chunks we get if we split the entire
 %spacetime
 %in chunks covering a fraction $p$, one of which may be smaller than $p$.
-%As above, we can probably find a hypercube size for which we
-%have $2n$ different hypercube descriptions when working with a given level
+%As above, we can probably find a cuboid size for which we
+%have $2n$ different cuboid descriptions when working with a given level
 %of approximation $L$.
 %Let us consider again that
-%we split a universe into hypercubes of this size, and that we assign
-%hypercube descriptions randomly.
+%we split a universe into cuboids of this size, and that we assign
+%cuboid descriptions randomly.
 
-%We are interested in hypercube type assignments that assign the hypercube types
+%We are interested in cuboid type assignments that assign the cuboid types
 %such that each of them covers a fraction less than $p/2$ of the universe.
 
 %Let us take a universe chunk covering a fraction $p$.
 %We can choose 
 % If that that includes at most one
-%partial hypercube, then, with a single hypercube description we can cover at
+%partial cuboid, then, with a single cuboid description we can cover at
 %most half of it. 
 
 %We'll further assume that when we divide the spacetime in chunks of the same
-%size (hypercubes are a good canditate),
+%size (cuboids are a good canditate),
 %we can get at least two assignments (i.e. two assignment types)
-%for the hypercubes inside those
+%for the cuboids inside those
 %chunks such that the two assignments do not assign the same value to the
-%same hypercube in both.
+%same cuboid in both.
 
 %Now, any description which works in a fraction $p$ of space must make
-%predictions that, roughly, work in at least two hypercube types.
+%predictions that, roughly, work in at least two cuboid types.
 %So, in order to make predictions, a definition must identify
-%the hypercube type, as in section \ref{sec:fewuniverses}.
+%the cuboid type, as in section \ref{sec:fewuniverses}.
 %This means that we must have at least
 %$\reale$ definitions.
 
