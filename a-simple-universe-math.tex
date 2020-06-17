@@ -321,7 +321,8 @@ predictions are being made.
 Of course, we may add other similar constraints if needed.
 
 As an example, we could ask that, out of all predictions that we can make
-at a given spacetime location, $p$ turn out to be true. If we are making
+at a given spacetime location, a fraction of $p$ turn out to be true.
+If we are making
 statistical predictions, then the observed outcomes would be consistent
 with a fraction $p$ of all sentences representing statistical predictions
 being correct.
@@ -380,7 +381,7 @@ the following issues:
         where this stops being the case.
   \item The set of possible descriptions for a finite chunk of space-time
         that are also compatible with life has at least the cardinal
-        of $\reale$, or a smaller one.
+        of the set of real numbers, $\reale$, or a smaller one.
 \end{itemize}
 
 \section{Axioms}
@@ -407,7 +408,7 @@ it is not peculiar.
   keep in mind that, in most cases throughout this paper, what is being said
   about the set of real numbers is similarly valid for any set with the same
   cardinality.},
-  we observe $x\in\reale$, and $P(x)=0$, then $x$ is generic.
+  we observe a real number $x$, and $P(x)=0$, then $x$ is generic.
 \end{axiom}
 
 Note that here, and in all the axioms in this paper, it is not required that
@@ -417,8 +418,8 @@ assumed when talking about probabilities over $\reale$.
 
 The set of events for which $P(y)$ is
 greater than $0$ is at most countable (see section \ref{sec:probabilities}),
-and, if we remove them from $\reale$, we
-get a set with the same cardinality as $\reale$.
+and, if we remove them from $\reale$, what remains will still have
+the same cardinality.
 On this later set, the probability
 of all peculiar events taken together is $0$, so there is no chance of us
 observing one.
@@ -430,7 +431,7 @@ but, practically, we will not observe it as long as the set of our
 observations is at most countable.
 
 \begin{axiom}\label{ax:noprobability}
-  If we observe $x\in\reale$, when we could have
+  If we observe a specific real number $x$, when we could have
   observed any real number, and there is no probability distribution that could
   describe how $x$ was chosen, then $x$ is generic.
 \end{axiom}
@@ -451,11 +452,15 @@ reasonable assumption in this case.
 \subsection{$\reale^4$ Universe}
 
 The universes we are interested in are universes that can be
-modelled on top of $\reale^\alpha$, where $\alpha$ is finite,
+modelled on top of a space with $\alpha$ dimensions,
+$\reale^\alpha$, where $\alpha$ is finite,
 or something close enough to that.
 
-However, the following axiom is enough, and it allowes us to not define
-what \ghilimele{close enough} means.
+In order to not define what \ghilimele{close enough} means, we will use
+the following axiom, which is true for any finite dimensional space
+based on the set of real numbers, but it also works on spaces based on,
+say, the set of rational numbers, and on many finite spaces that are similar
+enough.
 
 Let us define a \definitie{generalized rational number} as being either a
 rational number, or one of $-\infty$ and $+\infty$. Let us denote by
@@ -465,14 +470,12 @@ or any similar shape).
 
 \begin{axiom}\label{ax:rationalcovering}
   The set of (generalized) cuboids using the same dimensions as our space-time
-  and having their corners' coordinates in
-  $\rationale\cup\multime{-\infty, +\infty}$,
+  and whose corners' coordinates are generalized rational numbers (i.e. they
+  belong to $\rationale\cup\multime{-\infty, +\infty}$),
   is countable and covers our universe.
 \end{axiom}
 
-The set of cuboids above is finite if and only if our universe uses a finite
-set of coordinates.
-Also, a spacetime based on real numbers, i.e. included
+Note that any spacetime based on real numbers, i.e. included
 in $\reale^\alpha$, will be included in the generalized cuboid having
 its corners at plus or minus infinity.
 
@@ -489,7 +492,7 @@ The following definition could also be written as an axiom.
 \begin{definition}\label{finitecuboid}
   A part of our universe is \definitie{finite} if
   it can be covered with a finite cuboid, i.e. one
-  having its corners' coordinates in $\rationale$.
+  for which all corner coordinates are rational numbers.
 \end{definition}
 
 There are a lot of possible definitions for \ghilimele{finite} which are not
@@ -510,9 +513,11 @@ we could allow ignoring what happens in a small part of the region we model.
   system, and there is a level of approximation $L$ such that:
   \begin{enumerate}
     \item Any cuboid included in that region has a finite approximate
-          description for the level $L$.
+          description for the level $L$ (i.e. we can make non-trivial
+          approximate predictions in all such cuboids).
     \item A description for one of the cuboids also works for all other
-          cuboids with the same size in the given time-space region.
+          cuboids with the same size in the given time-space region
+          (i.e. the space region is isotropic enough).
   \end{enumerate}
 \end{axiom}
 
@@ -523,9 +528,9 @@ This is especially visible when, e.g., claiming
 that the universe is around $14$ billion years old, that the sun will,
 in some distant future, become a white dwarf, or that standard-candle supernovae
 are not ilussions.
-This means that they assume that our universe has a finite approximate
-description or, at least, that our solar system/galaxy/observable part of the
-universe has such a description.
+In order to believe this, one must assume that our universe has a
+finite approximate description or, at least, that our
+solar system/galaxy/observable part of the universe has such a description.
 
 \subsection{Logically Possible Universes}
 
