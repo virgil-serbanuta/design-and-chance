@@ -539,7 +539,8 @@ solar system/galaxy/observable part of the universe has such a description.
   there is a set $\descriptions$
   of universe descriptions such that the following are true:
   \begin{enumerate}
-    \item $\descriptions$ has the same cardinality as $\reale$.
+    \item $\descriptions$ has the same cardinality as
+          the set of real numbers, $\reale$.
     \item For all descriptions $d$ in $\descriptions$
           there is at least one conceivable
           universe $U_d$ which
@@ -580,12 +581,13 @@ Alternately, one could use a description based on, say, quantum field theory.
 
 It may be that there is a description (possibly different from the one above),
 that works for our entire universe.
-If not, some parts of the following should
+If not, some parts of the following would need to
 be adjusted to include this possibility, but the argument should stay
 essentially the same.
 
 Next, for almost any countable axiom system that still
-has $R^n$ as a base, one could imagine an alternate universe
+has an $n$-dimensional real space, $\reale^n$, as a base,
+one could imagine an alternate universe
 which, in the present, is exactly like ours inside (say) Mars' orbit,
 but what is what is outside of Mars' orbit is described by that axiom set.
 
@@ -599,28 +601,28 @@ of space in which one travels).
 For any approximation level $L$, and any region that is not trivial
 for $L$
 (the meaning of \ghilimele{trivial} is left open, but, as an example,
-if we use an approximation level that does not measure things smaller
+if we use an approximation level that does not distinguish things smaller
 than a size $l$, then the region must be significantly larger than $l$),
 there are multiple possible descriptions that
 are distinct for $L$, i.e. there is no possible region where both descriptions
-would be valid within the level $L$.
+would be valid within the level $L$ (see \ref{sec:not-enough-descriptions}).
 By splitting an infinite timespace
-into disjoint regions defined by a finite set of rational coordinates
+into disjoint regions defined by a set of finite rational coordinates
+(e.g. we could split it into cubes whose edges have length $1$ and whose
+corners are integers)
 and taking all possible ways of assigning descriptions to these regions
 we get a set of universe descriptions with infinitely countable axioms
 which we will denote by $\descriptions$.
 Since the set of regions is countable, and we can assign at least two
 descriptions to each region, we get a set of assignments with the same
-cardinality as $\reale$.
+cardinality as $\reale$ (also see \ref{sec:cardinals}).
 
-This does not change if we fix a region that can sustain intelligent life
-and we require that the other regions' descriptions are compatible with life.
+This does not change if we identify a region that can sustain intelligent life,
+whose description is fixed,
+and we require that the other regions' descriptions are compatible with life
+in the fixed region.
 
-Each of the conceivable universes
-having one of these descriptions could contain intelligent beings that use
-mathematics, and so on.
-
-This likely means that the set of descriptions mentioned in the axiom,
+This means that the set of descriptions mentioned in the axiom,
 $\descriptions$, has the cardinality of $\reale$. See section
 \ref{sec:fewuniverses} for another take on this issue.
 
@@ -661,7 +663,7 @@ that constraint, so both can be right within their contexts.
 
 Let us assume denote our universe's description by
 $\our_description$. Let us take $\descriptions$ be the set of descriptions from
-axiom \ref{uncountable}, with $\our_description\in\descriptions$.
+axiom \ref{uncountable}, with $\our_description$ belonging to $\descriptions$.
 Let us also consider that, perhaps, our universe is contained
 in a meta-universe, which is, perhaps, contained in
 a meta-meta-universe, and so on. Since these meta-universes included in other
@@ -669,31 +671,33 @@ meta-universes resemble ordinals, we will label them with ordinal numbers,
 starting with $0$ for the first meta-universe.
 
 For the purpose of this paper, a meta-universe is something that contains our
-universe and which influences, one way or another, which universes exist and
-in which quantity. This influence will be represented as a probability
+universe and which influences, one way or another, which universes could
+exist and in which quantity.
+This influence will be represented as a probability
 distribution over universe descriptions.
 
+In the following we will ignore that there could be meta-universe without
+a corresponding probability distribution, since they are handled by axiom
+\ref{ax:noprobability}.
+
 As an example, our universe could be one of the many universes in a
-meta-universe that contains universes having the same laws as ours, but with
-different fundamental constants.
+meta-universe that would allow only the existence of universes having the
+same laws as ours, but with different fundamental constants.
 The probability distribution mentioned above would be zero for all
 plausible universes with different laws, and for the universes that have
 the same set of laws, it would be equivalent to a
 probability distribution over the fundamental constants.
 
-Any meta-universe without a corresponding probability distribution could
-probably be handled with an axiom similar to axioms \ref{ax:zeroisgeneric}
-and \ref{ax:noprobability}, but, for simplicity, will be
-treated as if no meta-universe exists.
+Alternately, the probability over universe descriptions could be a
+subjective one, i.e. it can measure what we believe about what can exist.
+The text below is usually written with the objective meaning in mind, but
+most conclusions should also work for subjective probabilities.
 
-Alternately, this probability could be a subjective one, i.e. it can measure
-what we believe about what can exist.
-
-The meta-universe probability distribution reflects both what could exist, and
-in which proportion in the following way: we will assume that each universe's
-description was generated with a given probability distribution, but, since
-it will not make any difference in the argument below, we will make no
-assumptions about how many universes were generated.
+There is a difference between what universes exist, and in which proportion,
+and what universes could exist, which may seem important.
+However, for this argument, we will ignore this distinction, focusing on
+only on the probability distribution (or the lack of) that describes
+how the descriptions for the existing universes were generated.
 
 As an example, let us take a look at what happens if only one universe exists.
 If there is absolutely no reason
@@ -706,15 +710,16 @@ If other universes could exists, but, somehow, they don't, we will get a
 probability distribution specifying what could exist, and we would be talking
 about a meta-universe in which only one universe was generated.
 
-Returning to associating meta-universes with ordinals, let us consider the case
+As mentioned at the beginning of this section, we are associating
+meta-universes with ordinals. Let us consider the case
 when these universe ordinals stop at some point, i.e. when there are ordinals
 which do not correspond to any meta-universe.
 If the smallest
 ordinal not associated with a universe is countable, let us denote it by
 $\alpha$.
 If the smallest such ordinal is not countable,
-or if there is an ordinal for each
-universe, then let $\alpha$ be the lowest uncountable ordinal. $\alpha$ will
+or if there is a universe for each ordinal,
+then let $\alpha$ be the lowest uncountable ordinal. $\alpha$ will
 be an upper limit for any ordinal that we will consider in the following.
 
 If $\alpha = 0$, then there is no meta-universe containing ours, so there
@@ -743,49 +748,64 @@ distribution is continuous, then the discontinuities are generic. If not,
 then we have to ask ourselves if a meta-meta-meta-universe can give us more
 information.
 
-In general, let us let us assume that for some ordinals $\delta$ between
-$1$ and $\alpha$ (inclusive) there is a probability distribution
-$p_\delta$ over the set of universe descriptions $\descriptions$, telling us
-the probability that a given description is a discontinuity
-for all lower ordinal probabilities, i.e. for all
-$p_\gamma$ with $\gamma < \delta$.
-Since $p_0$ is not defined by the above, we will take it to be the
-probability distribution for universe descriptions.
+If the meta-meta-meta-universe contains a probability distribution that tells
+us what is the probability that a given number is a discontinuity for both
+the meta-universe and the meta-meta-universe, then, if this distribution
+is continuous (or there is no such distribution),
+the discontinuities are generic. If not, we can go to the next meta level.
 
-So, $p_0$ will be the probability distribution over universe descriptions,
-$p_1$ (if it exists) will be the probability distribution telling us
-what's the probability that a given description is a discontinuity for $p_0$,
-$p_2$ will tell us
-what's the probability that a given description is a discontinuity for both
-$p_0$ and $p_1$, and so on.
+Let $\beta$ be ordinal where this process stops (if any such ordinal exists)
+i.e. let $\beta$ the least ordinal lower than $\alpha$
+for which one of the following happens:
+either there is no meta-universe corresponding to it
+(and no probability distribution), or the probability for our universe's
+description is $0$. Note that $\beta$ may be infinite.
 
-Let $\beta$ be the minimum ordinal (if any) which is lower than our limit
-$\alpha$ and for which either there is no probability $p_\beta$,
-or the probability of our universe's description is $0$, i.e.
-$p_\beta(\our_description) = 0$.
+%In general, let us let us assume that for some ordinals $\delta$ between
+%$1$ and $\alpha$ (inclusive) there is a probability distribution
+%$p_\delta$ over the set of universe descriptions $\descriptions$, telling us
+%the probability that a given description is a discontinuity
+%for all lower ordinal probabilities, i.e. for all
+%$p_\gamma$ with $\gamma < \delta$.
+%Since $p_0$ is not defined by the above, we will take it to be the
+%probability distribution for universe descriptions.
 
-If such $\beta$ ordinal exists, let us note that we can consider that
+%So, $p_0$ will be the probability distribution over universe descriptions,
+%$p_1$ (if it exists) will be the probability distribution telling us
+%what's the probability that a given description is a discontinuity for $p_0$,
+%$p_2$ will tell us
+%what's the probability that a given description is a discontinuity for both
+%$p_0$ and $p_1$, and so on.
+
+%Let $\beta$ be the minimum ordinal (if any) which is lower than our limit
+%$\alpha$ and for which either there is no probability $p_\beta$,
+%or the probability of our universe's description is $0$, i.e.
+%$p_\beta(\our_description) = 0$.
+
+If $\beta$ exists, let us note that we can consider that
 we made a countable number of observations on various
 probability distributions, one for each ordinal/meta-universe, and that
 each time we observed our universe's description.
 Since one of them was made on a probability distribution
-where either there is no probability distribution $p_\beta$,
-or $p_\beta(\our_description)=0$, then $\our_description$ is
+where either there is no probability distribution, or the probability
+of $\our_description$ is $0$, then $\our_description$ is
 generic (axioms \ref{ax:noprobability} and \ref{ax:zeroisgeneric}).
 
-If such a $\beta<\alpha$ does not exist, then all
-probability distributions $p_\delta$ exist,
-with $\delta$ going up to $\alpha$ and,
-perhaps, including it.
-If, additionally, $\alpha$ is countable, then,
+If such a $\beta<\alpha$ does not exist, then for any ordinal $\delta<\alpha$
+there is a probability distributions which has $OURD$ as a discontinuity.
+
+If $\alpha$ is countable, then,
 similar to the above reasoning, $\our_description$ is generic.
 
 This means that, if our universe is not designed, we have two options
-that might be reasonable: our universe's description, $\our_description$, is
-generic, or ($\our_description$ is peculiar, $\alpha$ is uncountable and,
-for all $\delta < \alpha$,
-the probability distribution $p_\delta$ exists and, according to it,
-$\our_description$'s probability is greater than $0$.
+that might be reasonable:
+\begin{itemize}
+    \item our universe's description, $\our_description$, is generic
+    \item $\our_description$ is peculiar, $\alpha$ is uncountable and,
+          for all $\delta < \alpha$, the corresponding probability distribution
+          exists and, according to it, $\our_description$'s probability is
+          greater than $0$.
+\end{itemize}
 
 In other words, in order to claim that $\our_description$ is peculiar,
 one needs to postulate the
@@ -821,8 +841,11 @@ rational numbers or $+\infty$ or $-\infty$. From axiom
 Let us examine whet happens when the set of descriptions for a cuboid that
 are compatible with life in that cuboid (and, perhaps, in the universe
 around it) has the same cardinal as $\reale$: we can apply the same argument
-as in section \ref{fdaumu}, by considering it as some sort of universe, and the
-enclosing universe as a meta-universe.
+as in section \ref{fdaumu}. The main difference would be the way we assign
+ordinals: the region would correspond to ordinal $0$, 
+our universe would correspond to $1$, the meta-universe would correspond
+to $2$, and so on. I.e. we would treat the region as it would be an universe
+and our universe as being its meta-universe.
 
 Then, since the set of all the generalized cuboids mentioned above is
 countable, all of their descriptions should be generic.
@@ -1538,6 +1561,33 @@ $\omega$ and $\omega\cdot 2$ can be defined only as the set of all
 smaller ordinals. The former are called \ghilimele{successor ordinals},
 the later are called \ghilimele{limit ordinals}. Note that $0$ is a limit
 ordinal.
+
+\subsection{Cardinals}
+\label{sec:cardinals}
+
+The set of natural numbers $\naturale$, the set of integers $\intregi$ and
+the set of rational numbers $\rationale$ are countable.
+
+The set of real numbers $\reale$ has a larger cardinality, the same cardinality
+as the powerset of a countable set. Another way to put this is that
+if we have a countable set, and, for each element, we can choose one of two
+options,
+and we take all ways of choosing options for the entire countable set,
+then we get a set with the same cardinal as the set of real numbers\footnote{
+    This is also valid for more than two options, as long as the cardinality
+    of their set is not above that of the set of real numbers.
+  }.
+That is, the set of all functions
+$$
+f : \naturale \longrightarrow \multime{1, 2}
+$$
+has the same cardinality as $\reale$.
+
+If we have a set with the same cardinality as the set of real numbers, and
+we remove a countable set, the resulting set still has the same cardinality
+as the set of real numbers. As an example, $\reale$, $\reale\setminus\naturale$,
+$\reale\setminus\intregi$ and $\reale\setminus\rationale$ all have the same
+cardinality.
 
 \printbibliography
 
