@@ -534,7 +534,7 @@ solar system/galaxy/observable part of the universe has such a description.
 
 \subsection{Logically Possible Universes}
 
-\begin{axiom}\label{uncountable}
+\begin{axiom}\label{ax:uncountable}
   For any level of approximation $L$ above a certain minimum level (see below)
   there is a set $\descriptions$
   of universe descriptions such that the following are true:
@@ -663,7 +663,7 @@ that constraint, so both can be right within their contexts.
 
 Let us assume denote our universe's description by
 $\our_description$. Let us take $\descriptions$ be the set of descriptions from
-axiom \ref{uncountable}, with $\our_description$ belonging to $\descriptions$.
+axiom \ref{ax:uncountable}, with $\our_description$ belonging to $\descriptions$.
 Let us also consider that, perhaps, our universe is contained
 in a meta-universe, which is, perhaps, contained in
 a meta-meta-universe, and so on. Since these meta-universes included in other
@@ -1171,42 +1171,45 @@ That being said, the first possible answer to this section's issue
 is that the main argument of this \paper{} can be reused here,
 perhaps by slightly changing this \paper{}'s
 axioms.
-If we assume the continuum hypothesis, the meta-universe
-above restricts the set of descriptions to a countable one, which is peculiar,
+If we assume the continuum hypothesis, the set of descriptions mentioned
+above can be a countable one or a finite one, both of which are peculiar,
 so we can safely assume that this is not the case.
-Without the continuum hypothesis, if the set of descriptions is somewhere
-between countable and $\reale$, we can probably still expect continuous
-probability distributions over the set of descriptions, or, at least,
-that the set of discontinuities is at most countable and that peculiar
-non-continuous events require some explanation, which can be provided by
-a Designer.
+Without the continuum hypothesis, the cardinality of the set of descriptions
+can also be somewhere between countable and the cardinality of the real numbers.
+If so, then, by default, we should still use continuous
+probability distributions over the set of descriptions.
+If that does not seem good enough, then
+the set of discontinuities would still be at most countable and,
+following the same line of reasoning as the main argument, the discontinuities
+should be generic.
+Peculiar non-continuous events would require some explanation,
+which can be provided by a Designer.
+
+This means that, if we replace the set of real numbers by a set whose
+cardinality is above countable, but at most that of the real numbers
+in axioms \ref{ax:zeroisgeneric}, \ref{ax:noprobability} and
+\ref{ax:uncountable}, the argument should still work.
 
 The second possible answer is that, if there is no Designer, we should actually
 expect the set of
-possible descriptions to have the same cardinal as $\reale$,
-and that's true even
+possible descriptions for the meta-universe to have the same cardinal as
+$\reale$, and that's true even
 if we ask these descriptions to be \ghilimele{different enough},
 i.e. different even though we work with approximations.
+To see why, let us consider the following argument:
 
-The argument starts in the same way, and can be used both when considering
-how many descriptions are allowed by the meta-universe, and
-when asking what descriptions do the existing universes have.
-
-As above, the hypothesis that the set of descriptions is finite or countable
-is peculiar, so it can be discarded.
-Also, when assuming the continuum hypothesis, the only possible cardinality
-left for this set is $\reale$.
-However, the following is an argument that does not use the continuum
-hypothesis:
-
-The set of all conceivable descriptions has the same cardinality as $\reale$,
-so the set of all sets of conceivable descriptions
+The set of all conceivable descriptions has the same cardinality as the
+set of real numbers, $\reale$. This means that the
+set of all sets of conceivable descriptions
 has the same cardinality as the power set of $\reale$, i.e. $2^\reale$.
-Since a claim about what is possible specifies a set of descriptions, and any
-set of descriptions can be such a claim,
-the set of possible claims has the same cardinal as $2^\reale$.
+
+A claim about what is possible specifies a particular set of descriptions,
+and any set of descriptions can be such a claim,
+which means that the set of possible claims has the same cardinal as
+the power set of $\reale$, $2^\reale$.
 The cardinal numbers remain the same even if we take into account only claims
 according to which our universe is possible.
+
 Unlike in the main topic discussed in this
 \paper{}, this time it's clear that only one of these claims can be true.
 
@@ -1219,8 +1222,19 @@ Unlike in the main topic discussed in this
 
 Let us take all the claims in which the set of possible descriptions
 is less than $\reale$.
-The set of these claims has a cardinality which is less than $2^\reale$.
-This means that it's reasonable to assume that it has probability $0$.
+The set of these claims (let us denote it by $S$)
+has a cardinality which is less than $2^\reale$.
+The set of claims not in $S$ (let us denote it by $T$) has the same cardinality
+as $2^\reale$. But $T$ is infinitely larger\footnote{
+  $S$ is infinite, which means that, if we take a distinct copy of $S$ for each
+  element of $S$, and we put them together, we get a set that still has the same
+  cardinal as $S$ (i.e. $S\times S$ has the same cardinal as $S$). In order to
+  get the same cardinal as $T$ we need to take even more distinct copies of $S$,
+  which means that $T$ is infinitely larger than $S$.
+
+  How many copies? We actually need one for each element in $T$, and no lower
+  cardinal would do.
+} than $S$, which means that it's reasonable to assume that $S$ has probability $0$.
 If so, then, with probability $1$, the set of possible descriptions has the same
 cardinality as $\reale$.
 
@@ -1302,16 +1316,17 @@ It should be obvious that
 the reminder of this example can be generalized to any number of dimensions
 and to any number of cuboid types greater than $2$.
 
-Having $n=1$, means that we have a bijection between integers and cuboids,
-so let us identify a cuboid with its number.
+Having $n=1$, means that we have a one-to-one correspondence between
+integers and cuboids, so let us identify a cuboid with its number.
 Let us also identify the two cuboid types with $\multime{0, 1}$ and
-let us represent a universe as a function from $\intregi$ to $\multime{0, 1}$,
-identifying, for each cuboid, its type.
+let us represent a universe as a function from the set of integers, $\intregi$,
+to $\multime{0, 1}$, identifying, for each cuboid, its type.
 
 We can represent the information available for predicting the type of a future
 cuboid by a pair between the cuboid and its past, let us denote it
-by `(x, f)` where $x$ is the cuboid's number, and $f$, which represents
-$x$'s past, is a function from the set of natural numbers to $\multime{0,1}$.
+by `(x, f)` where $x$ is the cuboid's number, $0$ or $1$,
+and $f$, which represents $x$'s past, is a function from the set of natural
+numbers to $\multime{0,1}$.
 
 However, we are not trying to predict just one cuboid's future,
 we are trying to predict the future of all cuboids.
@@ -1330,7 +1345,7 @@ distinct prediction functions.
 In general, in order to predict the types of all cuboids between $0$ and $n$
 we need $2^{n+1}$ distinct prediction functions.
 And, in order to predict the type of all cuboids which are greater or equal
-to $0$, we need $2^\naturale$ (the power set of the natural numbers),
+to $0$, we need $2^\naturale$, i.e. the power set of the natural numbers,
 i.e. $\reale$ prediction functions.
 
 As mentioned previously, intelligent beings may need some consistent space-time
@@ -1340,15 +1355,15 @@ functions mentioned above.
 
 \subsection {Multiple Universes Based on the Same Laws}
 
-As mentioned above, our universe could be included in a meta-universe in which
-all universes have the same laws, but different fundamental constants, and no
-other universes are allowed.
-Of course, the fundamental constants would be part of a universe's description
-in the sense mentioned above.
+As mentioned above, our universe could be included in a meta-universe in which,
+colloquially speaking, all universes have the same laws,
+but different fundamental constants, and no other universes are allowed.
+Of course, using this paper's definitions,
+the fundamental constants would be part of a universe's description.
 
-Since we are using approximate universe descriptions, and our universe
+When using approximate universe descriptions, since our universe
 seems to be based on laws that are continuous in these fundamental constants,
-then the set constants that are "different enough" should be at most countable.
+the set constants that are "different enough" should be at most countable.
 
 Since no other universe is allowed, and the set of allowed approximate
 descriptions is countable, the meta-universe's probability
@@ -1447,8 +1462,17 @@ We have the following reasonable possibilities:
 
 The most reasonable option seems to be that our universe is designed.
 
-\section{Background}
+\section{Mathematical Background}
 \label{sec:background}
+
+This section presents the mathematical results used in this paper. They are
+usually presented without proofs or references, but most introductory courses
+on the topic of each subsection should cover them.
+
+This section also contains precise definitions for some of the concepts that
+are specific to this paper
+(namely \ghilimele{generic} and \ghilimele{peculiar}).
+
 \subsection{Probabilities}
 \label{sec:probabilities}
 
@@ -1478,8 +1502,10 @@ respectively.
 
 Let $P$ be a continuous probability distribution.
 
-Since $F$ is countable, $F_0$ must be at most countable. Then,
-obviously, $P(F_0)=0$, so the probability of its complement, $P(F_1)$, is $1$.
+Since $F$ is countable, $F_0$ must be at most countable. Then we can compute
+$P(F_0)$ as the sum of the probability of $F_0$'s elements,
+so obviously, $P(F_0)=0$,
+which means that the probability of its complement, $P(F_1)$, is $1$.
 From the way we defined $P(f)$, $P(F_0) = P(A_0)$, so $P(A_0)$ must be $0$
 and $P(A_1)$ must be $1$, which justifies the indexes used for
 these.
@@ -1495,9 +1521,11 @@ it means that,
 if we make a set of (independent) observations that is at most countable
 of elements of $A$, we have no chance at all of observing an element of $E$.
 
-Let us consider a probability $P$ over the set of real numbers, $\reale$ (or
-a larger one). Let $A$ be the set of real numbers with non-zero probability.
-We will show that $A$ is countable.
+Let us now consider a different issue.
+Let $P$ be a probability over the set of real numbers, $\reale$ (or
+any infinite uncountable set).
+Let $A$ be the set of real numbers with non-zero probability.
+We will show that $A$ is at most countable.
 
 Indeed, let us take all subsets of $A$ that are at most countable. The
 probability of any such subset is between $0$ and $1$, so we can take
@@ -1535,8 +1563,8 @@ Of course, the next ordinal, called $\omega + 1$, will be the set
 $\multime{0, 1, 2, \dots \omega}$ and the next one,
 $\omega+2$, will be $\multime{0, 1, 2, \dots \omega, \omega+1}$. We can
 continue and, in the same way, define $\omega\cdot 2=\omega+\omega$ to be
-the ordinal that comes after all $\omega+n$ where $n$ is a finite
-ordinal (i.e a natural number).
+the ordinal that comes after all ordinals of the form $\omega+n$
+where $n$ is a finite ordinal (i.e a natural number).
 
 Then we can define $\omega\cdot 3$, $\omega\cdot 4$ and so on, and we can
 take $\omega\cdot \omega$ to be the ordinal that comes after all the ones
@@ -1574,7 +1602,7 @@ options,
 and we take all ways of choosing options for the entire countable set,
 then we get a set with the same cardinal as the set of real numbers\footnote{
     This is also valid for more than two options, as long as the cardinality
-    of their set is not above that of the set of real numbers.
+    of their set is at most countable.
   }.
 That is, the set of all functions
 $$
@@ -1586,7 +1614,12 @@ If we have a set with the same cardinality as the set of real numbers, and
 we remove a countable set, the resulting set still has the same cardinality
 as the set of real numbers. As an example, $\reale$, $\reale\setminus\naturale$,
 $\reale\setminus\intregi$ and $\reale\setminus\rationale$ all have the same
-cardinality.
+cardinality. In general, if $A$ and $B$ are infinite sets and
+$B$'s cardinality is lower than $A$, then removing $B$ from $A$ does not change
+its cardinal, i.e. $A\setminus B$ has the same cardinal as $A$.
+
+If $A$ has an infinite cardinal, then the product set $A\times A$ has the same
+cardinality as $A$.
 
 \printbibliography
 
