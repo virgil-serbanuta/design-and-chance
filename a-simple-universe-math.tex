@@ -77,16 +77,13 @@
  %%%%%%%%%%%%%%%%%%
 
  \begin{abstract}
-  This \paper{} argues that one can make a prediction about our universe
-  from the hypothesis that our universe is not designed, regardless
+  This \paper{} argues that, if our universe is not designed, it should
+  have a high level of a certain kind of complexity, which should be visible
+  everywhere. Since we do not observe that, our universe is probably designed.
+  Even more, it is probably designed for intelligent beings.
+  \svn{This is valid regardless
   of how many universes exist, whether it is one, or all logically
-  possbile ones, or anything in between.
-  To be specific, it argues
-  that our universe should have has a high
-  level of complexity of a certain kind, and that this complexity would be
-  easily observable everywhere.
-  However, this is not what we observe, which
-  falsifies the hypothesis.
+  possbile ones, or anything in between.}
 \end{abstract}
 
 \section{Introduction}
@@ -110,41 +107,99 @@ This \paper{} attempts to figure out statistically
 why do we observe such a surprising universe and
 what can we reasonably believe about it.
 
-The mathematical part of this paper is rather small,
-containing only a few simple properties about set cardinalities,
-probabilities and ordinals.
-I think that the non-mathematical ideas in this paper
-have an intuitive appeal even without the mathematical ones,
-but presenting them separately would make it less clear why certain
-conclusions can be drawn.
-Although, in my opinion, the non-mathematical ideas are also somewhat obvious,
-I did not manage yet to find anyone drawing the same conclusions
-in the same way.
-
-My argument can be considered a statistical approach to Aquina's fifth way.
-It tries to avoid the issues that other statistical approaches
+This argument can be considered a statistical approach to Aquina's fifth way.
+It tries to avoid some of the issues that other statistical approaches
 attempting to show that our universe is designed
 (e.g. the fine-tuning argument) have.
 
-To be specific, I am arguing that, in the context of all possible universes
+To be specific, it is arguing that, in the context of all possible universes
 that could have human-like beings, our universe is extremely unlikely unless
 a Designer intended it, and, even more, probably the
 Designer wanted to design for human-like beings.
 
-Sections \ref{sec:ordered-universe} presents this paper's relation to
-previos work.
-Section \ref{sec:possible-universes} introduces universe approximations
-and a few other related notions.
+In order to show this, we first need to specify what would count as an universe.
+This is a difficult question, but, fortunately, this paper's argument also works
+if we only take into account only a subset of all posssible universes that
+satisfies certain constraints.
+In particular, these universes should be able to sustain intelligent beings,
+and, assuming that they contain intelligent beings, there should be mathematical
+theories (called \ghilimele{descriptions}) that these beings could use to predict
+(either fully, or as an approximation) how their univers behaves.
+We allow both deterministic and non-deterministic universes.
+
+Section \ref{sec:possible-universes} introduces these notions in a more
+rigourous way, together with some of reasoning behind them.
+
+Just defining these notions is not enough,
+we also need to make some assumptions about our universe and about
+the link between reality and mathematics.
+
+First, we specify what it means to observe events with probability $0$ From
+a set large enough, generalizing this to the case when there is no probability
+modelling how we observe the event.
+Next, we specify that our universe can be modelled by a finite-dimensional
+space based on the real numbers, or by something close to that.
+We also specify that it is possible to approximate the behaviour of the space
+around us, which is isotropic enough.
+We also need to assume that the set of possible universe descriptions
+is large enough, i.e. it has the same size as the set of real numbers.
+
+Section \ref{sec:axioms} contains axioms for all the assumptions mentioned
+above, each with an argument explaining why the axiom makes sense.
+
+Having these, we can start the main part of the argument,
+which says that, in the context of all possible universes that could
+have human-like beings, our universe is extremely unlikely unless a Designer
+intended it, the most obvious reason for that being that the Designer wanted
+to design for human beings.
+
+The main issue is that our universe seems to behave according to relatively
+simple laws that do not change with time and space.
+That is completely
+unplausible if it happens by chance, so there should be an explanation for it.
+If our universe is not designed, then the other explanation possible is that
+there is something outside of our universe that made it likely for our universe
+to exist (called a meta-universe).
+However, it turns out that a meta-universe that
+would explain our universe is also unlikely, and would itself need an
+explanation, so there should be a meta-meta-universe explaining the
+meta-universe, which would also need an
+explanation, and so on, until we get an infinite chain of meta-universes.
+But this chain would also need an explanation, so perhaps there is a
+meta-infinity universe that explains it.
+Since this meta-infinity universe would also need an explanation, we can
+continue this process for quite a while before it breaks,
+which makes these meta-universes also unplausible.
+
+This means that, if our universe is not designed, then it will not behave
+according to simple laws, and, in principle, we should be able to notice it.
+However, with our current travelling means, we can observe only a limited
+part of our entire universe, so, perhaps, we live in a bubble that covers
+a large amount of time and space, in which simple laws apply.
+
+If that's the case, our universe is still unlikely among all universes
+containing such bubbles, because our bubble is much larger than it needs to
+be.
+A conservative estimation produces a probability so low for our universe,
+that almost any other explanation is preferable.
+
+It's harder to estimate the same probabilities when there is a Designer, but
+it is likely that the probability for our universe is much higher than in the
+non-design case.
+
+Section \ref{sec:valid-options} describes this argument in detail.
+
 Section \ref{sec:options} presents
 the main issues discussed in this paper.
-Section \ref{sec:axioms} introduces the argument's axioms,
-while section \ref{sec:valid-options} uses them to make predictions
-about our universe, then verifies if they match our observations.
+
 Section \ref{sec:objections} presents some clarifications and possible
 answers to various objections to this paper.
 Section \ref{sec:conclusion} presents this \paper{}'s argument conclusion.
-Section \ref{sec:background}
-briefly presents some mathematical background for those interested in it.
+
+This \paper{} uses some mathematical notions related to set cardinalities,
+probabilities and ordinals, which can be found in, e.g., \svn{quote}.
+These are summarized in \ref{sec:background}, together with some properties
+derived from them.
 
 \section{The Ordered Universe Argument}
 \label{sec:ordered-universe}
@@ -392,6 +447,10 @@ the following issues:
         $\alpha < \beta$.
         Option 2: there is an ordinal $\beta$, possibly $1$,
         where this stops being the case.
+
+        Whether there is an uncountable chain of meta-universes, in which
+        our universe is the first one, and in which any meta-universe
+        includes, directly or not, all the previous ones.
   \item The set of possible descriptions for a finite chunk of space-time
         that are also compatible with life has at least the cardinal
         of the set of real numbers, $\reale$, or a smaller one.
@@ -400,43 +459,68 @@ the following issues:
 \section{Axioms}
 \label{sec:axioms}
 
-Throughout this paper we will implicitly use only separated probability
-measures, i.e. they can measure singletons (single-element sets).
+\subsection{Observing Events}
+In the main argument we will try to use the fact that we are observing our
+universe, and the laws describing its behaviour are one element picked from
+a very large set, a set having the same cardinality as the set of real numbers.
 
-Below we will use two terms, \ghilimele{generic} and \ghilimele{peculiar},
-which are defined precisely in section \ref{sec:probabilities}. Informally,
+The most natural probability distributions over real numbers
+or over sets with the same cardinality are the continuous
+ones, i.e. probabilities for which any element of the set has probability $0$.
+Practically, this means that we would lose any bet which we would make on an
+single element of the set.
+
+In order to make some sense out of this, we will use two terms,
+\ghilimele{generic} and \ghilimele{peculiar},
+which are defined precisely in section \ref{sec:probabilities}.
+Informally,
 an object is peculiar if it satisfies a peculiar predicate, and a peculiar
 predicate is one that has a zero probability for any continuous probability
-distribution. As an example,
+distribution.
+As an example,
 \ghilimele{has a finite number of digits} is a peculiar
 predicate over real numbers, and any real number with a finite number
 of digits, like $12.5$, is peculiar. An object or predicate is generic if
 it is not peculiar.
 
-\subsection{Observing Events}
+Axiom \ref{ax:zero} below specifies this in a more formal way.
+
+However, it might happen that, for some of the sets used in this \paper{},
+no reasonable probability distribution can be defined.
+Axiom \ref{ax:noprobability} specifies how choice works in those cases.
+
+Throughout this paper we will implicitly use only separated probability
+measures, i.e. they can measure singletons (single-element sets).
+
 \begin{axiom}
   \label{ax:zeroisgeneric}
-  If $P$ is a probability over the set of real numbers
-  (or a set with the same cardinal)\footnote{Readers should
-  keep in mind that, in most cases throughout this paper, what is being said
-  about the set of real numbers is similarly valid for any set with the same
-  cardinality.},
+  If $P$ is a probability over the set of real numbers\footnote{Note
+    that here, and in all the axioms in this paper, it is not required that
+    $P$ is a probability over the
+    Borel algebra of $\reale$, although that is, in many cases, implicitly
+    assumed when talking about probabilities over $\reale$.
+  }
+  (or a set with the same cardinal)\footnote{
+    Readers should
+    keep in mind that, in most cases throughout this paper, what is being said
+    about the set of real numbers is similarly valid for any set with the same
+    cardinality.},
   we observe a real number $x$, and $P(x)=0$, then $x$ is generic.
 \end{axiom}
-
-Note that here, and in all the axioms in this paper, it is not required that
-$P$ is a probability over the
-Borel algebra of $\reale$, although that is, in many cases, implicitly
-assumed when talking about probabilities over $\reale$.
 
 The set of events for which $P(y)$ is
 greater than $0$ is at most countable (see section \ref{sec:probabilities}),
 and, if we remove them from $\reale$, what remains will still have
 the same cardinality.
+
 On this later set, the probability
 of all peculiar events taken together is $0$, so there is no chance of us
 observing one.
-In other words, the probability of all generic events is $1$,
+In other words, the probability of all generic events is $1$\footnote{This
+  requires that, in the original set, the set of elements with $0$ probability
+  has itself a non-zero probability. However, this is implied by us observing
+  an element from this set.
+},
 so we can be sure that we observed a generic event.
 
 Of course, the (logical) possibility of observing a peculiar event still exists,
@@ -465,15 +549,13 @@ reasonable assumption in this case.
 \subsection{$\reale^4$ Universe}
 
 The universes we are interested in are universes that can be
-modelled on top of a space with $\alpha$ dimensions,
-$\reale^\alpha$, where $\alpha$ is finite,
+modelled on top of a finite-dimensional space based on real numbers,
 or something close enough to that.
 
 In order to not define what \ghilimele{close enough} means, we will use
 the following axiom, which is true for any finite dimensional space
 based on the set of real numbers, but it also works on spaces based on,
-say, the set of rational numbers, and on many finite spaces that are similar
-enough.
+say, the set of rational numbers, and on many similar finite dimensional spaces.
 
 Let us define a \definitie{generalized rational number} as being either a
 rational number, or one of $-\infty$ and $+\infty$. Let us denote by
@@ -518,34 +600,12 @@ mean that there are finite things that do not fit in finite cuboids.
 In order to handle this, when defining a level of approximation,
 we could allow ignoring what happens in a small part of the region we model.
 
-\subsection{Neighborhood Modelling}
-
-\begin{axiom}\label{ax:finiteneighborhood}
-  There is a large compact time-space region of our universe which
-  includes our solar
-  system, and there is a level of approximation $L$ such that:
-  \begin{enumerate}
-    \item Any cuboid included in that region has a finite approximate
-          description for the level $L$ (i.e. we can make non-trivial
-          approximate predictions in all such cuboids).
-    \item A description for one of the cuboids also works for all other
-          cuboids with the same size in the given time-space region
-          (i.e. the space region is isotropic enough).
-  \end{enumerate}
-\end{axiom}
-
-Many people assume, implicitly or explicitly,
-that this is true, and, even more, that a cuboid's description works
-for the entire universe.
-This is especially visible when, e.g., claiming
-that the universe is around $14$ billion years old, that the sun will,
-in some distant future, become a white dwarf, or that standard-candle supernovae
-are not ilussions.
-In order to believe this, one must assume that our universe has a
-finite approximate description or, at least, that our
-solar system/galaxy/observable part of the universe has such a description.
-
 \subsection{Logically Possible Universes}
+
+The following axiom states that, for a given level of approximation,
+there is a large set of conceivable universes, which in some narrow respects
+are similar to ours, but which are, in general, wildly different.
+Also, our universe belongs to this set.
 
 \begin{axiom}\label{ax:uncountable}
   For any level of approximation $L$ above a certain minimum level (see below)
@@ -564,7 +624,8 @@ solar system/galaxy/observable part of the universe has such a description.
               for the level of approximation $L$,
               $d$ is $U_d$'s description.
       \end{enumerate}
-    \item If $d$ and $d'$ are descriptions from $\descriptions$,
+    \item A description can be used only for its universe, i.e.
+          if $d$ and $d'$ are descriptions from $\descriptions$,
           then $d$ does not work
           for $U_{d'}$, the universe corresponding to $d'$.
     \item $\descriptions$ contains a description for our universe.
@@ -580,25 +641,27 @@ need to measure is not below Planck's length.
 All levels of approximation used below will be above this
 minimum level, even if this is not mentioned explicitly.
 
-This axioms states that, for a given level of approximation,
-there is a large set of conceivable universes, which in some narrow respects
-are similar to ours, but which are, in general, wildly different.
-Also, our universe belongs to this set.
+To see why this axiom is reasonable, we will first show that our universe's
+description could be part of such a set, then we will identify a large set
+of descriptions that fulfills all the requirements except for containing
+our universe's description, then we will show that, by removing some of the
+descriptions in that set and adding ours, we get a set that fullfils all
+requirements.
 
-To see why that is reasonable, let us first note that,
+Let us note that,
 %in a similar way to axiom \ref{nonessentialhypercube},
 most likely, we have an approximate description for the observable part
 of our universe
 given by classical mechanics, maybe with some additions.
 Alternately, one could use a description based on, say, quantum field theory.
 
-It may be that there is a description (possibly different from the one above),
-that works for our entire universe.
-If not, some parts of the following would need to
-be adjusted to include this possibility, but the argument should stay
-essentially the same.
+We can assume, then, that there is a description,
+(possibly different from the one above), that works for our entire universe,
+as we are theoretically able to observe it. In the worst case, the description
+would be just a recording of what we would observe (i.e. at a given time, in
+a given place, a certain event takes place).
 
-Next, for almost any countable axiom system that still
+For almost any countable axiom system that still
 has an $n$-dimensional real space, $\reale^n$, as a base,
 one could imagine an alternate universe
 which, in the present, is exactly like ours inside (say) Mars' orbit,
@@ -611,14 +674,25 @@ but different enough that
 we would notice (e.g. gravity could work differently, depending on the region
 of space in which one travels).
 
-For any approximation level $L$, and any region that is not trivial
-for $L$
+So we could then try to take all hypothetical universes with infinite space
+or time, and we could split them in an infinite number of regions. If we take
+all ways of having different enough laws for these regions,
+we get a set of universes whose set of descriptions has the same cardinality
+as the set of real numbers and which fulfills all conditions of the axiom
+above except the last one.
+
+To be more precise, for any approximation level $L$, and any region that
+is not trivial for $L$
 (the meaning of \ghilimele{trivial} is left open, but, as an example,
 if we use an approximation level that does not distinguish things smaller
 than a size $l$, then the region must be significantly larger than $l$),
 there are multiple possible descriptions that
 are distinct for $L$, i.e. there is no possible region where both descriptions
 would be valid within the level $L$ (see \ref{sec:not-enough-descriptions}).
+We can also ask that there same applies for the two descriptions taken together
+with an approximate description that we use for the universe around us.
+I.e. there is no possible region where one of the two descriptions could
+be applied at the same time as our description.
 By splitting an infinite timespace
 into disjoint regions defined by a set of finite rational coordinates
 (e.g. we could split it into cubes whose edges have length $1$ and whose
@@ -635,12 +709,50 @@ whose description is fixed,
 and we require that the other regions' descriptions are compatible with life
 in the fixed region.
 
+Also, let us note that, from the way we constructed it, we can add our
+universe's description to this set without breaking any of the requirements.
+
 This means that the set of descriptions mentioned in the axiom,
 $\descriptions$, has the cardinality of $\reale$. See section
 \ref{sec:fewuniverses} for another take on this issue.
 
 Also see \parencite{Manson2003}, which suggests that something similar
 might be happening in our universe.
+
+\subsection{Neighborhood Modelling}
+
+Since currently we can not observe our entire universe, saying that it has a
+high level of complexity is of limited use.
+The second part of our argument will try to draw some conclusions from
+what we see in the observable part of our universe.
+In order to do that, we need an axiom saying that, around us, perhaps in the
+entire observable part of our universe, there is a relatively simple
+set of laws that describe it.
+
+\begin{axiom}\label{ax:finiteneighborhood}
+  There is a large compact time-space region of our universe which
+  includes our solar
+  system, and there is a level of approximation $L$ such that:
+  \begin{enumerate}
+    \item Any cuboid included in that region has a finite approximate
+          description for the level $L$ (i.e. we can make non-trivial
+          approximate predictions in all such cuboids).
+    \item A description for one of the cuboids also works for all other
+          cuboids with the same size in the given time-space region
+          (i.e. the space region is isotropic enough).
+  \end{enumerate}
+\end{axiom}
+
+Usually we assume, implicitly or explicitly,
+that this is true, and, even more, that a cuboid's description works
+for the entire universe.
+This is especially visible when, e.g., claiming
+that the universe is around $14$ billion years old, that the sun will,
+in some distant future, become a white dwarf, or that standard-candle supernovae
+are not ilussions.
+In order to believe this, one must assume that our universe has a
+finite approximate description or, at least, that our
+solar system/galaxy/observable part of the universe has such a description.
 
 \section{Valid Options for Our Universe}
 \label{sec:valid-options}
@@ -937,6 +1049,8 @@ Next, let us see hat happens if we assume the design hypothesis.
 
 \subsection{Design Probability}
 \label{sec:design-probability}
+
+\svn{merge with unknown designer's intent.}
 
 Let us examine the hypothesis that our universe is designed.
 Since, in this case, the way our world works would based
