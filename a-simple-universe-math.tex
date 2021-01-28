@@ -786,24 +786,145 @@ that constraint, so both can be right within their contexts.
 \subsection{Peculiar Descriptions and Meta-universes}
 \label{fdaumu}
 
-Let us assume denote our universe's description by
+\subsubsection{Informal summary}
+
+From what we observe around us, it seems that our universe is fairly homogenous,
+having a relatively simple approximate description.
+In this section we will try to see how plausible it is that this description
+(or any finite description that still approximates what we see around us)
+applies to the entire universe, not only the space and time around us.
+To do that, we will that a finite description is peculiar, which means that
+there is no chance of
+us observing it both in the case when we use a continuous probability
+distribution over universes, and in the case when we can't use any probability
+distribution.
+
+If that's the case, then the correct probability distribution used over
+universe descriptions should be discontinuous.
+If our universe is not designed, then we don't normally have any reason of
+using a discontinuous probability distribution, which may be enough to
+show that any approximate description for our universe's description is
+infinite. This should settle at least the case when this probability
+distribution is a subjective one.
+
+However, we will look deeper into this issue.
+Let us assume that there is a probability distribution over universe
+descriptions, and that this probability distribution has discontinuities.
+
+First, we can ask ourselves why is there a probability distribution over
+universe descriptions.
+A probability distribution means that which universes exist and which don't
+is not completely chaotic, there is a minimal amount of order among them.
+We will call this order a \ghilimele{meta-universe}, and we will say that
+this meta-universe includes ours, but keep in mind that the intuition that
+many have about a meta-universe is something more complex than just
+a minimal amount of order.
+However, the most natural explanation for this order is that our universe
+is part of something larger that corresponds to the intuition of a
+meta-universe, which may contain many other universes besides ours.
+To put this entire paragaph in other words, the probability distribution over
+universe descriptions is something determined by a meta-universe which includes
+our universe.
+
+Now we have something that explains this probability distribution which,
+as mentioned above, is not continuous.
+Next, we can ask ourselves if this distribution's discontinuities are what
+we would normally expect or not.
+A natural question is whether we have a probability distribution describing
+what we shoudl expect from these discontinuities, and what kind of probability
+distribution it would be.
+
+The set of discontinuities for a probability distribution is at most countable
+(TODO: reference), so, if they are described by a continuous probability
+distribution, or if there is no such probability distribution, we would
+expect them to be generic.
+This would still mean that our universe description is generic.
+
+However, as above, we can try to explain a peculiar universe description
+using a discontinuous probability distribution over discontinuities,
+which means that there would be a
+meta-meta-universe that includes both our universe and the meta-universe.
+
+But having peculiar discontinuities for the meta-meta-universe probability
+distribution is plausible only if there is a meta-meta-meta-universe
+with a discontinous probability distribution.
+By repeating this reasoning, we get an infinite chain of meta-universes.
+But every probability distribution in this entire chain must have a
+discontinuity for our universe's
+description, which, using the same reasoning as above, must be generic,
+unless there is something explaining it, i.e. a meta-infinity universe,
+whose probability distribution has a discontinuity for our universe's
+description.
+
+In order to make this chain more precise, we will assign a number corresponding
+to the meta-level of each meta-universe.
+We will assign $0$ to the meta-universe including ours, $1$ to the
+meta-meta-universe including (directly or indirectly) the meta-universe and our
+universe, $2$ to the next level, and so on.
+Then we can denote by $\omega$ the meta-infinity universe that explains why all
+the meta-universes corresponding to finite numbers have a certain discontinuity.
+
+But the $\omega$ meta-universe also needs an explanation if its probability
+distribution has a peculiar discontinuity, so, again, either our universe's
+description is generic, or there is a meta-universe with a discontinous
+probability distribution that includes the
+$\omega$ meta-universe.
+We will call this the $\omega + 1$ meta-universe.
+
+In the same way, we need meta-universes corresponding to $\omega + 2$,
+$\omega + 3$, and so on.
+I.e., we get another infinite chain of meta-universes, which also needs an
+explanation, provided by a meta-universe that we will call $\omega + \omega$
+or $2\omega$. But that one still needs an explanation, so we also need
+meta-universes corresponding to $2\omega + 1$, $2\omega + 2$, ..., and,
+in the end, corresponding to $3\omega$.
+Next, we will need meta-universes
+corresponding to $4\omega$, $5\omega$, and so on.
+But to explain this infinite chain, we need another meta-universe which we
+will call $\omega\omega$, or $\omega^2$.
+
+Continuing, we will need meta-universes up to $\omega^3$, then up to
+$\omega^4$, and so on.
+In the end, we will need one for the entire
+infinite chain, denoted by $\omega^\omega$.
+However, we can't stop here, and we will not be able to stop for quite a while.
+
+Each of these meta-universes corresponds to a statistical observation and,
+as long as we make a countable number of observations, we either expect to
+observe generic discontinuities, or we expect to find yet another meta-universe
+above everything that we observed so far.
+
+This construction corresponds to ordinals, see (TODO: ref) to find out more,
+including the place where this process breaks, i.e. the first uncountable
+ordinal.
+
+Postulating that such an improbable and complicated construction exists does
+not seem reasonable, so any description for our universe must be peculiar.
+
+Next section will contain this argument presented in a more formal way.
+
+\subsubsection{Main argument}
+
+Let us denote our universe's description by
 $\our_description$. Let us take $\descriptions$ be the set of descriptions from
 axiom \ref{ax:uncountable}, with $\our_description$ belonging to $\descriptions$.
-Let us also consider that, perhaps, our universe is contained
-in a meta-universe, which is, perhaps, contained in
-a meta-meta-universe, and so on. Since these meta-universes included in other
-meta-universes resemble ordinals, we will label them with ordinal numbers,
-starting with $0$ for the first meta-universe.
+As mentioned above, let us also consider that, perhaps, our universe is
+contained in a meta-universe, which is, perhaps, contained in
+a meta-meta-universe, and so on, and let us label these meta-universe
+with ordinal numbers, starting with $0$ for the first meta-universe.
 
-For the purpose of this paper, a meta-universe is something that contains our
+As above, a meta-universe is something that contains our
 universe and which influences, one way or another, which universes could
 exist and in which quantity.
 This influence will be represented as a probability
 distribution over universe descriptions.
+Meta-meta-...meta-universes are defined in a similar way.
 
-In the following we will ignore that there could be meta-universe without
-a corresponding probability distribution, since they are handled by axiom
-\ref{ax:noprobability}.
+In principle, it could happen that there is a meta-universe without
+a corresponding probability distribution, but we will mostly ignore that,
+since axiom \ref{ax:noprobability} applies both when there is no meta-universe
+and when the meta-universe does not have a corresponding probability
+distribution.
 
 As an example, our universe could be one of the many universes in a
 meta-universe that would allow only the existence of universes having the
@@ -818,13 +939,17 @@ subjective one, i.e. it can measure what we believe about what can exist.
 The text below is usually written with the objective meaning in mind, but
 most conclusions should also work for subjective probabilities.
 
-There is a difference between what universes exist, and in which proportion,
-and what universes could exist, which may seem important.
-However, for this argument, we will ignore this distinction, focusing on
-only on the probability distribution (or the lack of) that describes
-how the descriptions for the existing universes were generated.
+The probability distribution of a meta-universe describes, at the same time,
+which universes exist, and which universes could exist.
+One way of thinking about this is to think about any process that we usually
+consider to be random, like rolling a die.
+Before the first roll, we have no events.
+Each roll adds the number on the die to the list of events.
+At any point, the same probability distribution describes both how we got the
+existing events, and how we will get any similar event in the future.
 
-As an example, let us take a look at what happens if only one universe exists.
+As another example, let us take a look at what happens if only one
+universe exists.
 If there is absolutely no reason
 for it existing and the other ones not existing, then no meta-universe which
 includes it exists.
@@ -833,7 +958,7 @@ enforces that only one universe exists, the probability distribution will
 assign $1$ to this universe's description, and $0$ to everything else.
 If other universes could exists, but, somehow, they don't, we will get a
 probability distribution specifying what could exist, and we would be talking
-about a meta-universe in which only one universe was generated.
+about a meta-universe in which only one universe was \ghilimele{generated}.
 
 As mentioned at the beginning of this section, we are associating
 meta-universes with ordinals. Let us consider the case
