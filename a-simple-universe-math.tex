@@ -786,72 +786,87 @@ that constraint, so both can be right within their contexts.
 \subsection{Peculiar Descriptions and Meta-universes}
 \label{fdaumu}
 
-\subsubsection{Informal summary}
+\subsubsection{Informal argument}
 
 From what we observe around us, it seems that our universe is fairly homogenous,
 having a relatively simple approximate description.
 In this section we will try to see how plausible it is that this description
 (or any finite description that still approximates what we see around us)
 applies to the entire universe, not only the space and time around us.
-To do that, we will that a finite description is peculiar, which means that
-there is no chance of
+To do that, we will note that a finite description is peculiar,
+which means that there is no chance of
 us observing it both in the case when we use a continuous probability
-distribution over universes, and in the case when we can't use any probability
-distribution.
+distribution over universes (axiom \ref{ax:zeroisgeneric}),
+and in the case when we can't use any probability
+distribution (axiom \ref{ax:noprobability}).
 
-If that's the case, then the correct probability distribution used over
-universe descriptions should be discontinuous.
-If our universe is not designed, then we don't normally have any reason of
-using a discontinuous probability distribution, which may be enough to
+This result should probably be good enough, and if you agree with
+this, please skip to section \ref{sec:peculiarregions}.
+Otherwise, the only option left is that the correct probability
+distribution used over universe descriptions is discontinuous.
+That, in itself, is not enough, because if our universe's description is not
+one of these discontinuities, then its probability is still $0$, which,
+from axiom \ref{ax:zeroisgeneric}, means that it's still generic.
+
+However, if our universe is not designed, then we don't normally have any
+reason for
+using a discontinuous probability distribution.
+For many people this may be, enough to
 show that any approximate description for our universe's description is
-infinite. This should settle at least the case when this probability
+infinite, and it should settle at least the case when this probability
 distribution is a subjective one.
 
 However, we will look deeper into this issue.
 Let us assume that there is a probability distribution over universe
-descriptions, and that this probability distribution has discontinuities.
+descriptions, and that this probability distribution has discontinuities,
+and that our universe's description is such a discontinuity.
 
 First, we can ask ourselves why is there a probability distribution over
 universe descriptions.
-A probability distribution means that which universes exist and which don't
+A probability distribution means that which universes exist and which do not
 is not completely chaotic, there is a minimal amount of order among them.
 We will call this order a \ghilimele{meta-universe}, and we will say that
 this meta-universe includes ours, but keep in mind that the intuition that
 many have about a meta-universe is something more complex than just
 a minimal amount of order.
-However, the most natural explanation for this order is that our universe
-is part of something larger that corresponds to the intuition of a
+On the other hand, the most natural explanation for this order
+that does not involve design is an actual
 meta-universe, which may contain many other universes besides ours.
 To put this entire paragaph in other words, the probability distribution over
-universe descriptions is something determined by a meta-universe which includes
+universe descriptions is something determined by something we will call
+a \ghilimele{meta-universe}, which includes
 our universe.
 
-Now we have something that explains this probability distribution which,
+Now we have something that explains this probability distribution, which,
 as mentioned above, is not continuous.
-Next, we can ask ourselves if this distribution's discontinuities are what
+Then we can ask ourselves if this distribution's discontinuities are what
 we would normally expect or not.
-A natural question is whether we have a probability distribution describing
-what we shoudl expect from these discontinuities, and what kind of probability
+It is natural to ask whether we have a probability distribution telling us
+what we should expect from these discontinuities, and what kind of probability
 distribution it would be.
 
 The set of discontinuities for a probability distribution is at most countable
 (TODO: reference), so, if they are described by a continuous probability
 distribution, or if there is no such probability distribution, we would
-expect them to be generic.
-This would still mean that our universe description is generic.
+expect them to be generic. Since our universe's description is one of them,
+then it should be generic.
 
 However, as above, we can try to explain a peculiar universe description
 using a discontinuous probability distribution over discontinuities,
-which means that there would be a
-meta-meta-universe that includes both our universe and the meta-universe.
+and assuming that our universe's description is also one of the
+discontinuities for this new probability distribution.
+Having this probability distribution would mean that there is
+meta-meta-universe that includes both the meta-universe and, indirectly,
+our universe.
 
 But having peculiar discontinuities for the meta-meta-universe probability
 distribution is plausible only if there is a meta-meta-meta-universe
 with a discontinous probability distribution.
-By repeating this reasoning, we get an infinite chain of meta-universes.
-But every probability distribution in this entire chain must have a
-discontinuity for our universe's
-description, which, using the same reasoning as above, must be generic,
+By repeating this reasoning, we get an infinite chain of meta-universes,
+each with a discontinuity for our universe's
+description.
+Applying the same reasoning as above to this chain, this discontinuity
+must be generic,
 unless there is something explaining it, i.e. a meta-infinity universe,
 whose probability distribution has a discontinuity for our universe's
 description.
@@ -864,8 +879,9 @@ universe, $2$ to the next level, and so on.
 Then we can denote by $\omega$ the meta-infinity universe that explains why all
 the meta-universes corresponding to finite numbers have a certain discontinuity.
 
-But the $\omega$ meta-universe also needs an explanation if its probability
-distribution has a peculiar discontinuity, so, again, either our universe's
+But, if the $\omega$ meta-universe probability distribution has a peculiar
+discontinuity, then it also needs an explanation, so, again,
+either our universe's
 description is generic, or there is a meta-universe with a discontinous
 probability distribution that includes the
 $\omega$ meta-universe.
@@ -874,13 +890,17 @@ We will call this the $\omega + 1$ meta-universe.
 In the same way, we need meta-universes corresponding to $\omega + 2$,
 $\omega + 3$, and so on.
 I.e., we get another infinite chain of meta-universes, which also needs an
-explanation, provided by a meta-universe that we will call $\omega + \omega$
-or $2\omega$. But that one still needs an explanation, so we also need
+explanation, which shoudl be provided by another meta-universe, including this
+second chain. We will call it the $\omega + \omega$ meta-universe
+or the $2\omega$ meta-universe.
+But this new meta-universe still needs an explanation,
+which means that we also need
 meta-universes corresponding to $2\omega + 1$, $2\omega + 2$, ..., and,
 in the end, corresponding to $3\omega$.
 Next, we will need meta-universes
 corresponding to $4\omega$, $5\omega$, and so on.
-But to explain this infinite chain, we need another meta-universe which we
+But to explain this (doubly) infinite chain,
+we need another meta-universe which we
 will call $\omega\omega$, or $\omega^2$.
 
 Continuing, we will need meta-universes up to $\omega^3$, then up to
@@ -894,16 +914,57 @@ as long as we make a countable number of observations, we either expect to
 observe generic discontinuities, or we expect to find yet another meta-universe
 above everything that we observed so far.
 
-This construction corresponds to ordinals, see (TODO: ref) to find out more,
-including the place where this process breaks, i.e. the first uncountable
-ordinal.
+This construction corresponds to ordinals, see (TODO: ref) to find out more.
+The process will break at the first uncountable ordinal.
+
+So, in order for our universe description to have a chance to be finite,
+we have to postulate a fairly improbable and complicated configuration
+of meta-universes and probability distributions, which,
+in itself, does not seem reasonable.
+However, even if we postulate that, let us note that it is also unreasonable
+to ask that any of these probability distributions has a probability of $1$
+for our universe's description, and that, in this entire construction,
+the probability of our universe description can be obtaine by multiplying the
+probabilities in each meta-universe.
+
+It may be difficult to multiply an uncountable set of numbers, but,
+since these numbers are between $0$ and $1$, then whatever value we should
+assign to their product,
+it should be at most the product of any countable subset.
+
+If a countable subset of probabilities are all below a certain threshold,
+say, $0.9$, then multiplying them produces $0$, which, again, would mean
+that our universe's description is generic. To have a chance of having
+a peculiar description, for any threshold less that $1$, there should be at
+most a finite number of probabilities less than it.
+
+But we can take a countable sequence of thresholds such that any number less
+than $1$ is also less than almost all such thresholds, e.g.
+$0.9$, $0.99$, $0.999$, \dots. But since all of them have only a finite number
+of probabilities below, this means that the set of probabilities which are
+below at least one of them is countable. But this means that the set of
+probabilities which are not $1$ is countable. Also, since the entire set of
+probabilities is uncountable, we must have an uncountable set of distributions
+for which our universe description has probability $1$.
+
+Each meta-universe probability distribution only gives the
+probability that a certain description is a discontinuity, i.e. that
+the probability of that description should be greater than $0$, but does not say
+anything about the probability itself,
+so we should expect these probabilities to
+be distributed in a random way, perhaps uniformly distributed between $0$ and
+$1$. This means that it is completely implausible to have almost only $1$
+probabilities. It is also completely implausible that, when looking at the
+probabilities which are not $1$, for any threshold below $1$, only a finite
+number are below that threshold.
 
 Postulating that such an improbable and complicated construction exists does
-not seem reasonable, so any description for our universe must be peculiar.
+not seem in any way reasonable,
+so any description for our universe must be peculiar.
 
-Next section will contain this argument presented in a more formal way.
+Next section will contain most of this argument, presented in a more formal way.
 
-\subsubsection{Main argument}
+\subsubsection{Formal argument}
 
 Let us denote our universe's description by
 $\our_description$. Let us take $\descriptions$ be the set of descriptions from
@@ -913,158 +974,60 @@ contained in a meta-universe, which is, perhaps, contained in
 a meta-meta-universe, and so on, and let us label these meta-universe
 with ordinal numbers, starting with $0$ for the first meta-universe.
 
-As above, a meta-universe is something that contains our
-universe and which influences, one way or another, which universes could
-exist and in which quantity.
-This influence will be represented as a probability
-distribution over universe descriptions.
-Meta-meta-...meta-universes are defined in a similar way.
+If one of these meta-universe does not exist, then obviously, no meta-universe
+that would include it exists. A less obvious conclusion is that, if one
+meta-universe does not exist, then there is a \ghilimele{least meta-universe}
+that does not exist, i.e. a meta-universe that does not exist,
+but all meta-universes that would be
+included (directly or not) in it exist\footnote{In any set of ordinals
+one can find the smallest ordinal as ordered by inclusion.
+In our case, we take the set of
+meta-universes that would be included in that non-existing meta-universe and,
+which, themselves, do not exist. Then we can find the smallest meta-universe
+that does not exist. Since it's the smallest, then all universes that would
+be included in it exist.}. Let us denote this meta-universe by $\alpha$. Note
+that, if no meta-universe exists, then $\alpha=0$. If all
+meta-universes exist, then let us denote by $\alpha$ a meta-universe labelled
+with a large enough ordinal, say, the first uncountable ordinal
+(an ordinal or a meta-universe is countable if the set of ordinals or
+meta-universes included in it, directly or not, is countable).
 
-In principle, it could happen that there is a meta-universe without
-a corresponding probability distribution, but we will mostly ignore that,
-since axiom \ref{ax:noprobability} applies both when there is no meta-universe
-and when the meta-universe does not have a corresponding probability
-distribution.
+Next, let us take a possible meta-universe $MU$ whose ordinal is at most
+countable, and is not $0$, and let us
+ask ourselves if it's possible that we observe that all meta-universes
+that would be included, directly or not, in it have a discontinuity for
+the same peculiar universe description, let us call it $U$.
 
-As an example, our universe could be one of the many universes in a
-meta-universe that would allow only the existence of universes having the
-same laws as ours, but with different fundamental constants.
-The probability distribution mentioned above would be zero for all
-plausible universes with different laws, and for the universes that have
-the same set of laws, it would be equivalent to a
-probability distribution over the fundamental constants.
+Any such common discontinuity would be generic if $MU$ does not exist
+(axiom \ref{ax:noprobability}), or if $MU$'s probability distribution
+is continuous (axiom \ref{ax:zeroisgeneric}),
+or if the probability distribution is discontinuous,
+but it does not have the same peculiar discontinuity $U$
+(also axiom \ref{ax:zeroisgeneric}).
+The only case when all the universes included in $MU$ have $U$ as a
+(peculiar) discontinuity is when $MU$ exists and its probability distribution
+also has $U$ as a discontinuity.
 
-Alternately, the probability over universe descriptions could be a
-subjective one, i.e. it can measure what we believe about what can exist.
-The text below is usually written with the objective meaning in mind, but
-most conclusions should also work for subjective probabilities.
+We know that the $0$ meta-universe has a discontinuity for
+our universe's description, and our universe's description is peculiar, so,
+from transfinite induction (TODO: cite), if the first meta-universe,
+corresponding to ordinal $0$, has a peculiar discontinuity, then all countable
+meta-universes exist, and have the same discontinuity.
 
-The probability distribution of a meta-universe describes, at the same time,
-which universes exist, and which universes could exist.
-One way of thinking about this is to think about any process that we usually
-consider to be random, like rolling a die.
-Before the first roll, we have no events.
-Each roll adds the number on the die to the list of events.
-At any point, the same probability distribution describes both how we got the
-existing events, and how we will get any similar event in the future.
+\subsection{Partial conclusion}
 
-As another example, let us take a look at what happens if only one
-universe exists.
-If there is absolutely no reason
-for it existing and the other ones not existing, then no meta-universe which
-includes it exists.
-If, somehow, this universe is contained in a meta-universe which
-enforces that only one universe exists, the probability distribution will
-assign $1$ to this universe's description, and $0$ to everything else.
-If other universes could exists, but, somehow, they don't, we will get a
-probability distribution specifying what could exist, and we would be talking
-about a meta-universe in which only one universe was \ghilimele{generated}.
+TODO: is $\our_description$ defined?
 
-As mentioned at the beginning of this section, we are associating
-meta-universes with ordinals. Let us consider the case
-when these universe ordinals stop at some point, i.e. when there are ordinals
-which do not correspond to any meta-universe.
-If the smallest
-ordinal not associated with a universe is countable, let us denote it by
-$\alpha$.
-If the smallest such ordinal is not countable,
-or if there is a universe for each ordinal,
-then let $\alpha$ be the lowest uncountable ordinal. $\alpha$ will
-be an upper limit for any ordinal that we will consider in the following.
-
-If $\alpha = 0$, then there is no meta-universe containing ours, so there
-is no probability distribution over universe descriptions,
-which means that $\our_description$ is generic (axiom \ref{ax:noprobability}).
-
-If $\alpha > 0$ and the probability distribution over universe descriptions
-given by the first meta-universe is continuous,
-then the probability of all peculiar descriptions is $0$,
-so the only reasonable conclusion is that our universe has a generic
-approximate description (axiom \ref{ax:zeroisgeneric}).
-
-This result should probably be good enough, and if you agree with
-this, please skip to section \ref{sec:peculiarregions}.
-
-However, one could also wonder what happens when this probability distribution
-is not continuous. If the discontinuities are generic, then we can easily
-show that, with probability $1$, our universe's description is generic.
-
-However, if they are not generic, then we can ask ourselves
-whether we have a probability
-description for these discontinuities. Since the meta-universe containing our
-universe may be contained in a meta-meta-universe, maybe the meta-meta-universe
-can provide such a distribution. If the meta-meta-universe probability
-distribution is continuous, then the discontinuities are generic. If not,
-then we have to ask ourselves if a meta-meta-meta-universe can give us more
-information.
-
-If the meta-meta-meta-universe contains a probability distribution that tells
-us what is the probability that a given number is a discontinuity for both
-the meta-universe and the meta-meta-universe, then, if this distribution
-is continuous (or there is no such distribution),
-the discontinuities are generic. If not, we can go to the next meta level.
-
-Let $\beta$ be ordinal where this process stops (if any such ordinal exists)
-i.e. let $\beta$ the least ordinal lower than $\alpha$
-for which one of the following happens:
-either there is no meta-universe corresponding to it
-(and no probability distribution), or the probability for our universe's
-description is $0$. Note that $\beta$ may be infinite.
-
-%In general, let us let us assume that for some ordinals $\delta$ between
-%$1$ and $\alpha$ (inclusive) there is a probability distribution
-%$p_\delta$ over the set of universe descriptions $\descriptions$, telling us
-%the probability that a given description is a discontinuity
-%for all lower ordinal probabilities, i.e. for all
-%$p_\gamma$ with $\gamma < \delta$.
-%Since $p_0$ is not defined by the above, we will take it to be the
-%probability distribution for universe descriptions.
-
-%So, $p_0$ will be the probability distribution over universe descriptions,
-%$p_1$ (if it exists) will be the probability distribution telling us
-%what's the probability that a given description is a discontinuity for $p_0$,
-%$p_2$ will tell us
-%what's the probability that a given description is a discontinuity for both
-%$p_0$ and $p_1$, and so on.
-
-%Let $\beta$ be the minimum ordinal (if any) which is lower than our limit
-%$\alpha$ and for which either there is no probability $p_\beta$,
-%or the probability of our universe's description is $0$, i.e.
-%$p_\beta(\our_description) = 0$.
-
-If $\beta$ exists, let us note that we can consider that
-we made a countable number of observations on various
-probability distributions, one for each ordinal/meta-universe, and that
-each time we observed our universe's description.
-Since one of them was made on a probability distribution
-where either there is no probability distribution, or the probability
-of $\our_description$ is $0$, then $\our_description$ is
-generic (axioms \ref{ax:noprobability} and \ref{ax:zeroisgeneric}).
-
-If such a $\beta<\alpha$ does not exist, then for any ordinal $\delta<\alpha$
-there is a probability distributions which has $OURD$ as a discontinuity.
-
-If $\alpha$ is countable, then,
-similar to the above reasoning, $\our_description$ is generic.
-
-This means that, if our universe is not designed, we have two options
-that might be reasonable:
-\begin{itemize}
-    \item our universe's description, $\our_description$, is generic
-    \item $\our_description$ is peculiar, $\alpha$ is uncountable and,
-          for all $\delta < \alpha$, the corresponding probability distribution
-          exists and, according to it, $\our_description$'s probability is
-          greater than $0$.
-\end{itemize}
-
-In other words, in order to claim that $\our_description$ is peculiar,
-one needs to postulate the
+As shown in the argument, in order to claim that $\our_description$ is peculiar,
+we would need to postulate the
 existence of an uncountable chain of meta-universes, all of them favouring a
 peculiar $\our_description$, which, by default,
-is prohibitively unlikely for any of them.
-But that's not all, since, although the
-current argument does not work anymore when the chain of
-meta-universes becomes uncountable, intuitively the peculiarness problem
+is prohibitively unlikely for any of them. Even more, almost all of them
+should be extremely favourable to $\our_description$, i.e. its probability
+should be $1$.
+
+Although we cannot expand the chain of universes when it becomes uncountable,
+intuitively the peculiarness problem
 still remains: why would it suddenly become reasonable to make
 only peculiar observations if we make enough of them? A few, maybe, but all
 of them? Normally, when we make
@@ -1092,7 +1055,7 @@ Let us examine whet happens when the set of descriptions for a cuboid that
 are compatible with life in that cuboid (and, perhaps, in the universe
 around it) has the same cardinal as $\reale$: we can apply the same argument
 as in section \ref{fdaumu}. The main difference would be the way we assign
-ordinals: the region would correspond to ordinal $0$, 
+ordinals: the region would correspond to ordinal $0$,
 our universe would correspond to $1$, the meta-universe would correspond
 to $2$, and so on. I.e. we would treat the region as it would be an universe
 and our universe as being its meta-universe.
