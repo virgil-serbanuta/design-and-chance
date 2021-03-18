@@ -1047,54 +1047,79 @@ what happens for universe regions.
 \subsection{Peculiar Descriptions for Universe Regions}
 \label{sec:peculiarregions}
 
-Let us consider all generalized cuboids whose corners' coordinates are
-rational numbers or $+\infty$ or $-\infty$. From axiom
-\ref{ax:rationalcovering}, their set is countable.
+In this section we will try to show that it is implausible to have a large
+region of spacetime around us whose behaviour is described by the same laws
+of physics that apply here on Earth.
+How implausible depends on how many
+distinct descriptions can a finite region of space have in a universe
+that contains intelligent beings.
 
-Let us examine whet happens when the set of descriptions for a cuboid that
-are compatible with life in that cuboid (and, perhaps, in the universe
-around it) has the same cardinal as $\reale$: we can apply the same argument
+We have then the following two cases:
+\begin{enumerate}
+  \item The set of descriptions for a finite region such that life
+      can exist in the universe has the same cardinality as $\reale$.
+  \item The same set has a lower cardinality.
+\end{enumerate}
+Only one of these can be true, but we do not know which one, so we should
+normally consider only the worst case. However, the first case is plausible,
+and there is a more efficient way of settling it, so it will be treated
+separately.
+
+In the first case we can apply the same argument
 as in section \ref{fdaumu}. The main difference would be the way we assign
-ordinals: the region would correspond to ordinal $0$,
-our universe would correspond to $1$, the meta-universe would correspond
-to $2$, and so on. I.e. we would treat the region as it would be an universe
+ordinals: the region would correspond to the universe in the previous argument,
+our universe would correspond to $0$, the first meta-universe,
+the first meta-universe would correspond
+to $1$, and so on. I.e. we would treat the region as it would be an universe
 and our universe as being its meta-universe.
 
-Then, since the set of all the generalized cuboids mentioned above is
-countable, all of their descriptions should be generic.
+We can then apply the previous argument to, say, the observable universe, or
+to the solar system -- both should have an infinite description.
+However, this contradicts axiom \ref{ax:finiteneighborhood}, so either the
+set of descriptions for a finite region must have a lower cardinality, or our
+universe is designed.
 
-However, we usually believe that we can have finite approximate descriptions
-for the observable part of our universe, or, at least, for a large part of if
-(axiom \ref{ax:finiteneighborhood}).
-This means that the only options
-that have a chance of being plausible are that our universe is designed, or
-that the set of descriptions compatible with life for a finite cuboid
-has a cardinality smaller than $\reale$.
+Let us focus now on the case when the set of descriptions mentioned above
+has a cardinality lower than $\reale$.
 
-Let us focus on the latter case above.
-Note that, from section \ref{fdaumu}, our universe has
-a generic approximate description.
-But we assumed that the region around us has a finite approximate description.
-If we were to extend it to the entire universe, we would find a peculiar
-description for our universe, which is a contradiction. This means that there
-is at least one region in our universe which has a different description.
+First, let us note that our universe has a generic approximate description,
+while the region around us has a finite (which means peculiar) approximate
+description (axiom \ref{ax:finiteneighborhood}).
+This means that we can't
+extend our region's description to the entire universe, which means that
+there is at least one finite region in our universe with a different
+description.
+Even more, if we split our universe in a countable set of finite regions
+(say, cuboids of the same size),
+it is not plausible that all of them except a finite set have the same
+description: for the same reasons as in the previous section,
+the pattern that we get when we map cuboids to their descriptions should also
+be generic, and if all of them except a finite set have the same description,
+then we can define this mapping using a finite number of words
+(i.e. \ghilimele{cuboid $X$ has the second description,
+cuboid $Y$ has the third description, ..., and all the other cuboids have the
+first description}), and the \ghilimele{can be uniquely identified using a
+finite number of words} predicate is peculiar.
 
 Let $A$ be the set of possible approximate descriptions for
 a cuboid of size, say, $1\;second \times meter^3$.
-As argued in the paragraph above,
-unless our approximation level is extremely coarse,
+Unless our approximation level is extremely coarse,
 $A$ will have multiple elements.
-We will assume that we are working with a reasonable approximation level.
-For any possible description $a$ in the set $A$,
-let $P(a)$ be the probability of encountering
-a cuboid with $a$ as its description in our universe.
+We will assume that we are working with a reasonable approximation level,
+for which $A$ has more than one element.
+For any possible description $d$ in the set $A$,
+let $P(d)$ be the probability of encountering
+a cuboid with $d$ as its description in our universe.
 
 If $A$ is finite, we should, by default, pick the uniform probability
 distribution on $A$, assigning equal probabilities to all elements of $A$.
 However, $A$ can have an infinite cardinal,
 so we have to consider more general probabilities.
 
-In any case, since, as mentioned above, $A$ has multiple elements,
+In any case, since $A$ has multiple elements, and since, as mentioned above,
+if we split our universe in finite regions
+(i.e. cuboid of size, $1\;second \times meter^3$) then there will be
+at least two descriptions that each belong to an infinite number of regions,
 we can't reasonably expect to have one element with probability $1$.
 Then let $p_1<1$ be the probability of the description that we use for the
 cuboids around us.
@@ -1107,16 +1132,24 @@ with this description without observing any other description is\footnote{
 }
 $p_1^n$.
 
-Even if $p_1$ is very close to $1$, $p_1^n$ converges quickly to 0.
+Even if $p_1$ is very close to $1$, $p_1^n$ converges quickly to $0$.
 As an example, if $p_1=0.9$ then observing $n=70$ consecutive cuboids with
 the same description is enough to make $p_1^n$ go below one to one thousand
 odds, $n=140$ is enough to go below one to one million,
-$n=210$ goes below one to one billion.
+$n=210$ goes below one to one billion. However, let us consider that, say,
+Mars has a volume of more than $10^20 meter^3$, so, for each second
+in which it behaves according to the same laws of physics that work on
+Earth, it decreases the probability that our universe is not designed by a
+very large number\footnote{Using $p_1=0.9$ as before, for each second,
+it decreases the
+probability that our universe is not designed by more than $1$ to
+$10^(3*(10^18))$, that is a $1$ followed by $3*10^18$ zeros.}.
 
 Then, if we compare the non-design hypothesis
 with another one non-zero probability,
-almost always the consistency of a small spacetime region around us is enough
-to make the non-design hypothesis unlikely enough to disregard\footnote{
+almost always the consistency of a relatively small spacetime region around us
+is enough to make the non-design hypothesis unlikely enough to
+disregard\footnote{
   Let $ND$ be the hypothesis that our universe is not designed,
   $D$ be the hypothesis that it is designed, $\our_description$ be our
   universe's description,
