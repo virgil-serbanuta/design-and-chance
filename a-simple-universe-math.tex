@@ -483,7 +483,7 @@ predicate over real numbers, and any real number with a finite number
 of digits, like $12.5$, is peculiar. An object or predicate is generic if
 it is not peculiar.
 
-Axiom \ref{ax:zero} below specifies this in a more formal way.
+Axiom \ref{ax:zeroisgeneric} below specifies this in a more formal way.
 
 However, it might happen that, for some of the sets used in this \paper{},
 no reasonable probability distribution can be defined.
@@ -1137,13 +1137,13 @@ As an example, if $p_1=0.9$ then observing $n=70$ consecutive cuboids with
 the same description is enough to make $p_1^n$ go below one to one thousand
 odds, $n=140$ is enough to go below one to one million,
 $n=210$ goes below one to one billion. However, let us consider that, say,
-Mars has a volume of more than $10^20 meter^3$, so, for each second
+Mars has a volume of more than $10^{20} meter^3$, so, for each second
 in which it behaves according to the same laws of physics that work on
 Earth, it decreases the probability that our universe is not designed by a
 very large number\footnote{Using $p_1=0.9$ as before, for each second,
 it decreases the
 probability that our universe is not designed by more than $1$ to
-$10^(3*(10^18))$, that is a $1$ followed by $3*10^18$ zeros.}.
+$10^{3*(10^{18})}$, that is a $1$ followed by $3*10^{18}$ zeros.}.
 
 Then, if we compare the non-design hypothesis
 with another one non-zero probability,
@@ -1171,22 +1171,74 @@ Next, let us see hat happens if we assume the design hypothesis.
 \subsection{Design Probability}
 \label{sec:design-probability}
 
-\svn{merge with unknown designer's intent.}
-
 Let us examine the hypothesis that our universe is designed.
-Since, in this case, the way our world works would based
+Since, in this case, the way our world works would be based
 on the designer's intent,
 it is no longer obvious that, say, continuous probability distributions
 should be the default.
-On the other hand, do we actually have better options?
 
-How large is the the probability of having
-a large consistent time-space region when a designer is involved?
-Can we repeat the previous argument to draw the same conclusion, that
-the probability of observing our universe is vanishingly small?
+On the other hand, it is also not obvious that we have a better option.
+Objections to previous similar arguments include that,
+from a natural theology point of view, one can't
+know what the Designer wanted
+(e.g. one can't know that a universe designer would want to create
+a universe having life) \parencites{Sober2009}{Narveson2003}, so, by default,
+any argument showing that the probability of our universe is small
+if it's not designed would also show that the probability is small
+even if it is designed.
+To fix this, one would need an independent way to show that the Designer
+wanted the universe to have life \parencite{Sober2003}.
+In order for this paper's argument to work, one would actually need a weaker
+requirement, i.e. it would be enough to have a non-zero probability
+to the hypothesis that the Designer wanted the universe to have intelligent
+life.
 
-We can separate this probability in two: the probability that a designer
-would want rational beings\footnote{A designer could want a consistent universe
+This is also an interesting objection for this approach.
+If we can't assign a
+non-zero probability to this hypothesis, then this argument can't explain
+that the universe around us seems to be consistent.
+Instead, it would just point out how extremely odd it is to observe it.
+
+It would be possible to argue that we could make an analogy between us and
+an intelligent Designer of worlds, saying that we would find it interesting
+to create a world with intelligent beings in it, and that there is a chance,
+maybe not that high, but still greater than zero that this would also apply
+to the Designer.
+
+However, let us try an approach based on the same principles used everywhere
+else in this \paper{}.
+This argument will have the following structure:
+\begin{itemize}
+  \item The probability that a universe designed for intelligent beings
+        has a finite description is non-zero.
+  \item There is a good chance that a Designer would not have design two things
+        that are too similar.
+  \item There is a good chance that this means that the set of things that
+        may be designed (called purposes) is at most countable.
+  \item The set of similarity measures that is relevant for this paper is
+        countable.
+  \item There is a good (non-zero) chance that, for a similarity high enough,
+        any purpose which is "too similar" to the purpose where the designer
+        wants intelligent beings for their own sake, also involves intelligent
+        beings.
+  \item Combining all the above, there is a non-zero chance that a designer
+        would want to design a world at least in part for the intelligent
+        beings that would live in it.
+
+  \item TODO: Maybe include elsewhere: Given a similarity measure, and given a countable maximal set of purposes
+        (called choosable purposes) that are not too similar,
+        there are various ways of splitting the
+        full set of purposes in smaller sets (buckets) such that each set
+        contains exactly one choosable purpose, and each purpose in a bucket is
+        "too similar" to the choosable purpose in that bucket, and 
+\end{itemize}
+
+Let us start with what we want to estimate:
+how large is the the probability of having
+a large consistent time-space region when a Designer is involved?
+
+We can separate this probability in two: the probability that a Designer
+would want rational beings\footnote{A Designer could want a consistent universe
 region with a finite
 description without wanting intelligent beings, but this possibility is not
 analyzed in this paper}, denoted by $p_r$, and
@@ -1195,9 +1247,13 @@ those intelligent beings is consistent
 given that it was designed for them.
 
 I think it's safe to assume that the latter probability is positive,
-and, probably, fairly high. See as an example this quote from
+and, probably, fairly high. See as an example the following quote from
 \textcite{Swinburne2003}, which argues that, if God exists,
-there is a fairly good chance that humans can understand their universe:
+there is a fairly good chance that humans can understand their universe.
+The same argument can be applied to show that, if a Designer wanted
+rational beings, a large region of the universe around them is understandable
+(perhaps the entire universe), i.e. that region probably has a finite
+description.
 
 \begin{quote}
   So, in order to have significant freedom and responsibility, humans need
@@ -1218,6 +1274,156 @@ there is a fairly good chance that humans can understand their universe:
   exercise their capacities, and so there is an argument from our being thus
   situated to God.
 \end{quote}
+
+Next, let us note that the design and non-design cases
+have some differences.
+
+One such difference is that, for an intelligent Designer/Creator, what is being
+created corresponds, one way or another, to a purpose.
+To be consistent with
+the approach used in this \paper{}, let us assume that the set of possible
+purposes has at most the cardinality of real numbers, $\reale$. Certainly,
+the purposes that could be described in words, even if we use an infinite
+number of words, has this cardinality.
+
+There could be a number of universes with
+distinct descriptions for each purpose, but, since intelligence and design
+imply choice, we should not expect that each
+possible purpose is an actual purpose.
+It is reasonable to assume that, for each actual purpose,
+there were many similar purposes that were discarded when the actual one
+was choosen.
+
+If that is the case, we could ask ourselves two things:
+how large is the set of actual
+purposes, and whether one of them involves creating intelligent beings.
+
+I think it is hard to estimate the likelyhood of any of these, but, for the
+purpose of this \paper{}, it is probably good enough to show that, by default,
+we should assign a non-zero probability to both.
+
+First, let us note that, for real numbers, the similarity of two numbers
+is, most often, linked to the distance between them
+(usually the similarity is the inverse of the distance).
+Also, if we want to pick a subset of real numbers such that no two of them are
+closer than a given distance (i.e. no two numbers are too similar),
+then that subset is at most countable.
+
+It is not obvious that
+similarity between purposes works in the same way as similarity between
+real numbers, but I think there is a non-zero chance
+that if Designer does not choose purposes which are too similar,
+then the set of chosen purposes is at most countable.
+Arguably, that chance is fairly high.
+In the following we will implicitly focus only on the case when choosing
+non-similar purposes means that their set is at most countable.
+
+Given a countable set of purposes, we can (and should) assign by default
+a non-zero probability to all of them.
+
+However, we do not know what purposes would this set contain. But we can do
+something else: we can take any maximal set of purposes that are not too similar
+(maximal meaning that we can not add any other purpose to it without breaking
+the similarity constraint), and ask ourselves whether one of these
+purposes would involve creating rational beings.
+
+To do that, let us take a closer look at the similarity threshold.
+For any such threshold $t$,
+there will be a natural number $n$ such that the similarity threshold is between
+$n$ (exclusive) and $n+1$ (inclusive).
+Since the purposes that were chosen using $t$ as a threshold can also be chosen
+using $n+1$ as a threshold, in the following we will use only natural numbers
+as thresholds.
+
+Since the new set of possible similarity thresholds is countable,
+we should assign a non-zero probability to each of them.
+
+There is a possible purpose where the designer wants intelligent beings
+for their own sake, which I will call
+\ghilimele{the main intelligent beings purpose}.
+Given a similarity threshold
+high enough, there is a good chance that any purpose whose similarity to the
+main intelligent beings purpose is above that threshold will also involve
+intelligent beings.
+
+Given any maximal set of purposes that are not too similar, at least one
+of them (called $P$) will be \ghilimele{too similar} to the main intelligent
+beings purpose.
+As mentioned above, if the similarity threshold is high enough, then there is
+a good chance that $P$ involves intelligent beings.
+
+So far, we have a non-zero probability that the set of buckets is countable,
+a non-zero chance of choosing a purpose from the bucket with the main
+intelligent beings purpose, and a non-zero chance that this bucket contains
+only purposes involving intelligent beings.
+Then we have a non-zero overall chance of having a universe designed for
+intelligent beings.
+
+
+% Obviously, there are several purposes that involve
+% \ghilimele{rational beings}.
+% There are two reasons for not choosing one
+% of them: either the Designer did choose one or more purposes which were
+% too similar, so there was no point in choosing intelligent beings,
+% or the Designer was not interested in any pupose that involved intelligent
+% beings, and also not interested in any similar purpose.
+
+% Let us assume that there is a similarity threshold such that no two actual
+% purposes are more similar than that.
+% For any such threshold, we can split all possible purposes into disjoint
+% buckets such that all purposes in the same bucket are similar beyond that
+% threshold. As mentioned above, there is a non-zero
+% probability that we can get a set of buckets that is at most countable,
+% so let us examine this case in more detail.
+
+
+\svn{merge with unknown designer's intent.}
+
+% Let us examine the hypothesis that our universe is designed.
+% Since, in this case, the way our world works would be based
+% on the designer's intent,
+% it is no longer obvious that, say, continuous probability distributions
+% should be the default.
+% On the other hand, do we actually have better options?
+
+% How large is the the probability of having
+% a large consistent time-space region when a designer is involved?
+% Can we repeat the previous argument to draw the same conclusion, that
+% the probability of observing our universe is vanishingly small?
+
+% We can separate this probability in two: the probability that a designer
+% would want rational beings\footnote{A designer could want a consistent universe
+% region with a finite
+% description without wanting intelligent beings, but this possibility is not
+% analyzed in this paper}, denoted by $p_r$, and
+% the probability that the universe region containing
+% those intelligent beings is consistent
+% given that it was designed for them.
+
+% I think it's safe to assume that the latter probability is positive,
+% and, probably, fairly high. See as an example this quote from
+% \textcite{Swinburne2003}, which argues that, if God exists,
+% there is a fairly good chance that humans can understand their universe:
+
+% \begin{quote}
+%   So, in order to have significant freedom and responsibility, humans need
+%   at any time to be situated in a \ghilimele{space} in which there is a
+%   region of basic control and perception, and a wider region into which
+%   we can extend our perception and control by learning which of our
+%   basic actions and perceptions have which more distant effects and causes
+%   when we are stationary, and by learning which of our basic actions cause
+%   movement into which part of the wider region.
+%   If we are to learn which of our basic actions done where have which
+%   more distant effects (including which ones move us into which parts
+%   of the wider region), and which distant events will have which basically
+%   perceptible effects, the spatial world must be governed by laws of nature.
+%   For only if there are such regularities will there be recipes for changing
+%   things and recipes for extending knowledge that creatures can learn and
+%   utilize.
+%   So humans need a spatial location in a law governed universe in which to
+%   exercise their capacities, and so there is an argument from our being thus
+%   situated to God.
+% \end{quote}
 
 With that in mind, let us compare the probability that
 we observe consistency under the \ghilimele{design for intelligent beings},
@@ -1361,19 +1567,19 @@ all existing universes.
 \subsection{Unknown Designer's Intent}
 \label{sec:unknown-designer-intent}
 
-From a natural theology point of view, one can't
-know what the Designer wanted
-(e.g. one can't know that a universe designer would want to create
-a universe having life) \parencites{Sober2009}{Narveson2003}, so, by default,
-any argument showing that the probability of our universe is small
-if it's not designed would also show that the probability is small
-even if it is designed.
-To fix this, one would need an independent way to show that the Designer
-wanted the universe to have life \parencite{Sober2003}.
-In order for this paper's argument to work, one would actually need a weaker
-requirement, i.e. it would be enough to have a non-zero probability
-to the hypothesis that the Designer wanted the universe to have intelligent
-life.
+% From a natural theology point of view, one can't
+% know what the Designer wanted
+% (e.g. one can't know that a universe designer would want to create
+% a universe having life) \parencites{Sober2009}{Narveson2003}, so, by default,
+% any argument showing that the probability of our universe is small
+% if it's not designed would also show that the probability is small
+% even if it is designed.
+% To fix this, one would need an independent way to show that the Designer
+% wanted the universe to have life \parencite{Sober2003}.
+% In order for this paper's argument to work, one would actually need a weaker
+% requirement, i.e. it would be enough to have a non-zero probability
+% to the hypothesis that the Designer wanted the universe to have intelligent
+% life.
 
 This is an interesting objection for this approach.
 If we can't assign a
@@ -1388,65 +1594,65 @@ In this case we would be in the right setting for the argument presented in
 \cite{Swinburne2004}, which uses this consistency as an argument for God's
 existence.
 
-Returning to the objection, let us note that the design and non-design cases
-have some differences.
+% Returning to the objection, let us note that the design and non-design cases
+% have some differences.
 
-One difference is that, for an intelligent Designer/Creator, what is being
-created corresponds, one way or another, to a purpose.
-To be consistent with
-the approach used in this \paper{}, let us assume that the set of possible
-purpose has the same cardinality as the set of real numbers, $\reale$.
-We should expect a number of universes with
-distinct descriptions for each purpose, but we should not expect that each
-possible purpose is an actual purpose.
-Given that intelligence and design
-both imply choice, I think we should assume that, for each actual purpose,
-there were many similar purposes that were discarded when the actual one
-was choosen.
+% One difference is that, for an intelligent Designer/Creator, what is being
+% created corresponds, one way or another, to a purpose.
+% To be consistent with
+% the approach used in this \paper{}, let us assume that the set of possible
+% purpose has the same cardinality as the set of real numbers, $\reale$.
+% We should expect a number of universes with
+% distinct descriptions for each purpose, but we should not expect that each
+% possible purpose is an actual purpose.
+% Given that intelligence and design
+% both imply choice, I think we should assume that, for each actual purpose,
+% there were many similar purposes that were discarded when the actual one
+% was choosen.
 
-So then we could ask ourselves two things: how large is the set of actual
-purposes, and whether one of them involves creating intelligent beings.
+% So then we could ask ourselves two things: how large is the set of actual
+% purposes, and whether one of them involves creating intelligent beings.
 
-I think it's hard to estimate the likelyhood of any of these, but, for the
-purpose of this \paper{}, it's probably good enough to show that, by default,
-we should assign a non-zero probability to both.
+% I think it's hard to estimate the likelyhood of any of these, but, for the
+% purpose of this \paper{}, it's probably good enough to show that, by default,
+% we should assign a non-zero probability to both.
 
-First, let us note that, for real numbers, the similarity of two numbers
-is usually linked to the distance between them
-(i.e. it's the inverse of the distance).
-So, if we are given a
-non-zero distance (i.e. a non-infinite similarity) between real numbers,
-and we want to pick a subset of real numbers such that no two numbers are
-too similar, then that subset is at most countable.
+% First, let us note that, for real numbers, the similarity of two numbers
+% is usually linked to the distance between them
+% (i.e. it's the inverse of the distance).
+% So, if we are given a
+% non-zero distance (i.e. a non-infinite similarity) between real numbers,
+% and we want to pick a subset of real numbers such that no two numbers are
+% too similar, then that subset is at most countable.
 
-It is not obvious that
-similarity between purposes works in the same way as similarity between
-real numbers, but I think there is a non-zero chance
-that if Designer does not choose purposes which are too similar,
-then their set is at most countable.
-Arguably, that chance is fairly high.
+% It is not obvious that
+% similarity between purposes works in the same way as similarity between
+% real numbers, but I think there is a non-zero chance
+% that if Designer does not choose purposes which are too similar,
+% then their set is at most countable.
+% Arguably, that chance is fairly high.
 
-Given a countable set of options, we can (and should) assign by default
-a non-zero probability to all options.
+% Given a countable set of options, we can (and should) assign by default
+% a non-zero probability to all options.
 
-Second, let us take a look at the probability that a Designer would want to
-create intelligent beings.
+% Second, let us take a look at the probability that a Designer would want to
+% create intelligent beings.
 
-Obviously, there are several purposes that involve
-\ghilimele{intelligent beings}.
-There are two reasons for not choosing one
-of them: either the Designer did choose one or more purposes which were
-too similar, so there was no point in choosing intelligent beings,
-or the Designer was not interested in any pupose that involved intelligent
-beings, and also not interested in any similar purpose.
+% Obviously, there are several purposes that involve
+% \ghilimele{intelligent beings}.
+% There are two reasons for not choosing one
+% of them: either the Designer did choose one or more purposes which were
+% too similar, so there was no point in choosing intelligent beings,
+% or the Designer was not interested in any pupose that involved intelligent
+% beings, and also not interested in any similar purpose.
 
-Let us assume that there is a similarity threshold such that no two actual
-purposes are more similar than that.
-For any such threshold, we can split all possible purposes into disjoint
-buckets such that all purposes in the same bucket are similar beyond that
-threshold. As mentioned above, there is a non-zero
-probability that we can get a set of buckets that is at most countable,
-so let us examine this case in more detail.
+% Let us assume that there is a similarity threshold such that no two actual
+% purposes are more similar than that.
+% For any such threshold, we can split all possible purposes into disjoint
+% buckets such that all purposes in the same bucket are similar beyond that
+% threshold. As mentioned above, there is a non-zero
+% probability that we can get a set of buckets that is at most countable,
+% so let us examine this case in more detail.
 
 If this set is countable, then for any bucket there is a non-zero chance that
 the Designer will pick a purpose from it, so there is a non-zero chance that
