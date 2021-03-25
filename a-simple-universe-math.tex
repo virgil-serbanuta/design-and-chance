@@ -1,5 +1,5 @@
 \documentclass[a4paper
-%,draft
+,draft
 ]{article}
 
 \usepackage{amsmath}
@@ -128,18 +128,22 @@ theories (called \ghilimele{descriptions}) that these beings could use to predic
 We allow both deterministic and non-deterministic universes.
 
 Section \ref{sec:possible-universes} introduces these notions in a more
-rigourous way, together with some of reasoning behind them.
+rigourous way, together with some of the reasoning behind them.
 
-Just defining these notions is not enough,
+Section \ref{sec:options} presents
+the main issues discussed in this paper.
+
+Just defining the notions presented in section \ref{sec:possible-universes}
+is not enough,
 we also need to make some assumptions about our universe and about
-the link between reality and mathematics.
+the link between mathematical theories and reality.
 
-First, we specify what it means to observe events with probability $0$ From
-a set large enough, generalizing this to the case when there is no probability
+First, we specify what it means to observe events with probability $0$,
+generalizing this to the case when there is no probability
 modelling how we observe the event.
-Next, we specify that our universe can be modelled by a finite-dimensional
+Next, we assume that our universe can be modelled by a finite-dimensional
 space based on the real numbers, or by something close to that.
-We also specify that it is possible to approximate the behaviour of the space
+We also assume that it is possible to approximate the behaviour of the space
 around us, which is isotropic enough.
 We also need to assume that the set of possible universe descriptions
 is large enough, i.e. it has the same size as the set of real numbers.
@@ -168,16 +172,16 @@ explanation, and so on, until we get an infinite chain of meta-universes.
 But this chain would also need an explanation, so perhaps there is a
 meta-infinity universe that explains it.
 Since this meta-infinity universe would also need an explanation, we can
-continue this process for quite a while before it breaks,
+continue this process for quite a while,
 which makes these meta-universes also unplausible.
 
 This means that, if our universe is not designed, then it will not behave
 according to simple laws, and, in principle, we should be able to notice it.
 However, with our current travelling means, we can observe only a limited
-part of our entire universe, so, perhaps, we live in a bubble that covers
+part of our entire universe, so it is possible that we live in a bubble covering
 a large amount of time and space, in which simple laws apply.
 
-If that's the case, our universe is still unlikely among all universes
+Even if that is the case, our universe is still unlikely among all universes
 containing such bubbles, because our bubble is much larger than it needs to
 be.
 A conservative estimation produces a probability so low for our universe,
@@ -189,15 +193,13 @@ non-design case.
 
 Section \ref{sec:valid-options} describes this argument in detail.
 
-Section \ref{sec:options} presents
-the main issues discussed in this paper.
-
 Section \ref{sec:objections} presents some clarifications and possible
 answers to various objections to this paper.
 Section \ref{sec:conclusion} presents this \paper{}'s argument conclusion.
 
 This \paper{} uses some mathematical notions related to set cardinalities,
-probabilities and ordinals, which can be found in, e.g., \svn{quote}.
+probabilities and ordinals, which can be found in, e.g.,
+\textcite{sep-set-theory} and \svn{quote}TODO.
 These are summarized in \ref{sec:background}, together with some properties
 derived from them.
 
@@ -429,7 +431,7 @@ If the level of approximation is obvious from the context, we will call
 this canonical description \definitie{the universe's description}
 or the \definitie{universe region's description}.
 
-One could also use a well-ordering on the real numbers to choose the
+One could also use a well-ordering on the set of real numbers to choose the
 lowest description as the universe's description, but that would
 complicate things without any benefit.
 
@@ -767,7 +769,7 @@ and to falsify them, but we will also take a look at created universes.
 
 \textcite[][Section \ghilimele{Why a world with human bodies is unlikely
 if there is no God}]{Swinburne2003} comes sort of close to the argument
-presented here, but while \citeauthor{Swinburne2003}
+presented here, but while he
 argues that human bodies are unlikely, I am arguing that, in the context
 of all possible universes that could have human-like beings,
 our universe is extremely unlikely unless a Designer intended it,
@@ -777,9 +779,9 @@ Since the existence of human bodies is not directly related to the subject
 of this \paper{}, I will not discuss that section more
 than it is strictly needed.
 
-Note that  \citeauthor{Swinburne2003} says that individual sets of laws
+Note that \textcite{Swinburne2003} says that individual sets of laws
 have non-zero probability while I'm claiming that their probability is $0$.
-It seems to me that \citeauthor{Swinburne2003} implicitly assumes that
+It seems to me that this paper implicitly assumes that
 such a set has a finite number of laws, while I am explicitly removing
 that constraint, so both can be right within their contexts.
 
@@ -1204,6 +1206,8 @@ an intelligent Designer of worlds, saying that we would find it interesting
 to create a world with intelligent beings in it, and that there is a chance,
 maybe not that high, but still greater than zero that this would also apply
 to the Designer.
+Given how unlikely it is to live in a non-designed universe, this may be
+a fairly attractive option.
 
 However, let us try an approach based on the same principles used everywhere
 else in this \paper{}.
@@ -1224,13 +1228,6 @@ This argument will have the following structure:
   \item Combining all the above, there is a non-zero chance that a designer
         would want to design a world at least in part for the intelligent
         beings that would live in it.
-
-  \item TODO: Maybe include elsewhere: Given a similarity measure, and given a countable maximal set of purposes
-        (called choosable purposes) that are not too similar,
-        there are various ways of splitting the
-        full set of purposes in smaller sets (buckets) such that each set
-        contains exactly one choosable purpose, and each purpose in a bucket is
-        "too similar" to the choosable purpose in that bucket, and 
 \end{itemize}
 
 Let us start with what we want to estimate:
@@ -1359,133 +1356,37 @@ only purposes involving intelligent beings.
 Then we have a non-zero overall chance of having a universe designed for
 intelligent beings.
 
-
-% Obviously, there are several purposes that involve
-% \ghilimele{rational beings}.
-% There are two reasons for not choosing one
-% of them: either the Designer did choose one or more purposes which were
-% too similar, so there was no point in choosing intelligent beings,
-% or the Designer was not interested in any pupose that involved intelligent
-% beings, and also not interested in any similar purpose.
-
-% Let us assume that there is a similarity threshold such that no two actual
-% purposes are more similar than that.
-% For any such threshold, we can split all possible purposes into disjoint
-% buckets such that all purposes in the same bucket are similar beyond that
-% threshold. As mentioned above, there is a non-zero
-% probability that we can get a set of buckets that is at most countable,
-% so let us examine this case in more detail.
-
-
-\svn{merge with unknown designer's intent.}
-
-% Let us examine the hypothesis that our universe is designed.
-% Since, in this case, the way our world works would be based
-% on the designer's intent,
-% it is no longer obvious that, say, continuous probability distributions
-% should be the default.
-% On the other hand, do we actually have better options?
-
-% How large is the the probability of having
-% a large consistent time-space region when a designer is involved?
-% Can we repeat the previous argument to draw the same conclusion, that
-% the probability of observing our universe is vanishingly small?
-
-% We can separate this probability in two: the probability that a designer
-% would want rational beings\footnote{A designer could want a consistent universe
-% region with a finite
-% description without wanting intelligent beings, but this possibility is not
-% analyzed in this paper}, denoted by $p_r$, and
-% the probability that the universe region containing
-% those intelligent beings is consistent
-% given that it was designed for them.
-
-% I think it's safe to assume that the latter probability is positive,
-% and, probably, fairly high. See as an example this quote from
-% \textcite{Swinburne2003}, which argues that, if God exists,
-% there is a fairly good chance that humans can understand their universe:
-
-% \begin{quote}
-%   So, in order to have significant freedom and responsibility, humans need
-%   at any time to be situated in a \ghilimele{space} in which there is a
-%   region of basic control and perception, and a wider region into which
-%   we can extend our perception and control by learning which of our
-%   basic actions and perceptions have which more distant effects and causes
-%   when we are stationary, and by learning which of our basic actions cause
-%   movement into which part of the wider region.
-%   If we are to learn which of our basic actions done where have which
-%   more distant effects (including which ones move us into which parts
-%   of the wider region), and which distant events will have which basically
-%   perceptible effects, the spatial world must be governed by laws of nature.
-%   For only if there are such regularities will there be recipes for changing
-%   things and recipes for extending knowledge that creatures can learn and
-%   utilize.
-%   So humans need a spatial location in a law governed universe in which to
-%   exercise their capacities, and so there is an argument from our being thus
-%   situated to God.
-% \end{quote}
-
-With that in mind, let us compare the probability that
-we observe consistency under the \ghilimele{design for intelligent beings},
-\ghilimele{design without intelligent beings in mind} and
-\ghilimele{no design} hypotheses.
-
-If the probability that a
-designer would want rational beings, $p_r$, is $0$, then we can't
-differentiate the design and non-design cases, and the
-the probability of observing our world's consistency is the same
-for both.
-
-However, if $p_r$ is non-zero, then the
-the probability of observing our world's consistency becomes larger in the
-design case, since $p_r$ is providing some ammount of support for that
-hypothesis.
-
-Oversimplifying a bit, and assuming that the probability of having consistency
-is large if the universe was designed for intelligent beings,
-the ammount of support would
-be roughly equal to the ratio between $p_r$ and the probability of observing
-our world's consistency in the non-design case.
-
-Since observing consistency without design has an extremely
-small probability,
-having almost any non-zero probability for
-\ghilimele{a designer of worlds would want rational beings} would provide
-overhelming support for the design hypothesis.
-As an example, a probability
-of $1$ in one billion billion would easily be large enough.
-
-From a natural theology point of view, one may argue for a higher design
-probability through analogy with our own intents: we would be interested
-in intelligent beings, it seems to us that intelligent beings would be
-interested in other intelligent beings, so maybe the Designer would be
-interested in creating other intelligent beings.
-
-How much is this analogy worth?
-It's hard to tell, but, on the other hand, our options are:
-
-\begin{itemize}
-  \item Our universe is not designed,
-        and the probability of observing the
-        consistency that we see around us is vanishingly small.
-  \item Our universe is designed, but the above analogy does not work and
-        peculiar descriptions still have a zero probability.
-        Again, the probability of observing the
-        consistency that we see around us would be vanishingly small.
-  \item The probability that the above analogy works is not vanishingly small,
-        and we are observing the consistency that we would expect from a
-        universe designed for intelligent beings.
-\end{itemize}
-For completeness, the first two options are valid only under the additional
-assumption mentioned earlier:
-for a given approximation level, in a universe that has intelligent life,
-the set of possible approximate descriptions for a finite cuboid
-must have a lower cardinality than $\reale$.
-
-It seems to me that the only reasonable option is that the analogy is not as
-bad as some people may think it is.
-
 \svn{5. Use Swinburne's argument about why would God create human-like beings.}
+
+\svn{Second, a good question is whether, in a designed world, intelligent beings
+would be able to identify this design by looking at their world.
+TODO: citation to whoever talked about this previously.
+If the intelligent beings would see many things that they design, they
+may be able to identify something as being designed by them.
+However, when they observe their world, they only see one thing that may or
+may not be designed, so they may not have enough experience to identify designed
+worlds.
+However, if the Designer's purpose was to create intelligent beings,
+i.e. they are not just an accident, then there's some chance that the
+things they design are analogous enough with some of the things the Designer
+designs that they would be able to figure that out. TODO: rephrase.
+}
+
+\svn{
+  Did I say this somewhere else?
+
+  If the Designer intends to create intelligent beings, then the Designer will
+create a universe for them.
+As argued in \cite{Swinburne2004},
+it's very likely that this universe is, indeed, consistent on a large scale.
+But if there is a non-zero probability of observing
+consistency around us, then there is a non-zero probability of observing
+an universe like ours.
+}
+
+\svn{
+  TODO: Why does non-zero consistency imply non-zero probability for our universe?
+}
 
 \section{Objections and Clarifications}
 \label{sec:objections}
@@ -1536,9 +1437,7 @@ chance? To be more precise,
 how large is the time-space region whose consistency is required? Well,
 perhaps at very distant times in the past, the consistent region included
 the entire observable universe, but, right now, there is no reason to require
-full consisency outside of Earth's orbit. Even more, since non-consistency
-only means
-observable non-consistency, and does not require something wildly different,
+full consistency outside of Earth's orbit. Even more,
 it's likely that we don't even need full consistency inside of Earth's orbit.
 
 However, as far as we know, our solar system is consistent, our galaxy is
@@ -1553,7 +1452,7 @@ implausibly consistent ones.
 
 While this is correct, the probability of an intelligent being
 living in a fully consistent universe is still $0$.
-In virtually all universes the nonhomogeneity of the universe would be
+In almost all universes the nonhomogeneity of the universe would be
 easily observable, meaning that, for the relatively few intelligent beings
 living in the other universes, as long as the design hypothesis
 has some plausibility, it would be unreasonable to think that
@@ -1561,25 +1460,12 @@ their universe is not designed (assuming that the argument presented in
 this \paper{} is correct).
 
 Also, observing a large consistent region of space is still very unlikely among
-all existing universes.
-
+all existing universes. TODO: Delete?
 
 \subsection{Unknown Designer's Intent}
 \label{sec:unknown-designer-intent}
 
-% From a natural theology point of view, one can't
-% know what the Designer wanted
-% (e.g. one can't know that a universe designer would want to create
-% a universe having life) \parencites{Sober2009}{Narveson2003}, so, by default,
-% any argument showing that the probability of our universe is small
-% if it's not designed would also show that the probability is small
-% even if it is designed.
-% To fix this, one would need an independent way to show that the Designer
-% wanted the universe to have life \parencite{Sober2003}.
-% In order for this paper's argument to work, one would actually need a weaker
-% requirement, i.e. it would be enough to have a non-zero probability
-% to the hypothesis that the Designer wanted the universe to have intelligent
-% life.
+TODO: Delete and move things somewhere else.
 
 This is an interesting objection for this approach.
 If we can't assign a
@@ -1593,121 +1479,6 @@ smaller with each passing second, which would be fairly similar).
 In this case we would be in the right setting for the argument presented in
 \cite{Swinburne2004}, which uses this consistency as an argument for God's
 existence.
-
-% Returning to the objection, let us note that the design and non-design cases
-% have some differences.
-
-% One difference is that, for an intelligent Designer/Creator, what is being
-% created corresponds, one way or another, to a purpose.
-% To be consistent with
-% the approach used in this \paper{}, let us assume that the set of possible
-% purpose has the same cardinality as the set of real numbers, $\reale$.
-% We should expect a number of universes with
-% distinct descriptions for each purpose, but we should not expect that each
-% possible purpose is an actual purpose.
-% Given that intelligence and design
-% both imply choice, I think we should assume that, for each actual purpose,
-% there were many similar purposes that were discarded when the actual one
-% was choosen.
-
-% So then we could ask ourselves two things: how large is the set of actual
-% purposes, and whether one of them involves creating intelligent beings.
-
-% I think it's hard to estimate the likelyhood of any of these, but, for the
-% purpose of this \paper{}, it's probably good enough to show that, by default,
-% we should assign a non-zero probability to both.
-
-% First, let us note that, for real numbers, the similarity of two numbers
-% is usually linked to the distance between them
-% (i.e. it's the inverse of the distance).
-% So, if we are given a
-% non-zero distance (i.e. a non-infinite similarity) between real numbers,
-% and we want to pick a subset of real numbers such that no two numbers are
-% too similar, then that subset is at most countable.
-
-% It is not obvious that
-% similarity between purposes works in the same way as similarity between
-% real numbers, but I think there is a non-zero chance
-% that if Designer does not choose purposes which are too similar,
-% then their set is at most countable.
-% Arguably, that chance is fairly high.
-
-% Given a countable set of options, we can (and should) assign by default
-% a non-zero probability to all options.
-
-% Second, let us take a look at the probability that a Designer would want to
-% create intelligent beings.
-
-% Obviously, there are several purposes that involve
-% \ghilimele{intelligent beings}.
-% There are two reasons for not choosing one
-% of them: either the Designer did choose one or more purposes which were
-% too similar, so there was no point in choosing intelligent beings,
-% or the Designer was not interested in any pupose that involved intelligent
-% beings, and also not interested in any similar purpose.
-
-% Let us assume that there is a similarity threshold such that no two actual
-% purposes are more similar than that.
-% For any such threshold, we can split all possible purposes into disjoint
-% buckets such that all purposes in the same bucket are similar beyond that
-% threshold. As mentioned above, there is a non-zero
-% probability that we can get a set of buckets that is at most countable,
-% so let us examine this case in more detail.
-
-If this set is countable, then for any bucket there is a non-zero chance that
-the Designer will pick a purpose from it, so there is a non-zero chance that
-the Designer will pick from a bucket containing an
-\ghilimele{intelligent beings} purpose.
-
-There is a possible purpose where the designer wants intelligent beings
-for their own sake, which I will call
-\ghilimele{the main intelligent beings purpose}.
-If we make the similarity threshold
-high enough, then there's a good chance that the bucket containing
-this purpose, will contain only purposes involving intelligent beings.
-If that's the case, then we
-have a non-zero probability that the set of buckets is countable, and a
-non-zero chance of choosing the bucket with the main intelligent beings purpose,
-so we have a non-zero overall chance of having a universe designed for
-intelligent beings.
-
-Even if we can't get a bucket containing only intelligent beings purposes,
-if the threshold is high enough, there's a (low, but non-zero) chance that
-any purpose in an intelligent beings bucket
-(todo: use more reasonable terms or define them)
-will be similar enough that it will result in a universe similar to one
-designed for intelligent beings.
-
-
-\svn{Second, a good question is whether, in a designed world, intelligent beings
-would be able to identify this design by looking at their world.
-TODO: citation to whoever talked about this previously.
-If the intelligent beings would see many things that they design, they
-may be able to identify something as being designed by them.
-However, when they observe their world, they only see one thing that may or
-may not be designed, so they may not have enough experience to identify designed
-worlds.
-However, if the Designer's purpose was to create intelligent beings,
-i.e. they are not just an accident, then there's some chance that the
-things they design are analogous enough with some of the things the Designer
-designs that they would be able to figure that out. TODO: rephrase.
-}
-
-\svn{
-  Did I say this somewhere else?
-
-  If the Designer intends to create intelligent beings, then the Designer will
-create a universe for them.
-As argued in \cite{Swinburne2004},
-it's very likely that this universe is, indeed, consistent on a large scale.
-But if there is a non-zero probability of observing
-consistency around us, then there is a non-zero probability of observing
-an universe like ours.
-}
-
-\svn{
-  TODO: Why does non-zero consistency imply non-zero probability for our universe?
-}
 
 \subsection{Few Universes Exist}
 \label{sec:fewuniverses}
@@ -1743,15 +1514,15 @@ so we can safely assume that this is not the case.
 Without the continuum hypothesis, the cardinality of the set of descriptions
 can also be somewhere between countable and the cardinality of the real numbers.
 If so, then, by default, we should still use continuous
-probability distributions over the set of descriptions.
-If that does not seem good enough, then
-the set of discontinuities would still be at most countable and,
+probability distributions over the set of descriptions, so the same conclusions
+would hold.
+The set of discontinuities would still be at most countable and,
 following the same line of reasoning as the main argument, the discontinuities
 should be generic.
-Peculiar non-continuous events would require some explanation,
+Peculiar non-continuous events would still require some explanation,
 which can be provided by a Designer.
 
-This means that, if we replace the set of real numbers by a set whose
+To be specific, if we replace the set of real numbers by a set whose
 cardinality is above countable, but at most that of the real numbers
 in axioms \ref{ax:zeroisgeneric}, \ref{ax:noprobability} and
 \ref{ax:uncountable}, the argument should still work.
