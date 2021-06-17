@@ -118,13 +118,13 @@ a Designer intended it, and, even more, probably the
 Designer wanted to design for human-like beings.
 
 In order to show this, we first need to specify what would count as an universe.
-This is a difficult question, but, fortunately, this paper's argument also works
-if we only take into account only a subset of all posssible universes that
-satisfies certain constraints.
-In particular, these universes should be able to sustain intelligent beings,
+This is a difficult question in general, but, fortunately, this paper's argument
+also works if we take into account only a subset of all posssible universes.
+In particular, we only need to take into account universes that are able
+to sustain intelligent beings,
 and, assuming that they contain intelligent beings, there should be mathematical
-theories (called \ghilimele{descriptions}) that these beings could use to predict
-(either fully, or as an approximation) how their univers behaves.
+theories (called \ghilimele{descriptions}) that these beings could use to
+predict (either fully, or as an approximation) how their univers behaves.
 We allow both deterministic and non-deterministic universes.
 
 Section \ref{sec:possible-universes} introduces these notions in a more
@@ -184,7 +184,7 @@ a large amount of time and space, in which simple laws apply.
 Even if that is the case, our universe is still unlikely among all universes
 containing such bubbles, because our bubble is much larger than it needs to
 be.
-A conservative estimation produces a probability so low for our universe,
+A conservative estimate produces a probability so low for our universe,
 that almost any other explanation is preferable.
 
 It's harder to estimate the same probabilities when there is a Designer, but
@@ -324,7 +324,7 @@ Any such universe is, for the purpose of this paper, a conceivable universe.
 To keep the exposition simple, in the following I will use
 \ghilimele{the state of the universe at a given moment in time},
 but one should replace it with one's favourite alternative concept, e.g.
-with \ghilimele{the past of a hyperplane whose points only have spacelike
+with \ghilimele{the state of a hyperplane whose points only have spacelike
 intervals between them}.
 
 Let us define a \definitie{universe description} to be a
@@ -333,7 +333,8 @@ a set of axioms which is at most countable and which allows making
 predictions about the future state of the universe given its state
 at a certain moment in time. A \definitie{universe region description}
 is something similar, but only for a given space-time region of a universe,
-with extra axioms to take into account the boundary conditions when predicting.
+with extra axioms to take into account interactions with the rest of the
+universe (e.g. by using the state of the region boundary when predicting).
 In the best case, for a deterministic universe, there might exist
 a description which allows one to correctly predict the entire future state
 given the state at any moment in time, but a universe description
@@ -349,7 +350,8 @@ We don't know if the state of the universe at a given moment in time is one of
 those things, although we could restrict our descriptions to ones where this
 is possible, at least up to a reasonable level.
 Regardless, let us use a different meaning: a theory predicts something if
-that something is true in all models of that theory.
+that something is true in all mathematical models of that theory (i.e. all
+sets is which the theory's axioms are satisfied).
 
 Note that usually the data available for making predictions is dependent
 on who is making the prediction. As an example, if we assume that
@@ -375,7 +377,7 @@ I.e. although we
 will talk about universes and their descriptions, we'll actually mean
 (universe, intelligent-being-kind) pairs and their corresponding descriptions.
 
-Next, let us try to specify how good an univese description
+Next, let us try to specify how good a universe description
 should be. First, predictions speak about the future, but expecting to
 predict everything until the end of the universe (if any) may not be
 reasonable. We may want to fix an amount of time $\Delta t$,
@@ -413,8 +415,8 @@ and we would know the laws of the universe perfectly, as long as we don't know
 the full current state of the universe.
 However, high precision predictions may be possible for a deterministic
 universe if the full state
-is taken into account and, as we mentioned, we assume that we know the full
-state of the universe at a moment in time when making predictions.
+is taken into account and, as mentioned, we assume that we know that full
+state when making predictions.
 
 For a given universe or region of a universe,
 given a level of approximation, we will pick a canonical description
@@ -443,14 +445,7 @@ the following issues:
 \begin{itemize}
   \item Our universe is designed or not.
   \item Our universe has a finite or infinite description.
-  \item Option 1: There is a meta-$\beta$ universe for each countable ordinal
-        $\beta$ such that our universe is the meta-$0$ one and the meta-$\beta$
-        universe includes, directly or not, all meta-$\alpha$ universes with
-        $\alpha < \beta$.
-        Option 2: there is an ordinal $\beta$, possibly $1$,
-        where this stops being the case.
-
-        Whether there is an uncountable chain of meta-universes, in which
+  \item There is an uncountable chain of meta-universes, in which
         our universe is the first one, and in which any meta-universe
         includes, directly or not, all the previous ones.
   \item The set of possible descriptions for a finite chunk of space-time
@@ -462,12 +457,13 @@ the following issues:
 \label{sec:axioms}
 
 \subsection{Observing Events}
-In the main argument we will try to use the fact that we are observing our
-universe, and the laws describing its behaviour are one element picked from
-a very large set, a set having the same cardinality as the set of real numbers.
+In the main argument we will try to use the fact that the set of laws describing
+the behaviour of our universe is a member of a large set of universe
+descriptions, a set large enough to have the same cardinality as the set of
+real numbers.
 
-The most natural probability distributions over real numbers
-or over sets with the same cardinality are the continuous
+For sets with the same cardinality as real numbers,
+the most natural probability distributions are the continuous
 ones, i.e. probabilities for which any element of the set has probability $0$.
 Practically, this means that we would lose any bet which we would make on an
 single element of the set.
@@ -678,7 +674,8 @@ of space in which one travels).
 
 So we could then try to take all hypothetical universes with infinite space
 or time, and we could split them in an infinite number of regions. If we take
-all ways of having different enough laws for these regions,
+all ways of having sets of laws (descriptions) which are different enough
+for these regions,
 we get a set of universes whose set of descriptions has the same cardinality
 as the set of real numbers and which fulfills all conditions of the axiom
 above except the last one.
@@ -795,7 +792,7 @@ having a relatively simple approximate description.
 In this section we will try to see how plausible it is that this description
 (or any finite description that still approximates what we see around us)
 applies to the entire universe, not only the space and time around us.
-To do that, we will note that a finite description is peculiar,
+To do that, we will first note that a finite description is peculiar,
 which means that there is no chance of
 us observing it both in the case when we use a continuous probability
 distribution over universes (axiom \ref{ax:zeroisgeneric}),
@@ -811,8 +808,7 @@ one of these discontinuities, then its probability is still $0$, which,
 from axiom \ref{ax:zeroisgeneric}, means that it's still generic.
 
 However, if our universe is not designed, then we don't normally have any
-reason for
-using a discontinuous probability distribution.
+reason for using a discontinuous probability distribution.
 For many people this may be, enough to
 show that any approximate description for our universe's description is
 infinite, and it should settle at least the case when this probability
@@ -825,19 +821,19 @@ and that our universe's description is such a discontinuity.
 
 First, we can ask ourselves why is there a probability distribution over
 universe descriptions.
-A probability distribution means that which universes exist and which do not
-is not completely chaotic, there is a minimal amount of order among them.
+A probability distribution means that which universes exist and which do not,
+and how many of each type exist, is not completely chaotic,
+i.e. there is a minimal amount of order among them.
 We will call this order a \ghilimele{meta-universe}, and we will say that
-this meta-universe includes ours, but keep in mind that the intuition that
-many have about a meta-universe is something more complex than just
+this meta-universe includes ours, but keep in mind that the usual intuition
+is that a meta-universe is something more complex than just
 a minimal amount of order.
 On the other hand, the most natural explanation for this order
 that does not involve design is an actual
 meta-universe, which may contain many other universes besides ours.
 To put this entire paragaph in other words, the probability distribution over
 universe descriptions is something determined by something we will call
-a \ghilimele{meta-universe}, which includes
-our universe.
+a \ghilimele{meta-universe}, which includes our universe.
 
 Now we have something that explains this probability distribution, which,
 as mentioned above, is not continuous.
@@ -848,10 +844,11 @@ what we should expect from these discontinuities, and what kind of probability
 distribution it would be.
 
 The set of discontinuities for a probability distribution is at most countable
-(TODO: reference), so, if they are described by a continuous probability
+(see section \ref{sec:probabilities}), so, if they are described by a
+continuous probability
 distribution, or if there is no such probability distribution, we would
-expect them to be generic. Since our universe's description is one of them,
-then it should be generic.
+expect them to be generic.
+Since our universe's description is one of them, then it should be generic.
 
 However, as above, we can try to explain a peculiar universe description
 using a discontinuous probability distribution over discontinuities,
@@ -892,7 +889,7 @@ We will call this the $\omega + 1$ meta-universe.
 In the same way, we need meta-universes corresponding to $\omega + 2$,
 $\omega + 3$, and so on.
 I.e., we get another infinite chain of meta-universes, which also needs an
-explanation, which shoudl be provided by another meta-universe, including this
+explanation, which should be provided by another meta-universe, including this
 second chain. We will call it the $\omega + \omega$ meta-universe
 or the $2\omega$ meta-universe.
 But this new meta-universe still needs an explanation,
@@ -917,7 +914,9 @@ observe generic discontinuities, or we expect to find yet another meta-universe
 above everything that we observed so far.
 
 This construction corresponds to ordinals, see (TODO: ref) to find out more.
-The process will break at the first uncountable ordinal.
+The process will break at the first uncountable ordinal (let us call it
+$\omega_1$), since we would make
+uncountable many observations, one for each ordinal between $0$ and $\omega_1$.
 
 So, in order for our universe description to have a chance to be finite,
 we have to postulate a fairly improbable and complicated configuration
@@ -926,13 +925,13 @@ in itself, does not seem reasonable.
 However, even if we postulate that, let us note that it is also unreasonable
 to ask that any of these probability distributions has a probability of $1$
 for our universe's description, and that, in this entire construction,
-the probability of our universe description can be obtaine by multiplying the
+the probability of our universe description can be obtained by multiplying the
 probabilities in each meta-universe.
 
 It may be difficult to multiply an uncountable set of numbers, but,
 since these numbers are between $0$ and $1$, then whatever value we should
 assign to their product,
-it should be at most the product of any countable subset.
+it should be at less or equal than the product of any countable subset.
 
 If a countable subset of probabilities are all below a certain threshold,
 say, $0.9$, then multiplying them produces $0$, which, again, would mean
@@ -940,12 +939,15 @@ that our universe's description is generic. To have a chance of having
 a peculiar description, for any threshold less that $1$, there should be at
 most a finite number of probabilities less than it.
 
-But we can take a countable sequence of thresholds such that any number less
-than $1$ is also less than almost all such thresholds, e.g.
-$0.9$, $0.99$, $0.999$, \dots. But since all of them have only a finite number
-of probabilities below, this means that the set of probabilities which are
-below at least one of them is countable. But this means that the set of
-probabilities which are not $1$ is countable. Also, since the entire set of
+Let us take take a countable sequence of thresholds, e.g.
+$0.9$, $0.99$, $0.999$, \dots, each of which has a finite number of
+probabilities less than it.
+If we take all of the probabilities which are below at least
+one such threshold together, we will get a countable set.
+But note that each number less than $1$ is below at least one such threshold,
+which means that the set of
+probabilities which are not $1$ is countable.
+Also, since the entire set of
 probabilities is uncountable, we must have an uncountable set of distributions
 for which our universe description has probability $1$.
 
@@ -955,8 +957,10 @@ the probability of that description should be greater than $0$, but does not say
 anything about the probability itself,
 so we should expect these probabilities to
 be distributed in a random way, perhaps uniformly distributed between $0$ and
-$1$. This means that it is completely implausible to have almost only $1$
-probabilities. It is also completely implausible that, when looking at the
+$1$.
+This means that it is completely implausible to have almost only $1$
+probabilities.
+It is also completely implausible that, when looking at the
 probabilities which are not $1$, for any threshold below $1$, only a finite
 number are below that threshold.
 
@@ -1072,7 +1076,7 @@ as in section \ref{fdaumu}. The main difference would be the way we assign
 ordinals: the region would correspond to the universe in the previous argument,
 our universe would correspond to $0$, the first meta-universe,
 the first meta-universe would correspond
-to $1$, and so on. I.e. we would treat the region as it would be an universe
+to $1$, and so on. I.e. we would treat the region as it would be a universe
 and our universe as being its meta-universe.
 
 We can then apply the previous argument to, say, the observable universe, or
@@ -1381,7 +1385,7 @@ As argued in \cite{Swinburne2004},
 it's very likely that this universe is, indeed, consistent on a large scale.
 But if there is a non-zero probability of observing
 consistency around us, then there is a non-zero probability of observing
-an universe like ours.
+a universe like ours.
 }
 
 \svn{
