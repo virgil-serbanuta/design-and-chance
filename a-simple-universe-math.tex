@@ -1830,6 +1830,8 @@ are specific to this paper
 \subsection{Probabilities}
 \label{sec:probabilities}
 
+\subsubsection{Peculiar and generic events}
+
 Let $A$ be a set with the same cardinality as the set of real numbers, $\reale$.
 Let $F$ be the set of
 all mathematical predicates of one variable over $A$ that can be written as a
@@ -1856,9 +1858,11 @@ respectively.
 
 Let $P$ be a continuous probability distribution.
 
-Since $F$ is countable, $F_0$ must be at most countable. Then we can compute
-$P(F_0)$ as the sum of the probability of $F_0$'s elements,
-so obviously, $P(F_0)=0$,
+Since $F$, the set of all predicates, is countable, $F_0$ must be at most
+countable.
+This means that we can compute
+$P(F_0)$ as the sum of the probability of $F_0$'s elements.
+$P$ is continuous, so, obviously, $P(F_0)=0$,
 which means that the probability of its complement, $P(F_1)$, is $1$.
 From the way we defined $P(f)$, $P(F_0) = P(A_0)$, so $P(A_0)$ must be $0$
 and $P(A_1)$ must be $1$, which justifies the indexes used for
@@ -1872,8 +1876,11 @@ $P(x\mbox{ is peculiar}) = 0$.
 When the probability for a subset of $A$ is $0$, $P(E)=0$, where $E\subset A$,
 it does not mean that observing an element of $E$ is logically impossible,
 it means that,
-if we make a set of (independent) observations that is at most countable
-of elements of $A$, we have no chance at all of observing an element of $E$.
+if we make a set of (independent) observations of elements of $A$
+that is at most countable, we have no chance at all of observing an element of
+$E$.
+
+\subsubsection{Countable discontinuities}
 
 Let us now consider a different issue.
 Let $P$ be a probability over the set of real numbers, $\reale$ (or
@@ -1908,9 +1915,10 @@ $1$ with $\multime{0}=\multime{\emptyset}$,
 $2$ with $\multime{0, 1}=\multime{\emptyset, \multime{\emptyset}}$,
 and so on.
 
-Each of these natural numbers is an ordinal. To define the smallest ordinal
-that is not a natural number, denoted by $\omega$, we will use the
-same rule: let $\omega$ to be the set of ordinals smaller than it, i.e
+Each of the natural numbers defined as above is an ordinal.
+However, we can define ordinals that do not correspond to natural numbers.
+The smallest such ordinal, denoted by $\omega$, is defined with the same rule:
+let $\omega$ to be the set of ordinals smaller than it, i.e
 the set of natural numbers, $\omega=\multime{0, 1, 2, \dots}$.
 
 Of course, the next ordinal, called $\omega + 1$, will be the set
@@ -1925,10 +1933,11 @@ take $\omega\cdot \omega$ to be the ordinal that comes after all the ones
 defined by using the above rules.
 
 Let us note that $\omega$ is countable, and that all the ordinals mentioned
-above that come after it are also countable. By using the same kind of
+above that come after it are also countable.
+By using the same kind of
 reasoning as above we can produce other countable ordinals like
-$\omega^\omega$ (from ordinals like $\omega\cdot\omega\cdot\dots\cdot\omega$)
-and $\epsilon_0$ (from $\omega^{\omega^{\cdots^\omega}}$).
+$\omega^\omega$ (containing ordinals like $\omega\cdot\omega\cdot\dots\cdot\omega$)
+and $\epsilon_0$ (containing $\omega^{\omega^{\cdots^\omega}}$).
 
 After going through many similar processes, at some point we obtain the
 smallest uncountable ordinal, $\omega_1$, which is the set of all
