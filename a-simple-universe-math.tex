@@ -199,7 +199,7 @@ Section \ref{sec:conclusion} presents this \paper{}'s argument conclusion.
 
 This \paper{} uses some mathematical notions related to set cardinalities,
 probabilities and ordinals, which can be found in, e.g.,
-\textcite{sep-set-theory}, \textcite{Cohen1966} and \svn{quote}TODO.
+\textcite{sep-set-theory}, \textcite{Cohen1966} and \textcite{Billingsley1995}.
 These are summarized in \ref{sec:background}, together with some properties
 derived from them.
 
@@ -1830,6 +1830,28 @@ are specific to this paper
 \subsection{Probabilities}
 \label{sec:probabilities}
 
+A probability measure $P$ is a function defined on some of the subsets of a
+space $\Omega$. $P$ should satisfy three conditions:
+\begin{itemize}
+  \item $0 \le P(A) \le P(\Omega)$ for all $A$ for which $P$ is defined;
+  \item $P(\emptyset) = 0$ and $P(\Omega) = 0$;
+  \item If $A_1, A_2, \dots$ is a disjoint sequence of sets for which $P$ is
+        defined, then $P$ is defined for their union, and
+        $P(\bigcup\limits_{i=1}^{\infty} A_i)=\sum_{i=1}^{\infty}P(A_i)$
+\end{itemize}
+
+The subsets for which $P$ is defined are called \ghilimele{events}.
+
+A probability $P$ is continuous if it assigns $0$ to each single element set.
+As an example, both the uniform probability for a real number interval and the
+normal probability over the set of real numbers are continuous.
+
+Any single element set for which the probability assigns a non-zero value is
+called a discontinuity.
+
+The terms \ghilimele{probability measure} and
+\ghilimele{probability distribution} will be used interchangeably.
+
 \subsubsection{Peculiar and generic events}
 
 Let $A$ be a set with the same cardinality as the set of real numbers, $\reale$.
@@ -1886,24 +1908,8 @@ Let us now consider a different issue.
 Let $P$ be a probability over the set of real numbers, $\reale$ (or
 any infinite uncountable set).
 Let $A$ be the set of real numbers with non-zero probability.
-We will show that $A$ is at most countable.
-
-Indeed, let us take all subsets of $A$ that are at most countable. The
-probability of any such subset is between $0$ and $1$, so we can take
-$S$ to be the supremum of the probabilty of these subsets, and
-$S$ will also be between $0$ and $1$.
-
-There is a sequence $(C_n)$ of at most countable sets such that each $C_n$
-includes all the preceding ones, and $P(C_n)$ converges to the supremum, $S$.
-But the union of all $C_n$ (let us call it $C$) is also countable,
-and its probability is larger or equal than the probability of any $C_n$,
-so the union's probability is exactly $S$.
-
-If there would be a number $x$ of non-zero probability that is not in the
-union $C$, then the union of $x$ and $C$ would still be countable, and
-would have a larger probability than $S$, which is a contradiction.
-This means that $C$, which is countable, contains all numbers with non-zero
-probability.
+Then, according to \textcite{Billingsley1995} (page 162, Theorem 10.2),
+$A$ is at most countable.
 
 \subsection{Ordinals}
 \label{sec:ordinals}
