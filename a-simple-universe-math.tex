@@ -495,8 +495,8 @@ measures, i.e. they can measure singletons (single-element sets).
   If $P$ is a probability over the set of real numbers\footnote{Note
     that here, and in all the axioms in this paper, it is not required that
     $P$ is a probability over the
-    Borel algebra of $\reale$, although that is, in many cases, implicitly
-    assumed when talking about probabilities over $\reale$.
+    Borel algebra of $\reale$, although that, in many cases, people implicitly
+    assume it when talking about probabilities over $\reale$.
   }
   (or a set with the same cardinal)\footnote{
     Readers should
@@ -913,7 +913,8 @@ as long as we make a countable number of observations, we either expect to
 observe generic discontinuities, or we expect to find yet another meta-universe
 above everything that we observed so far.
 
-This construction corresponds to ordinals, see (TODO: ref) to find out more.
+This construction corresponds to ordinals, see \textcite{Cohen1966}, Section 3,
+to find out more.
 The process will break at the first uncountable ordinal (let us call it
 $\omega_1$), since we would make
 uncountable many observations, one for each ordinal between $0$ and $\omega_1$.
@@ -922,16 +923,18 @@ So, in order for our universe description to have a chance to be finite,
 we have to postulate a fairly improbable and complicated configuration
 of meta-universes and probability distributions, which,
 in itself, does not seem reasonable.
-However, even if we postulate that, let us note that it is also unreasonable
-to ask that any of these probability distributions has a probability of $1$
-for our universe's description, and that, in this entire construction,
+However, even if we postulate it, the probability of our universe description
+is, most likely, still $0$.
+
+To show that, let us note that in this entire construction,
 the probability of our universe description can be obtained by multiplying the
-probabilities in each meta-universe.
+probabilities given by each meta-universe. However, it is unreasonable
+to ask that any of these probabilities is $1$, since $1$ is a peculiar value.
 
 It may be difficult to multiply an uncountable set of numbers, but,
 since these numbers are between $0$ and $1$, then whatever value we should
-assign to their product,
-it should be at less or equal than the product of any countable subset.
+assign to their product
+should be less or equal than the product of any countable subset.
 
 If a countable subset of probabilities are all below a certain threshold,
 say, $0.9$, then multiplying them produces $0$, which, again, would mean
@@ -1016,7 +1019,8 @@ also has $U$ as a discontinuity.
 
 We know that the $0$ meta-universe has a discontinuity for
 our universe's description, and our universe's description is peculiar, so,
-from transfinite induction (TODO: cite), if the first meta-universe,
+from transfinite induction (\textcite{Cohen1966}, section 3),
+if the first meta-universe,
 corresponding to ordinal $0$, has a peculiar discontinuity, then all countable
 meta-universes exist, and have the same discontinuity.
 
