@@ -160,7 +160,7 @@ to design for human beings.
 The main issue is that our universe seems to behave according to relatively
 simple laws that do not change with time and space.
 That is completely
-unplausible if it happens by chance, so there should be an explanation for it.
+implausible if it happens by chance, so there should be an explanation for it.
 If our universe is not designed, then the other explanation possible is that
 there is something outside of our universe that made it likely for our universe
 to exist (called a meta-universe).
@@ -173,7 +173,7 @@ But this chain would also need an explanation, so perhaps there is a
 meta-infinity universe that explains it.
 Since this meta-infinity universe would also need an explanation, we can
 continue this process for quite a while,
-which makes these meta-universes also unplausible.
+which makes these meta-universes also implausible.
 
 This means that, if our universe is not designed, then it will not behave
 according to simple laws, and, in principle, we should be able to notice it.
@@ -181,7 +181,8 @@ However, with our current travelling means, we can observe only a limited
 part of our entire universe, so it is possible that we live in a bubble covering
 a large amount of time and space, in which simple laws apply.
 
-Even if that is the case, our universe is still unlikely among all universes
+Even if that is the case, our universe is still unlikely among all possible
+universes
 containing such bubbles, because our bubble is much larger than it needs to
 be.
 A conservative estimate produces a probability so low for our universe,
@@ -200,7 +201,7 @@ Section \ref{sec:conclusion} presents this \paper{}'s argument conclusion.
 This \paper{} uses some mathematical notions related to set cardinalities,
 probabilities and ordinals, which can be found in, e.g.,
 \textcite{sep-set-theory}, \textcite{Cohen1966} and \textcite{Billingsley1995}.
-These are summarized in \ref{sec:background}, together with some properties
+These are summarized in section \ref{sec:background}, together with some properties
 derived from them.
 
 \section{The Ordered Universe Argument}
@@ -332,12 +333,13 @@ consistent mathematical theory that has
 a set of axioms which is at most countable and which allows making
 predictions about the future state of the universe given its state
 at a certain moment in time. A \definitie{universe region description}
-is something similar, but only for a given space-time region of a universe,
+is something similar, but limited to a given space-time region of a universe,
 with extra axioms to take into account interactions with the rest of the
 universe (e.g. by using the state of the region boundary when predicting).
 In the best case, for a deterministic universe, there might exist
-a description which allows one to correctly predict the entire future state
-given the state at any moment in time, but a universe description
+a description which allows one to correctly predict the entire future
+given the state of the universe at some moment in time,
+but a universe description
 as defined here does not have to predict everything and,
 even when it predicts something, it does not have to always be correct.
 
@@ -351,7 +353,7 @@ those things, although we could restrict our descriptions to ones where this
 is possible, at least up to a reasonable level.
 Regardless, let us use a different meaning: a theory predicts something if
 that something is true in all mathematical models of that theory (i.e. all
-sets is which the theory's axioms are satisfied).
+sets in which the theory's axioms are satisfied).
 
 Note that usually the data available for making predictions is dependent
 on who is making the prediction. As an example, if we assume that
@@ -516,8 +518,12 @@ of all peculiar events taken together is $0$, so there is no chance of us
 observing one.
 In other words, the probability of all generic events is $1$\footnote{This
   requires that, in the original set, the set of elements with $0$ probability
-  has itself a non-zero probability. However, this is implied by us observing
-  an element from this set.
+  has itself a non-zero probability, or, in other words, that the sum of all
+  probabilities $P(y)$ that are greater than $0$ is less than $1$.
+  However, if the sum of all these $P(y)$ would be $1$, then, no matter how much
+  we try, we would only observe $y$ numbers with $P(y) > 0$,
+  so we would not observe a number $x$ with $P(x)=0$,
+  as the axiom requires.
 },
 so we can be sure that we observed a generic event.
 
@@ -589,7 +595,7 @@ The following definition could also be written as an axiom.
 \end{definition}
 
 There are a lot of possible definitions for \ghilimele{finite} which are not
-included here.
+covered by this definition.
 While this paper could probably be extended to also handle many of these,
 most likely there is no point in doing so.
 As an example, in $\reale^3$ one can define it as
@@ -616,7 +622,7 @@ Also, our universe belongs to this set.
           there is at least one conceivable
           universe $U_d$ which
       \begin{enumerate}
-        \item has a time-space or something similar enough;
+        \item is based on time-space or something similar enough;
         \item can plausibly contain intelligent beings that use mathematics;
         \item for the intelligent beings mentioned above and
               for the level of approximation $L$,
@@ -662,15 +668,17 @@ a given place, a certain event takes place).
 For almost any countable axiom system that still
 has an $n$-dimensional real space, $\reale^n$, as a base,
 one could imagine an alternate universe
-which, in the present, is exactly like ours inside (say) Mars' orbit,
-but what is what is outside of Mars' orbit is described by that axiom set.
+which, in the present, is exactly like ours inside (say) the orbit of Mars,
+but what is outside of this orbit is described by that axiom set.
 
-Some of these axiom sets would describe laws of nature which still allow life
-to exist inside Mars' orbit, are similar enough
-to ours to allow us to observe what happens outside of this orbit,
+Some of these axiom sets would describe laws of nature which are similar enough
+to ours to allow us to observe what happens outside of the orbit of Mars,
 but different enough that
 we would notice (e.g. gravity could work differently, depending on the region
-of space in which one travels).
+of space in which one travels). Some of them would also allow life
+to exist inside the orbit of Mars (this is not a given, since, e.g., the zone
+outside of this orbit may produce large quantities of heat which
+would make sure that inside the orbit only hot gas or plasma exists).
 
 So we could then try to take all hypothetical universes with infinite space
 or time, and we could split them in an infinite number of regions. If we take
@@ -686,12 +694,14 @@ is not trivial for $L$
 if we use an approximation level that does not distinguish things smaller
 than a size $l$, then the region must be significantly larger than $l$),
 there are multiple possible descriptions that
-are distinct for $L$, i.e. there is no possible region where both descriptions
-would be valid within the level $L$ (see \ref{sec:not-enough-descriptions}).
-We can also ask that there same applies for the two descriptions taken together
-with an approximate description that we use for the universe around us.
-I.e. there is no possible region where one of the two descriptions could
-be applied at the same time as our description.
+are different enough for $L$, i.e. there is no possible region where both
+descriptions
+would be valid within the level of approximation $L$
+(see \ref{sec:not-enough-descriptions}).
+We can find two descriptions that are not valid for the region of space around
+us, which means that they are different enough from any any approximate
+description that we would use.
+
 By splitting an infinite timespace
 into disjoint regions defined by a set of finite rational coordinates
 (e.g. we could split it into cubes whose edges have length $1$ and whose
@@ -807,9 +817,9 @@ That, in itself, is not enough, because if our universe's description is not
 one of these discontinuities, then its probability is still $0$, which,
 from axiom \ref{ax:zeroisgeneric}, means that it's still generic.
 
-However, if our universe is not designed, then we don't normally have any
+If our universe is not designed, then we don't normally have any
 reason for using a discontinuous probability distribution.
-For many people this may be, enough to
+For many people this may be enough to
 show that any approximate description for our universe's description is
 infinite, and it should settle at least the case when this probability
 distribution is a subjective one.
@@ -825,13 +835,13 @@ A probability distribution means that which universes exist and which do not,
 and how many of each type exist, is not completely chaotic,
 i.e. there is a minimal amount of order among them.
 We will call this order a \ghilimele{meta-universe}, and we will say that
-this meta-universe includes ours, but keep in mind that the usual intuition
-is that a meta-universe is something more complex than just
+this meta-universe includes our universe, but keep in mind that the usual
+intuition is that a meta-universe is something more complex than just
 a minimal amount of order.
 On the other hand, the most natural explanation for this order
 that does not involve design is an actual
 meta-universe, which may contain many other universes besides ours.
-To put this entire paragaph in other words, the probability distribution over
+To put this entire paragaph in fewer words, the probability distribution over
 universe descriptions is something determined by something we will call
 a \ghilimele{meta-universe}, which includes our universe.
 
@@ -850,15 +860,17 @@ distribution, or if there is no such probability distribution, we would
 expect them to be generic.
 Since our universe's description is one of them, then it should be generic.
 
-However, as above, we can try to explain a peculiar universe description
+Since it's not generic, we can try to explain it (or its discontinuity
+in the meta-universe)
 using a discontinuous probability distribution over discontinuities,
 and assuming that our universe's description is also one of the
 discontinuities for this new probability distribution.
 Having this probability distribution would mean that there is
-meta-meta-universe that includes both the meta-universe and, indirectly,
+meta-meta-universe that includes the meta-universe and, indirectly,
 our universe.
 
-But having peculiar discontinuities for the meta-meta-universe probability
+But, by using the same reasoning, having peculiar discontinuities for the
+meta-meta-universe probability
 distribution is plausible only if there is a meta-meta-meta-universe
 with a discontinous probability distribution.
 By repeating this reasoning, we get an infinite chain of meta-universes,
@@ -1470,24 +1482,6 @@ living in the other universes, as long as the design hypothesis
 has some plausibility, it would be unreasonable to think that
 their universe is not designed (assuming that the argument presented in
 this \paper{} is correct).
-
-\subsection{Unknown Designer's Intent}
-\label{sec:unknown-designer-intent}
-
-TODO: Delete and move things somewhere else.
-
-This is an interesting objection for this approach.
-If we can't assign a
-non-zero probability to this hypothesis, then this argument can't explain
-that the universe around us seems to be consistent.
-Instead, it would just point out how extremely odd it is to observe it.
-This would force us to take it as a brute fact that the universe has a
-finite description (or we could just
-live in a bubble of consistency whose probability becomes inimaginably
-smaller with each passing second, which would be fairly similar).
-In this case we would be in the right setting for the argument presented in
-\cite{Swinburne2004}, which uses this consistency as an argument for God's
-existence.
 
 \subsection{Few Universes Exist}
 \label{sec:fewuniverses}
