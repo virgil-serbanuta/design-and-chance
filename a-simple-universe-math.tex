@@ -1200,9 +1200,9 @@ Next, let us see hat happens if we assume the design hypothesis.
 \label{sec:design-probability}
 
 Let us examine the hypothesis that our universe is designed.
-Since, in this case, the way our world works would be based
+In this case, the way our world works would be based
 on the designer's intent,
-it is no longer obvious that, say, continuous probability distributions
+so it is no longer obvious that continuous probability distributions
 should be the default option for universe descriptions.
 
 On the other hand, it is also not obvious that we have a better option.
@@ -1216,23 +1216,20 @@ if it's not designed would also show that the probability is small
 even if it is designed.
 To fix this, one would need an independent way to show that the Designer
 wanted the universe to have life \parencite{Sober2003}.
+
 In order for this paper's argument to work, one would actually need a weaker
 requirement, i.e. it would be enough to have a non-zero probability
 to the hypothesis that the Designer wanted the universe to have intelligent
-life.
-
-This is also an interesting objection for this approach.
-If we can't assign a
-non-zero probability to this hypothesis, then this argument can't explain
+life. If we cannot do that, then this argument can't explain
 that the universe around us seems to be consistent.
 Instead, it would just point out how extremely odd it is to observe it.
 
 It would be possible to argue for an analogy between us and
 an intelligent Designer of worlds, saying that we would find it interesting
 to create a world with intelligent beings in it, and that there is a chance,
-maybe not that high, but still greater than zero that this would also apply
-to the Designer.
-Given how unlikely it is to live in a non-designed universe, this may be
+maybe not that high, but still greater than zero, that this would also be
+the case for the Designer.
+Given how unlikely it is that we live in a non-designed universe, this may be
 a fairly attractive option.
 
 However, let us try an approach based on the same principles used everywhere
@@ -1243,10 +1240,10 @@ This argument will have the following structure:
         has a finite description is non-zero.
   \item There is a good chance that a Designer would not design two things
         that are too similar.
-  \item Given the above, there is a good chance that the set of things that
-        are designed (called purposes) is at most countable.
   \item The set of similarity thresholds that are relevant for this paper is
         countable.
+  \item Given the above, there is a good chance that the set of things that
+        are designed (called purposes) is at most countable.
   \item There is a good (non-zero) chance that, for a similarity threshold
         which is high enough,
         any purpose which is "too similar" to the purpose where the Designer
@@ -1265,7 +1262,7 @@ We can separate this probability in two: the probability that a Designer
 would want rational beings\footnote{A Designer could want a consistent universe
 region with a finite
 description without wanting intelligent beings, but this possibility is not
-analyzed in this paper}, denoted by $p_r$, and
+analyzed in this paper.}, denoted by $p_r$, and
 the probability that the universe region containing
 those intelligent beings is consistent
 given that it was designed for them.
@@ -1320,7 +1317,8 @@ was choosen.
 
 If that is the case, we could ask ourselves two things:
 how large is the set of actual
-purposes, and whether one of them involves creating intelligent beings.
+purposes, i.e. wheher is it at most countable,
+and whether one of the actual purposes involves creating intelligent beings.
 
 I think it is hard to estimate the likelyhood of any of these, but, for the
 purpose of this \paper{}, it is probably good enough to show that, by default,
@@ -1336,7 +1334,7 @@ then that subset is at most countable.
 It is not obvious that
 similarity between purposes works in the same way as similarity between
 real numbers, but I think there is a non-zero chance
-that if Designer does not choose purposes which are too similar,
+that if the Designer does not choose purposes which are too similar,
 then the set of chosen purposes is at most countable.
 Arguably, that chance is fairly high.
 In the following we will implicitly focus only on the case when choosing
@@ -1345,20 +1343,21 @@ non-similar purposes means that their set is at most countable.
 Given a countable set of purposes, we can (and should) assign by default
 a non-zero probability to all of them.
 
-However, we do not know what purposes would this set contain. But we can do
-something else: we can take any maximal set of purposes that are not too similar
+We do not know what purposes would be in this set.
+However, we can cover all the interesting cases by taking all maximal sets of
+purposes that are not too similar
 (maximal meaning that we can not add any other purpose to it without breaking
-the similarity constraint), and ask ourselves whether one of these
+the similarity constraint), and we can ask ourselves whether one of these
 purposes would involve creating rational beings.
 
 To do that, let us take a closer look at the similarity threshold.
 For any such threshold $t$,
 there will be a natural number $n$ such that the similarity threshold is between
-$n$ (exclusive) and $n+1$ (inclusive).
+$1/n$ (exclusive) and $1/(n+1)$ (inclusive).
 Since the set of purposes that were chosen by the Designer using $t$ as a
 threshold can also be chosen
-using $n+1$ as a threshold, in the following we will use only natural numbers
-as thresholds.
+using $1/(n+1)$ as a threshold, in the following we will use only
+thresholds derived from natural numbers.
 
 Since the new set of possible similarity thresholds is countable,
 we should assign a non-zero probability to each of them.
@@ -1379,8 +1378,9 @@ a good chance that everything in $P$ involves intelligent beings.
 
 So far, we have a non-zero probability that the set of buckets is countable,
 a non-zero chance of choosing a purpose from the bucket with the main
-intelligent beings purpose, and a non-zero chance that this bucket contains
-only purposes involving intelligent beings.
+intelligent beings purpose, a non-zero chance that below a threshold $1/n$
+this bucket contains only purposes involving intelligent beings, and a
+non-zero chance that the actual threshold that we should use is below $1/n$.
 Then we have a non-zero overall chance of having a universe designed for
 intelligent beings.
 
@@ -1465,7 +1465,7 @@ chance? To be more precise,
 how large is the time-space region whose consistency is required? Well,
 perhaps at very distant times in the past, the consistent region included
 the entire observable universe, but, right now, there is no reason to require
-full consistency outside of Earth's orbit. Even more,
+full consistency outside of, say, Earth's orbit. Even more,
 it's likely that we don't even need full consistency inside of Earth's orbit.
 
 However, as far as we know, our solar system is consistent, our galaxy is
@@ -1493,102 +1493,87 @@ this \paper{} is correct).
 Another possible objection is: we used a meta-universe definition that's too
 restrictive. What would happen if, say, we had a meta-universe that, instead
 of providing a probability distribution over universes, simply restricts the
-possible universe descriptions to a set with cardinality less than $\reale$,
-preventing us from applying axiom \ref{ax:zeroisgeneric}?
+possible universe descriptions to a given set?
 
-Note that the current argument works with conceivable universes, so the issue
-is not which universes exist, but which could exist.
+We have these options: the set is countable, the set has the same cardinality
+as $\reale$, and, if we reject the continuum hypothesis\footnote{
+  The continuum hypothesys states that there is no set whose cardinality is
+  strictly between that of the natural numbers and the real numbers.
+}, the set can be somewhere between the two.
 
-As a parenthesis, let us note that using conceivable universes makes sense.
-If we are
-trying to make a prediction about how a non-designed universe would
-look like, we would have to imagine that we are outside any universe, and we are
-about to observe one that is (say) non-designed. What could we say about it?
-Not much, maybe that it makes logical sense (i.e. that it can be modelled
-mathematically), maybe it has something close to time and space, but,
-besides that, anything is possible.
-I.e. we could say that it can be any
-of the conceivable universes, or, perhaps,
-that all conceivable universes are valid candidates.
+If the set is countable, then let us note that, by observing this meta-universe,
+we are actually observing a countable set of elements chosen from the full
+set of universe descriptions, so, by default, all of them should be generic.
+If not, we can repeat the same argument as above to show that either we have
+an uncountable chain of improbable meta-universes, or these descriptions should be
+generic.
 
-That being said, the first possible answer to this section's issue
-is that the main argument of this \paper{} can be reused here,
-perhaps by slightly changing this \paper{}'s
-axioms.
-If we assume the continuum hypothesis, the set of descriptions mentioned
-above can be a countable one or a finite one, both of which are peculiar,
-so we can safely assume that this is not the case.
-Without the continuum hypothesis, the cardinality of the set of descriptions
-can also be somewhere above countable and below the cardinality of
-the real numbers.
-If so, then, by default, we should still use continuous
-probability distributions over the set of descriptions, so the same conclusions
-would hold.
-The set of discontinuities would still be at most countable and,
-following the same line of reasoning as the main argument, the discontinuities
-should be generic.
-Peculiar non-continuous events would still require some explanation,
-which can be provided by a Designer.
+If the set has the same cardinality as $\reale$,
+then we observe an element of this set, our universe's description, and there
+is no probability distribution describing how to pick a description, so,
+according to axiom \ref{ax:noprobability}, it should be generic.
+
+If the set is not countable, but its cardinality is less than $\reale$, then
+let us note that this paper's axioms should still be valid when using this
+cardinality instead of $\reale$.
+As an example, the set of discontinuities would still be at most countable,
+and, by default, we should use continous probability distributions, and
+any if we observe any element with probability $0$, it should be generic.
 
 To be specific, if we replace the set of real numbers by a set whose
 cardinality is above countable, but at most that of the real numbers
 in axioms \ref{ax:zeroisgeneric}, \ref{ax:noprobability} and
 \ref{ax:uncountable}, the argument should still work.
 
-The second possible answer is that, if there is no Designer, we should actually
-expect the set of
-possible descriptions for the meta-universe to have the same cardinal as
-$\reale$, and that's true even
-if we ask these descriptions to be \ghilimele{different enough},
-i.e. different even though we work with approximations.
-To see why, let us consider the following argument, although it's a bit more
-technical than the others:
+% However, there is anothe possible answer:
+% if there is no Designer, we should actually
+% expect the set of
+% possible descriptions for the meta-universe to have the same cardinal as
+% $\reale$, and that's true even
+% if we ask these descriptions to be \ghilimele{different enough},
+% i.e. different even though we work with approximations.
+% To see why, let us consider the following argument, although it's a bit more
+% technical than the others:
 
-The set of all conceivable descriptions has the same cardinality as the
-set of real numbers, $\reale$. This means that the
-set of all sets of conceivable descriptions
-has the same cardinality as the power set of $\reale$, i.e. $2^\reale$.
+% The set of all conceivable descriptions has the same cardinality as the
+% set of real numbers, $\reale$. This means that the
+% set of all sets of conceivable descriptions
+% has the same cardinality as the power set of $\reale$, i.e. $2^\reale$.
 
-A claim about what is possible specifies a particular set of descriptions,
-and any set of descriptions can be such a claim,
-which means that the set of possible claims has the same cardinal as
-the power set of $\reale$, $2^\reale$.
-The cardinal numbers remain the same even if we take into account only claims
-according to which our universe is possible.
+% A claim about what is possible specifies a particular set of descriptions,
+% and any set of descriptions can be such a claim,
+% which means that the set of possible claims has the same cardinal as
+% the power set of $\reale$, $2^\reale$.
+% The cardinal numbers remain the same even if we take into account only claims
+% according to which our universe is possible.
 
-Unlike in the main topic discussed in this
-\paper{}, where any set of universes can, in principle, exist,
-this time it's clear that only one of the claims above can be true.
+% Unlike in the main topic discussed in this
+% \paper{}, where any set of universes can, in principle, exist,
+% this time it's clear that only one of the claims above can be true.
 
-%The $2^\reale$ cardinal for possible claims is larger than $\reale$,
-%so even more than when
-%working probabilities over $\reale$, we should
-%use a continuous probability distribution, i.e. the only reasonable
-%probability that we can assign to any concrete claim is $0$. We will not discuss
-%other cases.
+% Let us take all the claims in which the set of possible descriptions
+% is less than $\reale$.
+% The set of these claims (let us denote it by $S$)
+% has a cardinality which is less than $2^\reale$.
+% The set of claims not in $S$ (let us denote it by $T$) has the same cardinality
+% as $2^\reale$.
+% But $T$ is infinitely larger\footnote{
+%   $S$ is infinite, which means that, if we take a distinct copy of $S$ for each
+%   element of $S$, and we put them together, we get a set that still has the same
+%   cardinal as $S$ (i.e. $S\times S$ has the same cardinal as $S$). In order to
+%   get the same cardinal as $T$ we need to take even more distinct copies of $S$,
+%   which means that $T$ is infinitely larger than $S$.
 
-Let us take all the claims in which the set of possible descriptions
-is less than $\reale$.
-The set of these claims (let us denote it by $S$)
-has a cardinality which is less than $2^\reale$.
-The set of claims not in $S$ (let us denote it by $T$) has the same cardinality
-as $2^\reale$.
-But $T$ is infinitely larger\footnote{
-  $S$ is infinite, which means that, if we take a distinct copy of $S$ for each
-  element of $S$, and we put them together, we get a set that still has the same
-  cardinal as $S$ (i.e. $S\times S$ has the same cardinal as $S$). In order to
-  get the same cardinal as $T$ we need to take even more distinct copies of $S$,
-  which means that $T$ is infinitely larger than $S$.
+%   How many copies? We actually need one for each element in $T$, and no lower
+%   cardinal would do.
+% } than $S$, which means that it's reasonable to assume that $S$ has probability $0$.
+% If so, then, with probability $1$, the set of possible descriptions has the same
+% cardinality as $\reale$.
 
-  How many copies? We actually need one for each element in $T$, and no lower
-  cardinal would do.
-} than $S$, which means that it's reasonable to assume that $S$ has probability $0$.
-If so, then, with probability $1$, the set of possible descriptions has the same
-cardinality as $\reale$.
-
-We should be able to get the same results if, instead of looking at the set
-of all distinct descriptions, we group descriptions based on their similarity
-and we work with the set of these groups of descriptions.
+We should be able to get the same results when working with approximations:
+if, instead of looking at the set
+of all distinct descriptions, we take a level of approximation $L$
+and we group descriptions that, given $L$, work for the same universes.
 As argued in section \ref{sec:not-enough-descriptions},
 there are $\reale$ conceivable descriptions which are different
 enough, so each of these would be in a different group, which means that
@@ -1634,7 +1619,8 @@ and the second saying
   between $0$ and something large enough to be easily detected within
   the approximation level}.
 
-Then, let us consider a hypothetical infinite universe whose timespace is $R^n$.
+Then, let us consider a hypothetical infinite universe with an $n$-dimensional
+timespace based on the real numbers.
 Let us divide it in cuboids of the size mentioned above
 and let us assign the incompatible
 descriptions in the set mentioned above to these cuboids in a roughly even
@@ -1659,27 +1645,34 @@ and its context (i.e. position). Now we must find out how many such functions
 we need in order to describe all possible assignments.
 
 To make things simpler, let us assume that the number of dimensions, $n$,
-is $1$ and that we have only two cuboid types.
+is $1$ (i.e. we have only events ordered by time - a group of such events taking
+place between two moments in time would be a time-space cuboid;
+we could also consider the
+case when the space contains only one space-cuboid, and the time dimension is
+infinite - a time-space cuboid would consist of the space cuboid taken for a
+given time interval) and that we have only two cuboid types.
 It should be obvious that
 the reminder of this example can be generalized to any number of dimensions
 and to any number of cuboid types greater than $2$.
 
 Having $n=1$, means that we have a one-to-one correspondence between
-integers and cuboids, so let us identify a cuboid with its number.
-Let us also identify the two cuboid types with $\multime{0, 1}$ and
-let us represent a universe as a function from the set of integers, $\intregi$,
-to $\multime{0, 1}$, identifying, for each cuboid, its type.
+integers and cuboids, so let us identify a cuboid with its number through this
+correspondece.
+Let us also denote the two cuboid types by $0$ and $1$ and
+let us represent a universe as a function from the set of integers
+(representing the set of cuboids), $\intregi$,
+to the set $\multime{0, 1}$, identifying, for each cuboid, its type.
 
 We can represent the information available for predicting the type of a future
 cuboid by a pair between the cuboid and its past, let us denote it
-by `(x, f)` where $x$ is the cuboid's number, $0$ or $1$,
-and $f$, which represents $x$'s past, is a function from the set of natural
+by $(x, p_x)$ where $x$ is the cuboid's number, $0$ or $1$,
+and $p_x$, which represents $x$'s past, is a function from the set of natural
 numbers to $\multime{0,1}$.
 
 However, we are not trying to predict just one cuboid's future,
 we are trying to predict the future of all cuboids.
 Any way of making these predictions identifies with a function from the past
-of cuboids to their future, i.e. from $(x, f)$ pairs to $\multime{0, 1}$.
+of cuboids to their future, i.e. from $(x, p_x)$ pairs to $\multime{0, 1}$.
 
 Let us find out how many distinct functions we need.
 To make things simple, let us consider only universes which, for negative
@@ -1687,9 +1680,10 @@ integers, have only cuboids of type $0$.
 
 The past of cuboid $0$ is perfectly identical in all these universes, so,
 in order to predict the type of the cuboid with index $0$,
-we need two distinct prediction functions.
-In order to predict the types of cuboids $0$ and $1$ we need four
-distinct prediction functions.
+we need two distinct prediction functions: one which predicts that the type is
+$0$, another one that predicts that the type is $1$.
+In order to predict the types of the first two cuboids, $0$ and $1$, we need
+four distinct prediction functions.
 In general, in order to predict the types of all cuboids between $0$ and $n$
 we need $2^{n+1}$ distinct prediction functions.
 And, in order to predict the type of all cuboids which are greater or equal
@@ -1792,12 +1786,17 @@ but we didn't manage to notice that yet.
 This is possible, but the main part of this paper's argument can be applied here:
 We do notice a lot of consistency in the the timespace around us, perhaps
 because we do not (or can not) pay attention to enough aspects of the universe.
-At the same time, it is conceivable that the regions of time-space that we
-observe are not consistent in the aspects that we do observe.
-This means that, if we fix a reference timespace region, it
-becomes unreasonable to assign a probability of $1$ to having a random
-timespace region consistent in those aspects with the reference one.
-But this means that we are observing something having a really low probability.
+At the same time, it is conceivable that the time-space that we
+observe is not consistent in this way.
+This means that, if we divide our timespace in regions and we fix a reference
+one, it is unreasonable to have a probability of $1$ that any other
+region is consistent with the reference, at least in the aspects to which
+we pay attention.
+
+But, in a similar way to section \ref{sec:peculiarregions},
+this means that we are observing
+something having a really low probability, and that it's more reasonable to
+think that our universe is designed.
 
 \section{Conclusion}
 \label{sec:conclusion}
@@ -1806,11 +1805,11 @@ We have the following reasonable possibilities:
 
 \begin{enumerate}
 \item The probability that a Designer would want intelligent beings
-      is non-zero (see section \ref{sec:unknown-designer-intent}),
+      is non-zero (see section \ref{sec:design-probability}),
       our universe is designed (at least in part) for us,
       and the universe around us is, roughly, as homogenous as we would
       expect it to be.
-\item Section \ref{sec:unknown-designer-intent} does not make sense,
+\item Section \ref{sec:design-probability} does not make sense,
       we don't know whether our universe is designed or not,
       our universe is not homogenous, but we observe some
       extremely unlikely homogeneity around us.
