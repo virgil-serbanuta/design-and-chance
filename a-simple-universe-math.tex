@@ -1821,7 +1821,7 @@ The most reasonable option seems to be that our universe is designed.
 \label{sec:background}
 
 This section presents the mathematical results used in this paper. They are
-usually presented without proofs or references, but most introductory courses
+usually presented without proofs, but most introductory courses
 on the topic of each subsection should cover them.
 
 This section also contains precise definitions for some of the concepts that
@@ -1830,6 +1830,9 @@ are specific to this paper
 
 \subsection{Probabilities}
 \label{sec:probabilities}
+
+For the following definitions, see
+\textcite{Billingsley1995} (section \ghilimele{Probability Measures})
 
 A probability measure $P$ is a function defined on some of the subsets of a
 space $\Omega$. $P$ should satisfy three conditions:
@@ -1843,7 +1846,11 @@ space $\Omega$. $P$ should satisfy three conditions:
 
 The subsets for which $P$ is defined are called \ghilimele{events}.
 
-A probability $P$ is continuous if it assigns $0$ to each single element set.
+TODO: Cite Theorem 31.7 from the same book. Perhaps also page 422. Exemplul 38.1.
+
+A probability $P$ is continuous if it assigns $0$ to each single element set
+(this is a generalization of the \ghilimele{absolutely continuous} property
+used in \textcite{Billingsley1995}).
 As an example, both the uniform probability for a real number interval and the
 normal probability over the set of real numbers are continuous.
 
@@ -1855,13 +1862,15 @@ The terms \ghilimele{probability measure} and
 
 \subsubsection{Peculiar and generic events}
 
-Let $A$ be a set with the same cardinality as the set of real numbers, $\reale$.
+Let $A$ be a set with the same cardinality as the set of real numbers, $\reale$,
+with a probability distribution $P$.
 Let $F$ be the set of
 all mathematical predicates of one variable over $A$ that can be written as a
 finite formula.
 If $f$ is such a predicate then let $A_f$ be the subset of
 $A$ where $f$ is true, i.e. $A_f=\multime{a\in A\mid f(a) \mbox{ is true}}$.
-Given a probability distribution over $A$, we define $P(f)=P(A_f)$.
+Whenever $P(A_f)$ is defined, we will also denote it by $P(f)$, and we will
+call it \ghilimele{the probability of $f$}.
 
 Let $F_0$ be the set of predicates in $F$ whose probability is
 $0$ for all continuous probability distributions over $A$, i.e.
@@ -1876,20 +1885,18 @@ i.e. $A_f$ is finite, would belong to $F_0$.
 Let us identify by $A_0$ the
 set of elements of $A$ for which at least one predicate of $F_0$ is true, i.e.
 $$A_0=\multime{a \in A\mid \exists f\in F_0 \mbox{ with } f(a)\mbox{ true} }.$$
-Let us also denote by $F_1$ and $A_1$ the complements of $F_0$ and $A_0$,
-respectively.
+Let us also denote $A_1$ the complement of $A_0$.
 
-Let $P$ be a continuous probability distribution.
+In the following, let us assume that $P$ is a continuous probability distribution.
 
 Since $F$, the set of all predicates, is countable, $F_0$ must be at most
 countable.
-This means that we can compute
-$P(F_0)$ as the sum of the probability of $F_0$'s elements.
-$P$ is continuous, so, obviously, $P(F_0)=0$,
-which means that the probability of its complement, $P(F_1)$, is $1$.
-From the way we defined $P(f)$, $P(F_0) = P(A_0)$, so $P(A_0)$ must be $0$
-and $P(A_1)$ must be $1$, which justifies the indexes used for
-these.
+This means that $A_0$ is an at most countable union of sets, one set for each
+element of $F_0$, i.e. $A_0=\cup_{f\in F_0} A_f$.
+This means that $P(A_0)$ is less or equal to the sum of the probabilities of
+these sets, $P(A_0)\le\sum_{f\in F_0} P(A_f)$.
+Since this sum is $0$, then $P(A_0)$ is $0$.
+This means that $P(A_1)=1$.
 
 Let us say that an element $a\in A_1$ is \definitie{generic}
 and an element $a\in A_0$ is \definitie{peculiar}. Then we could rewrite
@@ -1909,8 +1916,7 @@ Let us now consider a different issue.
 Let $P$ be a probability over the set of real numbers, $\reale$ (or
 any infinite uncountable set).
 Let $A$ be the set of real numbers with non-zero probability.
-Then, according to \textcite{Billingsley1995} (page 162, Theorem 10.2),
-$A$ is at most countable.
+Then $A$ is at most countable, see \textcite{Billingsley1995} (page 162, Theorem 10.2).
 
 \subsection{Ordinals}
 \label{sec:ordinals}
