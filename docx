@@ -1,0 +1,1 @@
+pandoc -s a-simple-universe-math.tex --bibliography=design-argument.bib --biblatex --write=docx -o a-simple-universe-math.docx
